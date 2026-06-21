@@ -95,6 +95,22 @@ def strip_html(text: str) -> str:
     return re.sub(r"[ \t]+\n", "\n", text).strip()
 
 
+def clean_nws_product(text: str) -> str:
+    """Strip raw NWS transmission noise (WMO header, AWIPS id, 000, $$) from a
+    product so it reads cleanly on Facebook."""
+    out = []
+    for i, ln in enumerate(text.split("\n")):
+        s = ln.strip()
+        if s == "000" or s == "$$":
+            continue
+        if re.match(r"^[A-Z]{4}\d{2} [A-Z]{4} \d{6}$", s):   # e.g. ABNT20 KNHC 212309
+            continue
+        if i < 4 and re.match(r"^[A-Z]{3,6}$", s):           # AWIPS id near top, e.g. TWOAT
+            continue
+        out.append(ln)
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(out)).strip()
+
+
 def entry_image(entry) -> str | None:
     """Best-effort extraction of an image URL from a feed entry."""
     url = None
@@ -268,6 +284,8 @@ def process_simple_feed(item, fb, state, *, seed, attach_image,
         if getattr(entry, "content", None):
             body = entry.content[0].get("value", "")
         content = strip_html(body or getattr(entry, "summary", ""))
+        if item.get("clean") == "nws":
+            content = clean_nws_product(content)
         link = getattr(entry, "link", "")
 
         # Group C keyword filter: only post if a watched county is mentioned
@@ -280,7 +298,8 @@ def process_simple_feed(item, fb, state, *, seed, attach_image,
             continue  # record as seen, don't post
 
         msg = render(item["template"], title=title, content=content, url=link)
-        img = entry_image(entry) if attach_image else None
+        # a feed may pin a fixed image (e.g. the NHC outlook graphic); else use the entry's
+        img = item.get("image") or (entry_image(entry) if attach_image else None)
         log(f"[{item['name']}] new: {title[:70]!r}")
         for pk in item["pages"]:
             fb.post(pk, msg, img)

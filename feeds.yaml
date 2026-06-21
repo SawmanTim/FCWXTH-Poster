@@ -83,7 +83,9 @@ official_feeds:
   - name: "Atlantic Basin Tropical Cyclones (NHC)"
     url: "https://www.nhc.noaa.gov/index-at.xml"
     pages: [FCWXTH]
-    template: "***NHC TROPICAL ALERT***\n\n{content} {url}"
+    clean: nws            # strip WMO/AWIPS headers + $$ footer
+    image: "https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"  # attach the 7-day outlook map
+    template: "***NHC TROPICAL ALERT***\n\n{content}"
 
 # ---------------------------------------------------------------------
 # GROUP C — IEM office "chat" feeds  *** DISABLED 2026-06-21 ***

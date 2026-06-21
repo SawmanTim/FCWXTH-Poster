@@ -1,0 +1,25 @@
+name: Self Test (unpublished draft)
+
+# Manual only. Posts ONE unpublished draft to each page to verify tokens.
+# Drafts are visible only in Meta Business Suite, never to the public.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run self-test
+        env:
+          FB_TOKEN_FCWXTH: ${{ secrets.FB_TOKEN_FCWXTH }}
+          FB_TOKEN_PVFD:   ${{ secrets.FB_TOKEN_PVFD }}
+        run: python post.py --selftest

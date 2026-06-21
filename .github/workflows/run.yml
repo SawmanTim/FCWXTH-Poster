@@ -2,7 +2,7 @@ name: FCWXTH Poster
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # every ~10 minutes (GitHub may delay under load)
+    - cron: "*/5 * * * *"   # every ~5 minutes (GitHub's floor; may still drift under load)
   workflow_dispatch:          # lets you run it manually from the Actions tab
     inputs:
       mode:

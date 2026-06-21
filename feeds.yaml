@@ -86,10 +86,14 @@ official_feeds:
     template: "***NHC TROPICAL ALERT***\n\n{content} {url}"
 
 # ---------------------------------------------------------------------
-# GROUP C — IEM office "chat" feeds, keyword-filtered by county name
-#   trigger only fires if a feed item mentions one of the listed counties
+# GROUP C — IEM office "chat" feeds  *** DISABLED 2026-06-21 ***
+#   These dumped raw product text (LAT/LON, MOT, &&, $$) and posted the IEM
+#   map as a non-rendering LINK, and duplicated the clean county-alert system
+#   (Group D), which already covers every warning for the 27 counties with the
+#   map attached as a real image. Renamed the key to switch them OFF (the code
+#   reads "iem_office_feeds"; this won't be picked up). Rename back to re-enable.
 # ---------------------------------------------------------------------
-iem_office_feeds:
+iem_office_feeds_disabled:
   - name: "NWS HUN (Huntsville)"
     url: "https://weather.im/iembot-rss/room/hunchat.xml"
     pages: [FCWXTH]

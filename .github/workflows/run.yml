@@ -1,58 +1,48 @@
 name: FCWXTH Poster
 
+# GitHub's scheduler is best-effort and gets throttled to ~hourly, which is far
+# too slow for warnings. Work around it: each run is ONE long job that polls
+# every 60s for ~5.9 hours. The schedule just (re)starts the loop; the loop does
+# the real ~60-second polling. Free on a public repo (unlimited Actions minutes).
 on:
   schedule:
-    - cron: "*/5 * * * *"   # every ~5 minutes (GitHub's floor; may still drift under load)
-  workflow_dispatch:          # lets you run it manually from the Actions tab
-    inputs:
-      mode:
-        description: "Run mode"
-        default: normal
-        type: choice
-        options:
-          - normal
-          - selftest          # posts one UNPUBLISHED draft per page to verify tokens
+    - cron: "*/30 * * * *"   # best-effort: restart the loop if it isn't running
+  workflow_dispatch:
 
-# allow the job to commit state.json back to the repo
 permissions:
   contents: write
 
 concurrency:
-  group: fcwxth-poster        # never run two copies at once
-  cancel-in-progress: false
+  group: fcwxth-poster
+  cancel-in-progress: true   # a fresh trigger restarts the loop cleanly
 
 jobs:
-  post:
+  poll:
     runs-on: ubuntu-latest
+    timeout-minutes: 358      # just under GitHub's 360-min job cap
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
 
-      - name: Run poster
+      - name: Poll every 60 seconds
         env:
           FB_TOKEN_FCWXTH: ${{ secrets.FB_TOKEN_FCWXTH }}
           FB_TOKEN_PVFD:   ${{ secrets.FB_TOKEN_PVFD }}
         run: |
-          if [ "${{ github.event.inputs.mode }}" = "selftest" ]; then
-            python post.py --selftest
-          else
-            python post.py
-          fi
-
-      - name: Commit updated state
-        run: |
           git config user.name  "fcwxth-poster-bot"
           git config user.email "actions@users.noreply.github.com"
-          if ! git diff --quiet -- state.json; then
-            git add state.json
-            git commit -m "update state [skip ci]"
-            git push
-          else
-            echo "no state change"
-          fi
+          end=$((SECONDS + 21240))      # ~5.9 hours, then let the schedule restart
+          while [ $SECONDS -lt $end ]; do
+            python post.py || true
+            if ! git diff --quiet -- state.json; then
+              git add state.json
+              git commit -m "update state [skip ci]" >/dev/null 2>&1 || true
+              git pull --rebase --autostash -q origin main >/dev/null 2>&1 || true
+              git push -q origin main >/dev/null 2>&1 || true
+            fi
+            sleep 60
+          done

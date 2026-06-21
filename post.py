@@ -180,11 +180,33 @@ class Facebook:
         try:
             if image_url:
                 endpoint = f"https://graph.facebook.com/{GRAPH_VERSION}/{page_id}/photos"
-                data = {"url": image_url, "caption": message, "access_token": token}
+                # Download the image and upload the actual BYTES (multipart "source").
+                # Far more reliable than passing url= and hoping Facebook's scraper
+                # fetches it — dynamic images like the IEM maps often fail via url=.
+                im = None
+                try:
+                    im = requests.get(image_url, timeout=30,
+                                      headers={"User-Agent": USER_AGENT})
+                except requests.RequestException:
+                    im = None
+                if im is not None and im.status_code == 200 and \
+                        im.headers.get("content-type", "").startswith("image"):
+                    r = requests.post(
+                        endpoint,
+                        data={"caption": message, "access_token": token},
+                        files={"source": ("map.png", im.content,
+                                          im.headers.get("content-type", "image/png"))},
+                        timeout=60)
+                else:
+                    r = requests.post(
+                        endpoint,
+                        data={"url": image_url, "caption": message, "access_token": token},
+                        timeout=30)
             else:
                 endpoint = f"https://graph.facebook.com/{GRAPH_VERSION}/{page_id}/feed"
-                data = {"message": message, "access_token": token}
-            r = requests.post(endpoint, data=data, timeout=30)
+                r = requests.post(
+                    endpoint,
+                    data={"message": message, "access_token": token}, timeout=30)
             if r.status_code >= 400:
                 # if a photo post fails (e.g. bad image), retry as plain text
                 if image_url:

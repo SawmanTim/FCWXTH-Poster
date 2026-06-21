@@ -4,6 +4,14 @@ on:
   schedule:
     - cron: "*/10 * * * *"   # every ~10 minutes (GitHub may delay under load)
   workflow_dispatch:          # lets you run it manually from the Actions tab
+    inputs:
+      mode:
+        description: "Run mode"
+        default: normal
+        type: choice
+        options:
+          - normal
+          - selftest          # posts one UNPUBLISHED draft per page to verify tokens
 
 # allow the job to commit state.json back to the repo
 permissions:
@@ -30,7 +38,12 @@ jobs:
         env:
           FB_TOKEN_FCWXTH: ${{ secrets.FB_TOKEN_FCWXTH }}
           FB_TOKEN_PVFD:   ${{ secrets.FB_TOKEN_PVFD }}
-        run: python post.py
+        run: |
+          if [ "${{ github.event.inputs.mode }}" = "selftest" ]; then
+            python post.py --selftest
+          else
+            python post.py
+          fi
 
       - name: Commit updated state
         run: |

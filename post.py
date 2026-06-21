@@ -144,6 +144,31 @@ class Facebook:
     def _token(self, page_key: str) -> str | None:
         return self.tokens.get(page_key)
 
+    def selftest(self, page_key: str) -> bool:
+        """Post an UNPUBLISHED (draft) post to verify the token + permissions.
+        Unpublished posts are visible only in Meta Business Suite, never public."""
+        page_id = self.page_ids[page_key]
+        token = self._token(page_key)
+        if not token:
+            log(f"  [{page_key}] NO TOKEN set — add secret FB_TOKEN_{page_key}")
+            return False
+        msg = ("✅ FCWXTH Poster self-test — this is an UNPUBLISHED draft "
+               "created to confirm the automation can post. Safe to delete.")
+        try:
+            r = requests.post(
+                f"https://graph.facebook.com/{GRAPH_VERSION}/{page_id}/feed",
+                data={"message": msg, "published": "false", "access_token": token},
+                timeout=30)
+            if r.status_code >= 400:
+                log(f"  [{page_key}] FAILED: {r.status_code} {r.text[:300]}")
+                return False
+            log(f"  [{page_key}] OK — unpublished test post created "
+                f"(id={r.json().get('id','?')}). Check Meta Business Suite drafts.")
+            return True
+        except requests.RequestException as exc:
+            log(f"  [{page_key}] ERROR: {exc}")
+            return False
+
     def post(self, page_key: str, message: str, image_url: str | None) -> bool:
         page_id = self.page_ids[page_key]
         token = self._token(page_key)
@@ -298,12 +323,23 @@ def main() -> int:
                     help="mark current items as seen without posting (first run)")
     ap.add_argument("--dry-run", action="store_true",
                     help="show what would be posted; do not call Facebook")
+    ap.add_argument("--selftest", action="store_true",
+                    help="post one UNPUBLISHED draft to each page to verify tokens")
     args = ap.parse_args()
 
     cfg = load_config()
     state = load_state()
     attach_image = bool(cfg.get("defaults", {}).get("attach_image", True))
     fb = Facebook(cfg["pages"], dry_run=args.dry_run)
+
+    if args.selftest:
+        log("SELF-TEST — creating one unpublished draft post per page.")
+        all_ok = True
+        for pk in cfg["pages"]:
+            if not fb.selftest(pk):
+                all_ok = False
+        log("Self-test PASSED." if all_ok else "Self-test had FAILURES (see above).")
+        return 0 if all_ok else 1
 
     if args.seed:
         log("SEED MODE — recording current items as seen, NOT posting.")

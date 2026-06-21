@@ -1,0 +1,181 @@
+# =====================================================================
+# FCWXTH Poster — replacement config for 54 IFTTT applets
+# Harvested from ifttt.com/my_applets (account: sawmantim) 2026-06-20
+#
+# Facebook Pages (Graph API page IDs):
+#   FCWXTH = 423771745  (Franklin County Weather with Tim Haithcock)
+#   PVFD   = 425720166  (Paden Fire & Rescue)
+#   (AST and MSST intentionally DROPPED per user)
+#
+# Template tokens: {title}{content}{url}{image} map to the old IFTTT
+#   ingredients EntryTitle / EntryContent / EntryUrl / EntryImageUrl.
+# =====================================================================
+
+pages:
+  # Real Facebook Graph Page IDs (confirmed via Graph API /me/accounts 2026-06-20).
+  # NOTE: IFTTT used different internal IDs (423771745 / 425720166) — do not use those.
+  FCWXTH: "103994271809938"   # Franklin County Weather with Tim Haithcock
+  PVFD:   "254298421099827"   # Paden Fire & Rescue
+
+defaults:
+  poll_interval_minutes: 10
+  attach_image: true          # IFTTT could NOT do this; Graph API can
+
+# ---------------------------------------------------------------------
+# GROUP A — Agency Facebook pages reposted via RSS.app  (the "scrape" feeds)
+# ---------------------------------------------------------------------
+rss_app_feeds:
+  - name: "FB NWS Nashville TN"
+    url: "https://rss.app/feeds/X4PxTL5pNLLifD0D.xml"
+    pages: [FCWXTH]
+    template: "From the NWS Forecast Office in Nashville, TN.\n\n{content} {url}"
+  - name: "FB NWS Memphis TN"
+    url: "https://rss.app/feeds/ooRDmgGkddunF68p.xml"
+    pages: [FCWXTH, PVFD]
+    template: "From the NWS Forecast Office in Memphis, TN.\n\n{content} {url}"
+  - name: "FB NWS Birmingham AL"
+    url: "https://rss.app/feeds/JBk8eEJRnq97YNin.xml"
+    pages: [FCWXTH]
+    template: "From the NWS Forecast Office in Birmingham, AL.\n\n{content} {url}"
+  - name: "FB NWS Huntsville AL"
+    url: "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml"
+    pages: [FCWXTH]
+    template: "From the NWS Forecast Office in Huntsville, AL.\n\n{content} {url}"
+  - name: "FB US NWS Southern Region HQ"
+    url: "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml"
+    pages: [FCWXTH]
+    template: "From the US National Weather Service Southern Region HQ.\n\n{content} {url}"
+  - name: "FB SPC (Storm Prediction Center)"
+    url: "https://rss.app/feeds/UwFNrScpM7qJxVzU.xml"
+    pages: [FCWXTH]
+    template: "From the NOAA NWS Storm Prediction Center.\n\n{content} {url}"
+  - name: "FB Branches.Church"
+    url: "https://rss.app/feeds/pOYz2pLU9sUdSfvb.xml"
+    pages: [FCWXTH]
+    template: "Here is an Important Branches Church Community Service Announcement from Your FCWXTH Staff.\n\n{content} {url}"
+  - name: "FB Ready.Gov"
+    url: "https://rss.app/feeds/un6FWJkZkkU7OdHO.xml"
+    pages: [FCWXTH]
+    template: "Here is an Important Community Service Preparedness Message from Your FCWXTH Staff.\n\n{content} {url}"
+  - name: "FB NASA Marshall Space Flight Center"
+    url: "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml"
+    pages: [FCWXTH]
+    template: "Just for You, Space Lovers, from Your FCWXTH Staff.\n\n{content} {url}"
+  - name: "FB NASA Meteor Watch"
+    url: "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml"
+    pages: [FCWXTH]
+    template: "Just for You, Fireball Lovers, from Your FCWXTH Staff.\n\n{content} {url}"
+  - name: "FB USGS"
+    url: "https://rss.app/feeds/UtoyAib4so74ZCK4.xml"
+    pages: [FCWXTH]
+    template: "Just for You, Earth Quake Followers, from Your FCWXTH Staff.\n\n{content} {url}"
+  - name: "FB Nat'l Center for Missing & Exploited Children"
+    url: "https://rss.app/feeds/7XoaDuTyMgPM0HPU.xml"
+    pages: [FCWXTH]   # AST & MSST dropped
+    template: "Here is an Important Community Service Announcement from Your FCWXTH Staff.\n\n{title} {content} {url}"
+
+# ---------------------------------------------------------------------
+# GROUP B — Official direct feeds (no RSS.app needed)
+# ---------------------------------------------------------------------
+official_feeds:
+  - name: "Atlantic Basin Tropical Cyclones (NHC)"
+    url: "https://www.nhc.noaa.gov/index-at.xml"
+    pages: [FCWXTH]
+    template: "***NHC TROPICAL ALERT***\n\n{content} {url}"
+
+# ---------------------------------------------------------------------
+# GROUP C — IEM office "chat" feeds, keyword-filtered by county name
+#   trigger only fires if a feed item mentions one of the listed counties
+# ---------------------------------------------------------------------
+iem_office_feeds:
+  - name: "NWS HUN (Huntsville)"
+    url: "https://weather.im/iembot-rss/room/hunchat.xml"
+    pages: [FCWXTH]
+    match_any: [Colbert, Cullman, Fayette, Franklin, Lamar, Lauderdale, Lawrence, Limestone, Marion, Morgan, Walker, Winston, Giles]
+    template: "***NWS ALERT for your LOCATION***\n{title} {content} {url} {image}"
+  - name: "NWS MEG (Memphis)"
+    url: "https://weather.im/iembot-rss/room/megchat.xml"
+    pages: [FCWXTH]
+    match_any: [Alcorn, Itawamba, Lee, Monroe, Pontotoc, Prentiss, Union, Tishomingo]
+    template: "***NWS ALERT for your LOCATION***\n{title} {content} {url} {image}"
+  - name: "NWS BMX (Birmingham)"
+    url: "https://weather.im/iembot-rss/room/bmxchat.xml"
+    pages: [FCWXTH]
+    match_any: [Colbert, Cullman, Fayette, Franklin, Lamar, Lauderdale, Lawrence, Limestone, Marion, Morgan, Walker, Winston]
+    template: "***NWS ALERT for your LOCATION***\n{title} {content} {url} {image}"
+  - name: "NWS OHX (Nashville)"
+    url: "https://weather.im/iembot-rss/room/ohxchat.xml"
+    pages: [FCWXTH]
+    match_any: [Giles, Hardin, Lawrence, McNairy, Wayne]
+    template: "***NWS ALERT for your LOCATION***\n{title} {content} {url} {image}"
+
+# ---------------------------------------------------------------------
+# GROUP D — Per-county NWS Watch/Warning feeds (api.weather.gov by zone)
+#   *** THESE GET CONSOLIDATED: one alert covering many counties = ONE post ***
+#   All -> FCWXTH ; Tishomingo also -> PVFD
+# ---------------------------------------------------------------------
+county_alert_feeds:
+  consolidate: true   # NEW: collapse same event across counties into one post
+  template: "***{county}, {state}***\n***NWS ALERT for your LOCATION***\n\n{title} {content} {url}"
+  counties:
+    - {county: "Tishomingo", state: "Mississippi", zone: "MSC141", pages: [FCWXTH, PVFD]}
+    - {county: "Alcorn",     state: "Mississippi", zone: "MSC003", pages: [FCWXTH]}
+    - {county: "Itawamba",   state: "Mississippi", zone: "MSC057", pages: [FCWXTH]}
+    - {county: "Lee",        state: "Mississippi", zone: "MSC081", pages: [FCWXTH]}
+    - {county: "Monroe",     state: "Mississippi", zone: "MSC095", pages: [FCWXTH]}
+    - {county: "Pontotoc",   state: "Mississippi", zone: "MSC115", pages: [FCWXTH]}
+    - {county: "Prentiss",   state: "Mississippi", zone: "MSC117", pages: [FCWXTH]}
+    - {county: "Union",      state: "Mississippi", zone: "MSC145", pages: [FCWXTH]}
+    - {county: "Colbert",    state: "Alabama",     zone: "ALC033", pages: [FCWXTH]}
+    - {county: "Cullman",    state: "Alabama",     zone: "ALC043", pages: [FCWXTH]}
+    - {county: "Fayette",    state: "Alabama",     zone: "ALC057", pages: [FCWXTH]}
+    - {county: "Franklin",   state: "Alabama",     zone: "ALC059", pages: [FCWXTH]}
+    - {county: "Lamar",      state: "Alabama",     zone: "ALC075", pages: [FCWXTH]}
+    - {county: "Lauderdale", state: "Alabama",     zone: "ALC077", pages: [FCWXTH]}
+    - {county: "Lawrence",   state: "Alabama",     zone: "ALC079", pages: [FCWXTH]}
+    - {county: "Limestone",  state: "Alabama",     zone: "ALC083", pages: [FCWXTH]}
+    - {county: "Marion",     state: "Alabama",     zone: "ALC093", pages: [FCWXTH]}
+    - {county: "Morgan",     state: "Alabama",     zone: "ALC103", pages: [FCWXTH]}
+    - {county: "Walker",     state: "Alabama",     zone: "ALC127", pages: [FCWXTH]}
+    - {county: "Winston",    state: "Alabama",     zone: "ALC133", pages: [FCWXTH]}
+    - {county: "Giles",      state: "Tennessee",   zone: "TNC055", pages: [FCWXTH]}
+    - {county: "Hardin",     state: "Tennessee",   zone: "TNC071", pages: [FCWXTH]}
+    - {county: "Lawrence",   state: "Tennessee",   zone: "TNC099", pages: [FCWXTH]}
+    - {county: "McNairy",    state: "Tennessee",   zone: "TNC109", pages: [FCWXTH]}
+    - {county: "Wayne",      state: "Tennessee",   zone: "TNC181", pages: [FCWXTH]}
+
+# ---------------------------------------------------------------------
+# GROUP E — Weather-condition / sunrise posts (NOT feed-driven)
+#   Old trigger = Weather Underground style. Needs a weather-data source
+#   (e.g. NWS api point forecast / observations) instead of RSS.
+# ---------------------------------------------------------------------
+weather_condition_posts:
+  - {name: "Paden rain",      page: PVFD,   location: "Paden, Mississippi",        trigger: "condition_is:Rain",   template: "On {time} {condition} was observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
+  - {name: "Paden snow",      page: PVFD,   location: "Paden, Mississippi",        trigger: "condition_is:Snow",   template: "On {time} {condition} was observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
+  - {name: "Paden temp>99",   page: PVFD,   location: "Paden, Mississippi",        trigger: "temp_above:99F",      template: "On {time}, a Temperature of {tempF} Degrees was Observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
+  - {name: "Paden temp<32",   page: PVFD,   location: "Paden, Mississippi",        trigger: "temp_below:32F",      template: "On {time}, a Temperature of {tempF} Degrees was Observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
+  - {name: "Paden sun",       page: PVFD,   location: "Paden, Mississippi",        trigger: "civil_sunset",        template: "The sun will set this evening {sunset}. Then the sun will rise again, Lord willing, {sunrise} in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
+  - {name: "Franklin snow",   page: FCWXTH, location: "Franklin County, Alabama",  trigger: "condition_is:Snow",   template: "At {time} {condition} was observed in Franklin County."}
+  - {name: "Franklin rain",   page: FCWXTH, location: "Franklin County, Alabama",  trigger: "condition_is:Rain",   template: "On {time}, {condition} was observed in Franklin County, Alabama."}
+  - {name: "Franklin temp>99",page: FCWXTH, location: "Franklin County, Alabama",  trigger: "temp_above:99F",      template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama."}
+  - {name: "Franklin temp<32",page: FCWXTH, location: "Franklin County, Alabama",  trigger: "temp_below:32F",      template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama."}
+  - {name: "Franklin sun",    page: FCWXTH, location: "Franklin County, Alabama",  trigger: "civil_sunset",        template: "The sun will set this evening {sunset}. Then the sun will rise again, Lord willing, {sunrise} in Franklin County."}
+
+# ---------------------------------------------------------------------
+# GROUP F — Non-Facebook automations (special handling)
+# ---------------------------------------------------------------------
+special:
+  - name: "Magic Lights Blink & On — Franklin County alert"
+    type: smart_light
+    feed: "https://api.weather.gov/alerts/active.atom?zone=ALC059"
+    match_any: [Warning]
+    note: >
+      Controls MagicLight bulbs (poweron + blink) when Franklin County (ALC059)
+      gets a WARNING. Cannot run on GitHub Actions (needs to reach the bulbs).
+      Options: keep on IFTTT, OR run via Home Assistant / a local always-on
+      device, OR MagicHome cloud API if available.
+  - name: "Phone push notification (zone ALC083 / Limestone)"
+    type: ifttt_notification
+    note: >
+      Sends an IFTTT app push notification (not a Facebook post). Title is a raw
+      URL; likely a leftover/test. Replaceable with a push/email if still wanted.

@@ -1,0 +1,45 @@
+name: FCWXTH Poster
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every ~10 minutes (GitHub may delay under load)
+  workflow_dispatch:          # lets you run it manually from the Actions tab
+
+# allow the job to commit state.json back to the repo
+permissions:
+  contents: write
+
+concurrency:
+  group: fcwxth-poster        # never run two copies at once
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run poster
+        env:
+          FB_TOKEN_FCWXTH: ${{ secrets.FB_TOKEN_FCWXTH }}
+          FB_TOKEN_PVFD:   ${{ secrets.FB_TOKEN_PVFD }}
+        run: python post.py
+
+      - name: Commit updated state
+        run: |
+          git config user.name  "fcwxth-poster-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet -- state.json; then
+            git add state.json
+            git commit -m "update state [skip ci]"
+            git push
+          else
+            echo "no state change"
+          fi

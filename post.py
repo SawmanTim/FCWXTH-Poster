@@ -161,17 +161,22 @@ class Facebook:
         if not token:
             log(f"  [{page_key}] NO TOKEN set — add secret FB_TOKEN_{page_key}")
             return False
-        msg = ("✅ FCWXTH Poster self-test — this is an UNPUBLISHED draft "
-               "created to confirm the automation can post. Safe to delete.")
+        msg = ("✅ FCWXTH Poster self-test — UNPUBLISHED draft confirming PHOTO "
+               "posting works (safe to delete).")
+        test_img = ("https://mesonet.agron.iastate.edu/plotting/auto/plot/208/"
+                    "network:WFO::wfo:MOB::year:2026::phenomenav:FL::"
+                    "significancev:W::etn:0037::opt:single::_r:t::dpi:100.png")
         try:
+            im = requests.get(test_img, timeout=30, headers={"User-Agent": USER_AGENT})
             r = requests.post(
-                f"https://graph.facebook.com/{GRAPH_VERSION}/{page_id}/feed",
-                data={"message": msg, "published": "false", "access_token": token},
-                timeout=30)
+                f"https://graph.facebook.com/{GRAPH_VERSION}/{page_id}/photos",
+                data={"caption": msg, "published": "false", "access_token": token},
+                files={"source": ("test.png", im.content, "image/png")},
+                timeout=60)
             if r.status_code >= 400:
-                log(f"  [{page_key}] FAILED: {r.status_code} {r.text[:300]}")
+                log(f"  [{page_key}] PHOTO FAILED: {r.status_code} {r.text[:300]}")
                 return False
-            log(f"  [{page_key}] OK — unpublished test post created "
+            log(f"  [{page_key}] OK — unpublished PHOTO draft created "
                 f"(id={r.json().get('id','?')}). Check Meta Business Suite drafts.")
             return True
         except requests.RequestException as exc:

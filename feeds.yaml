@@ -70,6 +70,8 @@ rss_app_feeds:
     pages: [FCWXTH]
     template: "Just for You, Earth Quake Followers, from Your FCWXTH Staff.\n\n{content} {url}"
   - name: "FB Nat'l Center for Missing & Exploited Children"
+    # NOTE: this RSS.app feed is currently DEAD (404). It will just be skipped each
+    # run until you recreate the feed in RSS.app, then it works automatically.
     url: "https://rss.app/feeds/7XoaDuTyMgPM0HPU.xml"
     pages: [FCWXTH]   # AST & MSST dropped
     template: "Here is an Important Community Service Announcement from Your FCWXTH Staff.\n\n{title} {content} {url}"
@@ -96,7 +98,7 @@ iem_office_feeds:
   - name: "NWS MEG (Memphis)"
     url: "https://weather.im/iembot-rss/room/megchat.xml"
     pages: [FCWXTH]
-    match_any: [Alcorn, Itawamba, Lee, Monroe, Pontotoc, Prentiss, Union, Tishomingo]
+    match_any: [Alcorn, Chickasaw, Itawamba, Lee, Monroe, Pontotoc, Prentiss, Tippah, Union, Tishomingo]
     template: "***NWS ALERT for your LOCATION***\n{title} {content} {url} {image}"
   - name: "NWS BMX (Birmingham)"
     url: "https://weather.im/iembot-rss/room/bmxchat.xml"
@@ -126,6 +128,8 @@ county_alert_feeds:
     - {county: "Pontotoc",   state: "Mississippi", zone: "MSC115", pages: [FCWXTH]}
     - {county: "Prentiss",   state: "Mississippi", zone: "MSC117", pages: [FCWXTH]}
     - {county: "Union",      state: "Mississippi", zone: "MSC145", pages: [FCWXTH]}
+    - {county: "Chickasaw",  state: "Mississippi", zone: "MSC017", pages: [FCWXTH]}  # added to match SSRAS 27-county area
+    - {county: "Tippah",     state: "Mississippi", zone: "MSC139", pages: [FCWXTH]}  # added to match SSRAS 27-county area
     - {county: "Colbert",    state: "Alabama",     zone: "ALC033", pages: [FCWXTH]}
     - {county: "Cullman",    state: "Alabama",     zone: "ALC043", pages: [FCWXTH]}
     - {county: "Fayette",    state: "Alabama",     zone: "ALC057", pages: [FCWXTH]}
@@ -162,20 +166,11 @@ weather_condition_posts:
   - {name: "Franklin sun",    page: FCWXTH, location: "Franklin County, Alabama",  trigger: "civil_sunset",        template: "The sun will set this evening {sunset}. Then the sun will rise again, Lord willing, {sunrise} in Franklin County."}
 
 # ---------------------------------------------------------------------
-# GROUP F — Non-Facebook automations (special handling)
+# GROUP F — IFTTT applets intentionally NOT rebuilt (turned OFF in IFTTT)
 # ---------------------------------------------------------------------
-special:
-  - name: "Magic Lights Blink & On — Franklin County alert"
-    type: smart_light
-    feed: "https://api.weather.gov/alerts/active.atom?zone=ALC059"
-    match_any: [Warning]
-    note: >
-      Controls MagicLight bulbs (poweron + blink) when Franklin County (ALC059)
-      gets a WARNING. Cannot run on GitHub Actions (needs to reach the bulbs).
-      Options: keep on IFTTT, OR run via Home Assistant / a local always-on
-      device, OR MagicHome cloud API if available.
-  - name: "Phone push notification (zone ALC083 / Limestone)"
-    type: ifttt_notification
-    note: >
-      Sends an IFTTT app push notification (not a Facebook post). Title is a raw
-      URL; likely a leftover/test. Replaceable with a push/email if still wanted.
+# Both were disconnected ("Connect", gray) in IFTTT, so they are left out:
+#   * Magic Lights Blink & On — MagicLight bulbs on a Franklin County warning.
+#       Can't run on GitHub anyway (needs to reach the bulbs). User declined.
+#   * Phone push notification — Limestone County AL (zone ALC083) -> IFTTT app
+#       push (not a Facebook post). Looks like a leftover/test.
+# If you ever want one back, tell me and I'll build it.

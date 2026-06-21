@@ -259,6 +259,102 @@ def zone_from_url(u: str) -> str:
     return m.group(1) if m else ""
 
 
+# Page-specific sign-off + hashtags (appended to alert posts per target page).
+SIGN_OFFS = {
+    "FCWXTH": 'From your local "Franklin County Weather Team".\n#THW #FCWXTH',
+    "PVFD":   'From your local "Paden Fire & Rescue Department Weather Team".\n#THW #PVFRD',
+}
+
+
+def _param(props: dict, key: str) -> str | None:
+    v = (props.get("parameters") or {}).get(key)
+    if isinstance(v, list) and v:
+        return str(v[0]).strip()
+    return None
+
+
+def ibw_tags(props: dict) -> list[str]:
+    """Impact-Based Warning tags — the pro details NWS attaches to warnings."""
+    tags: list[str] = []
+    tdt = (_param(props, "tornadoDamageThreat") or "").upper()
+    if tdt == "CATASTROPHIC":
+        tags.append("*** TORNADO EMERGENCY ***")
+    elif tdt == "CONSIDERABLE":
+        tags.append("*** PARTICULARLY DANGEROUS SITUATION ***")
+    fft = (_param(props, "flashFloodDamageThreat") or "").upper()
+    if fft == "CATASTROPHIC":
+        tags.append("*** FLASH FLOOD EMERGENCY ***")
+    elif fft == "CONSIDERABLE":
+        tags.append("*** CONSIDERABLE flash flood threat ***")
+    det = _param(props, "tornadoDetection")
+    if det:
+        tags.append(f"Tornado: {det.title()}")
+    dmg = _param(props, "thunderstormDamageThreat")
+    if dmg:
+        tags.append(f"Wind damage threat: {dmg.title()}")
+    hail = _param(props, "maxHailSize")
+    if hail and hail not in ("0.00", "0"):
+        tags.append(f'Max hail: {hail}"')
+    wind = _param(props, "maxWindGust")
+    if wind and wind not in ("0", "0 MPH"):
+        tags.append(f"Max wind gust: {wind}")
+    return tags
+
+
+def iem_map_url(props: dict) -> str | None:
+    """Build the IEM Autoplot #208 map image URL from the alert's VTEC code."""
+    for v in (props.get("parameters") or {}).get("VTEC", []) or []:
+        m = re.search(r"/[A-Z]\.[A-Z]{3}\.([A-Z]{4})\.([A-Z]{2})\.([A-Z])\.(\d{4})\.(\d{2})\d{4}T", v)
+        if m:
+            office, ph, sig, etn, yy = m.groups()
+            wfo = office[1:] if len(office) == 4 else office   # KHUN -> HUN
+            year = 2000 + int(yy)
+            return ("https://mesonet.agron.iastate.edu/plotting/auto/plot/208/"
+                    f"network:WFO::wfo:{wfo}::year:{year}::phenomenav:{ph}::"
+                    f"significancev:{sig}::etn:{etn}::opt:single::_r:t::dpi:100.png")
+    return None
+
+
+_COMPASS16 = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
+              "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
+
+
+def storm_motion(props: dict) -> str | None:
+    """Human-readable storm motion from NWS eventMotionDescription.
+    The degrees are the direction the storm comes FROM, so movement is +180."""
+    emd = _param(props, "eventMotionDescription")
+    if not emd:
+        return None
+    m = re.search(r"(\d{1,3})DEG\.\.\.(\d{1,3})KT", emd)
+    if not m:
+        return None
+    frm, kt = int(m.group(1)), int(m.group(2))
+    toward = _COMPASS16[int(((frm + 180) % 360) / 22.5 + 0.5) % 16]
+    return f"Storm motion: moving {toward} at {round(kt * 1.151)} mph"
+
+
+def build_alert_message(props: dict, county_names: list[str], page_key: str) -> str:
+    headline = (props.get("headline") or "").strip()
+    desc = strip_html(props.get("description", ""))
+    instruction = strip_html(props.get("instruction") or "")
+    parts = ["***Affected Counties: " + "; ".join(county_names) + "***",
+             "***NWS ALERT for Your LOCATION***"]
+    if headline:
+        parts.append(headline)
+    tags = ibw_tags(props)
+    if tags:
+        parts.append("\n".join(tags))
+    motion = storm_motion(props)
+    if motion:
+        parts.append(motion)
+    if desc:
+        parts.append(desc)
+    if instruction:
+        parts.append("PRECAUTIONARY/PREPAREDNESS ACTIONS:\n" + instruction)
+    parts.append(SIGN_OFFS.get(page_key, SIGN_OFFS["FCWXTH"]))
+    return re.sub(r"\n{3,}", "\n\n", "\n\n".join(p for p in parts if p)).strip()
+
+
 def process_county_alerts(cfg, fb, state, *, seed):
     """Group D — pull all zones in ONE api.weather.gov call, consolidate by event."""
     counties = cfg["counties"]
@@ -295,20 +391,11 @@ def process_county_alerts(cfg, fb, state, *, seed):
 
         county_names = sorted({f"{c['county']}, {c['state']}" for c in matched})
         pages = sorted({p for c in matched for p in c["pages"]})
-        headline = props.get("headline") or props.get("event", "")
-        desc = strip_html(props.get("description", ""))
-        link = (props.get("@id") or alert_id)
-
-        msg = (
-            "***NWS ALERT for your LOCATION***\n"
-            f"Counties affected: {'; '.join(county_names)}\n\n"
-            f"{headline}\n\n{desc}\n{link}"
-        )
-        msg = re.sub(r"\n{3,}", "\n\n", msg).strip()
+        img = iem_map_url(props)   # IEM Autoplot map of the warning polygon
         log(f"[county_alerts] {props.get('event','alert')} -> "
-            f"{len(county_names)} counties, pages={pages}")
+            f"{len(county_names)} counties, pages={pages}, map={'yes' if img else 'no'}")
         for pk in pages:
-            fb.post(pk, msg, None)
+            fb.post(pk, build_alert_message(props, county_names, pk), img)
 
     if new_ids:
         state[key] = list(seen.union(new_ids))

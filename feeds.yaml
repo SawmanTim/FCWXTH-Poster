@@ -28,53 +28,53 @@ rss_app_feeds:
   - name: "FB NWS Nashville TN"
     url: "https://rss.app/feeds/X4PxTL5pNLLifD0D.xml"
     pages: [FCWXTH]
-    template: "From the NWS Forecast Office in Nashville, TN.\n\n{content} {url}"
+    template: "From the NWS Forecast Office in Nashville, TN.\n\n{content}"
   - name: "FB NWS Memphis TN"
     url: "https://rss.app/feeds/ooRDmgGkddunF68p.xml"
     pages: [FCWXTH, PVFD]
-    template: "From the NWS Forecast Office in Memphis, TN.\n\n{content} {url}"
+    template: "From the NWS Forecast Office in Memphis, TN.\n\n{content}"
   - name: "FB NWS Birmingham AL"
     url: "https://rss.app/feeds/JBk8eEJRnq97YNin.xml"
     pages: [FCWXTH]
-    template: "From the NWS Forecast Office in Birmingham, AL.\n\n{content} {url}"
+    template: "From the NWS Forecast Office in Birmingham, AL.\n\n{content}"
   - name: "FB NWS Huntsville AL"
     url: "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml"
     pages: [FCWXTH]
-    template: "From the NWS Forecast Office in Huntsville, AL.\n\n{content} {url}"
+    template: "From the NWS Forecast Office in Huntsville, AL.\n\n{content}"
   - name: "FB US NWS Southern Region HQ"
     url: "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml"
     pages: [FCWXTH]
-    template: "From the US National Weather Service Southern Region HQ.\n\n{content} {url}"
+    template: "From the US National Weather Service Southern Region HQ.\n\n{content}"
   - name: "FB SPC (Storm Prediction Center)"
     url: "https://rss.app/feeds/UwFNrScpM7qJxVzU.xml"
     pages: [FCWXTH]
-    template: "From the NOAA NWS Storm Prediction Center.\n\n{content} {url}"
+    template: "From the NOAA NWS Storm Prediction Center.\n\n{content}"
   - name: "FB Branches.Church"
     url: "https://rss.app/feeds/pOYz2pLU9sUdSfvb.xml"
     pages: [FCWXTH]
-    template: "Here is an Important Branches Church Community Service Announcement from Your FCWXTH Staff.\n\n{content} {url}"
+    template: "Here is an Important Branches Church Community Service Announcement from Your FCWXTH Staff.\n\n{content}"
   - name: "FB Ready.Gov"
     url: "https://rss.app/feeds/un6FWJkZkkU7OdHO.xml"
     pages: [FCWXTH]
-    template: "Here is an Important Community Service Preparedness Message from Your FCWXTH Staff.\n\n{content} {url}"
+    template: "Here is an Important Community Service Preparedness Message from Your FCWXTH Staff.\n\n{content}"
   - name: "FB NASA Marshall Space Flight Center"
     url: "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml"
     pages: [FCWXTH]
-    template: "Just for You, Space Lovers, from Your FCWXTH Staff.\n\n{content} {url}"
+    template: "Just for You, Space Lovers, from Your FCWXTH Staff.\n\n{content}"
   - name: "FB NASA Meteor Watch"
     url: "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml"
     pages: [FCWXTH]
-    template: "Just for You, Fireball Lovers, from Your FCWXTH Staff.\n\n{content} {url}"
+    template: "Just for You, Fireball Lovers, from Your FCWXTH Staff.\n\n{content}"
   - name: "FB USGS"
     url: "https://rss.app/feeds/UtoyAib4so74ZCK4.xml"
     pages: [FCWXTH]
-    template: "Just for You, Earth Quake Followers, from Your FCWXTH Staff.\n\n{content} {url}"
+    template: "Just for You, Earth Quake Followers, from Your FCWXTH Staff.\n\n{content}"
   - name: "FB Nat'l Center for Missing & Exploited Children"
     # NOTE: this RSS.app feed is currently DEAD (404). It will just be skipped each
     # run until you recreate the feed in RSS.app, then it works automatically.
     url: "https://rss.app/feeds/7XoaDuTyMgPM0HPU.xml"
     pages: [FCWXTH]   # AST & MSST dropped
-    template: "Here is an Important Community Service Announcement from Your FCWXTH Staff.\n\n{title} {content} {url}"
+    template: "Here is an Important Community Service Announcement from Your FCWXTH Staff.\n\n{title} {content}"
 
 # ---------------------------------------------------------------------
 # GROUP B — Official direct feeds (no RSS.app needed)
@@ -124,7 +124,7 @@ iem_office_feeds_disabled:
 # ---------------------------------------------------------------------
 county_alert_feeds:
   consolidate: true   # NEW: collapse same event across counties into one post
-  template: "***{county}, {state}***\n***NWS ALERT for your LOCATION***\n\n{title} {content} {url}"
+  template: "***{county}, {state}***\n***NWS ALERT for your LOCATION***\n\n{title} {content}"
   counties:
     - {county: "Tishomingo", state: "Mississippi", zone: "MSC141", pages: [FCWXTH, PVFD]}
     - {county: "Alcorn",     state: "Mississippi", zone: "MSC003", pages: [FCWXTH]}

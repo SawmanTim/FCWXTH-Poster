@@ -97,22 +97,31 @@ def strip_html(text: str) -> str:
 
 def entry_image(entry) -> str | None:
     """Best-effort extraction of an image URL from a feed entry."""
+    url = None
     for enc in getattr(entry, "enclosures", []) or []:
-        if str(enc.get("type", "")).startswith("image"):
-            return enc.get("href")
-    for mc in getattr(entry, "media_content", []) or []:
-        if mc.get("url") and str(mc.get("type", "")).startswith("image"):
-            return mc["url"]
-    for mt in getattr(entry, "media_thumbnail", []) or []:
-        if mt.get("url"):
-            return mt["url"]
-    # fall back to first <img> in the content/summary
-    body = ""
-    if getattr(entry, "content", None):
-        body = entry.content[0].get("value", "")
-    body = body or getattr(entry, "summary", "")
-    m = re.search(r'<img[^>]+src="([^"]+)"', body or "", flags=re.I)
-    return m.group(1) if m else None
+        if str(enc.get("type", "")).startswith("image") and enc.get("href"):
+            url = enc["href"]
+            break
+    if not url:
+        for mc in getattr(entry, "media_content", []) or []:
+            if mc.get("url") and (mc.get("medium") == "image"
+                                  or str(mc.get("type", "")).startswith("image")):
+                url = mc["url"]
+                break
+    if not url:
+        for mt in getattr(entry, "media_thumbnail", []) or []:
+            if mt.get("url"):
+                url = mt["url"]
+                break
+    if not url:
+        body = ""
+        if getattr(entry, "content", None):
+            body = entry.content[0].get("value", "")
+        body = body or getattr(entry, "summary", "")
+        m = re.search(r'<img[^>]+src="([^"]+)"', body or "", flags=re.I)
+        url = m.group(1) if m else None
+    # feeds HTML-encode the URL (&amp;); decode so the link actually works
+    return html.unescape(url) if url else None
 
 
 def render(template: str, *, title="", content="", url="", image="") -> str:

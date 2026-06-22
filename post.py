@@ -288,6 +288,11 @@ def process_simple_feed(item, fb, state, *, seed, attach_image,
             content = clean_nws_product(content)
         link = getattr(entry, "link", "")
 
+        # optional skip (e.g. NHC's redundant "no tropical cyclones" status line)
+        skip = item.get("skip_title_contains")
+        if skip and skip.lower() in title.lower():
+            continue
+
         # Group C keyword filter: only post if a watched county is mentioned
         if match_any:
             haystack = f"{title}\n{content}".lower()
@@ -297,11 +302,13 @@ def process_simple_feed(item, fb, state, *, seed, attach_image,
         if seed:
             continue  # record as seen, don't post
 
-        msg = render(item["template"], title=title, content=content, url=link)
+        base = render(item["template"], title=title, content=content, url=link)
         # a feed may pin a fixed image (e.g. the NHC outlook graphic); else use the entry's
         img = item.get("image") or (entry_image(entry) if attach_image else None)
         log(f"[{item['name']}] new: {title[:70]!r}")
         for pk in item["pages"]:
+            tags = PAGE_HASHTAGS.get(pk, "")
+            msg = f"{base}\n\n{tags}" if tags else base
             fb.post(pk, msg, img)
 
     if new_ids:
@@ -318,6 +325,12 @@ def zone_from_url(u: str) -> str:
 SIGN_OFFS = {
     "FCWXTH": 'From your local "Franklin County Weather Team".\n#THW #FCWXTH',
     "PVFD":   'From your local "Paden Fire & Rescue Department Weather Team".\n#THW #PVFRD',
+}
+
+# Per-page hashtags appended to agency reposts (alerts use the fuller SIGN_OFFS).
+PAGE_HASHTAGS = {
+    "FCWXTH": "#THW #FCWXTH",
+    "PVFD":   "#THW #PVFRD",
 }
 
 

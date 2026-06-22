@@ -85,6 +85,7 @@ official_feeds:
     pages: [FCWXTH]
     clean: nws            # strip WMO/AWIPS headers + $$ footer
     image: "https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"  # attach the 7-day outlook map
+    skip_title_contains: "no tropical cyclones"   # skip the redundant quiet-season status line
     template: "***NHC TROPICAL ALERT***\n\n{content}"
 
 # ---------------------------------------------------------------------

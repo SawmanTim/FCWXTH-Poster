@@ -632,13 +632,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly clear",
-   "temp": 75,
+   "cond": "partly cloudy",
+   "temp": 77,
    "sun_date": "2026-06-21"
   },
   "Franklin": {
-   "cond": "light rain",
-   "temp": 82,
+   "cond": "heavy rain",
+   "temp": 79,
    "sun_date": "2026-06-21"
   }
  }

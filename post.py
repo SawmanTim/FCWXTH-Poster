@@ -474,6 +474,73 @@ def process_county_alerts(cfg, fb, state, *, seed):
 
 
 # --------------------------------------------------------------------------- #
+# Group G — Community Service Alerts (state-wide non-weather emergencies)
+# --------------------------------------------------------------------------- #
+EVENT_LABELS = {
+    "child abduction emergency": "AMBER ALERT",
+}
+
+
+def build_community_message(props: dict, page_key: str) -> str:
+    event = props.get("event", "Emergency Alert")
+    label = EVENT_LABELS.get(event.lower(), event.upper())
+    headline = (props.get("headline") or "").strip()
+    desc = strip_html(props.get("description", ""))
+    instruction = strip_html(props.get("instruction") or "")
+    area = (props.get("areaDesc") or "").strip()
+    parts = ["***COMMUNITY SERVICE ALERT***", f"*** {label} ***"]
+    if headline:
+        parts.append(headline)
+    if area:
+        parts.append("Area: " + area)
+    if desc:
+        parts.append(desc)
+    if instruction:
+        parts.append(instruction)
+    parts.append(SIGN_OFFS.get(page_key, SIGN_OFFS["FCWXTH"]))
+    return re.sub(r"\n{3,}", "\n\n", "\n\n".join(p for p in parts if p)).strip()
+
+
+def process_community_alerts(cfg, fb, state, *, seed):
+    csa = cfg.get("community_service_alerts")
+    if not csa:
+        return
+    events = {e.lower() for e in csa.get("events", [])}
+    pages = csa.get("pages", [])
+    key = "community_alerts"
+    seen = set(state.get(key, []))
+    ua = {"User-Agent": USER_AGENT, "Accept": "application/geo+json"}
+
+    features = []
+    for stt in csa.get("states", []):
+        try:
+            r = requests.get(ALERTS_API, params={"area": stt}, headers=ua, timeout=40)
+            r.raise_for_status()
+            features += r.json().get("features", [])
+        except (requests.RequestException, ValueError) as exc:
+            log(f"[community_alerts] {stt} fetch failed: {exc}")
+
+    new_ids, handled = [], set()
+    for feat in features:
+        aid = feat.get("id", "")
+        props = feat.get("properties", {})
+        if (props.get("event") or "").lower() not in events:
+            continue                      # weather / non-emergency -> skip
+        if not aid or aid in seen or aid in handled:
+            continue                      # dedupe (alerts can span states)
+        new_ids.append(aid)
+        handled.add(aid)
+        if seed:
+            continue
+        log(f"[community_alerts] {props.get('event','alert')} -> pages={pages}")
+        for pk in pages:
+            fb.post(pk, build_community_message(props, pk), None)
+
+    if new_ids:
+        state[key] = list(seen.union(new_ids))
+
+
+# --------------------------------------------------------------------------- #
 # Group E — weather-condition & sunrise/sunset posts (event-triggered)
 # --------------------------------------------------------------------------- #
 def fetch_current_obs(lat, lon) -> dict | None:
@@ -625,6 +692,9 @@ def main() -> int:
     county_cfg = cfg.get("county_alert_feeds")
     if county_cfg:
         process_county_alerts(county_cfg, fb, state, seed=args.seed)
+
+    # Group G — Community Service Alerts (state-wide non-weather emergencies)
+    process_community_alerts(cfg, fb, state, seed=args.seed)
 
     # Group E — weather-condition & sunrise/sunset posts
     process_weather_conditions(cfg, fb, state, seed=args.seed)

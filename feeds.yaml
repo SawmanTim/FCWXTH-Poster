@@ -152,6 +152,30 @@ county_alert_feeds:
     - {county: "Wayne",      state: "Tennessee",   zone: "TNC181", pages: [FCWXTH]}
 
 # ---------------------------------------------------------------------
+# GROUP G — Community Service Alerts: state-wide NON-weather emergencies
+#   AMBER (Child Abduction), Blue Alert, law-enforcement, civil/local
+#   emergency, evacuation, shelter-in-place, HazMat, 911 outage, etc.
+#   Pulled from NWS per state and filtered to these event types only
+#   (weather is handled by the county feeds, so it's excluded here).
+# ---------------------------------------------------------------------
+community_service_alerts:
+  states: [AL, TN, MS]
+  pages: [FCWXTH, PVFD]
+  events:
+    - "Child Abduction Emergency"     # AMBER
+    - "Blue Alert"
+    - "Law Enforcement Warning"
+    - "Civil Emergency Message"
+    - "Local Area Emergency"
+    - "Evacuation Immediate"
+    - "Shelter In Place Warning"
+    - "911 Telephone Outage Emergency"
+    - "Hazardous Materials Warning"
+    - "Nuclear Power Plant Warning"
+    - "Radiological Hazard Warning"
+    - "Fire Warning"
+
+# ---------------------------------------------------------------------
 # GROUP E — Weather-condition & sunrise/sunset posts (event-triggered)
 #   Replaces the old IFTTT "Weather Underground" applets. Current conditions
 #   and temperature come from the nearest NWS station; sun times from astral.

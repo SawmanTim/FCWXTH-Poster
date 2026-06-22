@@ -601,13 +601,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "light drizzle",
-   "temp": 72,
+   "cond": "drizzle",
+   "temp": 70,
    "sun_date": "2026-06-21"
   },
   "Franklin": {
    "cond": "cloudy",
-   "temp": 75,
+   "temp": 77,
    "sun_date": "2026-06-21"
   }
  }

@@ -331,8 +331,8 @@ def zone_from_url(u: str) -> str:
 #     <our hashtags>
 # Any hashtags from an outside source stay in the post body, ABOVE this footer.
 FOOTERS = {
-    "FCWXTH": 'From your "Franklin County Weather Team"\n\n#THWX #FCWXTH',
-    "PVFD":   'From your "Paden Fire & Rescue Weather Team"\n\n#THWX #PVFRD',
+    "FCWXTH": 'From your local "Franklin County Weather Team"\n\n#THWX #FCWXTH',
+    "PVFD":   'From your local "Paden Fire & Rescue Weather Team"\n\n#THWX #PVFRD',
 }
 
 

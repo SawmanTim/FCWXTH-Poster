@@ -589,7 +589,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "drizzle",
+   "cond": "cloudy",
    "temp": 75,
    "sun_date": "2026-06-21"
   },

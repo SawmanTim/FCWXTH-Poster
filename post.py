@@ -31,11 +31,15 @@ import os
 import re
 import sys
 import time
+from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import feedparser
 import requests
 import yaml
+from astral import LocationInfo
+from astral.sun import sun
 
 # Windows consoles default to cp1252 and crash on emoji/special chars in posts.
 for _stream in (sys.stdout, sys.stderr):
@@ -470,6 +474,111 @@ def process_county_alerts(cfg, fb, state, *, seed):
 
 
 # --------------------------------------------------------------------------- #
+# Group E — weather-condition & sunrise/sunset posts (event-triggered)
+# --------------------------------------------------------------------------- #
+def fetch_current_obs(lat, lon) -> dict | None:
+    """Latest temperature (F) + condition text from the nearest NWS station."""
+    ua = {"User-Agent": USER_AGENT, "Accept": "application/geo+json"}
+    try:
+        pts = requests.get(f"https://api.weather.gov/points/{lat},{lon}",
+                           headers=ua, timeout=30).json()
+        st_url = pts["properties"]["observationStations"]
+        sid = requests.get(st_url, headers=ua, timeout=30).json() \
+            ["features"][0]["properties"]["stationIdentifier"]
+        o = requests.get(f"https://api.weather.gov/stations/{sid}/observations/latest",
+                         headers=ua, timeout=30).json()["properties"]
+        c = (o.get("temperature") or {}).get("value")
+        return {"tempF": round(c * 9 / 5 + 32) if c is not None else None,
+                "cond": o.get("textDescription") or "",
+                "time": o.get("timestamp") or ""}
+    except (requests.RequestException, KeyError, ValueError, IndexError) as exc:
+        log(f"  obs fetch failed ({lat},{lon}): {exc}")
+        return None
+
+
+def _fmt_dt(iso_utc: str, tzname: str) -> str:
+    try:
+        dt = datetime.fromisoformat(iso_utc.replace("Z", "+00:00")).astimezone(ZoneInfo(tzname))
+        return f"{dt.strftime('%b')} {dt.day} at {dt.strftime('%I:%M %p').lstrip('0')} {dt.strftime('%Z')}"
+    except (ValueError, AttributeError):
+        return iso_utc or ""
+
+
+def _clock(dt: datetime) -> str:
+    return dt.strftime("%I:%M %p").lstrip("0")
+
+
+def process_weather_conditions(cfg, fb, state, *, seed):
+    locs = cfg.get("weather_locations", {})
+    posts = cfg.get("weather_condition_posts", [])
+    if not posts:
+        return
+    wx = state.setdefault("wx", {})
+    obs = {n: fetch_current_obs(l["lat"], l["lon"]) for n, l in locs.items()}
+
+    for p in posts:
+        loc = locs[p["loc"]]
+        tz = loc.get("tz", "America/Chicago")
+        page = loc["page"]
+        st = wx.setdefault(p["loc"], {})
+        o = obs.get(p["loc"])
+        trig = p["trigger"]
+        fire, fields = False, {}
+
+        if trig.startswith("condition:"):
+            want = trig.split(":", 1)[1].lower()
+            if o and o["cond"]:
+                if want in o["cond"].lower() and want not in st.get("cond", ""):
+                    fire = True
+                fields = {"time": _fmt_dt(o["time"], tz), "condition": o["cond"]}
+        elif trig.startswith("temp_above:"):
+            t = float(trig.split(":", 1)[1])
+            if o and o["tempF"] is not None:
+                prev = st.get("temp")
+                if o["tempF"] > t and (prev is None or prev <= t):
+                    fire = True
+                fields = {"time": _fmt_dt(o["time"], tz), "tempF": o["tempF"]}
+        elif trig.startswith("temp_below:"):
+            t = float(trig.split(":", 1)[1])
+            if o and o["tempF"] is not None:
+                prev = st.get("temp")
+                if o["tempF"] < t and (prev is None or prev >= t):
+                    fire = True
+                fields = {"time": _fmt_dt(o["time"], tz), "tempF": o["tempF"]}
+        elif trig == "sunset":
+            now = datetime.now(ZoneInfo(tz))
+            today = now.date()
+            s = sun(LocationInfo(latitude=loc["lat"], longitude=loc["lon"]).observer,
+                    date=today, tzinfo=ZoneInfo(tz))
+            if now >= s["sunset"] and st.get("sun_date") != today.isoformat():
+                fire = True
+                st["sun_date"] = today.isoformat()
+                s2 = sun(LocationInfo(latitude=loc["lat"], longitude=loc["lon"]).observer,
+                         date=today + timedelta(days=1), tzinfo=ZoneInfo(tz))
+                fields = {"sunset": _clock(s["sunset"]), "sunrise": _clock(s2["sunrise"])}
+
+        if fire and not seed:
+            msg = p["template"]
+            for k, v in fields.items():
+                msg = msg.replace("{" + k + "}", str(v))
+            log(f"[wx] {p['loc']} {trig} -> posting to {page}")
+            fb.post(page, msg, None)
+
+    # update baselines AFTER all triggers are evaluated (so edges compare to prior)
+    for name, o in obs.items():
+        if o:
+            st = wx.setdefault(name, {})
+            if o["cond"]:
+                st["cond"] = o["cond"].lower()
+            if o["tempF"] is not None:
+                st["temp"] = o["tempF"]
+    if seed:   # don't let the first live run dump a backlog sunset
+        for name, loc in locs.items():
+            tz = loc.get("tz", "America/Chicago")
+            wx.setdefault(name, {})["sun_date"] = datetime.now(ZoneInfo(tz)).date().isoformat()
+
+
+# --------------------------------------------------------------------------- #
 # Main
 # --------------------------------------------------------------------------- #
 def main() -> int:
@@ -516,6 +625,9 @@ def main() -> int:
     county_cfg = cfg.get("county_alert_feeds")
     if county_cfg:
         process_county_alerts(county_cfg, fb, state, seed=args.seed)
+
+    # Group E — weather-condition & sunrise/sunset posts
+    process_weather_conditions(cfg, fb, state, seed=args.seed)
 
     if args.dry_run:
         log("Done (dry-run — state NOT saved).")

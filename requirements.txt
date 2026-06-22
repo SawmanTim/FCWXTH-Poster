@@ -1,3 +1,5 @@
 feedparser>=6.0.11
 requests>=2.32.0
 PyYAML>=6.0.2
+astral>=3.2
+tzdata>=2024.1

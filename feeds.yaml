@@ -156,21 +156,36 @@ county_alert_feeds:
     - {county: "Wayne",      state: "Tennessee",   zone: "TNC181", pages: [FCWXTH]}
 
 # ---------------------------------------------------------------------
-# GROUP E — Weather-condition / sunrise posts (NOT feed-driven)
-#   Old trigger = Weather Underground style. Needs a weather-data source
-#   (e.g. NWS api point forecast / observations) instead of RSS.
+# GROUP E — Weather-condition & sunrise/sunset posts (event-triggered)
+#   Replaces the old IFTTT "Weather Underground" applets. Current conditions
+#   and temperature come from the nearest NWS station; sun times from astral.
+#   Triggers are EDGE-based: "condition:Rain" posts when it STARTS raining,
+#   "temp_above:99" when temp crosses up through 99F, "sunset" once per day.
+#   Tokens: {time} {condition} {tempF} {sunset} {sunrise}
 # ---------------------------------------------------------------------
+weather_locations:
+  Paden:
+    lat: 34.69
+    lon: -88.30
+    tz: "America/Chicago"
+    page: PVFD
+  Franklin:                       # Franklin County, AL — sampled at Russellville
+    lat: 34.51
+    lon: -87.73
+    tz: "America/Chicago"
+    page: FCWXTH
+
 weather_condition_posts:
-  - {name: "Paden rain",      page: PVFD,   location: "Paden, Mississippi",        trigger: "condition_is:Rain",   template: "On {time} {condition} was observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
-  - {name: "Paden snow",      page: PVFD,   location: "Paden, Mississippi",        trigger: "condition_is:Snow",   template: "On {time} {condition} was observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
-  - {name: "Paden temp>99",   page: PVFD,   location: "Paden, Mississippi",        trigger: "temp_above:99F",      template: "On {time}, a Temperature of {tempF} Degrees was Observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
-  - {name: "Paden temp<32",   page: PVFD,   location: "Paden, Mississippi",        trigger: "temp_below:32F",      template: "On {time}, a Temperature of {tempF} Degrees was Observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
-  - {name: "Paden sun",       page: PVFD,   location: "Paden, Mississippi",        trigger: "civil_sunset",        template: "The sun will set this evening {sunset}. Then the sun will rise again, Lord willing, {sunrise} in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
-  - {name: "Franklin snow",   page: FCWXTH, location: "Franklin County, Alabama",  trigger: "condition_is:Snow",   template: "At {time} {condition} was observed in Franklin County."}
-  - {name: "Franklin rain",   page: FCWXTH, location: "Franklin County, Alabama",  trigger: "condition_is:Rain",   template: "On {time}, {condition} was observed in Franklin County, Alabama."}
-  - {name: "Franklin temp>99",page: FCWXTH, location: "Franklin County, Alabama",  trigger: "temp_above:99F",      template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama."}
-  - {name: "Franklin temp<32",page: FCWXTH, location: "Franklin County, Alabama",  trigger: "temp_below:32F",      template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama."}
-  - {name: "Franklin sun",    page: FCWXTH, location: "Franklin County, Alabama",  trigger: "civil_sunset",        template: "The sun will set this evening {sunset}. Then the sun will rise again, Lord willing, {sunrise} in Franklin County."}
+  - {loc: Paden,    trigger: "condition:Rain", template: "On {time} {condition} was observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
+  - {loc: Paden,    trigger: "condition:Snow", template: "On {time} {condition} was observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
+  - {loc: Paden,    trigger: "temp_above:99",  template: "On {time}, a Temperature of {tempF} Degrees was Observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
+  - {loc: Paden,    trigger: "temp_below:32",  template: "On {time}, a Temperature of {tempF} Degrees was Observed in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
+  - {loc: Paden,    trigger: "sunset",         template: "The sun will set this evening {sunset}. Then the sun will rise again, Lord willing, {sunrise} in Paden, Mississippi. Provided by your #PVFRD & #FCWXTH Staff."}
+  - {loc: Franklin, trigger: "condition:Snow", template: "At {time} {condition} was observed in Franklin County, Alabama. #THW #FCWXTH"}
+  - {loc: Franklin, trigger: "condition:Rain", template: "On {time}, {condition} was observed in Franklin County, Alabama. #THW #FCWXTH"}
+  - {loc: Franklin, trigger: "temp_above:99",  template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama. #THW #FCWXTH"}
+  - {loc: Franklin, trigger: "temp_below:32",  template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama. #THW #FCWXTH"}
+  - {loc: Franklin, trigger: "sunset",         template: "The sun will set this evening {sunset}. Then the sun will rise again, Lord willing, {sunrise} in Franklin County, Alabama. #THW #FCWXTH"}
 
 # ---------------------------------------------------------------------
 # GROUP F — IFTTT applets intentionally NOT rebuilt (turned OFF in IFTTT)

@@ -311,8 +311,8 @@ def process_simple_feed(item, fb, state, *, seed, attach_image,
         img = item.get("image") or (entry_image(entry) if attach_image else None)
         log(f"[{item['name']}] new: {title[:70]!r}")
         for pk in item["pages"]:
-            tags = PAGE_HASHTAGS.get(pk, "")
-            msg = f"{base}\n\n{tags}" if tags else base
+            footer = FOOTERS.get(pk, "")
+            msg = f"{base}\n\n{footer}" if footer else base
             fb.post(pk, msg, img)
 
     if new_ids:
@@ -325,16 +325,14 @@ def zone_from_url(u: str) -> str:
     return m.group(1) if m else ""
 
 
-# Page-specific sign-off + hashtags (appended to alert posts per target page).
-SIGN_OFFS = {
-    "FCWXTH": 'From your local "Franklin County Weather Team".\n#THW #FCWXTH',
-    "PVFD":   'From your local "Paden Fire & Rescue Department Weather Team".\n#THW #PVFRD',
-}
-
-# Per-page hashtags appended to agency reposts (alerts use the fuller SIGN_OFFS).
-PAGE_HASHTAGS = {
-    "FCWXTH": "#THW #FCWXTH",
-    "PVFD":   "#THW #PVFRD",
+# GOLD-STANDARD footer appended to EVERY post, per target page:
+#     <our sign-off>
+#     (blank line)
+#     <our hashtags>
+# Any hashtags from an outside source stay in the post body, ABOVE this footer.
+FOOTERS = {
+    "FCWXTH": 'From your "Franklin County Weather Team"\n\n#THWX #FCWXTH',
+    "PVFD":   'From your "Paden Fire & Rescue Weather Team"\n\n#THWX #PVFRD',
 }
 
 
@@ -423,7 +421,7 @@ def build_alert_message(props: dict, county_names: list[str], page_key: str) -> 
         parts.append(desc)
     if instruction:
         parts.append("PRECAUTIONARY/PREPAREDNESS ACTIONS:\n" + instruction)
-    parts.append(SIGN_OFFS.get(page_key, SIGN_OFFS["FCWXTH"]))
+    parts.append(FOOTERS.get(page_key, FOOTERS["FCWXTH"]))
     return re.sub(r"\n{3,}", "\n\n", "\n\n".join(p for p in parts if p)).strip()
 
 
@@ -497,7 +495,7 @@ def build_community_message(props: dict, page_key: str) -> str:
         parts.append(desc)
     if instruction:
         parts.append(instruction)
-    parts.append(SIGN_OFFS.get(page_key, SIGN_OFFS["FCWXTH"]))
+    parts.append(FOOTERS.get(page_key, FOOTERS["FCWXTH"]))
     return re.sub(r"\n{3,}", "\n\n", "\n\n".join(p for p in parts if p)).strip()
 
 
@@ -628,6 +626,9 @@ def process_weather_conditions(cfg, fb, state, *, seed):
             msg = p["template"]
             for k, v in fields.items():
                 msg = msg.replace("{" + k + "}", str(v))
+            footer = FOOTERS.get(page, "")
+            if footer:
+                msg = f"{msg}\n\n{footer}"
             log(f"[wx] {p['loc']} {trig} -> posting to {page}")
             fb.post(page, msg, None)
 

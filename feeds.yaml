@@ -69,12 +69,8 @@ rss_app_feeds:
     url: "https://rss.app/feeds/UtoyAib4so74ZCK4.xml"
     pages: [FCWXTH]
     template: "Just for You, Earth Quake Followers, from Your FCWXTH Staff.\n\n{content}"
-  - name: "FB Nat'l Center for Missing & Exploited Children"
-    # NOTE: this RSS.app feed is currently DEAD (404). It will just be skipped each
-    # run until you recreate the feed in RSS.app, then it works automatically.
-    url: "https://rss.app/feeds/7XoaDuTyMgPM0HPU.xml"
-    pages: [FCWXTH]   # AST & MSST dropped
-    template: "Here is an Important Community Service Announcement from Your FCWXTH Staff.\n\n{title} {content}"
+  # NCMEC retired 2026-06-21 (RSS.app feed deleted). Superseded by the planned
+  # Community Service Alerts (state-wide emergency/AMBER/BOLO alerts).
 
 # ---------------------------------------------------------------------
 # GROUP B — Official direct feeds (no RSS.app needed)

@@ -585,7 +585,8 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 81
+   "temp": 81,
+   "sun_date": "2026-06-21"
   },
   "Franklin": {
    "cond": "clear",

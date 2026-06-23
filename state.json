@@ -655,12 +655,12 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "cloudy",
+   "cond": "mostly cloudy",
    "temp": 64,
    "sun_date": "2026-06-22"
   },
   "Franklin": {
-   "cond": "partly cloudy",
+   "cond": "mostly clear",
    "temp": 64,
    "sun_date": "2026-06-22"
   }

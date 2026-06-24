@@ -677,12 +677,12 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "fog/mist",
-   "temp": 64,
+   "cond": "clear",
+   "temp": 66,
    "sun_date": "2026-06-23"
   },
   "Franklin": {
-   "cond": "clear",
+   "cond": "fog/mist",
    "temp": 63,
    "sun_date": "2026-06-23"
   }

@@ -647,6 +647,81 @@ def process_weather_conditions(cfg, fb, state, *, seed):
 
 
 # --------------------------------------------------------------------------- #
+# USGS earthquakes — official feed + ShakeMap map image
+# --------------------------------------------------------------------------- #
+def _fmt_epoch_ms(ms, tzname: str) -> str:
+    try:
+        dt = datetime.fromtimestamp(ms / 1000, ZoneInfo(tzname))
+        return f"{dt.strftime('%b')} {dt.day}, {dt.year} at {dt.strftime('%I:%M %p').lstrip('0')} {dt.strftime('%Z')}"
+    except (TypeError, ValueError, OSError):
+        return ""
+
+
+def usgs_shakemap_image(detail_url: str) -> str | None:
+    """The USGS ShakeMap intensity map (a real map of the quake), if available."""
+    if not detail_url:
+        return None
+    try:
+        det = requests.get(detail_url, headers={"User-Agent": USER_AGENT}, timeout=30).json()
+        sm = det.get("properties", {}).get("products", {}).get("shakemap")
+        if sm:
+            c = sm[0].get("contents", {}).get("download/intensity.jpg")
+            if c and c.get("url"):
+                return c["url"]
+    except (requests.RequestException, ValueError, KeyError, IndexError):
+        pass
+    return None
+
+
+def process_usgs_quakes(cfg, fb, state, *, seed):
+    uq = cfg.get("usgs_quakes")
+    if not uq:
+        return
+    pages = uq.get("pages", [])
+    prefix = uq.get("prefix", "")
+    key = "usgs_quakes"
+    first_time = key not in state   # auto-seed first run so we don't dump the week's backlog
+    seen = set(state.get(key, []))
+    try:
+        feats = requests.get(uq["feed"], headers={"User-Agent": USER_AGENT},
+                             timeout=40).json().get("features", [])
+    except (requests.RequestException, ValueError) as exc:
+        log(f"[usgs] fetch failed: {exc}")
+        return
+
+    new_ids = []
+    for f in feats:
+        eid = f.get("id", "")
+        if not eid or eid in seen:
+            continue
+        new_ids.append(eid)
+        if seed or first_time:
+            continue
+        p = f.get("properties", {})
+        coords = (f.get("geometry") or {}).get("coordinates") or []
+        depth = coords[2] if len(coords) > 2 else None
+        info = ["Notable earthquake — preliminary info:",
+                f"M {p.get('mag')} — {p.get('place', '')}"]
+        if depth is not None:
+            info.append(f"Depth: {round(depth)} km")
+        t = _fmt_epoch_ms(p.get("time"), "America/Chicago")
+        if t:
+            info.append(f"Time: {t}")
+        if p.get("tsunami"):
+            info.append("Tsunami: possible — see tsunami.gov")
+        if p.get("url"):
+            info.append(f"Details: {p['url']}")
+        body = (f"{prefix}\n\n" + "\n".join(info)) if prefix else "\n".join(info)
+        img = usgs_shakemap_image(p.get("detail"))
+        log(f"[usgs] M{p.get('mag')} {p.get('place', '')[:40]} -> map={'yes' if img else 'no'}")
+        for pk in pages:
+            fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", img)
+
+    if new_ids or first_time:
+        state[key] = list(seen.union(new_ids))
+
+
+# --------------------------------------------------------------------------- #
 # Main
 # --------------------------------------------------------------------------- #
 def main() -> int:
@@ -693,6 +768,9 @@ def main() -> int:
     county_cfg = cfg.get("county_alert_feeds")
     if county_cfg:
         process_county_alerts(county_cfg, fb, state, seed=args.seed)
+
+    # USGS earthquakes (official feed + ShakeMap image)
+    process_usgs_quakes(cfg, fb, state, seed=args.seed)
 
     # Group G — Community Service Alerts (state-wide non-weather emergencies)
     process_community_alerts(cfg, fb, state, seed=args.seed)

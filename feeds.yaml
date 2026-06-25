@@ -65,16 +65,22 @@ rss_app_feeds:
     url: "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml"
     pages: [FCWXTH]
     template: "Just for You, Fireball Lovers, from Your FCWXTH Staff.\n\n{content}"
-  - name: "FB USGS"
-    url: "https://rss.app/feeds/UtoyAib4so74ZCK4.xml"
-    pages: [FCWXTH]
-    template: "Just for You, Earth Quake Followers, from Your FCWXTH Staff.\n\n{content}"
+  # USGS moved off RSS.app to the official USGS feed (see usgs_quakes below) —
+  # cleaner data + ShakeMap image. The old RSS.app USGS feed can be deleted to
+  # free a slot.
   # NCMEC retired 2026-06-21 (RSS.app feed deleted). Superseded by the planned
   # Community Service Alerts (state-wide emergency/AMBER/BOLO alerts).
 
 # ---------------------------------------------------------------------
 # GROUP B — Official direct feeds (no RSS.app needed)
 # ---------------------------------------------------------------------
+# Official USGS earthquake feed (replaces the scraped one). "significant" = the
+# newsworthy/notable quakes only. ShakeMap intensity map attached when available.
+usgs_quakes:
+  feed: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson"
+  pages: [FCWXTH]
+  prefix: "Just for You, Earthquake Followers!"
+
 official_feeds:
   - name: "Atlantic Basin Tropical Cyclones (NHC)"
     url: "https://www.nhc.noaa.gov/index-at.xml"

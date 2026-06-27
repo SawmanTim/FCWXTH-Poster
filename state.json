@@ -797,9 +797,10 @@
  ],
  "usdm_week": "2026-W26",
  "spc_md": [
+  "https://www.spc.noaa.gov/products/md/md1346.html/20260627",
+  "https://www.spc.noaa.gov/products/md/md1345.html/20260627",
   "https://www.spc.noaa.gov/products/md/20260627",
-  "https://www.spc.noaa.gov/products/md/md1343.html/20260627",
-  "https://www.spc.noaa.gov/products/md/md1345.html/20260627"
+  "https://www.spc.noaa.gov/products/md/md1343.html/20260627"
  ],
  "apod_date": "2026-06-27"
 }

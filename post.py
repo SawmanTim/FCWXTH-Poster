@@ -673,6 +673,18 @@ def usgs_shakemap_image(detail_url: str) -> str | None:
     return None
 
 
+def usgs_map_image(props: dict, coords: list) -> str | None:
+    """Prefer the USGS ShakeMap; if it isn't generated yet (fresh quakes), fall
+    back to a location map of the epicenter so the post always has a map."""
+    img = usgs_shakemap_image(props.get("detail"))
+    if img:
+        return img
+    if len(coords) >= 2:
+        lon, lat = coords[0], coords[1]
+        return f"https://maps.wikimedia.org/img/osm-intl,5,{lat},{lon},600x400.png"
+    return None
+
+
 def process_usgs_quakes(cfg, fb, state, *, seed):
     uq = cfg.get("usgs_quakes")
     if not uq:
@@ -712,7 +724,7 @@ def process_usgs_quakes(cfg, fb, state, *, seed):
         if p.get("url"):
             info.append(f"Details: {p['url']}")
         body = (f"{prefix}\n\n" + "\n".join(info)) if prefix else "\n".join(info)
-        img = usgs_shakemap_image(p.get("detail"))
+        img = usgs_map_image(p, coords)
         log(f"[usgs] M{p.get('mag')} {p.get('place', '')[:40]} -> map={'yes' if img else 'no'}")
         for pk in pages:
             fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", img)

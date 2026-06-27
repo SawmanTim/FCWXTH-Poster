@@ -768,13 +768,14 @@
   }
  },
  "usgs_quakes": [
-  "us6000t7zc",
-  "us6000t7zp",
-  "us6000t8ec",
-  "us7000sui3",
   "us6000t7zq",
-  "nc75382936",
-  "pt26177001"
+  "us6000t7zc",
+  "us6000t8ec",
+  "aka2026mpitdk",
+  "us6000t7zp",
+  "pt26177001",
+  "us7000sui3",
+  "nc75382936"
  ],
  "apod_fetch_ts": 1782539192.1375775,
  "swpc": [

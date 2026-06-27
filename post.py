@@ -734,6 +734,167 @@ def process_usgs_quakes(cfg, fb, state, *, seed):
 
 
 # --------------------------------------------------------------------------- #
+# Extras — NASA APOD, space weather, drought monitor, SPC mesoscale discussions
+# --------------------------------------------------------------------------- #
+def process_nasa_apod(cfg, fb, state, *, seed):
+    """NASA Astronomy Picture of the Day — posts once per day."""
+    c = cfg.get("nasa_apod")
+    if not c:
+        return
+    if time.time() - state.get("apod_fetch_ts", 0) < 3000:   # throttle ~50 min (DEMO_KEY safe)
+        return
+    state["apod_fetch_ts"] = time.time()
+    try:
+        d = requests.get("https://api.nasa.gov/planetary/apod",
+                         params={"api_key": os.environ.get("NASA_API_KEY", "DEMO_KEY"),
+                                 "thumbs": "true"},
+                         headers={"User-Agent": USER_AGENT}, timeout=30).json()
+    except (requests.RequestException, ValueError) as exc:
+        log(f"[apod] fetch failed: {exc}")
+        return
+    date = d.get("date", "")
+    if not date or state.get("apod_date") == date:
+        return
+    if seed:
+        state["apod_date"] = date
+        return
+    body = f"{c.get('prefix', 'NASA Astronomy Picture of the Day')}\n\n{d.get('title', '')}\n\n{d.get('explanation', '')}"
+    if d.get("copyright"):
+        body += f"\n\nImage credit: {d['copyright'].strip()}"
+    if d.get("media_type") == "video" and d.get("url"):
+        body += f"\n\nWatch: {d['url']}"
+        img = d.get("thumbnail_url")
+    else:
+        img = d.get("url")   # standard size (hdurl can be too large for FB)
+    state["apod_date"] = date
+    log(f"[apod] {date}: {d.get('title', '')[:40]}")
+    for pk in c["pages"]:
+        fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", img)
+
+
+def _clean_swpc(msg: str) -> str:
+    lines = [ln.rstrip() for ln in msg.replace("\r", "").split("\n")]
+    keep = [ln for ln in lines
+            if not re.match(r"^(Space Weather Message Code|Serial Number|Issue Time):", ln.strip())]
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(keep)).strip()
+
+
+def process_swpc(cfg, fb, state, *, seed):
+    """NOAA SWPC space-weather alerts: geomagnetic storms (aurora) + strong blackouts."""
+    c = cfg.get("swpc_space_weather")
+    if not c:
+        return
+    key = "swpc"
+    first_time = key not in state
+    seen = set(state.get(key, []))
+    try:
+        alerts = requests.get("https://services.swpc.noaa.gov/products/alerts.json",
+                              headers={"User-Agent": USER_AGENT}, timeout=30).json()
+    except (requests.RequestException, ValueError) as exc:
+        log(f"[swpc] fetch failed: {exc}")
+        return
+    new_ids = []
+    for a in alerts:
+        sid = f"{a.get('issue_datetime', '')}|{a.get('product_id', '')}"
+        if sid in seen:
+            continue
+        low = a.get("message", "").lower()
+        geo = ("geomagnetic storm category g" in low                       # predicted (watch/warning)
+               or bool(re.search(r"geomagnetic k-index of [789]", low)))   # sudden strong storm (G3+)
+        radio = bool(re.search(r"radio blackout.*?r[345]", low, re.S))
+        solar = bool(re.search(r"solar radiation storm.*?s[345]", low, re.S))
+        if not (geo or radio or solar):
+            continue
+        new_ids.append(sid)
+        if seed or first_time:
+            continue
+        body = "***SPACE WEATHER ALERT***\n\n" + _clean_swpc(a.get("message", ""))
+        img = c.get("aurora_image") if geo else None
+        log(f"[swpc] {a.get('product_id')} -> posting (aurora={'y' if geo else 'n'})")
+        for pk in c["pages"]:
+            fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", img)
+    if new_ids or first_time:
+        state[key] = list(seen.union(new_ids))
+
+
+def process_usdm(cfg, fb, state, *, seed):
+    """U.S. Drought Monitor — once a week (released Thursdays)."""
+    c = cfg.get("usdm_drought")
+    if not c:
+        return
+    now = datetime.now(ZoneInfo("America/Chicago"))
+    yw = now.strftime("%G-W%V")
+    if state.get("usdm_week") == yw:
+        return
+    if seed:
+        state["usdm_week"] = yw
+        return
+    if now.weekday() < 3:        # USDM releases Thursday (Mon=0..Sun=6); wait for the fresh map
+        return
+    state["usdm_week"] = yw
+    body = c.get("text", "U.S. Drought Monitor — weekly update.")
+    log(f"[usdm] weekly drought update {yw}")
+    for pk in c["pages"]:
+        fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", c.get("image"))
+
+
+def _mentions_area(text: str, terms: list) -> bool:
+    low = text.lower()
+    for t in terms:
+        t = t.lower()
+        if len(t) <= 3:
+            if re.search(r"\b" + re.escape(t) + r"\b", low):
+                return True
+        elif t in low:
+            return True
+    return False
+
+
+def process_spc_md(cfg, fb, state, *, seed):
+    """SPC Mesoscale Discussions that mention our area (pre-watch heads-up)."""
+    c = cfg.get("spc_mesoscale")
+    if not c:
+        return
+    key = "spc_md"
+    first_time = key not in state
+    seen = set(state.get(key, []))
+    parsed = fetch_feed(c["feed"])
+    if not parsed:
+        return
+    terms = c.get("match", [])
+    new_ids = []
+    for e in reversed(parsed.entries):
+        uid = entry_uid(e)
+        if not uid or uid in seen:
+            continue
+        new_ids.append(uid)
+        if seed or first_time:
+            continue
+        title = strip_html(getattr(e, "title", ""))
+        m = re.search(r"(\d{3,4})", title + " " + getattr(e, "link", ""))
+        num = m.group(1) if m else None
+        disc, page_html = strip_html(getattr(e, "summary", "")), ""
+        if num:
+            try:
+                page_html = requests.get(f"https://www.spc.noaa.gov/products/md/md{num}.html",
+                                         headers={"User-Agent": USER_AGENT}, timeout=20).text
+                pm = re.search(r"<pre[^>]*>(.*?)</pre>", page_html, re.S | re.I)
+                if pm:
+                    disc = strip_html(pm.group(1))
+            except requests.RequestException:
+                pass
+        if terms and not _mentions_area(disc, terms):
+            continue        # not our area
+        img = f"https://www.spc.noaa.gov/products/md/mcd{num}.png" if num else None
+        body = f"{c.get('prefix', '***SPC MESOSCALE DISCUSSION***')}\n\n{disc[:1800]}"
+        log(f"[spc_md] {title} -> posting (our area)")
+        for pk in c["pages"]:
+            fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", img)
+    if new_ids or first_time:
+        state[key] = list(seen.union(new_ids))
+
+
+# --------------------------------------------------------------------------- #
 # Main
 # --------------------------------------------------------------------------- #
 def main() -> int:
@@ -789,6 +950,12 @@ def main() -> int:
 
     # Group E — weather-condition & sunrise/sunset posts
     process_weather_conditions(cfg, fb, state, seed=args.seed)
+
+    # Extras — NASA APOD, space weather, drought monitor, SPC mesoscale discussions
+    process_nasa_apod(cfg, fb, state, seed=args.seed)
+    process_swpc(cfg, fb, state, seed=args.seed)
+    process_usdm(cfg, fb, state, seed=args.seed)
+    process_spc_md(cfg, fb, state, seed=args.seed)
 
     if args.dry_run:
         log("Done (dry-run — state NOT saved).")

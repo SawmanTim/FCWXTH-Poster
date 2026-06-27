@@ -214,6 +214,30 @@ weather_condition_posts:
   - {loc: Franklin, trigger: "sunset",         template: "The sun will set this evening at {sunset}. Then the sun will rise again, Lord willing, at {sunrise} in Franklin County, Alabama."}
 
 # ---------------------------------------------------------------------
+# EXTRAS — engagement & science content (all free/official, no RSS.app slots)
+# ---------------------------------------------------------------------
+nasa_apod:                       # daily NASA Astronomy Picture of the Day
+  pages: [FCWXTH]
+  prefix: "NASA Astronomy Picture of the Day"
+  # needs a free NASA API key as secret NASA_API_KEY (get one at api.nasa.gov).
+  # Falls back to the shared DEMO_KEY if unset (rate-limited).
+
+swpc_space_weather:              # NOAA space weather: geomagnetic storms / aurora / blackouts
+  pages: [FCWXTH]
+  aurora_image: "https://services.swpc.noaa.gov/images/aurora-forecast-northern-hemisphere.jpg"
+
+usdm_drought:                    # weekly U.S. Drought Monitor (released Thursdays)
+  pages: [FCWXTH]
+  image: "https://droughtmonitor.unl.edu/data/png/current/current_al_trd.png"
+  text: "U.S. Drought Monitor — this week's update for Alabama.\nUpdated every Thursday by the National Drought Mitigation Center, USDA & NOAA."
+
+spc_mesoscale:                   # SPC Mesoscale Discussions that mention our area
+  feed: "https://www.spc.noaa.gov/products/spcmdrss.xml"
+  pages: [FCWXTH]
+  prefix: "***SPC MESOSCALE DISCUSSION***"
+  match: [Alabama, Tennessee, Mississippi, AL, TN, MS]
+
+# ---------------------------------------------------------------------
 # GROUP F — IFTTT applets intentionally NOT rebuilt (turned OFF in IFTTT)
 # ---------------------------------------------------------------------
 # Both were disconnected ("Connect", gray) in IFTTT, so they are left out:

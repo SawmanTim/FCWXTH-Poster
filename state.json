@@ -775,7 +775,7 @@
   "nc75382936",
   "pt26177001"
  ],
- "apod_fetch_ts": 1782533109.099387,
+ "apod_fetch_ts": 1782536155.8659952,
  "swpc": [
   "2026-06-06 22:11:17.180|A50F",
   "2026-06-08 21:17:43.480|A50F",
@@ -790,5 +790,6 @@
   "https://www.spc.noaa.gov/products/md/20260627",
   "https://www.spc.noaa.gov/products/md/md1343.html/20260627",
   "https://www.spc.noaa.gov/products/md/md1345.html/20260627"
- ]
+ ],
+ "apod_date": "2026-06-27"
 }

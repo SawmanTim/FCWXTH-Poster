@@ -228,8 +228,12 @@ swpc_space_weather:              # NOAA space weather: geomagnetic storms / auro
 
 usdm_drought:                    # weekly U.S. Drought Monitor (released Thursdays)
   pages: [FCWXTH]
-  image: "https://droughtmonitor.unl.edu/data/png/current/current_al_trd.png"
-  text: "U.S. Drought Monitor — this week's update for Alabama.\nUpdated every Thursday by the National Drought Mitigation Center, USDA & NOAA."
+  # One post + state map each, for our 3-state coverage area. {state} fills in below.
+  states:
+    - {name: Alabama,     image: "https://droughtmonitor.unl.edu/data/png/current/current_al_trd.png"}
+    - {name: Mississippi, image: "https://droughtmonitor.unl.edu/data/png/current/current_ms_trd.png"}
+    - {name: Tennessee,   image: "https://droughtmonitor.unl.edu/data/png/current/current_tn_trd.png"}
+  text: "U.S. Drought Monitor — this week's update for {state}.\nUpdated every Thursday by the National Drought Mitigation Center, USDA & NOAA."
 
 spc_mesoscale:                   # SPC Mesoscale Discussions that mention our area
   feed: "https://www.spc.noaa.gov/products/spcmdrss.xml"

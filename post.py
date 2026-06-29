@@ -832,10 +832,14 @@ def process_usdm(cfg, fb, state, *, seed):
     if now.weekday() < 3:        # USDM releases Thursday (Mon=0..Sun=6); wait for the fresh map
         return
     state["usdm_week"] = yw
-    body = c.get("text", "U.S. Drought Monitor — weekly update.")
-    log(f"[usdm] weekly drought update {yw}")
-    for pk in c["pages"]:
-        fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", c.get("image"))
+    # Each state gets its own post + map. Falls back to the old single-image form.
+    states = c.get("states") or [{"name": "Alabama", "image": c.get("image")}]
+    text_tmpl = c.get("text", "U.S. Drought Monitor — this week's update for {state}.")
+    log(f"[usdm] weekly drought update {yw} ({len(states)} states)")
+    for st in states:
+        body = text_tmpl.format(state=st["name"])
+        for pk in c["pages"]:
+            fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", st.get("image"))
 
 
 def _mentions_area(text: str, terms: list) -> bool:

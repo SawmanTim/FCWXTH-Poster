@@ -186,7 +186,9 @@ community_service_alerts:
 #   Replaces the old IFTTT "Weather Underground" applets. Current conditions
 #   and temperature come from the nearest NWS station; sun times from astral.
 #   Triggers are EDGE-based: "condition:Rain" posts when it STARTS raining,
-#   "temp_above:99" when temp crosses up through 99F, "sunset" once per day.
+#   "temp_above:100" when temp crosses up through 100F, "sunset" once per day.
+#   Cold has two tiers: temp_below:32 (freezing/frost) and temp_below:20
+#   (extreme cold / drip-your-faucets). Each fires once per downward crossing.
 #   Tokens: {time} {condition} {tempF} {sunset} {sunrise}
 # ---------------------------------------------------------------------
 weather_locations:
@@ -205,11 +207,13 @@ weather_condition_posts:
   - {loc: Paden,    trigger: "condition:Rain", template: "On {time} {condition} was observed in Paden, Mississippi."}
   - {loc: Paden,    trigger: "condition:Snow", template: "On {time} {condition} was observed in Paden, Mississippi."}
   - {loc: Paden,    trigger: "temp_above:100", template: "On {time}, a Temperature of {tempF} Degrees was Observed in Paden, Mississippi."}
+  - {loc: Paden,    trigger: "temp_below:32",  template: "🥶 FREEZING — On {time}, the temperature reached {tempF}°F in Paden, Mississippi.\nWatch for frost and icy spots; bring in tender plants and outdoor pets."}
   - {loc: Paden,    trigger: "temp_below:20",  template: "❄️ EXTREME COLD — On {time}, the temperature dropped to {tempF}°F in Paden, Mississippi.\nAt 20° and below, pipes can freeze — let your faucets drip, and protect pets, plants, and exposed plumbing."}
   - {loc: Paden,    trigger: "sunset",         template: "The sun will set this evening at {sunset}. Then the sun will rise again, Lord willing, at {sunrise} in Paden, Mississippi."}
   - {loc: Franklin, trigger: "condition:Snow", template: "At {time} {condition} was observed in Franklin County, Alabama."}
   - {loc: Franklin, trigger: "condition:Rain", template: "On {time}, {condition} was observed in Franklin County, Alabama."}
   - {loc: Franklin, trigger: "temp_above:100", template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama."}
+  - {loc: Franklin, trigger: "temp_below:32",  template: "🥶 FREEZING — On {time}, the temperature reached {tempF}°F in Franklin County, Alabama.\nWatch for frost and icy spots; bring in tender plants and outdoor pets."}
   - {loc: Franklin, trigger: "temp_below:20",  template: "❄️ EXTREME COLD — On {time}, the temperature dropped to {tempF}°F in Franklin County, Alabama.\nAt 20° and below, pipes can freeze — let your faucets drip, and protect pets, plants, and exposed plumbing."}
   - {loc: Franklin, trigger: "sunset",         template: "The sun will set this evening at {sunset}. Then the sun will rise again, Lord willing, at {sunrise} in Franklin County, Alabama."}
 

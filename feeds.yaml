@@ -204,13 +204,13 @@ weather_locations:
 weather_condition_posts:
   - {loc: Paden,    trigger: "condition:Rain", template: "On {time} {condition} was observed in Paden, Mississippi."}
   - {loc: Paden,    trigger: "condition:Snow", template: "On {time} {condition} was observed in Paden, Mississippi."}
-  - {loc: Paden,    trigger: "temp_above:99",  template: "On {time}, a Temperature of {tempF} Degrees was Observed in Paden, Mississippi."}
-  - {loc: Paden,    trigger: "temp_below:32",  template: "On {time}, a Temperature of {tempF} Degrees was Observed in Paden, Mississippi."}
+  - {loc: Paden,    trigger: "temp_above:100", template: "On {time}, a Temperature of {tempF} Degrees was Observed in Paden, Mississippi."}
+  - {loc: Paden,    trigger: "temp_below:20",  template: "❄️ EXTREME COLD — On {time}, the temperature dropped to {tempF}°F in Paden, Mississippi.\nAt 20° and below, pipes can freeze — let your faucets drip, and protect pets, plants, and exposed plumbing."}
   - {loc: Paden,    trigger: "sunset",         template: "The sun will set this evening at {sunset}. Then the sun will rise again, Lord willing, at {sunrise} in Paden, Mississippi."}
   - {loc: Franklin, trigger: "condition:Snow", template: "At {time} {condition} was observed in Franklin County, Alabama."}
   - {loc: Franklin, trigger: "condition:Rain", template: "On {time}, {condition} was observed in Franklin County, Alabama."}
-  - {loc: Franklin, trigger: "temp_above:99",  template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama."}
-  - {loc: Franklin, trigger: "temp_below:32",  template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama."}
+  - {loc: Franklin, trigger: "temp_above:100", template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama."}
+  - {loc: Franklin, trigger: "temp_below:20",  template: "❄️ EXTREME COLD — On {time}, the temperature dropped to {tempF}°F in Franklin County, Alabama.\nAt 20° and below, pipes can freeze — let your faucets drip, and protect pets, plants, and exposed plumbing."}
   - {loc: Franklin, trigger: "sunset",         template: "The sun will set this evening at {sunset}. Then the sun will rise again, Lord willing, at {sunrise} in Franklin County, Alabama."}
 
 # ---------------------------------------------------------------------

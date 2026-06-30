@@ -734,9 +734,9 @@ def _num(v) -> str:
     return str(v)
 
 
-def _station_post(fb, page, body, attribution, image_bytes=None) -> None:
+def _station_post(fb, page, body, attribution, image_bytes=None, disclaimer="") -> None:
     footer = FOOTERS.get(page, FOOTERS["FCWXTH"])
-    msg = "\n\n".join(p for p in (body, attribution, footer) if p)
+    msg = "\n\n".join(p for p in (body, attribution, disclaimer, footer) if p)
     if image_bytes is not None:
         fb.post_bytes(page, msg, image_bytes)
     else:
@@ -788,6 +788,7 @@ def process_station(cfg, fb, state, *, seed):
     page = sc.get("page", "FCWXTH")
     loc = sc.get("location", "")
     attribution = sc.get("attribution", "")
+    disc = sc.get("disclaimer", "")
     msgs = sc.get("messages", {})
     stt = state.setdefault("station", {})
 
@@ -860,7 +861,7 @@ def process_station(cfg, fb, state, *, seed):
     # Rain onset (edge: not raining -> raining)
     if sc.get("rain"):
         if not first and raining and not stt.get("raining"):
-            _station_post(fb, page, fmt("rain"), attribution)
+            _station_post(fb, page, fmt("rain"), attribution, disclaimer=disc)
             log("[station] rain onset posted")
         stt["raining"] = raining
 
@@ -868,7 +869,7 @@ def process_station(cfg, fb, state, *, seed):
     if not first and heat > stt.get("heat", 0):
         key = _HEAT_MSG.get(heat)
         if key and msgs.get(key):
-            _station_post(fb, page, fmt(key), attribution)
+            _station_post(fb, page, fmt(key), attribution, disclaimer=disc)
             log(f"[station] heat level {heat} ({key}) posted")
     stt["heat"] = heat
 
@@ -876,7 +877,7 @@ def process_station(cfg, fb, state, *, seed):
     if not first and cold > stt.get("cold", 0):
         key = _COLD_MSG.get(cold)
         if key and msgs.get(key):
-            _station_post(fb, page, fmt(key), attribution)
+            _station_post(fb, page, fmt(key), attribution, disclaimer=disc)
             log(f"[station] cold level {cold} ({key}) posted")
     stt["cold"] = cold
 

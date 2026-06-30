@@ -873,8 +873,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
-   "temp": 81,
+   "cond": "light drizzle",
+   "temp": 79,
    "sun_date": "2026-06-29"
   },
   "Franklin": {

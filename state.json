@@ -899,7 +899,7 @@
   "us7000sui3",
   "nc75382936"
  ],
- "apod_fetch_ts": 1782800367.950095,
+ "apod_fetch_ts": 1782803410.5198207,
  "swpc": [
   "2026-06-05 18:52:32.167|A30F",
   "2026-06-08 21:17:43.480|A50F",
@@ -971,5 +971,5 @@
   "https://www.spc.noaa.gov/products/md/md1376.html/20260629",
   "https://www.spc.noaa.gov/products/md/md1350.html/20260627"
  ],
- "apod_date": "2026-06-29"
+ "apod_date": "2026-06-30"
 }

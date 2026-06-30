@@ -210,12 +210,38 @@ weather_condition_posts:
   - {loc: Paden,    trigger: "temp_below:32",  template: "🥶 FREEZING — On {time}, the temperature reached {tempF}°F in Paden, Mississippi.\nWatch for frost and icy spots; bring in tender plants and outdoor pets."}
   - {loc: Paden,    trigger: "temp_below:20",  template: "❄️ EXTREME COLD — On {time}, the temperature dropped to {tempF}°F in Paden, Mississippi.\nAt 20° and below, pipes can freeze — let your faucets drip, and protect pets, plants, and exposed plumbing."}
   - {loc: Paden,    trigger: "sunset",         template: "The sun will set this evening at {sunset}. Then the sun will rise again, Lord willing, at {sunrise} in Paden, Mississippi."}
+  # Franklin SNOW stays on NWS (a personal gauge can't tell precip type); sunset is
+  # astronomical. Franklin RAIN + all temperature/heat/cold posts now come from the
+  # personal station (KALPHILC8) — see the `station` block below.
   - {loc: Franklin, trigger: "condition:Snow", template: "At {time} {condition} was observed in Franklin County, Alabama."}
-  - {loc: Franklin, trigger: "condition:Rain", template: "On {time}, {condition} was observed in Franklin County, Alabama."}
-  - {loc: Franklin, trigger: "temp_above:100", template: "On {time}, a Temperature of {tempF} Degrees was Observed in Franklin County, Alabama."}
-  - {loc: Franklin, trigger: "temp_below:32",  template: "🥶 FREEZING — On {time}, the temperature reached {tempF}°F in Franklin County, Alabama.\nWatch for frost and icy spots; bring in tender plants and outdoor pets."}
-  - {loc: Franklin, trigger: "temp_below:20",  template: "❄️ EXTREME COLD — On {time}, the temperature dropped to {tempF}°F in Franklin County, Alabama.\nAt 20° and below, pipes can freeze — let your faucets drip, and protect pets, plants, and exposed plumbing."}
   - {loc: Franklin, trigger: "sunset",         template: "The sun will set this evening at {sunset}. Then the sun will rise again, Lord willing, at {sunrise} in Franklin County, Alabama."}
+
+# ---------------------------------------------------------------------
+# PERSONAL WEATHER STATION — KALPHILC8 (Weather Underground), at Tim's house in
+# Phil Campbell, Franklin Co. AL. Source for: the hourly conditions graphic, rain
+# onset, the 32°/20° cold milestones, and the NWS-Huntsville heat/cold reinforcing
+# alerts. All posts -> FCWXTH and attributed to the station. Needs secret WU_API_KEY.
+# HUN criteria: Heat Advisory = HI 105-109 or temp 100-104; Excessive Heat Warning =
+# HI >=110 or temp >=105; Cold Weather Advisory = temp/feels +5F or below; Extreme
+# Cold Warning = temp/feels -6F or below. (32/20 are local frost/pipe milestones.)
+# ---------------------------------------------------------------------
+station:
+  station_id: KALPHILC8
+  name: "Franklin County Weather with Tim Haithcock"
+  location: "Franklin County, Alabama"
+  tz: "America/Chicago"
+  page: FCWXTH
+  hourly_card: true     # post the conditions graphic on the hour, every hour
+  rain: true            # post when rain first begins (precipRate > 0)
+  attribution: 'Observed at our station "Franklin County Weather with Tim Haithcock" (KALPHILC8), Phil Campbell, AL.'
+  messages:
+    rain: "🌧️ RAIN is now falling at our station in {location}.\nDrive with caution and watch for ponding on roadways."
+    freezing: "🥶 FREEZING — {tempF}°F at our station in {location}.\nWatch for frost and icy spots on roads and walkways, bring in tender plants and outdoor pets, and dress in warm layers."
+    dangerous_cold: "❄️ DANGEROUS COLD — {tempF}°F at our station in {location}.\nAt 20° and below, pipes can freeze — let your faucets drip, and protect pets, plants, and exposed plumbing."
+    cold_advisory: "🥶 COLD WEATHER ADVISORY CONDITIONS — feels like {feelsF}°F at our station in {location}.\nCold temperatures can cause hypothermia and frostbite. Dress in warm layers, cover exposed skin, bring pets indoors, and check on the elderly and anyone without adequate heat. Let faucets drip to protect pipes."
+    extreme_cold: "❄️ EXTREME COLD WARNING CONDITIONS — feels like {feelsF}°F at our station in {location}.\nDangerously cold. Frostbite can occur on exposed skin within minutes and hypothermia can be life-threatening. Avoid going outside; if you must, wear a hat, gloves, and layers. Bring pets indoors, protect plumbing, and use heaters safely — never use a stove, oven, or generator indoors for heat."
+    heat_advisory: "🥵 HEAT ADVISORY CONDITIONS — {tempF}°F, feels like {feelsF}°F at our station in {location}.\nDrink plenty of fluids, stay in air conditioning when you can, stay out of the sun, and check on relatives, neighbors, the elderly, and pets. Never leave children or pets in a parked vehicle. Take extra care if you work or spend time outside."
+    heat_warning: "🔥 EXCESSIVE HEAT WARNING CONDITIONS — {tempF}°F, feels like {feelsF}°F at our station in {location}.\nDangerous heat. Avoid the sun and strenuous activity during the heat of the day, drink plenty of water, and stay in air conditioning. Check on the elderly, the sick, and those without AC. NEVER leave children or pets in a vehicle — interior temperatures turn deadly within minutes. Heat stroke is an emergency — call 911."
 
 # ---------------------------------------------------------------------
 # EXTRAS — engagement & science content (all free/official, no RSS.app slots)

@@ -27,12 +27,15 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Ensure DejaVu font for the conditions card
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-dejavu-core
 
       - name: Poll every 60 seconds
         env:
           FB_TOKEN_FCWXTH: ${{ secrets.FB_TOKEN_FCWXTH }}
           FB_TOKEN_PVFD:   ${{ secrets.FB_TOKEN_PVFD }}
           NASA_API_KEY:    ${{ secrets.NASA_API_KEY }}
+          WU_API_KEY:      ${{ secrets.WU_API_KEY }}
         run: |
           git config user.name  "fcwxth-poster-bot"
           git config user.email "actions@users.noreply.github.com"

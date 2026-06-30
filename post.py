@@ -254,6 +254,30 @@ class Facebook:
             log(f"  ERROR posting to {page_key}: {exc}")
             return False
 
+    def post_bytes(self, page_key: str, message: str, image_bytes: bytes,
+                   filename: str = "card.png") -> bool:
+        """Post a locally-generated image (raw PNG bytes) with a caption."""
+        page_id = self.page_ids[page_key]
+        token = self._token(page_key)
+        if self.dry_run or not token:
+            tag = "DRY-RUN" if self.dry_run else "NO-TOKEN(skipped)"
+            log(f"  [{tag}] -> {page_key}: {message[:80]!r} (+generated image)")
+            return self.dry_run
+        try:
+            r = requests.post(
+                f"https://graph.facebook.com/{GRAPH_VERSION}/{page_id}/photos",
+                data={"caption": message, "access_token": token},
+                files={"source": (filename, image_bytes, "image/png")},
+                timeout=60)
+            if r.status_code >= 400:
+                log(f"  ERROR posting image to {page_key}: {r.status_code} {r.text[:200]}")
+                return False
+            log(f"  posted image to {page_key} (id={r.json().get('id', '?')})")
+            return True
+        except requests.RequestException as exc:
+            log(f"  ERROR posting image to {page_key}: {exc}")
+            return False
+
 
 # --------------------------------------------------------------------------- #
 # Feed fetching
@@ -573,6 +597,58 @@ def _clock(dt: datetime) -> str:
     return dt.strftime("%I:%M %p").lstrip("0")
 
 
+_COMPASS = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
+            "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
+
+
+def _deg_to_compass(deg) -> str:
+    try:
+        return _COMPASS[int((float(deg) % 360) / 22.5 + 0.5) % 16]
+    except (TypeError, ValueError):
+        return ""
+
+
+def fetch_wu_station(station_id: str) -> dict | None:
+    """Current observation from a Weather Underground PWS. Needs env WU_API_KEY.
+    Returns a flat dict (imperial units) or None on any failure."""
+    key = os.environ.get("WU_API_KEY")
+    if not key:
+        log("  [wu] WU_API_KEY not set — skipping station pull")
+        return None
+    url = "https://api.weather.com/v2/pws/observations/current"
+    params = {"stationId": station_id, "format": "json", "units": "e",
+              "numericPrecision": "decimal", "apiKey": key}
+    try:
+        r = requests.get(url, params=params, timeout=30,
+                         headers={"User-Agent": USER_AGENT})
+        if r.status_code != 200:
+            log(f"  [wu] {station_id} HTTP {r.status_code}: {r.text[:120]}")
+            return None
+        obs = (r.json().get("observations") or [None])[0]
+        if not obs:
+            log(f"  [wu] {station_id} returned no observations")
+            return None
+        imp = obs.get("imperial", {})
+        return {
+            "tempF": imp.get("temp"),
+            "heatIndexF": imp.get("heatIndex"),
+            "windChillF": imp.get("windChill"),
+            "dewF": imp.get("dewpt"),
+            "humidity": obs.get("humidity"),
+            "wind_dir": _deg_to_compass(obs.get("winddir")),
+            "wind_mph": imp.get("windSpeed"),
+            "gust_mph": imp.get("windGust"),
+            "pressure_in": imp.get("pressure"),
+            "precip_rate": imp.get("precipRate"),
+            "precip_accum": imp.get("precipTotal"),
+            "uv": obs.get("uv"),
+            "obs_local": obs.get("obsTimeLocal") or "",
+        }
+    except (requests.RequestException, ValueError, KeyError) as exc:
+        log(f"  [wu] {station_id} fetch failed: {exc}")
+        return None
+
+
 def process_weather_conditions(cfg, fb, state, *, seed):
     locs = cfg.get("weather_locations", {})
     posts = cfg.get("weather_condition_posts", [])
@@ -644,6 +720,165 @@ def process_weather_conditions(cfg, fb, state, *, seed):
         for name, loc in locs.items():
             tz = loc.get("tz", "America/Chicago")
             wx.setdefault(name, {})["sun_date"] = datetime.now(ZoneInfo(tz)).date().isoformat()
+
+
+# --------------------------------------------------------------------------- #
+# Personal weather station (Weather Underground PWS) — hourly card, rain,
+# and NWS-Huntsville heat/cold reinforcing alerts. Source: feeds.yaml `station`.
+# --------------------------------------------------------------------------- #
+def _num(v) -> str:
+    if v is None:
+        return "--"
+    if isinstance(v, float) and v.is_integer():
+        return str(int(v))
+    return str(v)
+
+
+def _station_post(fb, page, body, attribution, image_bytes=None) -> None:
+    footer = FOOTERS.get(page, FOOTERS["FCWXTH"])
+    msg = "\n\n".join(p for p in (body, attribution, footer) if p)
+    if image_bytes is not None:
+        fb.post_bytes(page, msg, image_bytes)
+    else:
+        fb.post(page, msg, None)
+
+
+def _heat_level(temp, hi) -> int:
+    """0 none, 1 Heat Advisory, 2 Excessive Heat Warning (NWS Huntsville)."""
+    if temp is None:
+        return 0
+    h = hi if hi is not None else temp
+    if temp >= 105 or h >= 110:
+        return 2
+    if temp >= 100 or h >= 105:
+        return 1
+    return 0
+
+
+def _cold_level(temp, wc) -> int:
+    """0 none, 1 Freezing(32), 2 Dangerous Cold(20), 3 Cold Weather Advisory(+5),
+    4 Extreme Cold Warning(-6). +5/-6 use apparent temp; 32/20 use air temp."""
+    if temp is None:
+        return 0
+    feels = min(temp, wc) if wc is not None else temp
+    if feels <= -6:
+        return 4
+    if feels <= 5:
+        return 3
+    if temp < 20:
+        return 2
+    if temp < 32:
+        return 1
+    return 0
+
+
+_HEAT_MSG = {1: "heat_advisory", 2: "heat_warning"}
+_COLD_MSG = {1: "freezing", 2: "dangerous_cold", 3: "cold_advisory", 4: "extreme_cold"}
+
+
+def process_station(cfg, fb, state, *, seed):
+    sc = cfg.get("station")
+    if not sc:
+        return
+    data = fetch_wu_station(sc["station_id"])
+    if not data:
+        return
+    tz = ZoneInfo(sc.get("tz", "America/Chicago"))
+    now = datetime.now(tz)
+    page = sc.get("page", "FCWXTH")
+    loc = sc.get("location", "")
+    attribution = sc.get("attribution", "")
+    msgs = sc.get("messages", {})
+    stt = state.setdefault("station", {})
+
+    temp = data["tempF"]
+    feels_hot, feels_cold = data["heatIndexF"], data["windChillF"]
+    feels_label = "Feels Like"
+    if temp is not None and feels_hot is not None and feels_hot - temp >= 1:
+        feelsF = feels_hot
+    elif temp is not None and feels_cold is not None and temp - feels_cold >= 1:
+        feelsF, feels_label = feels_cold, "Wind Chill"
+    else:
+        feelsF = temp
+
+    def fmt(key):
+        return (msgs.get(key, "")
+                .replace("{tempF}", _num(temp))
+                .replace("{feelsF}", _num(feelsF))
+                .replace("{location}", loc)
+                .replace("{time}", _clock(now)))
+
+    heat = _heat_level(temp, feels_hot)
+    cold = _cold_level(temp, feels_cold)
+    raining = (data["precip_rate"] or 0) > 0
+
+    # Track today's high/low from the 60s polling — no extra API calls, and it
+    # survives runner restarts because state.json is committed. Resets at local midnight.
+    today = now.strftime("%Y-%m-%d")
+    if temp is not None:
+        if stt.get("hilo_date") != today:
+            stt.update({"hilo_date": today, "hi": temp, "lo": temp})
+        else:
+            stt["hi"] = max(stt.get("hi", temp), temp)
+            stt["lo"] = min(stt.get("lo", temp), temp)
+
+    if seed:
+        stt.update({"heat": heat, "cold": cold, "raining": raining,
+                    "card_hour": now.strftime("%Y-%m-%dT%H")})
+        return
+
+    # First run after deploy (no prior baselines): establish them WITHOUT firing,
+    # so an in-progress heat/cold event isn't back-posted. The card still posts.
+    first = "heat" not in stt
+
+    # Hourly conditions card — on the hour (first loop cycle in the first 2 min).
+    if sc.get("hourly_card") and now.minute < 2:
+        hour_key = now.strftime("%Y-%m-%dT%H")
+        if stt.get("card_hour") != hour_key:
+            stt["card_hour"] = hour_key
+            try:
+                import wx_card
+                cd = dict(data)
+                cd["feelsF"], cd["feels_label"] = feelsF, feels_label
+                cd["as_of"] = (f"As of {_clock(now)} {now.strftime('%Z')} · "
+                               f"{now.strftime('%b')} {now.day}, {now.year}")
+                if cd.get("humidity") is not None:
+                    cd["humidity"] = int(round(float(cd["humidity"])))
+                cd["high_today"] = round(stt["hi"]) if stt.get("hi") is not None else None
+                cd["low_today"] = round(stt["lo"]) if stt.get("lo") is not None else None
+                for k in ("precip_rate", "precip_accum"):
+                    if isinstance(cd.get(k), (int, float)):
+                        cd[k] = f"{cd[k]:.2f}"
+                png = wx_card.render_conditions_card(cd)
+                cap = (f"Current conditions from our weather station in {loc} — "
+                       f"{_clock(now)} {now.strftime('%Z')}.")
+                _station_post(fb, page, cap, attribution, image_bytes=png)
+                log(f"[station] hourly card posted ({hour_key})")
+            except Exception as exc:  # noqa: BLE001 — never let the card break the loop
+                log(f"  [station] card render/post failed: {exc}")
+
+    # Rain onset (edge: not raining -> raining)
+    if sc.get("rain"):
+        if not first and raining and not stt.get("raining"):
+            _station_post(fb, page, fmt("rain"), attribution)
+            log("[station] rain onset posted")
+        stt["raining"] = raining
+
+    # Heat tiers — fire on entering a higher level
+    if not first and heat > stt.get("heat", 0):
+        key = _HEAT_MSG.get(heat)
+        if key and msgs.get(key):
+            _station_post(fb, page, fmt(key), attribution)
+            log(f"[station] heat level {heat} ({key}) posted")
+    stt["heat"] = heat
+
+    # Cold tiers — fire on entering a colder level
+    if not first and cold > stt.get("cold", 0):
+        key = _COLD_MSG.get(cold)
+        if key and msgs.get(key):
+            _station_post(fb, page, fmt(key), attribution)
+            log(f"[station] cold level {cold} ({key}) posted")
+    stt["cold"] = cold
 
 
 # --------------------------------------------------------------------------- #
@@ -954,6 +1189,9 @@ def main() -> int:
 
     # Group E — weather-condition & sunrise/sunset posts
     process_weather_conditions(cfg, fb, state, seed=args.seed)
+
+    # Personal weather station (KALPHILC8) — hourly card + rain + heat/cold alerts
+    process_station(cfg, fb, state, seed=args.seed)
 
     # Extras — NASA APOD, space weather, drought monitor, SPC mesoscale discussions
     process_nasa_apod(cfg, fb, state, seed=args.seed)

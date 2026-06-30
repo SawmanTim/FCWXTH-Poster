@@ -887,7 +887,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "fog/mist",
+   "cond": "clear",
    "temp": 73,
    "sun_date": "2026-06-29"
   },

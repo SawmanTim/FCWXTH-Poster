@@ -1058,11 +1058,11 @@
  "apod_date": "2026-07-01",
  "station": {
   "hilo_date": "2026-07-01",
-  "hi": 95.7,
+  "hi": 95.9,
   "lo": 72.3,
   "raining": false,
   "heat": 2,
   "cold": 0,
-  "card_hour": "2026-07-01T10"
+  "card_hour": "2026-07-01T11"
  }
 }

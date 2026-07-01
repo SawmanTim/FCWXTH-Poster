@@ -988,12 +988,12 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
+   "cond": "cloudy",
    "temp": 97,
    "sun_date": "2026-06-30"
   },
   "Franklin": {
-   "cond": "rain",
+   "cond": "heavy thunderstorms and heavy rain",
    "temp": 82,
    "sun_date": "2026-06-30"
   }

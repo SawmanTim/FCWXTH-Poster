@@ -1254,7 +1254,7 @@
   "hi": 93.9,
   "lo": 68.9,
   "raining": false,
-  "heat": 1,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-07-02T13"
  }

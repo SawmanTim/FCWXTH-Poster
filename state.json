@@ -1087,7 +1087,7 @@
   "us6000t8ec",
   "pt26177001"
  ],
- "apod_fetch_ts": 1782967301.0609794,
+ "apod_fetch_ts": 1782970358.5421422,
  "swpc": [
   "2026-06-05 17:16:54.460|K07W",
   "2026-06-05 18:52:32.167|A30F",
@@ -1208,7 +1208,7 @@
   "https://www.spc.noaa.gov/products/md/md1433.html/20260702",
   "https://www.spc.noaa.gov/products/md/md1427.html/20260701"
  ],
- "apod_date": "2026-07-01",
+ "apod_date": "2026-07-02",
  "station": {
   "hilo_date": "2026-07-02",
   "hi": 69.4,

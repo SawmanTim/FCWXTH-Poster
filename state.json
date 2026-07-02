@@ -1243,11 +1243,11 @@
  "apod_date": "2026-07-02",
  "station": {
   "hilo_date": "2026-07-02",
-  "hi": 93.6,
+  "hi": 93.9,
   "lo": 68.9,
   "raining": false,
   "heat": 2,
   "cold": 0,
-  "card_hour": "2026-07-02T11"
+  "card_hour": "2026-07-02T12"
  }
 }

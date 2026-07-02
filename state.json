@@ -1243,7 +1243,7 @@
   "hi": 91.4,
   "lo": 68.9,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-02T11"
  }

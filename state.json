@@ -1098,12 +1098,12 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 88,
+   "temp": 90,
    "sun_date": "2026-07-01"
   },
   "Franklin": {
-   "cond": "mostly clear",
-   "temp": 90,
+   "cond": "clear",
+   "temp": 88,
    "sun_date": "2026-07-01"
   }
  },

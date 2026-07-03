@@ -1150,8 +1150,8 @@
    "sun_date": "2026-07-02"
   },
   "Franklin": {
-   "cond": "clear",
-   "temp": 73,
+   "cond": "fog/mist",
+   "temp": 72,
    "sun_date": "2026-07-02"
   }
  },

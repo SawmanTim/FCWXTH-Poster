@@ -1156,8 +1156,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
-   "temp": 86,
+   "cond": "partly cloudy",
+   "temp": 88,
    "sun_date": "2026-07-02"
   },
   "Franklin": {
@@ -1345,7 +1345,7 @@
   "hi": 90.1,
   "lo": 72.7,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-03T10"
  }

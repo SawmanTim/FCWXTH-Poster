@@ -1144,7 +1144,7 @@
    "sun_date": "2026-07-02"
   },
   "Franklin": {
-   "cond": "mostly cloudy",
+   "cond": "partly cloudy",
    "temp": 79,
    "sun_date": "2026-07-02"
   }
@@ -1161,7 +1161,7 @@
   "us6000t7zp",
   "us6000t7zc"
  ],
- "apod_fetch_ts": 1783053010.6025813,
+ "apod_fetch_ts": 1783056031.5627582,
  "swpc": [
   "2026-06-08 21:17:43.480|A50F",
   "2026-06-03 14:52:28.343|A50F",

@@ -1340,10 +1340,10 @@
  "apod_date": "2026-07-03",
  "station": {
   "hilo_date": "2026-07-03",
-  "hi": 88.2,
+  "hi": 88.3,
   "lo": 72.7,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-03T09"
  }

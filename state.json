@@ -1245,12 +1245,12 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 77,
+   "temp": 79,
    "sun_date": "2026-07-03"
   },
   "Franklin": {
    "cond": "mostly clear",
-   "temp": 79,
+   "temp": 81,
    "sun_date": "2026-07-03"
   }
  },

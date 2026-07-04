@@ -1236,7 +1236,7 @@
    "sun_date": "2026-07-03"
   },
   "Franklin": {
-   "cond": "clear",
+   "cond": "fog/mist",
    "temp": 72,
    "sun_date": "2026-07-03"
   }

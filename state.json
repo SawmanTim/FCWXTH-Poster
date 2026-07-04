@@ -1444,12 +1444,12 @@
  ],
  "apod_date": "2026-07-04",
  "station": {
-  "hilo_date": "2026-07-03",
-  "hi": 96.6,
-  "lo": 71.2,
+  "hilo_date": "2026-07-04",
+  "hi": 71.4,
+  "lo": 71.4,
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-07-03T23"
+  "card_hour": "2026-07-04T00"
  }
 }

@@ -1286,8 +1286,8 @@
    "sun_date": "2026-07-03"
   },
   "Franklin": {
-   "cond": "clear",
-   "temp": 88,
+   "cond": "thunderstorms",
+   "temp": 84,
    "sun_date": "2026-07-03"
   }
  },

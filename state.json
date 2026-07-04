@@ -1247,8 +1247,8 @@
    "sun_date": "2026-07-03"
   },
   "Franklin": {
-   "cond": "fog/mist",
-   "temp": 70,
+   "cond": "clear",
+   "temp": 72,
    "sun_date": "2026-07-03"
   }
  },
@@ -1460,7 +1460,7 @@
  "apod_date": "2026-07-04",
  "station": {
   "hilo_date": "2026-07-04",
-  "hi": 74.1,
+  "hi": 74.3,
   "lo": 68.5,
   "raining": false,
   "heat": 0,

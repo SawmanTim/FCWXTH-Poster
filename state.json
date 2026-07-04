@@ -1254,7 +1254,7 @@
   "us6000t7zp",
   "us6000t7zc"
  ],
- "apod_fetch_ts": 1783135006.2016735,
+ "apod_fetch_ts": 1783138068.2056415,
  "swpc": [
   "2026-07-01 12:40:57.270|A30F",
   "2026-06-11 20:29:33.070|A30F",
@@ -1441,7 +1441,7 @@
   "https://www.spc.noaa.gov/products/md/md1467.html/20260703",
   "https://www.spc.noaa.gov/products/md/md1409.html/20260701"
  ],
- "apod_date": "2026-07-03",
+ "apod_date": "2026-07-04",
  "station": {
   "hilo_date": "2026-07-03",
   "hi": 96.6,

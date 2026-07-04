@@ -233,6 +233,12 @@ station:
   page: FCWXTH
   hourly_card: true     # post the conditions graphic on the hour, every hour
   rain: true            # post when rain first begins (precipRate > 0)
+  # Heat/cold post ONCE when the reading crosses into a tier, and once more only if
+  # it climbs to a higher tier. A tier won't re-post until the driving reading (air
+  # temp, heat index, OR wind chill) falls this many °F back past its threshold — so
+  # jitter around a line doesn't re-fire the same category two or three times in an
+  # hour, but a real cooldown-and-rebound (e.g. a pop-up storm) counts as a fresh event.
+  hysteresis_f: 3
   attribution: 'Observed at our station "Franklin County Weather with Tim Haithcock" (KALPHILC8), Phil Campbell, AL.'
   # Liability disclaimer appended to every alert post (NOT the hourly card). Makes
   # clear we are REPORTING that conditions are met at our station, not ISSUING alerts.

@@ -772,6 +772,47 @@ def _cold_level(temp, wc) -> int:
     return 0
 
 
+def _heat_level_hyst(temp, hi, prev, buf):
+    """Hysteresis (Schmitt trigger): a tier is ENTERED at the NWS threshold, but
+    only DE-ARMS after the reading falls `buf`°F below that threshold. Brief dips
+    and threshold flapping therefore never re-post the same category — only a real
+    cooldown (out of the tier by more than buf) re-arms it for a genuine new event."""
+    if temp is None:
+        return 0
+    raw = _heat_level(temp, hi)
+    if raw >= prev:
+        return raw
+    # Falling below entry: hold the current tier until we clear entry-minus-buffer.
+    h = hi if hi is not None else temp
+    lvl = 0
+    if temp >= 100 - buf or h >= 105 - buf:
+        lvl = 1
+    if temp >= 105 - buf or h >= 110 - buf:
+        lvl = 2
+    return min(prev, lvl)
+
+
+def _cold_level_hyst(temp, wc, prev, buf):
+    """Cold-side hysteresis: a tier de-arms only after the reading rises `buf`°F
+    above its entry threshold, so a brief warm-up doesn't re-post the same tier."""
+    if temp is None:
+        return 0
+    raw = _cold_level(temp, wc)
+    if raw >= prev:
+        return raw
+    feels = min(temp, wc) if wc is not None else temp
+    lvl = 0
+    if temp < 32 + buf:
+        lvl = 1
+    if temp < 20 + buf:
+        lvl = 2
+    if feels <= 5 + buf:
+        lvl = 3
+    if feels <= -6 + buf:
+        lvl = 4
+    return min(prev, lvl)
+
+
 _HEAT_MSG = {1: "heat_advisory", 2: "heat_warning"}
 _COLD_MSG = {1: "freezing", 2: "dangerous_cold", 3: "cold_advisory", 4: "extreme_cold"}
 
@@ -865,21 +906,27 @@ def process_station(cfg, fb, state, *, seed):
             log("[station] rain onset posted")
         stt["raining"] = raining
 
-    # Heat tiers — fire on entering a higher level
-    if not first and heat > stt.get("heat", 0):
-        key = _HEAT_MSG.get(heat)
-        if key and msgs.get(key):
-            _station_post(fb, page, fmt(key), attribution, disclaimer=disc)
-            log(f"[station] heat level {heat} ({key}) posted")
-    stt["heat"] = heat
+    # Buffer (°F) a reading must clear past a threshold before that tier re-arms.
+    buf = float(sc.get("hysteresis_f", 2.0))
 
-    # Cold tiers — fire on entering a colder level
-    if not first and cold > stt.get("cold", 0):
-        key = _COLD_MSG.get(cold)
+    # Heat tiers — fire only on entering a higher level; hysteresis on de-arm so a
+    # brief dip (pop-up storm, threshold flapping) can't re-post the same category.
+    new_heat = _heat_level_hyst(temp, feels_hot, stt.get("heat", 0), buf)
+    if not first and new_heat > stt.get("heat", 0):
+        key = _HEAT_MSG.get(new_heat)
         if key and msgs.get(key):
             _station_post(fb, page, fmt(key), attribution, disclaimer=disc)
-            log(f"[station] cold level {cold} ({key}) posted")
-    stt["cold"] = cold
+            log(f"[station] heat level {new_heat} ({key}) posted")
+    stt["heat"] = new_heat
+
+    # Cold tiers — same rule on the cold side.
+    new_cold = _cold_level_hyst(temp, feels_cold, stt.get("cold", 0), buf)
+    if not first and new_cold > stt.get("cold", 0):
+        key = _COLD_MSG.get(new_cold)
+        if key and msgs.get(key):
+            _station_post(fb, page, fmt(key), attribution, disclaimer=disc)
+            log(f"[station] cold level {new_cold} ({key}) posted")
+    stt["cold"] = new_cold
 
 
 # --------------------------------------------------------------------------- #

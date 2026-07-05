@@ -1318,7 +1318,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
+   "cond": "thunderstorms",
    "temp": 88,
    "sun_date": "2026-07-04"
   },
@@ -1570,6 +1570,6 @@
   "raining": false,
   "heat": 1,
   "cold": 0,
-  "card_hour": "2026-07-05T14"
+  "card_hour": "2026-07-05T15"
  }
 }

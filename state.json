@@ -1325,7 +1325,7 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 84,
+   "temp": 86,
    "sun_date": "2026-07-04"
   },
   "Franklin": {
@@ -1576,6 +1576,6 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-07-05T16"
+  "card_hour": "2026-07-05T17"
  }
 }

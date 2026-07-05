@@ -1533,10 +1533,10 @@
  "station": {
   "hilo_date": "2026-07-05",
   "hi": 72.1,
-  "lo": 70.3,
+  "lo": 70.2,
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-07-05T04"
+  "card_hour": "2026-07-05T05"
  }
 }

@@ -1312,13 +1312,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
+   "cond": "partly cloudy",
    "temp": 90,
    "sun_date": "2026-07-04"
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 84,
+   "temp": 82,
    "sun_date": "2026-07-04"
   }
  },

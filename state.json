@@ -1528,12 +1528,12 @@
  ],
  "apod_date": "2026-07-05",
  "station": {
-  "hilo_date": "2026-07-04",
-  "hi": 95.9,
-  "lo": 68.5,
+  "hilo_date": "2026-07-05",
+  "hi": 72.1,
+  "lo": 72.1,
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-07-04T23"
+  "card_hour": "2026-07-05T00"
  }
 }

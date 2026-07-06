@@ -1603,7 +1603,7 @@
   "hi": 87.4,
   "lo": 68.7,
   "raining": false,
-  "heat": 1,
+  "heat": 0,
   "cold": 0,
   "card_hour": "2026-07-06T11"
  }

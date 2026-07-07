@@ -1362,7 +1362,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "fog",
+   "cond": "fog/mist",
    "temp": 72,
    "sun_date": "2026-07-06"
   },
@@ -1636,6 +1636,6 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-07-07T02"
+  "card_hour": "2026-07-07T03"
  }
 }

@@ -1632,10 +1632,10 @@
  "station": {
   "hilo_date": "2026-07-07",
   "hi": 72.1,
-  "lo": 71.8,
+  "lo": 71.6,
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-07-07T00"
+  "card_hour": "2026-07-07T01"
  }
 }

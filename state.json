@@ -1405,12 +1405,12 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "heavy thunderstorms and heavy rain",
+   "cond": "rain",
    "temp": 81,
    "sun_date": "2026-07-07"
   },
   "Franklin": {
-   "cond": "mostly cloudy",
+   "cond": "partly cloudy",
    "temp": 88,
    "sun_date": "2026-07-07"
   }

@@ -1404,7 +1404,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "rain",
+   "cond": "heavy thunderstorms and heavy rain",
    "temp": 81,
    "sun_date": "2026-07-07"
   },

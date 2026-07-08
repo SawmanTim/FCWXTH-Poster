@@ -1410,7 +1410,7 @@
   },
   "Franklin": {
    "cond": "mostly cloudy",
-   "temp": 86,
+   "temp": 88,
    "sun_date": "2026-07-07"
   }
  },
@@ -1691,7 +1691,7 @@
   "hi": 92.3,
   "lo": 66.9,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-08T14"
  }

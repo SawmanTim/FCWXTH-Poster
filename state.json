@@ -1409,7 +1409,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "drizzle",
+   "cond": "clear",
    "temp": 73,
    "sun_date": "2026-07-07"
   },

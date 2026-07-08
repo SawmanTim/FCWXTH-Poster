@@ -818,16 +818,17 @@ _COLD_MSG = {1: "freezing", 2: "dangerous_cold", 3: "cold_advisory", 4: "extreme
 
 
 def _card_due(hour, sc):
-    """Conditions card cadence: hourly through the busy daytime window
-    [card_day_start, card_day_end] (inclusive), and only every card_night_every
-    hours overnight — so we don't flood the feed at 2 AM. Event posts (heat/cold/
-    rain/alerts) are unaffected; they still fire whenever they happen."""
-    ds = sc.get("card_day_start", 6)
-    de = sc.get("card_day_end", 21)
-    ne = sc.get("card_night_every", 3)
-    if ds <= hour <= de:
-        return True
-    return ne > 0 and hour % ne == 0
+    """Conditions card cadence: post every `card_every_hours` starting at
+    card_start, up through card_end, and NOT at all outside that window. With the
+    defaults (start 6, end 21, every 3) that's 6a, 9a, noon, 3p, 6p, 9p — no
+    overnight posts. Event posts (heat/cold/rain/alerts) are unaffected; they still
+    fire whenever they happen."""
+    start = sc.get("card_start", 6)
+    end = sc.get("card_end", 21)
+    every = sc.get("card_every_hours", 3)
+    if not (start <= hour <= end):
+        return False
+    return every > 0 and (hour - start) % every == 0
 
 
 def process_station(cfg, fb, state, *, seed):
@@ -906,13 +907,16 @@ def process_station(cfg, fb, state, *, seed):
                     if isinstance(cd.get(k), (int, float)):
                         cd[k] = f"{cd[k]:.2f}"
                 png = wx_card.render_conditions_card(cd)
-                # Caption = attribution (+ WU station link) + footer; the card image
-                # itself carries the "As of <time>" stamp, so no separate time line.
+                # Caption = card_caption template (leads with the observation time)
+                # + footer. Placeholders: {time} {tz} {location} {url}.
                 url = sc.get("station_url", "")
-                cap = (f"{attribution}  Visit our Weather Station anytime at {url}"
-                       if url else attribution)
+                cap = (sc.get("card_caption", attribution)
+                       .replace("{time}", _clock(now))
+                       .replace("{tz}", now.strftime("%Z"))
+                       .replace("{location}", loc)
+                       .replace("{url}", url))
                 _station_post(fb, page, "", cap, image_bytes=png)
-                log(f"[station] hourly card posted ({hour_key})")
+                log(f"[station] conditions card posted ({hour_key})")
             except Exception as exc:  # noqa: BLE001 — never let the card break the loop
                 log(f"  [station] card render/post failed: {exc}")
 

@@ -817,6 +817,19 @@ _HEAT_MSG = {1: "heat_advisory", 2: "heat_warning"}
 _COLD_MSG = {1: "freezing", 2: "dangerous_cold", 3: "cold_advisory", 4: "extreme_cold"}
 
 
+def _card_due(hour, sc):
+    """Conditions card cadence: hourly through the busy daytime window
+    [card_day_start, card_day_end] (inclusive), and only every card_night_every
+    hours overnight — so we don't flood the feed at 2 AM. Event posts (heat/cold/
+    rain/alerts) are unaffected; they still fire whenever they happen."""
+    ds = sc.get("card_day_start", 6)
+    de = sc.get("card_day_end", 21)
+    ne = sc.get("card_night_every", 3)
+    if ds <= hour <= de:
+        return True
+    return ne > 0 and hour % ne == 0
+
+
 def process_station(cfg, fb, state, *, seed):
     sc = cfg.get("station")
     if not sc:
@@ -873,8 +886,9 @@ def process_station(cfg, fb, state, *, seed):
     # so an in-progress heat/cold event isn't back-posted. The card still posts.
     first = "heat" not in stt
 
-    # Hourly conditions card — on the hour (first loop cycle in the first 2 min).
-    if sc.get("hourly_card") and now.minute < 2:
+    # Conditions card — on the hour (first loop cycle in the first 2 min), subject
+    # to the day/night cadence in _card_due (hourly 6a-9p, every 3h overnight).
+    if sc.get("hourly_card") and now.minute < 2 and _card_due(now.hour, sc):
         hour_key = now.strftime("%Y-%m-%dT%H")
         if stt.get("card_hour") != hour_key:
             stt["card_hour"] = hour_key
@@ -892,9 +906,12 @@ def process_station(cfg, fb, state, *, seed):
                     if isinstance(cd.get(k), (int, float)):
                         cd[k] = f"{cd[k]:.2f}"
                 png = wx_card.render_conditions_card(cd)
-                cap = (f"Current conditions from our weather station in {loc} — "
-                       f"{_clock(now)} {now.strftime('%Z')}.")
-                _station_post(fb, page, cap, attribution, image_bytes=png)
+                # Caption = attribution (+ WU station link) + footer; the card image
+                # itself carries the "As of <time>" stamp, so no separate time line.
+                url = sc.get("station_url", "")
+                cap = (f"{attribution}  Visit our Weather Station anytime at {url}"
+                       if url else attribution)
+                _station_post(fb, page, "", cap, image_bytes=png)
                 log(f"[station] hourly card posted ({hour_key})")
             except Exception as exc:  # noqa: BLE001 — never let the card break the loop
                 log(f"  [station] card render/post failed: {exc}")

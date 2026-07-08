@@ -231,8 +231,16 @@ station:
   location: "Franklin County, Alabama"
   tz: "America/Chicago"
   page: FCWXTH
-  hourly_card: true     # post the conditions graphic on the hour, every hour
+  hourly_card: true     # post the conditions graphic on the hour (see cadence below)
+  # Card cadence: hourly through the daytime window (inclusive), then only every
+  # card_night_every hours overnight. Default = hourly 6 AM–9 PM, plus midnight & 3 AM.
+  # Event posts (heat/cold/rain/alerts) ignore this — they fire whenever they happen.
+  card_day_start: 6
+  card_day_end: 21
+  card_night_every: 3
   rain: true            # post when rain first begins (precipRate > 0)
+  # Public WU dashboard for this station — linked in the conditions-card caption.
+  station_url: "https://www.wunderground.com/dashboard/pws/KALPHILC8"
   # Heat/cold post ONCE when the reading crosses into a tier, and once more only if
   # it climbs to a higher tier. A tier won't re-post until the driving reading (air
   # temp, heat index, OR wind chill) falls this many °F back past its threshold — so

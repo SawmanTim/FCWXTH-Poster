@@ -1459,7 +1459,7 @@
   "2026-06-05 18:52:32.167|A30F",
   "2026-07-04 05:01:32.633|K07W"
  ],
- "usdm_week": "2026-W27",
+ "usdm_week": "2026-W28",
  "spc_md": [
   "https://www.spc.noaa.gov/products/md/md1385.html/20260629",
   "https://www.spc.noaa.gov/products/md/md1375.html/20260629",
@@ -1715,9 +1715,9 @@
  ],
  "apod_date": "2026-07-09",
  "station": {
-  "hilo_date": "2026-07-08",
-  "hi": 92.3,
-  "lo": 66.9,
+  "hilo_date": "2026-07-09",
+  "hi": 71.2,
+  "lo": 71.2,
   "raining": false,
   "heat": 0,
   "cold": 0,

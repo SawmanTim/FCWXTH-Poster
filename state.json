@@ -1727,11 +1727,11 @@
  "apod_date": "2026-07-09",
  "station": {
   "hilo_date": "2026-07-09",
-  "hi": 83.3,
+  "hi": 83.7,
   "lo": 70.5,
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-07-09T06"
+  "card_hour": "2026-07-09T09"
  }
 }

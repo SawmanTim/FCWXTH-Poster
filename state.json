@@ -1461,13 +1461,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "partly cloudy",
-   "temp": 91,
+   "cond": "clear",
+   "temp": 93,
    "sun_date": "2026-07-08"
   },
   "Franklin": {
    "cond": "mostly cloudy",
-   "temp": 86,
+   "temp": 87,
    "sun_date": "2026-07-08"
   }
  },
@@ -1483,7 +1483,7 @@
   "us6000t7zp",
   "us6000t7zc"
  ],
- "apod_fetch_ts": 1783632274.8707182,
+ "apod_fetch_ts": 1783635279.5005999,
  "swpc": [
   "2026-06-08 21:17:43.480|A50F",
   "2026-06-05 17:16:54.460|K07W",

@@ -1432,7 +1432,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
+   "cond": "partly cloudy",
    "temp": 79,
    "sun_date": "2026-07-08"
   },
@@ -1729,7 +1729,7 @@
  "apod_date": "2026-07-09",
  "station": {
   "hilo_date": "2026-07-09",
-  "hi": 84.2,
+  "hi": 84.6,
   "lo": 70.5,
   "raining": false,
   "heat": 0,

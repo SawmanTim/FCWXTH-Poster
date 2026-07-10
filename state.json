@@ -1476,7 +1476,7 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 73,
+   "temp": 75,
    "sun_date": "2026-07-09"
   },
   "Franklin": {
@@ -1793,7 +1793,7 @@
  "apod_date": "2026-07-10",
  "station": {
   "hilo_date": "2026-07-10",
-  "hi": 74.8,
+  "hi": 75.0,
   "lo": 70.0,
   "raining": false,
   "heat": 0,

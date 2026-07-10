@@ -1790,7 +1790,7 @@
  "station": {
   "hilo_date": "2026-07-10",
   "hi": 71.8,
-  "lo": 70.2,
+  "lo": 70.0,
   "raining": false,
   "heat": 0,
   "cold": 0,

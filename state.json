@@ -1501,7 +1501,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly clear",
+   "cond": "partly cloudy",
    "temp": 90,
    "sun_date": "2026-07-10"
   },
@@ -1836,11 +1836,11 @@
  "apod_date": "2026-07-11",
  "station": {
   "hilo_date": "2026-07-11",
-  "hi": 91.8,
+  "hi": 92.3,
   "lo": 72.1,
   "raining": false,
   "heat": 2,
   "cold": 0,
-  "card_hour": "2026-07-11T09"
+  "card_hour": "2026-07-11T12"
  }
 }

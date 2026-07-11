@@ -1832,10 +1832,10 @@
  "apod_date": "2026-07-11",
  "station": {
   "hilo_date": "2026-07-11",
-  "hi": 86.4,
+  "hi": 86.9,
   "lo": 72.1,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-11T09"
  }

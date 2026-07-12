@@ -1523,13 +1523,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "partly cloudy",
+   "cond": "mostly clear",
    "temp": 73,
    "sun_date": "2026-07-11",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly clear",
+   "cond": "",
    "temp": 90,
    "sun_date": "2026-07-11",
    "station_id": "K1M4"

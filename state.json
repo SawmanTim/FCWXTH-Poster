@@ -866,7 +866,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607010505",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606291149",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606280501",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606261135"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606261135",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607120514"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1522,13 +1523,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
+   "cond": "partly cloudy",
    "temp": 73,
    "sun_date": "2026-07-11",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "",
+   "cond": "light rain",
    "temp": 90,
    "sun_date": "2026-07-11",
    "station_id": "K1M4"

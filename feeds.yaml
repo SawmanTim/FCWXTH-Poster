@@ -18,8 +18,9 @@ pages:
   PVFD:   "254298421099827"   # Paden Fire & Rescue
 
 defaults:
-  poll_interval_minutes: 10
   attach_image: true          # IFTTT could NOT do this; Graph API can
+  # (Poll frequency is NOT set here — it's the 60-second loop in
+  #  .github/workflows/run.yml.)
 
 # ---------------------------------------------------------------------
 # GROUP A — Agency Facebook pages reposted via RSS.app  (the "scrape" feeds)
@@ -126,8 +127,8 @@ iem_office_feeds_disabled:
 #   All -> FCWXTH ; Tishomingo also -> PVFD
 # ---------------------------------------------------------------------
 county_alert_feeds:
-  consolidate: true   # NEW: collapse same event across counties into one post
-  template: "***{county}, {state}***\n***NWS ALERT for your LOCATION***\n\n{title} {content}"
+  # Consolidation is built into post.py (build_alert_message): one alert that
+  # covers many counties always becomes ONE post listing all of them.
   counties:
     - {county: "Tishomingo", state: "Mississippi", zone: "MSC141", pages: [FCWXTH, PVFD]}
     - {county: "Alcorn",     state: "Mississippi", zone: "MSC003", pages: [FCWXTH]}
@@ -221,13 +222,13 @@ weather_condition_posts:
 # Phil Campbell, Franklin Co. AL. Source for: the hourly conditions graphic, rain
 # onset, the 32°/20° cold milestones, and the NWS-Huntsville heat/cold reinforcing
 # alerts. All posts -> FCWXTH and attributed to the station. Needs secret WU_API_KEY.
-# HUN criteria: Heat Advisory = HI 105-109 or temp 100-104; Excessive Heat Warning =
-# HI >=110 or temp >=105; Cold Weather Advisory = temp/feels +5F or below; Extreme
-# Cold Warning = temp/feels -6F or below. (32/20 are local frost/pipe milestones.)
+# HUN criteria: Heat Advisory = HI 105-109 or temp 100-104; Extreme Heat Warning
+# (renamed from "Excessive" in the NWS national rename, Mar 2025) = HI >=110 or
+# temp >=105; Cold Weather Advisory = temp/feels +5F or below; Extreme Cold
+# Warning = temp/feels -6F or below. (32/20 are local frost/pipe milestones.)
 # ---------------------------------------------------------------------
 station:
   station_id: KALPHILC8
-  name: "Franklin County Weather with Tim Haithcock"
   location: "Franklin County, Alabama"
   tz: "America/Chicago"
   page: FCWXTH

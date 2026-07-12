@@ -2,19 +2,32 @@ name: FCWXTH Poster
 
 # GitHub's scheduler is best-effort and gets throttled to ~hourly, which is far
 # too slow for warnings. Work around it: each run is ONE long job that polls
-# every 60s for ~5.9 hours. The schedule just (re)starts the loop; the loop does
-# the real ~60-second polling. Free on a public repo (unlimited Actions minutes).
+# every 60s for ~5.9 hours. The schedule keeps a restart QUEUED (it never kills
+# the running job — see concurrency below); pushing a code/config change to
+# main restarts the loop immediately so changes go live without waiting.
 on:
   schedule:
-    - cron: "*/30 * * * *"   # best-effort: restart the loop if it isn't running
+    - cron: "*/30 * * * *"   # best-effort: keep a restart queued
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:                    # state.json commits use [skip ci] and don't match
+      - post.py
+      - wx_card.py
+      - feeds.yaml
+      - requirements.txt
+      - .github/workflows/run.yml
 
 permissions:
   contents: write
 
 concurrency:
   group: fcwxth-poster
-  cancel-in-progress: true   # a fresh trigger restarts the loop cleanly
+  # Scheduled runs QUEUE behind the current job instead of cancelling it —
+  # a mid-flight kill between "posted to Facebook" and "pushed state.json"
+  # would repost those items on the next run. Pushes and manual dispatches DO
+  # cancel (an intentional restart to pick up new code right away).
+  cancel-in-progress: ${{ github.event_name != 'schedule' }}
 
 jobs:
   poll:
@@ -39,14 +52,25 @@ jobs:
         run: |
           git config user.name  "fcwxth-poster-bot"
           git config user.email "actions@users.noreply.github.com"
+          had_failures=0
           end=$((SECONDS + 21240))      # ~5.9 hours, then let the schedule restart
           while [ $SECONDS -lt $end ]; do
-            python post.py || true
+            if ! python post.py; then
+              echo "::warning::post.py reported failures this cycle (expired token? API down?)"
+              had_failures=1
+            fi
             if ! git diff --quiet -- state.json; then
               git add state.json
               git commit -m "update state [skip ci]" >/dev/null 2>&1 || true
               git pull --rebase --autostash -q origin main >/dev/null 2>&1 || true
-              git push -q origin main >/dev/null 2>&1 || true
+              git push -q origin main >/dev/null 2>&1 || \
+                echo "::warning::git push failed — state not saved to GitHub this cycle"
             fi
             sleep 60
           done
+          # Fail the job at the end of the window so GitHub sends a failure
+          # notification — otherwise an expired token could go unnoticed for weeks.
+          if [ "$had_failures" = "1" ]; then
+            echo "::error::One or more cycles had posting failures — check the warnings above and the FB tokens."
+            exit 1
+          fi

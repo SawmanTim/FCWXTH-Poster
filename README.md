@@ -6,20 +6,26 @@ Self-hosted replacement for the IFTTT "RSS → Facebook Page" applets that feed
 **RSS.app is still used** as the source for the agency-page feeds — this project only
 replaces IFTTT (the part that posts to Facebook).
 
-## What it does (Phase 1 — 42 of the 54 applets)
+## What it does (replaced all 54 applets)
 
-- **A.** Reposts 12 RSS.app agency feeds (NWS offices, NASA, USGS, SPC, Ready.gov, etc.)
-- **B.** NHC Atlantic tropical cyclones (official feed)
-- **C.** 4 IEM office feeds, keyword-filtered by your county names
-- **D.** 25 per-county NWS watch/warning feeds — **consolidated**: one alert that covers
+- **A.** Reposts 10 RSS.app agency feeds (NWS offices, SPC, NASA, Ready.gov, etc.)
+- **B.** NHC Atlantic tropical cyclones (official feed) + USGS significant earthquakes
+  with ShakeMap images
+- **C.** IEM office feeds — *disabled* (duplicated Group D; rename the key in
+  `feeds.yaml` to re-enable)
+- **D.** 27 per-county NWS watch/warning zones — **consolidated**: one alert that covers
   many counties becomes a **single post** listing all of them (fixes the 27-message flood)
+- **E.** Weather-condition and sunset posts (NWS observations + astral sun times)
+- **G.** Community Service Alerts — state-wide non-weather emergencies (AMBER, Blue
+  Alert, HazMat, 911 outages, …) for AL/TN/MS
+- **Station** — personal WU station KALPHILC8: scheduled conditions graphic
+  (`wx_card.py`), rain onset, and tiered heat/cold posts with hysteresis
+- **Extras** — NASA APOD, SWPC space weather, weekly Drought Monitor, SPC
+  mesoscale discussions
 
 Two things IFTTT couldn't do, now fixed:
 - **One post per event** instead of one per county.
 - **Photos/maps attached** to posts (IFTTT's status-message action was text-only).
-
-Phase 2 (later): the weather-condition/sunrise posts, the MagicLight bulbs, and the push
-notification. See `feeds.yaml` Groups E & F.
 
 ## Files
 | File | Purpose |
@@ -27,7 +33,7 @@ notification. See `feeds.yaml` Groups E & F.
 | `feeds.yaml` | All feeds, templates, target pages (edit this to change behavior) |
 | `post.py` | The poster |
 | `state.json` | Auto-created; remembers what was already posted |
-| `.github/workflows/run.yml` | Runs every ~10 min on GitHub Actions (free) |
+| `.github/workflows/run.yml` | GitHub Actions: ~60-second polling loop, restarted by cron (free) |
 
 ---
 
@@ -72,18 +78,23 @@ python post.py --dry-run   # shows what it WOULD post
 ### 4. Go live on GitHub Actions
 
 1. Create a new GitHub repo and push this folder.
-2. Add the two secrets (step 2).
-3. The workflow runs automatically every ~10 min; it commits `state.json` back so it
-   remembers across runs. Trigger a manual run anytime from the **Actions** tab.
+2. Add the secrets (step 2) — plus `NASA_API_KEY` and `WU_API_KEY`.
+3. The workflow polls every ~60 seconds (one long job, restarted by the cron); it
+   commits `state.json` back whenever it changes so it remembers across runs.
+   Pushing a code/config change to `main` restarts the loop immediately.
+   Trigger a manual run anytime from the **Actions** tab.
 
 ---
 
 ## Changing things later
-- Add/remove a feed or change wording → edit `feeds.yaml`.
-- Change post frequency → edit the `cron` in `.github/workflows/run.yml`.
+- Add/remove a feed or change wording → edit `feeds.yaml` (goes live on push).
+- Change post frequency → edit the `sleep` in `.github/workflows/run.yml`.
 - Turn off image attachment → set `defaults.attach_image: false` in `feeds.yaml`.
 
 ## Notes / honest caveats
-- GitHub's scheduler fires ~every 5 min at best and can lag a few minutes under load.
-- `state.json` is committed to the repo each run; that's normal and keeps it free.
+- GitHub's cron is best-effort (can lag to ~hourly); the long polling job rides
+  through the gaps, so effective polling stays ~60s.
+- `state.json` is committed back whenever it changes; that's normal and keeps it free.
 - County consolidation reposts an alert if NWS issues an **updated** version (new alert id).
+- If any cycle fails to post (e.g. an expired Facebook token), the job ends **failed**
+  so GitHub emails you — check the run's warnings, refresh the token, done.

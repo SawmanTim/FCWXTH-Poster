@@ -2,11 +2,15 @@
 """
 FCWXTH Poster — self-hosted replacement for the IFTTT "RSS -> Facebook Page" applets.
 
-Phase 1 covers Groups A-D from feeds.yaml:
+Sources (all configured in feeds.yaml):
   A. RSS.app agency reposts
-  B. Official direct feeds (NHC)
-  C. IEM office feeds (keyword-filtered by county)
+  B. Official direct feeds (NHC) + USGS significant earthquakes
+  C. IEM office feeds (currently DISABLED in feeds.yaml)
   D. Per-county NWS watch/warning alerts  -> CONSOLIDATED into one post per event
+  E. Weather-condition & sunset posts (NWS obs + astral)
+  G. Community Service Alerts (state-wide non-weather emergencies)
+  Station: personal WU station KALPHILC8 — conditions card, rain, heat/cold tiers
+  Extras: NASA APOD, SWPC space weather, Drought Monitor, SPC mesoscale discussions
 
 Improvements over IFTTT:
   * One post per alert event listing every affected county (no more 27-message floods)
@@ -20,6 +24,7 @@ Run modes:
 
 Facebook tokens come from env vars, one long-lived Page token per page:
   FB_TOKEN_FCWXTH , FB_TOKEN_PVFD   (named FB_TOKEN_<PAGEKEY> from feeds.yaml `pages`)
+Other keys (also env vars / GitHub secrets): NASA_API_KEY, WU_API_KEY.
 """
 
 from __future__ import annotations
@@ -161,6 +166,15 @@ def entry_uid(entry) -> str:
             or getattr(entry, "title", "")).strip()
 
 
+def append_seen(state: dict, key: str, new_ids: list) -> None:
+    """Record newly-seen IDs by APPENDING them, keeping the list oldest-first.
+    Order matters: save_state trims each list to its last N entries, so an
+    ordered list guarantees the trim drops the OLDEST ids. (The old
+    list(set.union(...)) approach shuffled the list, so the trim could evict a
+    recent, still-active id — and that item would be re-posted as 'new'.)"""
+    state[key] = state.get(key, []) + new_ids
+
+
 # --------------------------------------------------------------------------- #
 # Facebook Graph API
 # --------------------------------------------------------------------------- #
@@ -169,6 +183,8 @@ class Facebook:
         self.page_ids = page_ids                 # {"FCWXTH": "4237...", ...}
         self.dry_run = dry_run
         self.tokens = {k: os.environ.get(f"FB_TOKEN_{k}") for k in page_ids}
+        self.failures = 0   # posts that were LOST (bad/missing token, FB error);
+                            # main() exits non-zero so the workflow can alert
 
     def _token(self, page_key: str) -> str | None:
         return self.tokens.get(page_key)
@@ -188,6 +204,11 @@ class Facebook:
                     "significancev:W::etn:0037::opt:single::_r:t::dpi:100.png")
         try:
             im = requests.get(test_img, timeout=30, headers={"User-Agent": USER_AGENT})
+            if im.status_code != 200 or \
+                    not im.headers.get("content-type", "").startswith("image"):
+                log(f"  [{page_key}] test image fetch failed (HTTP {im.status_code}) "
+                    "— can't run the photo test")
+                return False
             r = requests.post(
                 f"https://graph.facebook.com/{GRAPH_VERSION}/{page_id}/photos",
                 data={"caption": msg, "published": "false", "access_token": token},
@@ -210,6 +231,8 @@ class Facebook:
             tag = "DRY-RUN" if self.dry_run else "NO-TOKEN(skipped)"
             log(f"  [{tag}] -> {page_key}: {message[:90]!r} "
                 f"{'(+image)' if image_url else ''}")
+            if not self.dry_run:
+                self.failures += 1   # missing token = post silently dropped
             return self.dry_run  # in dry-run we count it as 'handled'
         try:
             if image_url:
@@ -246,11 +269,13 @@ class Facebook:
                 if image_url:
                     log(f"  photo post failed ({r.status_code}); retrying as text")
                     return self.post(page_key, message, None)
+                self.failures += 1
                 log(f"  ERROR posting to {page_key}: {r.status_code} {r.text[:200]}")
                 return False
             log(f"  posted to {page_key} (id={r.json().get('id', '?')})")
             return True
         except requests.RequestException as exc:
+            self.failures += 1
             log(f"  ERROR posting to {page_key}: {exc}")
             return False
 
@@ -262,6 +287,8 @@ class Facebook:
         if self.dry_run or not token:
             tag = "DRY-RUN" if self.dry_run else "NO-TOKEN(skipped)"
             log(f"  [{tag}] -> {page_key}: {message[:80]!r} (+generated image)")
+            if not self.dry_run:
+                self.failures += 1
             return self.dry_run
         try:
             r = requests.post(
@@ -270,11 +297,13 @@ class Facebook:
                 files={"source": (filename, image_bytes, "image/png")},
                 timeout=60)
             if r.status_code >= 400:
+                self.failures += 1
                 log(f"  ERROR posting image to {page_key}: {r.status_code} {r.text[:200]}")
                 return False
             log(f"  posted image to {page_key} (id={r.json().get('id', '?')})")
             return True
         except requests.RequestException as exc:
+            self.failures += 1
             log(f"  ERROR posting image to {page_key}: {exc}")
             return False
 
@@ -340,7 +369,7 @@ def process_simple_feed(item, fb, state, *, seed, attach_image,
             fb.post(pk, msg, img)
 
     if new_ids:
-        state[key] = list(seen.union(new_ids))
+        append_seen(state, key, new_ids)
 
 
 def zone_from_url(u: str) -> str:
@@ -492,7 +521,7 @@ def process_county_alerts(cfg, fb, state, *, seed):
             fb.post(pk, build_alert_message(props, county_names, pk), img)
 
     if new_ids:
-        state[key] = list(seen.union(new_ids))
+        append_seen(state, key, new_ids)
 
 
 # --------------------------------------------------------------------------- #
@@ -559,27 +588,32 @@ def process_community_alerts(cfg, fb, state, *, seed):
             fb.post(pk, build_community_message(props, pk), None)
 
     if new_ids:
-        state[key] = list(seen.union(new_ids))
+        append_seen(state, key, new_ids)
 
 
 # --------------------------------------------------------------------------- #
 # Group E — weather-condition & sunrise/sunset posts (event-triggered)
 # --------------------------------------------------------------------------- #
-def fetch_current_obs(lat, lon) -> dict | None:
-    """Latest temperature (F) + condition text from the nearest NWS station."""
+def fetch_current_obs(lat, lon, station_id: str | None = None) -> dict | None:
+    """Latest temperature (F) + condition text from the nearest NWS station.
+    Pass a cached station_id to skip the two nearest-station lookup calls —
+    the answer never changes, and api.weather.gov asks clients to cache it."""
     ua = {"User-Agent": USER_AGENT, "Accept": "application/geo+json"}
     try:
-        pts = requests.get(f"https://api.weather.gov/points/{lat},{lon}",
-                           headers=ua, timeout=30).json()
-        st_url = pts["properties"]["observationStations"]
-        sid = requests.get(st_url, headers=ua, timeout=30).json() \
-            ["features"][0]["properties"]["stationIdentifier"]
+        sid = station_id
+        if not sid:
+            pts = requests.get(f"https://api.weather.gov/points/{lat},{lon}",
+                               headers=ua, timeout=30).json()
+            st_url = pts["properties"]["observationStations"]
+            sid = requests.get(st_url, headers=ua, timeout=30).json() \
+                ["features"][0]["properties"]["stationIdentifier"]
         o = requests.get(f"https://api.weather.gov/stations/{sid}/observations/latest",
                          headers=ua, timeout=30).json()["properties"]
         c = (o.get("temperature") or {}).get("value")
         return {"tempF": round(c * 9 / 5 + 32) if c is not None else None,
                 "cond": o.get("textDescription") or "",
-                "time": o.get("timestamp") or ""}
+                "time": o.get("timestamp") or "",
+                "station": sid}
     except (requests.RequestException, KeyError, ValueError, IndexError) as exc:
         log(f"  obs fetch failed ({lat},{lon}): {exc}")
         return None
@@ -655,10 +689,22 @@ def process_weather_conditions(cfg, fb, state, *, seed):
     if not posts:
         return
     wx = state.setdefault("wx", {})
-    obs = {n: fetch_current_obs(l["lat"], l["lon"]) for n, l in locs.items()}
+    obs = {}
+    for name, l in locs.items():
+        st = wx.setdefault(name, {})
+        o = fetch_current_obs(l["lat"], l["lon"], station_id=st.get("station_id"))
+        if o:
+            st["station_id"] = o["station"]   # cache — skips 2 of 3 API calls next cycle
+        elif st.get("station_id"):
+            st.pop("station_id", None)        # cached station may have died; re-resolve
+        obs[name] = o
 
     for p in posts:
-        loc = locs[p["loc"]]
+        loc = locs.get(p["loc"])
+        if not loc:
+            log(f"[wx] unknown location {p['loc']!r} in weather_condition_posts "
+                "— check feeds.yaml")
+            continue
         tz = loc.get("tz", "America/Chicago")
         page = loc["page"]
         st = wx.setdefault(p["loc"], {})
@@ -692,11 +738,15 @@ def process_weather_conditions(cfg, fb, state, *, seed):
             s = sun(LocationInfo(latitude=loc["lat"], longitude=loc["lon"]).observer,
                     date=today, tzinfo=ZoneInfo(tz))
             if now >= s["sunset"] and st.get("sun_date") != today.isoformat():
-                fire = True
                 st["sun_date"] = today.isoformat()
-                s2 = sun(LocationInfo(latitude=loc["lat"], longitude=loc["lon"]).observer,
-                         date=today + timedelta(days=1), tzinfo=ZoneInfo(tz))
-                fields = {"sunset": _clock(s["sunset"]), "sunrise": _clock(s2["sunrise"])}
+                # Mark the day done either way, but only POST if we're within a
+                # couple hours of sunset — if the runner was down all evening, a
+                # late-night "the sun will set this evening" post reads wrong.
+                if now - s["sunset"] <= timedelta(hours=2):
+                    fire = True
+                    s2 = sun(LocationInfo(latitude=loc["lat"], longitude=loc["lon"]).observer,
+                             date=today + timedelta(days=1), tzinfo=ZoneInfo(tz))
+                    fields = {"sunset": _clock(s["sunset"]), "sunrise": _clock(s2["sunrise"])}
 
         if fire and not seed:
             msg = p["template"]
@@ -712,8 +762,9 @@ def process_weather_conditions(cfg, fb, state, *, seed):
     for name, o in obs.items():
         if o:
             st = wx.setdefault(name, {})
-            if o["cond"]:
-                st["cond"] = o["cond"].lower()
+            # An empty condition CLEARS the baseline — otherwise a stale
+            # "light rain" baseline would suppress the next real onset post.
+            st["cond"] = (o["cond"] or "").lower()
             if o["tempF"] is not None:
                 st["temp"] = o["tempF"]
     if seed:   # don't let the first live run dump a backlog sunset
@@ -723,8 +774,8 @@ def process_weather_conditions(cfg, fb, state, *, seed):
 
 
 # --------------------------------------------------------------------------- #
-# Personal weather station (Weather Underground PWS) — hourly card, rain,
-# and NWS-Huntsville heat/cold reinforcing alerts. Source: feeds.yaml `station`.
+# Personal weather station (Weather Underground PWS) — scheduled conditions
+# card, rain, and NWS-Huntsville heat/cold reinforcing alerts. feeds.yaml `station`.
 # --------------------------------------------------------------------------- #
 def _num(v) -> str:
     if v is None:
@@ -734,17 +785,17 @@ def _num(v) -> str:
     return str(v)
 
 
-def _station_post(fb, page, body, attribution, image_bytes=None, disclaimer="") -> None:
+def _station_post(fb, page, body, attribution, image_bytes=None, disclaimer="") -> bool:
     footer = FOOTERS.get(page, FOOTERS["FCWXTH"])
     msg = "\n\n".join(p for p in (body, attribution, disclaimer, footer) if p)
     if image_bytes is not None:
-        fb.post_bytes(page, msg, image_bytes)
-    else:
-        fb.post(page, msg, None)
+        return fb.post_bytes(page, msg, image_bytes)
+    return fb.post(page, msg, None)
 
 
 def _heat_level(temp, hi) -> int:
-    """0 none, 1 Heat Advisory, 2 Excessive Heat Warning (NWS Huntsville)."""
+    """0 none, 1 Heat Advisory, 2 Extreme Heat Warning (NWS Huntsville criteria;
+    'Extreme' was renamed from 'Excessive' in the NWS national rename, Mar 2025)."""
     if temp is None:
         return 0
     h = hi if hi is not None else temp
@@ -756,8 +807,10 @@ def _heat_level(temp, hi) -> int:
 
 
 def _cold_level(temp, wc) -> int:
-    """0 none, 1 Freezing(32), 2 Dangerous Cold(20), 3 Cold Weather Advisory(+5),
-    4 Extreme Cold Warning(-6). +5/-6 use apparent temp; 32/20 use air temp."""
+    """0 none, 1 Freezing(<=32), 2 Dangerous Cold(<=20), 3 Cold Weather
+    Advisory(<=+5), 4 Extreme Cold Warning(<=-6). +5/-6 use apparent temp;
+    32/20 use air temp. All boundaries INCLUSIVE — the post copy says
+    "at 20° and below", so hitting exactly 20.0 must fire."""
     if temp is None:
         return 0
     feels = min(temp, wc) if wc is not None else temp
@@ -765,9 +818,9 @@ def _cold_level(temp, wc) -> int:
         return 4
     if feels <= 5:
         return 3
-    if temp < 20:
+    if temp <= 20:
         return 2
-    if temp < 32:
+    if temp <= 32:
         return 1
     return 0
 
@@ -778,7 +831,8 @@ def _heat_level_hyst(temp, hi, prev, buf):
     and threshold flapping therefore never re-post the same category — only a real
     cooldown (out of the tier by more than buf) re-arms it for a genuine new event."""
     if temp is None:
-        return 0
+        return prev   # "no data" is NOT "all clear" — a blank sample must never
+                      # de-arm a tier, or the next good reading re-posts the alert
     raw = _heat_level(temp, hi)
     if raw >= prev:
         return raw
@@ -796,15 +850,15 @@ def _cold_level_hyst(temp, wc, prev, buf):
     """Cold-side hysteresis: a tier de-arms only after the reading rises `buf`°F
     above its entry threshold, so a brief warm-up doesn't re-post the same tier."""
     if temp is None:
-        return 0
+        return prev   # same rule as the heat side: no data leaves the latch alone
     raw = _cold_level(temp, wc)
     if raw >= prev:
         return raw
     feels = min(temp, wc) if wc is not None else temp
     lvl = 0
-    if temp < 32 + buf:
+    if temp <= 32 + buf:
         lvl = 1
-    if temp < 20 + buf:
+    if temp <= 20 + buf:
         lvl = 2
     if feels <= 5 + buf:
         lvl = 3
@@ -872,11 +926,14 @@ def process_station(cfg, fb, state, *, seed):
     # survives runner restarts because state.json is committed. Resets at local midnight.
     today = now.strftime("%Y-%m-%d")
     if temp is not None:
+        # Whole degrees only: the card displays rounded values anyway, and this
+        # stops state.json (which gets committed) changing on every 0.1° wiggle.
+        t = round(temp)
         if stt.get("hilo_date") != today:
-            stt.update({"hilo_date": today, "hi": temp, "lo": temp})
+            stt.update({"hilo_date": today, "hi": t, "lo": t})
         else:
-            stt["hi"] = max(stt.get("hi", temp), temp)
-            stt["lo"] = min(stt.get("lo", temp), temp)
+            stt["hi"] = max(stt.get("hi", t), t)
+            stt["lo"] = min(stt.get("lo", t), t)
 
     if seed:
         stt.update({"heat": heat, "cold": cold, "raining": raining,
@@ -887,12 +944,12 @@ def process_station(cfg, fb, state, *, seed):
     # so an in-progress heat/cold event isn't back-posted. The card still posts.
     first = "heat" not in stt
 
-    # Conditions card — on the hour (first loop cycle in the first 2 min), subject
-    # to the day/night cadence in _card_due (hourly 6a-9p, every 3h overnight).
-    if sc.get("hourly_card") and now.minute < 2 and _card_due(now.hour, sc):
+    # Conditions card — near the top of the hour (5-min window, so one slow poll
+    # cycle can't miss the slot), on the cadence set by _card_due (every
+    # card_every_hours from card_start through card_end; nothing outside that).
+    if sc.get("hourly_card") and now.minute < 5 and _card_due(now.hour, sc):
         hour_key = now.strftime("%Y-%m-%dT%H")
         if stt.get("card_hour") != hour_key:
-            stt["card_hour"] = hour_key
             try:
                 import wx_card
                 cd = dict(data)
@@ -915,13 +972,18 @@ def process_station(cfg, fb, state, *, seed):
                        .replace("{tz}", now.strftime("%Z"))
                        .replace("{location}", loc)
                        .replace("{url}", url))
-                _station_post(fb, page, "", cap, image_bytes=png)
-                log(f"[station] conditions card posted ({hour_key})")
+                if _station_post(fb, page, "", cap, image_bytes=png):
+                    # Mark done only on SUCCESS — a failed render/post retries on
+                    # the next cycle while we're still inside the 5-min window.
+                    stt["card_hour"] = hour_key
+                    log(f"[station] conditions card posted ({hour_key})")
             except Exception as exc:  # noqa: BLE001 — never let the card break the loop
                 log(f"  [station] card render/post failed: {exc}")
 
-    # Rain onset (edge: not raining -> raining)
-    if sc.get("rain"):
+    # Rain onset (edge: not raining -> raining). A null precipRate means "no
+    # data", not "dry" — leave the latch untouched so one blank sample can't
+    # re-fire the onset post in the middle of the same storm.
+    if sc.get("rain") and data["precip_rate"] is not None:
         if not first and raining and not stt.get("raining"):
             _station_post(fb, page, fmt("rain"), attribution, disclaimer=disc)
             log("[station] rain onset posted")
@@ -1034,7 +1096,7 @@ def process_usgs_quakes(cfg, fb, state, *, seed):
             fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", img)
 
     if new_ids or first_time:
-        state[key] = list(seen.union(new_ids))
+        append_seen(state, key, new_ids)
 
 
 # --------------------------------------------------------------------------- #
@@ -1047,15 +1109,17 @@ def process_nasa_apod(cfg, fb, state, *, seed):
         return
     if time.time() - state.get("apod_fetch_ts", 0) < 3000:   # throttle ~50 min (DEMO_KEY safe)
         return
-    state["apod_fetch_ts"] = time.time()
     try:
         d = requests.get("https://api.nasa.gov/planetary/apod",
                          params={"api_key": os.environ.get("NASA_API_KEY", "DEMO_KEY"),
                                  "thumbs": "true"},
                          headers={"User-Agent": USER_AGENT}, timeout=30).json()
     except (requests.RequestException, ValueError) as exc:
+        # failed fetch: retry in ~5 min instead of waiting out the full 50
+        state["apod_fetch_ts"] = time.time() - 2700
         log(f"[apod] fetch failed: {exc}")
         return
+    state["apod_fetch_ts"] = time.time()   # full throttle only after a good fetch
     date = d.get("date", "")
     if not date or state.get("apod_date") == date:
         return
@@ -1097,6 +1161,9 @@ def process_swpc(cfg, fb, state, *, seed):
     except (requests.RequestException, ValueError) as exc:
         log(f"[swpc] fetch failed: {exc}")
         return
+    if not isinstance(alerts, list):   # an error object here would crash the loop
+        log(f"[swpc] unexpected response type ({type(alerts).__name__}) — skipping")
+        return
     new_ids = []
     for a in alerts:
         sid = f"{a.get('issue_datetime', '')}|{a.get('product_id', '')}"
@@ -1118,7 +1185,7 @@ def process_swpc(cfg, fb, state, *, seed):
         for pk in c["pages"]:
             fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", img)
     if new_ids or first_time:
-        state[key] = list(seen.union(new_ids))
+        append_seen(state, key, new_ids)
 
 
 def process_usdm(cfg, fb, state, *, seed):
@@ -1133,7 +1200,10 @@ def process_usdm(cfg, fb, state, *, seed):
     if seed:
         state["usdm_week"] = yw
         return
-    if now.weekday() < 3:        # USDM releases Thursday (Mon=0..Sun=6); wait for the fresh map
+    # USDM publishes Thursday ~7:30 AM Central. Waiting until 9 AM Thursday keeps
+    # the 12:01 AM cycle from posting LAST week's map as "this week's update";
+    # Fri-Sun still catch up if the runner was down all Thursday. (Mon=0..Sun=6)
+    if now.weekday() < 3 or (now.weekday() == 3 and now.hour < 9):
         return
     state["usdm_week"] = yw
     # Each state gets its own post + map. Falls back to the old single-image form.
@@ -1144,6 +1214,19 @@ def process_usdm(cfg, fb, state, *, seed):
         body = text_tmpl.format(state=st["name"])
         for pk in c["pages"]:
             fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", st.get("image"))
+
+
+def _truncate(text: str, limit: int) -> str:
+    """Cut long text at the last paragraph/sentence break before `limit`
+    instead of mid-word."""
+    if len(text) <= limit:
+        return text
+    cut = text[:limit]
+    for sep in ("\n\n", "\n", ". ", " "):
+        i = cut.rfind(sep)
+        if i > limit // 2:
+            return cut[:i].rstrip() + " …"
+    return cut.rstrip() + " …"
 
 
 def _mentions_area(text: str, terms: list) -> bool:
@@ -1194,12 +1277,12 @@ def process_spc_md(cfg, fb, state, *, seed):
         if terms and not _mentions_area(disc, terms):
             continue        # not our area
         img = f"https://www.spc.noaa.gov/products/md/mcd{num}.png" if num else None
-        body = f"{c.get('prefix', '***SPC MESOSCALE DISCUSSION***')}\n\n{disc[:1800]}"
+        body = f"{c.get('prefix', '***SPC MESOSCALE DISCUSSION***')}\n\n{_truncate(disc, 1800)}"
         log(f"[spc_md] {title} -> posting (our area)")
         for pk in c["pages"]:
             fb.post(pk, f"{body}\n\n{FOOTERS.get(pk, FOOTERS['FCWXTH'])}", img)
     if new_ids or first_time:
-        state[key] = list(seen.union(new_ids))
+        append_seen(state, key, new_ids)
 
 
 # --------------------------------------------------------------------------- #
@@ -1232,47 +1315,60 @@ def main() -> int:
     if args.seed:
         log("SEED MODE — recording current items as seen, NOT posting.")
 
-    # Group A
-    for item in cfg.get("rss_app_feeds", []):
-        process_simple_feed(item, fb, state, seed=args.seed,
-                            attach_image=attach_image)
-    # Group B
-    for item in cfg.get("official_feeds", []):
-        process_simple_feed(item, fb, state, seed=args.seed,
-                            attach_image=attach_image)
-    # Group C
+    def step(label, fn, *a, **kw):
+        """Run one source in isolation, then persist state immediately.
+        Isolation: one broken source must not abort the rest. Persistence:
+        a crash or runner shutdown can then never rewind posts already made —
+        without this, a crash mid-run meant every post since startup was
+        re-posted on the next 60-second cycle."""
+        try:
+            fn(*a, **kw)
+        except Exception as exc:  # noqa: BLE001 — log, count, keep going
+            log(f"[{label}] UNEXPECTED ERROR ({type(exc).__name__}): {exc}")
+            fb.failures += 1
+        if not args.dry_run:
+            save_state(state)
+
+    # Groups A + B
+    for item in cfg.get("rss_app_feeds", []) + cfg.get("official_feeds", []):
+        step(item["name"], process_simple_feed, item, fb, state,
+             seed=args.seed, attach_image=attach_image)
+    # Group C (currently disabled in feeds.yaml)
     for item in cfg.get("iem_office_feeds", []):
-        process_simple_feed(item, fb, state, seed=args.seed,
-                            attach_image=attach_image,
-                            match_any=item.get("match_any"))
+        step(item["name"], process_simple_feed, item, fb, state,
+             seed=args.seed, attach_image=attach_image,
+             match_any=item.get("match_any"))
     # Group D
     county_cfg = cfg.get("county_alert_feeds")
     if county_cfg:
-        process_county_alerts(county_cfg, fb, state, seed=args.seed)
+        step("county_alerts", process_county_alerts, county_cfg, fb, state,
+             seed=args.seed)
 
     # USGS earthquakes (official feed + ShakeMap image)
-    process_usgs_quakes(cfg, fb, state, seed=args.seed)
+    step("usgs_quakes", process_usgs_quakes, cfg, fb, state, seed=args.seed)
 
     # Group G — Community Service Alerts (state-wide non-weather emergencies)
-    process_community_alerts(cfg, fb, state, seed=args.seed)
+    step("community_alerts", process_community_alerts, cfg, fb, state, seed=args.seed)
 
     # Group E — weather-condition & sunrise/sunset posts
-    process_weather_conditions(cfg, fb, state, seed=args.seed)
+    step("weather_conditions", process_weather_conditions, cfg, fb, state, seed=args.seed)
 
-    # Personal weather station (KALPHILC8) — hourly card + rain + heat/cold alerts
-    process_station(cfg, fb, state, seed=args.seed)
+    # Personal weather station (KALPHILC8) — conditions card + rain + heat/cold alerts
+    step("station", process_station, cfg, fb, state, seed=args.seed)
 
     # Extras — NASA APOD, space weather, drought monitor, SPC mesoscale discussions
-    process_nasa_apod(cfg, fb, state, seed=args.seed)
-    process_swpc(cfg, fb, state, seed=args.seed)
-    process_usdm(cfg, fb, state, seed=args.seed)
-    process_spc_md(cfg, fb, state, seed=args.seed)
+    step("nasa_apod", process_nasa_apod, cfg, fb, state, seed=args.seed)
+    step("swpc", process_swpc, cfg, fb, state, seed=args.seed)
+    step("usdm", process_usdm, cfg, fb, state, seed=args.seed)
+    step("spc_md", process_spc_md, cfg, fb, state, seed=args.seed)
 
     if args.dry_run:
         log("Done (dry-run — state NOT saved).")
     else:
-        save_state(state)
         log("Done.")
+    if fb.failures:
+        log(f"WARNING: {fb.failures} failure(s) this run — see errors above.")
+        return 2
     return 0
 
 

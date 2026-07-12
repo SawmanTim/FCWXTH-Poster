@@ -1522,7 +1522,7 @@
    "sun_date": "2026-07-11"
   },
   "Franklin": {
-   "cond": "light thunderstorms and light rain",
+   "cond": "thunderstorms and rain",
    "temp": 90,
    "sun_date": "2026-07-11"
   }
@@ -1540,7 +1540,7 @@
   "pt26177001",
   "us6000t9bg"
  ],
- "apod_fetch_ts": 1783817236.6790285,
+ "apod_fetch_ts": 1783820298.6910932,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

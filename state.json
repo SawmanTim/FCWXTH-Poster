@@ -1544,7 +1544,7 @@
   "pt26177001",
   "us6000t9bg"
  ],
- "apod_fetch_ts": 1783826366.6033967,
+ "apod_fetch_ts": 1783829379.6810098,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -1867,7 +1867,7 @@
   "https://www.spc.noaa.gov/products/md/md1515.html/20260705",
   "https://www.spc.noaa.gov/products/md/md1597.html/20260712"
  ],
- "apod_date": "2026-07-11",
+ "apod_date": "2026-07-12",
  "station": {
   "hilo_date": "2026-07-11",
   "hi": 93.0,

@@ -1516,8 +1516,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "thunderstorms and rain",
-   "temp": 81,
+   "cond": "drizzle",
+   "temp": 73,
    "sun_date": "2026-07-10"
   },
   "Franklin": {

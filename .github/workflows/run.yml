@@ -79,12 +79,18 @@ jobs:
               git rebase --abort >/dev/null 2>&1 || true
               git checkout HEAD -- state.json 2>/dev/null || true
             fi
-            if ! python post.py; then
-              echo "::warning::post.py reported failures this cycle (expired token? API down?)"
+            # Capture each cycle's output so a failure can quote its own error
+            # lines in the alarm issue (output prints per-cycle instead of live).
+            rc=0
+            python post.py >/tmp/cycle.log 2>&1 || rc=$?
+            cat /tmp/cycle.log
+            if [ "$rc" -ne 0 ]; then
+              echo "::warning::post.py reported failures this cycle (see log above)"
               if [ "$had_failures" = "0" ]; then
                 # instant phone alarm on the FIRST failure of this job — an
-                # @mention issue pushes to GitHub Mobile within ~a minute
-                python alert.py || true
+                # @mention issue pushes to GitHub Mobile within ~a minute, and
+                # the issue body now carries the failing cycle's error lines
+                python alert.py --log /tmp/cycle.log || true
               fi
               had_failures=1
             fi

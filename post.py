@@ -71,6 +71,14 @@ def log(msg: str) -> None:
     print(time.strftime("%Y-%m-%d %H:%M:%S"), msg, flush=True)
 
 
+def scrub_secrets(s) -> str:
+    """Mask API keys in text that gets logged. urllib3/requests exception
+    messages can include the FULL request URL — query string and all — so a
+    WU/NASA outage would otherwise print the key into the Actions log."""
+    return re.sub(r"(apiKey|api_key|access_token)=[^&\s\"']+", r"\1=****",
+                  str(s), flags=re.I)
+
+
 def load_config() -> dict:
     with open(CONFIG_PATH, "r", encoding="utf-8") as fh:
         return yaml.safe_load(fh)
@@ -687,7 +695,7 @@ def fetch_wu_station(station_id: str) -> dict | None:
             "obs_local": obs.get("obsTimeLocal") or "",
         }
     except (requests.RequestException, ValueError, KeyError) as exc:
-        log(f"  [wu] {station_id} fetch failed: {exc}")
+        log(f"  [wu] {station_id} fetch failed: {scrub_secrets(exc)}")
         return None
 
 
@@ -1125,7 +1133,7 @@ def process_nasa_apod(cfg, fb, state, *, seed):
     except (requests.RequestException, ValueError) as exc:
         # failed fetch: retry in ~5 min instead of waiting out the full 50
         state["apod_fetch_ts"] = time.time() - 2700
-        log(f"[apod] fetch failed: {exc}")
+        log(f"[apod] fetch failed: {scrub_secrets(exc)}")
         return
     state["apod_fetch_ts"] = time.time()   # full throttle only after a good fetch
     date = d.get("date", "")
@@ -1332,7 +1340,8 @@ def main() -> int:
         try:
             fn(*a, **kw)
         except Exception as exc:  # noqa: BLE001 — log, count, keep going
-            log(f"[{label}] UNEXPECTED ERROR ({type(exc).__name__}): {exc}")
+            log(f"[{label}] UNEXPECTED ERROR ({type(exc).__name__}): "
+                f"{scrub_secrets(exc)}")
             fb.failures += 1
         if not args.dry_run:
             save_state(state)

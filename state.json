@@ -205,7 +205,8 @@
   "cd44d9c74f009a9d1b499baf75aca543",
   "0c2d479e62657883e44543e1eaf87839",
   "fa36bd3f547811af0ead3fc67be315e9",
-  "3594decf1fad82fd1412eae478e4c53f"
+  "3594decf1fad82fd1412eae478e4c53f",
+  "add6c4c933f7cc328e5ed740dbeb103c"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -295,7 +296,8 @@
   "dbf1fb4d244e225575ea5694f596c81b",
   "1d78bb142f9e258bef718263bc9a3d9c",
   "e51920ea101546450fd7c73b643ec119",
-  "f9b1a9195e553499d2b35cd1036e54fc"
+  "f9b1a9195e553499d2b35cd1036e54fc",
+  "6f530966e87cf341d16ded991e626d27"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "5680291621d83ebee04600bd151c4ddd",
@@ -496,7 +498,8 @@
   "463a94d8fb2ffe4a7d45b74c6b6adbea",
   "a5bb4a964ecf336d170a29afc7c3a894",
   "3c8ffcd6492cb80c7244ee661d68ddfa",
-  "9ae51d67197bdaf5adadd9cab889614c"
+  "9ae51d67197bdaf5adadd9cab889614c",
+  "56ebb1c1dd0a9e5dc04dc057e398e9f3"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -867,7 +870,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606291149",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606280501",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606261135",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607120514"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607120514",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607121122"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1523,14 +1527,14 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "cloudy",
-   "temp": 72,
+   "cond": "mostly cloudy",
+   "temp": 79,
    "sun_date": "2026-07-11",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly cloudy",
-   "temp": 72,
+   "cond": "mostly clear",
+   "temp": 73,
    "sun_date": "2026-07-11",
    "station_id": "K1M4"
   }
@@ -1548,7 +1552,7 @@
   "pt26177001",
   "us6000t9bg"
  ],
- "apod_fetch_ts": 1783844905.8829756,
+ "apod_fetch_ts": 1783867985.5421517,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -1875,7 +1879,7 @@
  "apod_date": "2026-07-12",
  "station": {
   "hilo_date": "2026-07-12",
-  "hi": 71,
+  "hi": 75,
   "lo": 70,
   "raining": false,
   "heat": 0,

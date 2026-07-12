@@ -60,12 +60,25 @@ jobs:
         run: |
           git config user.name  "fcwxth-poster-bot"
           git config user.email "actions@users.noreply.github.com"
+          # Sync to the branch tip FIRST. A queued job checks out the commit it
+          # was queued at — after a long wait that snapshot (and its state.json)
+          # can be hours stale, which re-posts old items AND guarantees a rebase
+          # conflict on the first push (2026-07-12 incident).
+          git pull --rebase -q origin main || true
           if [ "${{ inputs.test_alert }}" = "true" ]; then
             python alert.py --test || true
           fi
           had_failures=0
           end=$((SECONDS + 21240))      # ~5.9 hours, then let the schedule restart
           while [ $SECONDS -lt $end ]; do
+            # Self-heal: a corrupted state.json (e.g. conflict markers left by an
+            # interrupted rebase) must never crash-loop the poller. Restore the
+            # last committed copy and carry on.
+            if ! python -c "import json; json.load(open('state.json'))" 2>/dev/null; then
+              echo "::warning::state.json corrupted — restoring last committed copy"
+              git rebase --abort >/dev/null 2>&1 || true
+              git checkout HEAD -- state.json 2>/dev/null || true
+            fi
             if ! python post.py; then
               echo "::warning::post.py reported failures this cycle (expired token? API down?)"
               if [ "$had_failures" = "0" ]; then
@@ -78,7 +91,13 @@ jobs:
             if ! git diff --quiet -- state.json; then
               git add state.json
               git commit -m "update state [skip ci]" >/dev/null 2>&1 || true
-              git pull --rebase --autostash -q origin main >/dev/null 2>&1 || true
+              # -X theirs: if state.json conflicts, keep OUR (newest) values.
+              # If the rebase still fails, ABORT it — never leave conflict
+              # markers in state.json (they corrupt it and crash post.py).
+              if ! git pull --rebase --autostash -X theirs -q origin main >/dev/null 2>&1; then
+                git rebase --abort >/dev/null 2>&1 || true
+                echo "::warning::git rebase conflict — kept local state, retrying next cycle"
+              fi
               git push -q origin main >/dev/null 2>&1 || \
                 echo "::warning::git push failed — state not saved to GitHub this cycle"
             fi

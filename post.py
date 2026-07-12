@@ -79,7 +79,15 @@ def load_config() -> dict:
 def load_state() -> dict:
     if STATE_PATH.exists():
         with open(STATE_PATH, "r", encoding="utf-8") as fh:
-            return json.load(fh)
+            try:
+                return json.load(fh)
+            except json.JSONDecodeError as exc:
+                # NEVER fall back to {} — an empty state would re-post every
+                # feed's whole backlog. Refuse loudly instead; run.yml restores
+                # the last committed copy and the next cycle recovers.
+                log(f"FATAL: state.json is corrupted ({exc}). Refusing to run "
+                    "with no memory — run.yml will restore the committed copy.")
+                raise
     return {}
 
 

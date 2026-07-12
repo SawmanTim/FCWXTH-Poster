@@ -96,5 +96,9 @@ python post.py --dry-run   # shows what it WOULD post
   through the gaps, so effective polling stays ~60s.
 - `state.json` is committed back whenever it changes; that's normal and keeps it free.
 - County consolidation reposts an alert if NWS issues an **updated** version (new alert id).
-- If any cycle fails to post (e.g. an expired Facebook token), the job ends **failed**
-  so GitHub emails you — check the run's warnings, refresh the token, done.
+- If any cycle fails to post (e.g. an expired Facebook token), two alarms fire:
+  **instantly**, `alert.py` opens a `poster-alert` issue that @mentions you (GitHub
+  Mobile pushes that to your phone within ~a minute); and at the end of the window
+  the job ends **failed** so GitHub also emails you. Fix the token, close the issue.
+  Test the phone alarm anytime: Actions → FCWXTH Poster → Run workflow → check
+  "Send a TEST phone alert".

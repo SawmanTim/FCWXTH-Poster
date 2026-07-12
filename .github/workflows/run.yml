@@ -9,6 +9,11 @@ on:
   schedule:
     - cron: "*/30 * * * *"   # best-effort: keep a restart queued
   workflow_dispatch:
+    inputs:
+      test_alert:
+        description: "Send a TEST phone alert (opens a test issue that @mentions you)"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:                    # state.json commits use [skip ci] and don't match
@@ -16,10 +21,12 @@ on:
       - wx_card.py
       - feeds.yaml
       - requirements.txt
+      - alert.py
       - .github/workflows/run.yml
 
 permissions:
   contents: write
+  issues: write               # alert.py opens the @mention alarm issue
 
 concurrency:
   group: fcwxth-poster
@@ -49,14 +56,23 @@ jobs:
           FB_TOKEN_PVFD:   ${{ secrets.FB_TOKEN_PVFD }}
           NASA_API_KEY:    ${{ secrets.NASA_API_KEY }}
           WU_API_KEY:      ${{ secrets.WU_API_KEY }}
+          GH_TOKEN:        ${{ github.token }}
         run: |
           git config user.name  "fcwxth-poster-bot"
           git config user.email "actions@users.noreply.github.com"
+          if [ "${{ inputs.test_alert }}" = "true" ]; then
+            python alert.py --test || true
+          fi
           had_failures=0
           end=$((SECONDS + 21240))      # ~5.9 hours, then let the schedule restart
           while [ $SECONDS -lt $end ]; do
             if ! python post.py; then
               echo "::warning::post.py reported failures this cycle (expired token? API down?)"
+              if [ "$had_failures" = "0" ]; then
+                # instant phone alarm on the FIRST failure of this job — an
+                # @mention issue pushes to GitHub Mobile within ~a minute
+                python alert.py || true
+              fi
               had_failures=1
             fi
             if ! git diff --quiet -- state.json; then

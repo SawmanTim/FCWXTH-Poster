@@ -1570,7 +1570,7 @@
   "pt26194000",
   "us7000szzy"
  ],
- "apod_fetch_ts": 1783946775.0035164,
+ "apod_fetch_ts": 1783949777.5005603,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -1908,7 +1908,7 @@
   "https://www.spc.noaa.gov/products/md/md1610.html/20260713",
   "https://www.spc.noaa.gov/products/md/20260713"
  ],
- "apod_date": "2026-07-12",
+ "apod_date": "2026-07-13",
  "station": {
   "hilo_date": "2026-07-13",
   "hi": 76,

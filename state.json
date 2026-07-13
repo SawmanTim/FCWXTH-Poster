@@ -891,7 +891,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607121713",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607122306",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607130500",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607131122"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607131122",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607131719"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1554,7 +1555,7 @@
   },
   "Franklin": {
    "cond": "cloudy",
-   "temp": 81,
+   "temp": 79,
    "sun_date": "2026-07-12",
    "station_id": "K1M4"
   }

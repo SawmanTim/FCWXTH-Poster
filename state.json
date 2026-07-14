@@ -312,7 +312,8 @@
   "ff1943db1af1a7637c70daf8ad1b65be",
   "eff1b2275430e9bb7551246a2c8571cc",
   "81bfcfed6e95a6451ead119cc2d8f79d",
-  "34ecea196daa925bafeb9d1dedb25156"
+  "34ecea196daa925bafeb9d1dedb25156",
+  "bd1266a725dbf96bf5a9d0fc9b858cf1"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "5680291621d83ebee04600bd151c4ddd",
@@ -1965,6 +1966,6 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-07-14T15"
+  "card_hour": "2026-07-14T18"
  }
 }

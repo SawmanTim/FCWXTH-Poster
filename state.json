@@ -1944,7 +1944,7 @@
   "hilo_date": "2026-07-14",
   "hi": 80,
   "lo": 72,
-  "raining": false,
+  "raining": true,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-07-14T09"

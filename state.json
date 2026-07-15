@@ -1987,7 +1987,8 @@
   "https://www.spc.noaa.gov/products/md/md1622.html/20260715",
   "https://www.spc.noaa.gov/products/md/md1623.html/20260715",
   "https://www.spc.noaa.gov/products/md/md1624.html/20260715",
-  "https://www.spc.noaa.gov/products/md/md1625.html/20260715"
+  "https://www.spc.noaa.gov/products/md/md1625.html/20260715",
+  "https://www.spc.noaa.gov/products/md/md1626.html/20260715"
  ],
  "apod_date": "2026-07-15",
  "station": {
@@ -1997,6 +1998,6 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-07-15T12"
+  "card_hour": "2026-07-15T15"
  }
 }

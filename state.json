@@ -317,7 +317,8 @@
   "81bfcfed6e95a6451ead119cc2d8f79d",
   "34ecea196daa925bafeb9d1dedb25156",
   "bd1266a725dbf96bf5a9d0fc9b858cf1",
-  "34eaee4cafb427ffcfd4da3e08ddbeeb"
+  "34eaee4cafb427ffcfd4da3e08ddbeeb",
+  "dc713f40805c87b0c7de73d6d8d220c7"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "5680291621d83ebee04600bd151c4ddd",
@@ -1596,7 +1597,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "cloudy",
+   "cond": "light rain and fog/mist",
    "temp": 72,
    "sun_date": "2026-07-14",
    "station_id": "K1M4"

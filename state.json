@@ -1599,13 +1599,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
-   "temp": 84,
+   "cond": "cloudy",
+   "temp": 86,
    "sun_date": "2026-07-14",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "light rain",
+   "cond": "mostly cloudy",
    "temp": 81,
    "sun_date": "2026-07-14",
    "station_id": "K1M4"
@@ -1988,7 +1988,7 @@
  "apod_date": "2026-07-15",
  "station": {
   "hilo_date": "2026-07-15",
-  "hi": 82,
+  "hi": 83,
   "lo": 71,
   "raining": false,
   "heat": 0,

@@ -1983,7 +1983,7 @@
   "hilo_date": "2026-07-15",
   "hi": 82,
   "lo": 71,
-  "raining": false,
+  "raining": true,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-07-15T09"

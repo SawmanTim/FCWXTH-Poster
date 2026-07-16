@@ -1640,7 +1640,7 @@
   "ci41292687",
   "us7000t0d0"
  ],
- "apod_fetch_ts": 1784175391.9862819,
+ "apod_fetch_ts": 1784178439.2648885,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2004,7 +2004,7 @@
   "https://www.spc.noaa.gov/products/md/20260716",
   "https://www.spc.noaa.gov/products/md/md1630.html/20260716"
  ],
- "apod_date": "2026-07-15",
+ "apod_date": "2026-07-16",
  "station": {
   "hilo_date": "2026-07-16",
   "hi": 74,

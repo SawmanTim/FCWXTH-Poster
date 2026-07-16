@@ -551,7 +551,8 @@
   "010d65af9ead79ca18ae4f651ba443bb",
   "66e54688d97bd6ce7a4df504f49e5e7c",
   "9787a6ede9842f111a7585cc04d74d36",
-  "e0f35a91944e6f2c1cfcb9454f4ced40"
+  "e0f35a91944e6f2c1cfcb9454f4ced40",
+  "46db5172c20e0f4a0669e8bd9af52902"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -1625,7 +1626,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly clear",
+   "cond": "partly cloudy",
    "temp": 84,
    "sun_date": "2026-07-15",
    "station_id": "K1M4"
@@ -2020,7 +2021,7 @@
  "apod_date": "2026-07-16",
  "station": {
   "hilo_date": "2026-07-16",
-  "hi": 90,
+  "hi": 91,
   "lo": 70,
   "raining": false,
   "heat": 1,

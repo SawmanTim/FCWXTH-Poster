@@ -2026,7 +2026,7 @@
   "hi": 91,
   "lo": 70,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-16T12"
  }

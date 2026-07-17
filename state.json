@@ -1637,8 +1637,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
-   "temp": 75,
+   "cond": "clear",
+   "temp": 77,
    "sun_date": "2026-07-16",
    "station_id": "KCRX"
   },

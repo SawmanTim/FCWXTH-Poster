@@ -2052,10 +2052,10 @@
  "apod_date": "2026-07-17",
  "station": {
   "hilo_date": "2026-07-17",
-  "hi": 89,
+  "hi": 90,
   "lo": 72,
   "raining": false,
-  "heat": 1,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-07-17T09"
  }

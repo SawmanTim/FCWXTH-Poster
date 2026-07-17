@@ -565,7 +565,8 @@
   "81776f0e79f2bd03d656bbef4a0e2482",
   "b7d7447f942267f34924556e651e6be9",
   "c339ff2fe2a7f1fbd772b411cf60cb44",
-  "cdd98ebbffb5501221a897a4eb65dfab"
+  "cdd98ebbffb5501221a897a4eb65dfab",
+  "a6362fb856d3f5fd4bdd2e771a275bbd"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -1651,7 +1652,7 @@
   },
   "Franklin": {
    "cond": "mostly clear",
-   "temp": 82,
+   "temp": 84,
    "sun_date": "2026-07-16",
    "station_id": "K1M4"
   }

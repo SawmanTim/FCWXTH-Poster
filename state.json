@@ -2089,7 +2089,8 @@
   "https://www.spc.noaa.gov/products/md/md1646.html/20260718",
   "https://www.spc.noaa.gov/products/md/md1647.html/20260718",
   "https://www.spc.noaa.gov/products/md/md1648.html/20260718",
-  "https://www.spc.noaa.gov/products/md/md1649.html/20260718"
+  "https://www.spc.noaa.gov/products/md/md1649.html/20260718",
+  "https://www.spc.noaa.gov/products/md/md1650.html/20260718"
  ],
  "apod_date": "2026-07-18",
  "station": {
@@ -2097,7 +2098,7 @@
   "hi": 92,
   "lo": 71,
   "raining": false,
-  "heat": 1,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-07-18T12"
  }

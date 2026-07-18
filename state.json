@@ -346,7 +346,8 @@
   "6bd7e800d65d03fa64c907c76c009732",
   "4973bd7ce864fd553abdba41b6b3e204",
   "681b8d9b02df3011bd8e7187d2131897",
-  "01b86b5ef0c19819631b2d66c281f485"
+  "01b86b5ef0c19819631b2d66c281f485",
+  "dd15164f03e5354b411afa2d895c5c2d"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "5680291621d83ebee04600bd151c4ddd",
@@ -1006,7 +1007,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607171141",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607171721",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607172318",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607180543"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607180543",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607181110"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1668,7 +1670,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "clear",
+   "cond": "fog/mist",
    "temp": 72,
    "sun_date": "2026-07-17",
    "station_id": "K1M4"

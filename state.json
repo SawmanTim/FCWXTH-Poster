@@ -1012,7 +1012,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607171721",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607172318",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607180543",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607181110"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607181110",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607181717"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2090,7 +2091,7 @@
  "apod_date": "2026-07-18",
  "station": {
   "hilo_date": "2026-07-18",
-  "hi": 90,
+  "hi": 91,
   "lo": 71,
   "raining": false,
   "heat": 2,

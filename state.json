@@ -1002,7 +1002,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607170533",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607171141",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607171721",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607172318"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607172318",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607180543"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1658,7 +1659,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
+   "cond": "clear",
    "temp": 77,
    "sun_date": "2026-07-17",
    "station_id": "KCRX"

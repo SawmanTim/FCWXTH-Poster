@@ -607,7 +607,8 @@
   "b09d63549dc409ec7e7fc63e06d1f10f",
   "1f2e9ebd73c17db73d808ca77370c50c",
   "71e6b4cdd3c19f60ce6781bd6c582ff5",
-  "789e061ab5bb9f572ec5ab5d8999e6b9"
+  "789e061ab5bb9f572ec5ab5d8999e6b9",
+  "66d5b4f07457876f853fd2adfa5dcb6d"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -1743,14 +1744,14 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
-   "temp": 95,
+   "cond": "clear",
+   "temp": 93,
    "sun_date": "2026-07-18",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "light rain",
-   "temp": 72,
+   "temp": 73,
    "sun_date": "2026-07-18",
    "station_id": "K1M4"
   }
@@ -1778,7 +1779,7 @@
   "us7000t1bu",
   "us7000t1q7"
  ],
- "apod_fetch_ts": 1784496614.7278678,
+ "apod_fetch_ts": 1784499620.0761154,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

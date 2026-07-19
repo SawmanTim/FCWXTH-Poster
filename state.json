@@ -1048,7 +1048,8 @@
   "https://www.nhc.noaa.gov/text/WTUS84-KMOB.shtml",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/151501.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/151602.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/151807.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/151807.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/152142.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1711,7 +1712,7 @@
   },
   "Franklin": {
    "cond": "mostly cloudy",
-   "temp": 84,
+   "temp": 86,
    "sun_date": "2026-07-18",
    "station_id": "K1M4"
   }

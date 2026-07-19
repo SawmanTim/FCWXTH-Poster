@@ -1081,7 +1081,8 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/204636.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/204834.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/204932.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/205059.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/205059.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/210638.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1737,13 +1738,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
+   "cond": "mostly clear",
    "temp": 93,
    "sun_date": "2026-07-18",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "heavy thunderstorms and heavy rain and fog",
+   "cond": "heavy thunderstorms and heavy rain and fog/mist",
    "temp": 72,
    "sun_date": "2026-07-18",
    "station_id": "K1M4"

@@ -1743,13 +1743,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
+   "cond": "clear",
    "temp": 93,
    "sun_date": "2026-07-18",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "heavy rain and fog/mist",
+   "cond": "rain",
    "temp": 73,
    "sun_date": "2026-07-18",
    "station_id": "K1M4"

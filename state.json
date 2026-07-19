@@ -2162,7 +2162,7 @@
   "hi": 95,
   "lo": 73,
   "raining": true,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-19T12"
  }

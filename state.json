@@ -1730,8 +1730,8 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "heavy thunderstorms and heavy rain",
-   "temp": 75,
+   "cond": "heavy rain and fog/mist",
+   "temp": 73,
    "sun_date": "2026-07-18",
    "station_id": "K1M4"
   }
@@ -2158,7 +2158,8 @@
   "https://www.spc.noaa.gov/products/md/md1658.html/20260719",
   "https://www.spc.noaa.gov/products/md/md1659.html/20260719",
   "https://www.spc.noaa.gov/products/md/md1660.html/20260719",
-  "https://www.spc.noaa.gov/products/md/md1661.html/20260719"
+  "https://www.spc.noaa.gov/products/md/md1661.html/20260719",
+  "https://www.spc.noaa.gov/products/md/md1662.html/20260719"
  ],
  "apod_date": "2026-07-19",
  "station": {

@@ -1058,7 +1058,8 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/155926.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/163713.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/163721.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/165628.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/165628.shtml?cone",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607191717"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1311,7 +1312,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6eabb8c058d1dc59518da4eafb365464cff6552b.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b4384ffb42ada33d68c390df1e29c3a0ed102efd.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ade54555743fc2ccc613e9c7aa6f0e0a189049d6.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8898e5730925fdf0a0a2b9483009d7a07211b5dd.001.1",
@@ -1710,7 +1710,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.919a7220f29f6ffe753d9c83831546d02c2ccba9.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d904c3997b5724e5a127cf52101fc103187b102e.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8b7a9bca7d57f592131286b74a78230e555fa845.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f52183e7cad7cc22e93d1dabe77f49161334dacc.003.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f52183e7cad7cc22e93d1dabe77f49161334dacc.003.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3720fe3b29b904c681e8348b338f856094dca7eb.001.1"
  ],
  "wx": {
   "Paden": {
@@ -1749,7 +1750,7 @@
   "us7000t1bu",
   "us7000t1q7"
  ],
- "apod_fetch_ts": 1784478488.9551008,
+ "apod_fetch_ts": 1784481534.6545439,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

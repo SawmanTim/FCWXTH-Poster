@@ -1729,7 +1729,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 82,
+   "temp": 84,
    "sun_date": "2026-07-18",
    "station_id": "K1M4"
   }
@@ -2160,7 +2160,7 @@
   "hilo_date": "2026-07-19",
   "hi": 95,
   "lo": 73,
-  "raining": false,
+  "raining": true,
   "heat": 2,
   "cold": 0,
   "card_hour": "2026-07-19T12"

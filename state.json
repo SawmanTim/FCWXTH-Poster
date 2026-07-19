@@ -1042,7 +1042,8 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT2+shtml/191452.shtml",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/145437.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/145539.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/145749.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/145749.shtml?cone",
+  "https://www.nhc.noaa.gov/text/WTUS82-KTAE.shtml"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1698,8 +1699,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "partly cloudy",
-   "temp": 82,
+   "cond": "mostly cloudy",
+   "temp": 84,
    "sun_date": "2026-07-18",
    "station_id": "KCRX"
   },

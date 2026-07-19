@@ -194,6 +194,25 @@ def append_seen(state: dict, key: str, new_ids: list) -> None:
 # --------------------------------------------------------------------------- #
 # Facebook Graph API
 # --------------------------------------------------------------------------- #
+FB_RETRIES = 3                 # total attempts for a TRANSIENT Graph failure
+FB_RETRY_BACKOFF = (3, 8)      # seconds to wait before attempts 2 and 3
+
+
+def _fb_transient(resp) -> bool:
+    """True only for errors worth retrying: any 5xx, plus Facebook's generic
+    code 1 ("unknown error") and code 2 ("service temporarily unavailable"),
+    which it hands back for momentary server-side hiccups on photo uploads —
+    e.g. the 500 code-1 "reduce the amount of data" blip that lost a card on
+    2026-07-19. Real 4xx problems (190 expired token, bad request) are NOT
+    retried: retrying those just burns cycles and hides the true cause."""
+    if resp.status_code >= 500:
+        return True
+    try:
+        return resp.json().get("error", {}).get("code") in (1, 2)
+    except ValueError:
+        return False
+
+
 class Facebook:
     def __init__(self, page_ids: dict, dry_run: bool = False):
         self.page_ids = page_ids                 # {"FCWXTH": "4237...", ...}
@@ -240,6 +259,24 @@ class Facebook:
             log(f"  [{page_key}] ERROR: {exc}")
             return False
 
+    def _graph_post(self, url: str, **kwargs):
+        """POST to the Graph API, retrying transient server-side failures with
+        backoff. Returns the final Response for the caller to inspect; a network
+        exception on the last attempt propagates to the caller's handler."""
+        for attempt in range(1, FB_RETRIES + 1):
+            last = attempt == FB_RETRIES
+            try:
+                r = requests.post(url, **kwargs)
+            except requests.RequestException:
+                if last:
+                    raise
+            else:
+                if last or r.status_code < 400 or not _fb_transient(r):
+                    return r
+                log(f"  transient Graph error {r.status_code} — "
+                    f"retrying ({attempt + 1}/{FB_RETRIES})")
+            time.sleep(FB_RETRY_BACKOFF[min(attempt - 1, len(FB_RETRY_BACKOFF) - 1)])
+
     def post(self, page_key: str, message: str, image_url: str | None) -> bool:
         page_id = self.page_ids[page_key]
         token = self._token(page_key)
@@ -264,20 +301,20 @@ class Facebook:
                     im = None
                 if im is not None and im.status_code == 200 and \
                         im.headers.get("content-type", "").startswith("image"):
-                    r = requests.post(
+                    r = self._graph_post(
                         endpoint,
                         data={"caption": message, "access_token": token},
                         files={"source": ("map.png", im.content,
                                           im.headers.get("content-type", "image/png"))},
                         timeout=60)
                 else:
-                    r = requests.post(
+                    r = self._graph_post(
                         endpoint,
                         data={"url": image_url, "caption": message, "access_token": token},
                         timeout=30)
             else:
                 endpoint = f"https://graph.facebook.com/{GRAPH_VERSION}/{page_id}/feed"
-                r = requests.post(
+                r = self._graph_post(
                     endpoint,
                     data={"message": message, "access_token": token}, timeout=30)
             if r.status_code >= 400:
@@ -307,7 +344,7 @@ class Facebook:
                 self.failures += 1
             return self.dry_run
         try:
-            r = requests.post(
+            r = self._graph_post(
                 f"https://graph.facebook.com/{GRAPH_VERSION}/{page_id}/photos",
                 data={"caption": message, "access_token": token},
                 files={"source": (filename, image_bytes, "image/png")},

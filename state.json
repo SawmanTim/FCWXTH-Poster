@@ -1304,7 +1304,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.88a264f7c538cd19f5715858d6d744f4e61fb83f.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d086bfdddb527a76c0266e1d975660a184175b7a.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7f162d0c98dbfd37315ba3c9786ec7b7b7586b6c.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6eabb8c058d1dc59518da4eafb365464cff6552b.001.1",
@@ -1703,7 +1702,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bc9d5d9573172808e4b910a99fd643b53b59f928.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1a28f2dfca49517b85f984e2d242e21152698fa6.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ed49086c277af0b893e9a03765b9de05667efa6b.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.919a7220f29f6ffe753d9c83831546d02c2ccba9.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.919a7220f29f6ffe753d9c83831546d02c2ccba9.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d904c3997b5724e5a127cf52101fc103187b102e.001.1"
  ],
  "wx": {
   "Paden": {
@@ -1713,7 +1713,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "partly cloudy",
+   "cond": "mostly clear",
    "temp": 79,
    "sun_date": "2026-07-18",
    "station_id": "K1M4"
@@ -2145,7 +2145,7 @@
   "hi": 90,
   "lo": 73,
   "raining": false,
-  "heat": 1,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-07-19T09"
  }

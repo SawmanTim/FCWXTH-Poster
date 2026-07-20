@@ -1119,7 +1119,8 @@
   "summary-al022026-202607200556",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/055824.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/055845.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/060002.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/060002.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/060047.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1775,7 +1776,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "light rain",
+   "cond": "light drizzle",
    "temp": 77,
    "sun_date": "2026-07-19",
    "station_id": "KCRX"

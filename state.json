@@ -1127,7 +1127,8 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/200846.shtml",
   "summary-al022026-202607200846",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/084909.shtml?cone",
-  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT2+shtml/200850.shtml"
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT2+shtml/200850.shtml",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/085116.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1380,7 +1381,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ab2c1ccd57cd1d55f9ecdc5788de1fbc85691c0a.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91fb441a723971abf7a38849bd76d081a7324df6.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7da5839adc6691b8fca145a387d8c2592733d8c2.002.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.038bb8050ff964aa6db11212ff2ace0a6c65605d.001.1",
@@ -1779,7 +1779,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0f9397287e7009b892e5457f1c055faf98e3cf7a.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a9804413e0601afadebf76553f1873c17b2c13c7.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.172d485e110b09b81635178535500a190e865bcc.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.335bf111bf8a40916210b67f883dd812e5562fb6.003.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.335bf111bf8a40916210b67f883dd812e5562fb6.003.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.653304e4b56c8099d789e87c102a90b1077f3c92.001.1"
  ],
  "wx": {
   "Paden": {

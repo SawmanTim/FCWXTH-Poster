@@ -1819,13 +1819,13 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 84,
+   "temp": 86,
    "sun_date": "2026-07-19",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly clear",
-   "temp": 79,
+   "cond": "clear",
+   "temp": 81,
    "sun_date": "2026-07-19",
    "station_id": "K1M4"
   }

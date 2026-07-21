@@ -1347,7 +1347,10 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/150031.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/150209.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/150209.shtml?inundation",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/150209.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/150209.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/150329.shtml?wsurge",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/150329.shtml?inundation",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/150329.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2039,7 +2042,7 @@
   "us7000t1q7",
   "us7000t1cc"
  ],
- "apod_fetch_ts": 1784643282.3465934,
+ "apod_fetch_ts": 1784646288.250647,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

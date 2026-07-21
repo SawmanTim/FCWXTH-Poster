@@ -1337,7 +1337,8 @@
   "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT2+shtml/211455.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT2+shtml/211454.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/211454.shtml",
-  "summary-al022026-202607211454"
+  "summary-al022026-202607211454",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT2+shtml/211457.shtml"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2457,7 +2458,7 @@
   "hi": 87,
   "lo": 73,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-21T09"
  }

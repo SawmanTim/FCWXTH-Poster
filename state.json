@@ -1322,7 +1322,10 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/092302.shtml?cone",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607211136",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/211141.shtml",
-  "summary-al022026-202607211141"
+  "summary-al022026-202607211141",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/115152.shtml?wsurge",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/115152.shtml?inundation",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/115152.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",

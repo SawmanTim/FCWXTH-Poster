@@ -981,7 +981,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606301736",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607031135",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607041121",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606261716",
@@ -1380,7 +1379,8 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT2+shtml/212052.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT2+shtml/212053.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/212053.shtml",
-  "summary-al022026-202607212054"
+  "summary-al022026-202607212054",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT2+shtml/212057.shtml"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",

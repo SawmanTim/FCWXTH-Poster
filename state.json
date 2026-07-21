@@ -2500,7 +2500,7 @@
   "hi": 95,
   "lo": 73,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-21T15"
  }

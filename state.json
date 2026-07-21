@@ -1362,7 +1362,9 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/152231.shtml?cone",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607211719",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/211745.shtml",
-  "summary-al022026-202607211746"
+  "summary-al022026-202607211746",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/174806.shtml?inundation",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/174806.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2024,7 +2026,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "partly cloudy",
+   "cond": "mostly clear",
    "temp": 88,
    "sun_date": "2026-07-20",
    "station_id": "K1M4"

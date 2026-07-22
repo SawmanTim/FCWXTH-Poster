@@ -105,7 +105,8 @@
   "6ef918e8358346827384fe9af3f61fff",
   "fa7cf47b6b446776301880f97b127f62",
   "03610fa01ac5b429a9941953ac801862",
-  "cd3504284f4a8fa874f6041dd18a6949"
+  "cd3504284f4a8fa874f6041dd18a6949",
+  "5f0919b127b1b07a7a9e6c117ba570cc"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
   "6d410f70592149889863512af083a959",
@@ -2526,7 +2527,7 @@
   "hi": 91,
   "lo": 74,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-22T15"
  }

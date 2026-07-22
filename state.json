@@ -995,8 +995,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607060506",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606240502",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606252311",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607052313",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607102305",
@@ -1394,7 +1392,9 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/084932.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/084932.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/085105.shtml?inundation",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/085105.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/085105.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/092256.shtml?inundation",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/092256.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -1647,7 +1647,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.54f495d88f77e72a6ffe758010facb1aaafb21e6.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0523eea09ceb65c1bda33ec05c68e2d45340f3ed.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d812ad04a1eecae1810cb08180b181968de53234.001.2",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a823dd4d947d120aac904285fcfec32e8ac486c6.002.1",
@@ -2046,7 +2045,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6160bd75fffda6c6da25779eb49730abd7fe5e9b.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f394fd1cdefc79962f4c27d50cf965d2176d8b23.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.59b37e563f7bdc65fe829dee0eeccd5a4fe8fd20.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5b9425944ebcc3f07898c862a4269c695761783.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c5b9425944ebcc3f07898c862a4269c695761783.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ee9641a275aae7af541eb53b00111c6cd111a7cd.001.1"
  ],
  "wx": {
   "Paden": {

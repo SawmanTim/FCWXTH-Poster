@@ -997,7 +997,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606271144",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606302302",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202606271724",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202607021714",
@@ -1396,7 +1395,8 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/114918.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/114918.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/115539.shtml?inundation",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/115539.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/115539.shtml?cone",
+  "https://www.nhc.noaa.gov/text/WTUS84-KHGX.shtml"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2052,7 +2052,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly clear",
+   "cond": "mostly cloudy",
    "temp": 77,
    "sun_date": "2026-07-21",
    "station_id": "KCRX"

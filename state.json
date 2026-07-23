@@ -2126,7 +2126,7 @@
   "2026-07-19 20:14:34.243|A20F",
   "2026-07-22 19:25:10.567|A20F"
  ],
- "usdm_week": "2026-W29",
+ "usdm_week": "2026-W30",
  "spc_md": [
   "https://www.spc.noaa.gov/products/md/20260709",
   "https://www.spc.noaa.gov/products/md/md1404.html/20260630",
@@ -2537,6 +2537,6 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-07-23T06"
+  "card_hour": "2026-07-23T09"
  }
 }

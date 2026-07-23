@@ -2077,13 +2077,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
+   "cond": "mostly clear",
    "temp": 84,
    "sun_date": "2026-07-22",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "light rain and fog/mist",
+   "cond": "rain and fog/mist",
    "temp": 77,
    "sun_date": "2026-07-22",
    "station_id": "K1M4"
@@ -2114,7 +2114,7 @@
   "us7000t1cc",
   "tx2026ojlaky"
  ],
- "apod_fetch_ts": 1784843512.4402895,
+ "apod_fetch_ts": 1784846536.031806,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

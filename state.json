@@ -2536,7 +2536,7 @@
   "hilo_date": "2026-07-23",
   "hi": 88,
   "lo": 75,
-  "raining": false,
+  "raining": true,
   "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-23T12"

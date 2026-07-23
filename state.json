@@ -952,7 +952,8 @@
   "8e7fd197a9e4ffb76db9408b20a065fa",
   "fd540d2effd7d6365c2d07b7a1c2d078",
   "139b9d6c8a5734d85c2902d282d5fc1f",
-  "b1c56c562549decbef5958b84595894d"
+  "b1c56c562549decbef5958b84595894d",
+  "483441db8400c9eb3e08b6783a69eff6"
  ],
  "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml": [
   "ef354fda682a7577253ab06ef0284f7a",
@@ -2070,7 +2071,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "fog/mist",
+   "cond": "",
    "temp": 73,
    "sun_date": "2026-07-22",
    "station_id": "KCRX"

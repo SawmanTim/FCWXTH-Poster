@@ -1011,9 +1011,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/205059.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/210638.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/212234.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/192344.shtml",
   "summary-al022026-202607192344",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/234514.shtml?cone",
@@ -1410,7 +1407,10 @@
   "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT2+shtml/931314.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT2+shtml/230837.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/230837.shtml",
-  "summary-al022026-202607230837"
+  "summary-al022026-202607230837",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/083918.shtml?cone",
+  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT2+shtml/230838.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT2+shtml/230838.shtml"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2066,7 +2066,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
+   "cond": "partly cloudy",
    "temp": 73,
    "sun_date": "2026-07-22",
    "station_id": "KCRX"

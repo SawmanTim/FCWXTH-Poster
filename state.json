@@ -1011,10 +1011,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "summary-al022026-202607192044",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/204636.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/204834.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/204932.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/205059.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/210638.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/212234.shtml?cone",
@@ -1410,7 +1406,11 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/054102.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/061152.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/062323.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/072307.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/072307.shtml?cone",
+  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT2+shtml/931314.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCMAT2+shtml/230837.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/230837.shtml",
+  "summary-al022026-202607230837"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",

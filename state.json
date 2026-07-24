@@ -2089,13 +2089,13 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 84,
+   "temp": 86,
    "sun_date": "2026-07-23",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "heavy rain and fog/mist",
-   "temp": 79,
+   "temp": 77,
    "sun_date": "2026-07-23",
    "station_id": "K1M4"
   }
@@ -2147,7 +2147,6 @@
  ],
  "usdm_week": "2026-W30",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1403.html/20260630",
   "https://www.spc.noaa.gov/products/md/md1577.html/20260710",
   "https://www.spc.noaa.gov/products/md/md1369.html/20260628",
   "https://www.spc.noaa.gov/products/md/md1454.html/20260703",
@@ -2546,7 +2545,8 @@
   "https://www.spc.noaa.gov/products/md/20260724",
   "https://www.spc.noaa.gov/products/md/md1718.html/20260724",
   "https://www.spc.noaa.gov/products/md/md1719.html/20260724",
-  "https://www.spc.noaa.gov/products/md/md1720.html/20260724"
+  "https://www.spc.noaa.gov/products/md/md1720.html/20260724",
+  "https://www.spc.noaa.gov/products/md/md1721.html/20260724"
  ],
  "apod_date": "2026-07-24",
  "station": {

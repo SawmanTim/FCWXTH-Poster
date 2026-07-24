@@ -685,7 +685,8 @@
   "bf23d631e48e049213be47572950a020",
   "cb3bc804f96562440f7e8cd464bd508e",
   "ce4ae4239e92f6af2d99732b6a1bb6d6",
-  "546f4d1c9175d7d52f420eea0191bec4"
+  "546f4d1c9175d7d52f420eea0191bec4",
+  "36fa90aefcd7fc0c2e49a29cf9f18e57"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2087,13 +2088,13 @@
  "wx": {
   "Paden": {
    "cond": "cloudy",
-   "temp": 82,
+   "temp": 84,
    "sun_date": "2026-07-23",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "cloudy",
-   "temp": 82,
+   "temp": 81,
    "sun_date": "2026-07-23",
    "station_id": "K1M4"
   }

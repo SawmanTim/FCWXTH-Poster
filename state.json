@@ -2554,7 +2554,7 @@
   "hilo_date": "2026-07-24",
   "hi": 86,
   "lo": 72,
-  "raining": true,
+  "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-07-24T15"

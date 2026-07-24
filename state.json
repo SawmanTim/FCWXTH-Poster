@@ -2118,7 +2118,7 @@
   "us7000t1cc",
   "tx2026ojlaky"
  ],
- "apod_fetch_ts": 1784865074.899186,
+ "apod_fetch_ts": 1784868098.7118628,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2541,7 +2541,7 @@
   "https://www.spc.noaa.gov/products/md/md1718.html/20260724",
   "https://www.spc.noaa.gov/products/md/md1719.html/20260724"
  ],
- "apod_date": "2026-07-23",
+ "apod_date": "2026-07-24",
  "station": {
   "hilo_date": "2026-07-23",
   "hi": 88,

@@ -2148,7 +2148,7 @@
   "us7000t1cc",
   "tx2026ojlaky"
  ],
- "apod_fetch_ts": 1785017711.5802732,
+ "apod_fetch_ts": 1785020770.6326165,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2170,7 +2170,6 @@
  ],
  "usdm_week": "2026-W30",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1446.html/20260702",
   "https://www.spc.noaa.gov/products/md/md1485.html/20260704",
   "https://www.spc.noaa.gov/products/md/md1517.html/20260706",
   "https://www.spc.noaa.gov/products/md/md1454.html/20260702",
@@ -2569,7 +2568,8 @@
   "https://www.spc.noaa.gov/products/md/md1729.html/20260725",
   "https://www.spc.noaa.gov/products/md/md1730.html/20260725",
   "https://www.spc.noaa.gov/products/md/md1731.html/20260725",
-  "https://www.spc.noaa.gov/products/md/md1732.html/20260725"
+  "https://www.spc.noaa.gov/products/md/md1732.html/20260725",
+  "https://www.spc.noaa.gov/products/md/md1733.html/20260725"
  ],
  "apod_date": "2026-07-25",
  "station": {

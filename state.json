@@ -697,7 +697,8 @@
   "97c983960fffd7d5d84365ffdcb6f52e",
   "0f1f246204db226b4e29b650f08cfb58",
   "d632b4a529e0623f31ab2cdeaf02779c",
-  "6bed9dbca0f97c8ea5ab46ba42355cdb"
+  "6bed9dbca0f97c8ea5ab46ba42355cdb",
+  "02a6645a8a88afa19b3a5c72b207973b"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2564,7 +2565,7 @@
  "apod_date": "2026-07-25",
  "station": {
   "hilo_date": "2026-07-25",
-  "hi": 80,
+  "hi": 81,
   "lo": 72,
   "raining": false,
   "heat": 0,

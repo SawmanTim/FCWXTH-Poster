@@ -2093,15 +2093,15 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
-   "temp": 84,
+   "cond": "mostly clear",
+   "temp": 82,
    "sun_date": "2026-07-23",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "cloudy",
    "temp": 75,
-   "sun_date": "2026-07-23",
+   "sun_date": "2026-07-24",
    "station_id": "K1M4"
   }
  },
@@ -2130,7 +2130,7 @@
   "us7000t1cc",
   "tx2026ojlaky"
  ],
- "apod_fetch_ts": 1784938089.9371955,
+ "apod_fetch_ts": 1784941142.1249616,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

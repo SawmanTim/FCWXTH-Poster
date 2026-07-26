@@ -2121,12 +2121,12 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 84,
+   "temp": 82,
    "sun_date": "2026-07-25",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly clear",
+   "cond": "clear",
    "temp": 81,
    "sun_date": "2026-07-25",
    "station_id": "K1M4"
@@ -2583,7 +2583,7 @@
  "apod_date": "2026-07-26",
  "station": {
   "hilo_date": "2026-07-26",
-  "hi": 83,
+  "hi": 84,
   "lo": 73,
   "raining": false,
   "heat": 0,

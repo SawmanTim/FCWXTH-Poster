@@ -1738,7 +1738,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a26f3a561a20969004194f4d68d539c174024876.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f49bd6b0974198a1912506dd6f037d5652372adc.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d2825117a8d40a4fee179c52c6b632c5fc12936f.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.97cff3a90921ab477b8a9054c88907329c64be1d.003.1",
@@ -2137,7 +2136,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.930ccb23bb9743409159d481f16b0ce4ceeea100.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0753b8d2b91c92f7bc6c2b8418f966dca491f06d.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.739c5418747b723a33a9e12f9b15719d516ed607.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cb9d6d0d769e1635723da9c5c4d2171cb878e38b.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cb9d6d0d769e1635723da9c5c4d2171cb878e38b.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.60d452757751927a6d5f23161a43bf97463b63e1.001.1"
  ],
  "wx": {
   "Paden": {
@@ -2200,7 +2200,6 @@
  ],
  "usdm_week": "2026-W30",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1457.html/20260703",
   "https://www.spc.noaa.gov/products/md/md1578.html/20260710",
   "https://www.spc.noaa.gov/products/md/md1452.html/20260702",
   "https://www.spc.noaa.gov/products/md/md1548.html/20260709",
@@ -2599,13 +2598,14 @@
   "https://www.spc.noaa.gov/products/md/md1753.html/20260727",
   "https://www.spc.noaa.gov/products/md/md1754.html/20260727",
   "https://www.spc.noaa.gov/products/md/md1755.html/20260727",
-  "https://www.spc.noaa.gov/products/md/md1756.html/20260727"
+  "https://www.spc.noaa.gov/products/md/md1756.html/20260727",
+  "https://www.spc.noaa.gov/products/md/md1757.html/20260727"
  ],
  "apod_date": "2026-07-27",
  "station": {
   "hilo_date": "2026-07-27",
   "hi": 78,
-  "lo": 75,
+  "lo": 74,
   "raining": true,
   "heat": 0,
   "cold": 0,

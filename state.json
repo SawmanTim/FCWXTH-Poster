@@ -2629,10 +2629,10 @@
  "apod_date": "2026-07-28",
  "station": {
   "hilo_date": "2026-07-28",
-  "hi": 86,
+  "hi": 87,
   "lo": 74,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-28T09"
  }

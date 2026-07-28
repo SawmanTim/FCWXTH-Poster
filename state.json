@@ -742,7 +742,8 @@
   "74b19b44496b836644b16406a459e06d",
   "356e93d5e6ec04a9b36cd74a77da5bce",
   "67b95f8e1505ed5b0bc6f8e70115b44f",
-  "6686a8975f8359d8d034ba651d64439b"
+  "6686a8975f8359d8d034ba651d64439b",
+  "dd04dc11c7ece2dc16c3d47cde75ef36"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2156,7 +2157,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
+   "cond": "",
    "temp": 82,
    "sun_date": "2026-07-27",
    "station_id": "KCRX"

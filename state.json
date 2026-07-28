@@ -2161,14 +2161,14 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
-   "temp": 88,
+   "cond": "clear",
+   "temp": 90,
    "sun_date": "2026-07-27",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 88,
+   "temp": 90,
    "sun_date": "2026-07-27",
    "station_id": "K1M4"
   }

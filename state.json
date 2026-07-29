@@ -2173,14 +2173,12 @@
   "Paden": {
    "cond": "mostly cloudy",
    "temp": 81,
-   "sun_date": "2026-07-28",
-   "station_id": "KCRX"
+   "sun_date": "2026-07-28"
   },
   "Franklin": {
    "cond": "clear",
    "temp": 81,
-   "sun_date": "2026-07-28",
-   "station_id": "K1M4"
+   "sun_date": "2026-07-28"
   }
  },
  "usgs_quakes": [

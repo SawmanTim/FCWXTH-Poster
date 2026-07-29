@@ -2182,8 +2182,7 @@
   "Franklin": {
    "cond": "clear",
    "temp": 82,
-   "sun_date": "2026-07-28",
-   "station_id": "K1M4"
+   "sun_date": "2026-07-28"
   }
  },
  "usgs_quakes": [

@@ -2644,10 +2644,10 @@
  "apod_date": "2026-07-29",
  "station": {
   "hilo_date": "2026-07-29",
-  "hi": 85,
+  "hi": 86,
   "lo": 78,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-07-29T09"
  }

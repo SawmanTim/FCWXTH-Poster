@@ -782,7 +782,9 @@
   "60af203199e1169fa73b03502a62493c",
   "3cf6c52ce165a34db265efcfbf98632b",
   "a02805c3cd52e5ea6ae9cd61624860e4",
-  "ee09c799d58231e673a816c9921854c7"
+  "ee09c799d58231e673a816c9921854c7",
+  "1fb0d23f94e1604a2d69a22b62798573",
+  "ef397c3390cd6b55049238bc91868d2b"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2218,7 +2220,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 88,
+   "temp": 90,
    "sun_date": "2026-07-30",
    "station_id": "K1M4"
   }
@@ -2276,7 +2278,6 @@
  ],
  "usdm_week": "2026-W31",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1482.html/20260704",
   "https://www.spc.noaa.gov/products/md/20260710",
   "https://www.spc.noaa.gov/products/md/md1395.html/20260630",
   "https://www.spc.noaa.gov/products/md/md1564.html/20260710",
@@ -2675,7 +2676,8 @@
   "https://www.spc.noaa.gov/products/md/md1808.html/20260731",
   "https://www.spc.noaa.gov/products/md/md1809.html/20260731",
   "https://www.spc.noaa.gov/products/md/md1810.html/20260731",
-  "https://www.spc.noaa.gov/products/md/md1811.html/20260731"
+  "https://www.spc.noaa.gov/products/md/md1811.html/20260731",
+  "https://www.spc.noaa.gov/products/md/md1812.html/20260731"
  ],
  "apod_date": "2026-07-31",
  "station": {

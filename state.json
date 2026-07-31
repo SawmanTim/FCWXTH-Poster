@@ -2243,7 +2243,7 @@
   "attivjdk",
   "us6000tgb9"
  ],
- "apod_fetch_ts": 1785468678.3815627,
+ "apod_fetch_ts": 1785471705.0975957,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2666,7 +2666,7 @@
   "https://www.spc.noaa.gov/products/md/20260731",
   "https://www.spc.noaa.gov/products/md/md1808.html/20260731"
  ],
- "apod_date": "2026-07-30",
+ "apod_date": "2026-07-31",
  "station": {
   "hilo_date": "2026-07-30",
   "hi": 92,

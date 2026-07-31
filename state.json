@@ -2679,7 +2679,7 @@
   "hi": 91,
   "lo": 65,
   "raining": false,
-  "heat": 1,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-07-31T12"
  },

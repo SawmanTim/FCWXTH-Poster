@@ -479,7 +479,8 @@
   "31460e1da9eeb3170161a5c588795d3d",
   "54a9fbe937f0ec5b355ff2eede7bb464",
   "fd43ce790ffb2ee8c3c13ebf45456dbe",
-  "713f77ea6350ea0fed8c6b11201280fe"
+  "713f77ea6350ea0fed8c6b11201280fe",
+  "7bf344ae375a4da696949d50c9107353"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "5680291621d83ebee04600bd151c4ddd",
@@ -2234,7 +2235,7 @@
   },
   "Franklin": {
    "cond": "cloudy",
-   "temp": 75,
+   "temp": 77,
    "sun_date": "2026-07-31",
    "station_id": "K1M4"
   }

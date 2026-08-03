@@ -2262,7 +2262,7 @@
  "wx": {
   "Paden": {
    "cond": "cloudy",
-   "temp": 73,
+   "temp": 72,
    "sun_date": "2026-08-02",
    "station_id": "KCRX"
   },
@@ -2303,7 +2303,7 @@
   "attivjdk",
   "us6000tgb9"
  ],
- "apod_fetch_ts": 1785727239.706054,
+ "apod_fetch_ts": 1785730255.6294312,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2728,7 +2728,7 @@
   "https://www.spc.noaa.gov/products/md/md1822.html/20260802",
   "https://www.spc.noaa.gov/products/md/md1823.html/20260802"
  ],
- "apod_date": "2026-08-02",
+ "apod_date": "2026-08-03",
  "station": {
   "hilo_date": "2026-08-02",
   "hi": 83,

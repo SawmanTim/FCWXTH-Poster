@@ -2262,12 +2262,12 @@
  "wx": {
   "Paden": {
    "cond": "cloudy",
-   "temp": 72,
+   "temp": 70,
    "sun_date": "2026-08-02",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly cloudy",
+   "cond": "mostly clear",
    "temp": 70,
    "sun_date": "2026-08-02",
    "station_id": "K1M4"

@@ -2280,8 +2280,8 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "clear",
-   "temp": 68,
+   "cond": "mostly clear",
+   "temp": 66,
    "sun_date": "2026-08-03",
    "station_id": "K1M4"
   }

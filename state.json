@@ -1221,7 +1221,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/202351.shtml",
   "summary-al022026-202607202351",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/235340.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/235340.shtml?inundation",
@@ -1620,7 +1619,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608031128",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608031724",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608032307",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608040501"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608040501",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608041125"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2318,7 +2318,7 @@
   "attivjdk",
   "us6000tgb9"
  ],
- "apod_fetch_ts": 1785839763.7149734,
+ "apod_fetch_ts": 1785842771.693887,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

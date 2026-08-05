@@ -2763,7 +2763,7 @@
   "hilo_date": "2026-08-05",
   "hi": 73,
   "lo": 73,
-  "raining": true,
+  "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-08-04T21"

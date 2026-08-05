@@ -2290,12 +2290,12 @@
  "wx": {
   "Paden": {
    "cond": "cloudy",
-   "temp": 81,
+   "temp": 79,
    "sun_date": "2026-08-04",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly cloudy",
+   "cond": "cloudy",
    "temp": 77,
    "sun_date": "2026-08-04",
    "station_id": "K1M4"

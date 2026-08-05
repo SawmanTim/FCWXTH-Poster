@@ -2287,13 +2287,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
+   "cond": "mostly cloudy",
    "temp": 84,
    "sun_date": "2026-08-03",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "clear",
+   "cond": "mostly clear",
    "temp": 79,
    "sun_date": "2026-08-03",
    "station_id": "K1M4"

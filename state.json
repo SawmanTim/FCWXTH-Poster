@@ -2296,7 +2296,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly cloudy",
+   "cond": "fog/mist",
    "temp": 77,
    "sun_date": "2026-08-04",
    "station_id": "K1M4"
@@ -2765,7 +2765,7 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-08-04T18"
+  "card_hour": "2026-08-04T21"
  },
  "community_alerts": [
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01791a67b6d6e77940a2dd7ec7d49936c4f4fea2.001.1"

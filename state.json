@@ -2331,7 +2331,7 @@
   "attivjdk",
   "us6000tgb9"
  ],
- "apod_fetch_ts": 1785888346.9967809,
+ "apod_fetch_ts": 1785891359.4616256,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2355,7 +2355,6 @@
  ],
  "usdm_week": "2026-W31",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1546.html/20260708",
   "https://www.spc.noaa.gov/products/md/md1440.html/20260702",
   "https://www.spc.noaa.gov/products/md/md1581.html/20260711",
   "https://www.spc.noaa.gov/products/md/md1345.html/20260627",
@@ -2754,7 +2753,8 @@
   "https://www.spc.noaa.gov/products/md/md1830.html/20260804",
   "https://www.spc.noaa.gov/products/md/md1831.html/20260804",
   "https://www.spc.noaa.gov/products/md/md1832.html/20260804",
-  "https://www.spc.noaa.gov/products/md/md1833.html/20260804"
+  "https://www.spc.noaa.gov/products/md/md1833.html/20260804",
+  "https://www.spc.noaa.gov/products/md/md1834.html/20260805"
  ],
  "apod_date": "2026-08-04",
  "station": {

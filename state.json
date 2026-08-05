@@ -2342,7 +2342,7 @@
   "us6000ti6x",
   "us6000ti8i"
  ],
- "apod_fetch_ts": 1785958224.987294,
+ "apod_fetch_ts": 1785961230.3194911,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2366,7 +2366,6 @@
  ],
  "usdm_week": "2026-W31",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1423.html/20260701",
   "https://www.spc.noaa.gov/products/md/md1549.html/20260709",
   "https://www.spc.noaa.gov/products/md/md1508.html/20260705",
   "https://www.spc.noaa.gov/products/md/md1572.html/20260710",
@@ -2765,7 +2764,8 @@
   "https://www.spc.noaa.gov/products/md/md1834.html/20260805",
   "https://www.spc.noaa.gov/products/md/20260805",
   "https://www.spc.noaa.gov/products/md/md1835.html/20260805",
-  "https://www.spc.noaa.gov/products/md/md1836.html/20260805"
+  "https://www.spc.noaa.gov/products/md/md1836.html/20260805",
+  "https://www.spc.noaa.gov/products/md/md1837.html/20260805"
  ],
  "apod_date": "2026-08-05",
  "station": {

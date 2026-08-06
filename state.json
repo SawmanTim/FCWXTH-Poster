@@ -2352,7 +2352,7 @@
   "us6000ti6x",
   "us6000ti8i"
  ],
- "apod_fetch_ts": 1786021819.7532074,
+ "apod_fetch_ts": 1786024837.2751415,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2374,7 +2374,7 @@
   "2026-07-31 11:05:14.830|A30F",
   "2026-08-02 16:34:29.760|A20F"
  ],
- "usdm_week": "2026-W31",
+ "usdm_week": "2026-W32",
  "spc_md": [
   "https://www.spc.noaa.gov/products/md/md1524.html/20260706",
   "https://www.spc.noaa.gov/products/md/md1357.html/20260628",
@@ -2780,12 +2780,12 @@
  "apod_date": "2026-08-06",
  "station": {
   "hilo_date": "2026-08-06",
-  "hi": 84,
+  "hi": 85,
   "lo": 70,
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-08-06T06"
+  "card_hour": "2026-08-06T09"
  },
  "community_alerts": [
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01791a67b6d6e77940a2dd7ec7d49936c4f4fea2.001.1"

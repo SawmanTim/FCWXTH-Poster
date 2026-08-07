@@ -144,7 +144,8 @@
   "9597a96d3d1e0816f23280510b2fe984",
   "002a86b6146e4cf7c1cf22eeadeaf19d",
   "20acf30e33244ed44e57693d676dd001",
-  "982c4ec3c7f4dc1c373dda1983931f5f"
+  "982c4ec3c7f4dc1c373dda1983931f5f",
+  "afe926527a68bee477b1a456ca0090e9"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
   "6d410f70592149889863512af083a959",
@@ -369,7 +370,8 @@
   "7a7f7927d67532dc3b4bb3372b570ce3",
   "2cba3acf8c8a73c4f4ed315f9558f85f",
   "8d0fc7bb840fc5daf4da74dd73621e3e",
-  "78929f39ba02fcd7145741267c8f8a6d"
+  "78929f39ba02fcd7145741267c8f8a6d",
+  "1ae16393188a44023ca23bfd90e7b7a9"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -518,7 +520,8 @@
   "23725ddc59a0ed020c20b794327a2ed9",
   "e1712d9fb7bd1d77881d4cae3a3dc933",
   "7b21926e8840be3a21613aa796080649",
-  "6356e86176630ba048c99e017d2dd36d"
+  "6356e86176630ba048c99e017d2dd36d",
+  "7d97b63ad435f1d970dc90f24645c0ff"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "5680291621d83ebee04600bd151c4ddd",
@@ -863,7 +866,13 @@
   "7fb3ded065403855ea0c4087a6a1c6d2",
   "3277d377e34f968dc0833c8734fe3cd4",
   "82385be6dafa04df91ddf5325b55f6e7",
-  "2e80549b272d0240068e05f0a98c1bb4"
+  "2e80549b272d0240068e05f0a98c1bb4",
+  "f9433e7506e14914c6c78c2d30d57338",
+  "4b9ed97bc27c0202e18e73c7a61714a8",
+  "aa1182b21f699b5bf3dcdf4478d05f7a",
+  "9fa43f83d9b12859582d1158f238d0dc",
+  "02a7f8987bfba7ee41e9a5985c2e31a0",
+  "80aaa476a94304ce25b1ba4fcd9e8f31"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -1000,7 +1009,9 @@
   "950f74bc0fc4f465a40e66f61d1874e2",
   "bda4cd609e9f25162a2a98e9a2d4a758",
   "a264cd67306aed63bdc0866ca7adfcab",
-  "7876f279fc8f28a69668853c15734a55"
+  "7876f279fc8f28a69668853c15734a55",
+  "6db0306b3970ac59dae68c38c42926a0",
+  "414c54c3a05ebf583636e2f7373a0c65"
  ],
  "https://rss.app/feeds/un6FWJkZkkU7OdHO.xml": [
   "7d38a4c99e30a7ec6378b26871666fb2",
@@ -1094,7 +1105,9 @@
   "5d22453c084ec5121ad1705ec599c8a3",
   "69edb0338991c756d1c91f7fb25db4d6",
   "21932be96ebec30abd7aa6d717efff53",
-  "11399d8ef456ad6bc261b495ed8e5f68"
+  "11399d8ef456ad6bc261b495ed8e5f68",
+  "7c2556e95db93bb7db327d4df6db16ba",
+  "cf9b4913747cf72a3eb915f946e43d21"
  ],
  "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml": [
   "f068a2eaf3e067f0ab363d0b1c2b91e9",
@@ -1191,7 +1204,9 @@
   "c3b57d828bc9241a5729c0cbea023b0d",
   "6c876fbac2a0be775dd4347b14af3653",
   "c96fdea3ef1820eda71c3ee20c5d3f78",
-  "79dcc89b3f8502e2b1f74617419d11c9"
+  "79dcc89b3f8502e2b1f74617419d11c9",
+  "8f6608d5ae6b58eb750fcecfe4de0eea",
+  "4791115f3bdb0d6abe8541ad24942254"
  ],
  "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml": [
   "ef354fda682a7577253ab06ef0284f7a",
@@ -1254,7 +1269,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/235616.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/235616.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/235707.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/235707.shtml?inundation",
@@ -1653,7 +1667,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608051725",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608052306",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608060500",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608061139"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608061139",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608062309"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2310,13 +2325,13 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 86,
+   "temp": 90,
    "sun_date": "2026-08-05",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly cloudy",
-   "temp": 86,
+   "cond": "clear",
+   "temp": 84,
    "sun_date": "2026-08-05",
    "station_id": "K1M4"
   }
@@ -2353,7 +2368,7 @@
   "us6000ti6x",
   "us6000ti8i"
  ],
- "apod_fetch_ts": 1786028587.2525117,
+ "apod_fetch_ts": 1786062267.167981,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2784,7 +2799,7 @@
   "hi": 91,
   "lo": 70,
   "raining": false,
-  "heat": 1,
+  "heat": 0,
   "cold": 0,
   "card_hour": "2026-08-06T09"
  },

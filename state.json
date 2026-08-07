@@ -2335,8 +2335,8 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "cloudy",
-   "temp": 73,
+   "cond": "mostly cloudy",
+   "temp": 75,
    "sun_date": "2026-08-06",
    "station_id": "K1M4"
   }
@@ -2801,7 +2801,7 @@
  "apod_date": "2026-08-07",
  "station": {
   "hilo_date": "2026-08-07",
-  "hi": 79,
+  "hi": 80,
   "lo": 71,
   "raining": false,
   "heat": 0,

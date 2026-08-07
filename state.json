@@ -1937,7 +1937,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a8301e35a0c5842e28223fc8a6a888ea0d487433.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.30051fdea03eaee1697fe1c86cf84ba154e3808f.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ce5f93b488a67f075895c46b9302a91851520ae1.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.acfd546b68bb5269defc8fe034c313f1684badd6.001.1",
@@ -2336,7 +2335,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dd25c0cff9d64e34c330084dea753fda2dee5b0a.002.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0da2163265f24900c7d72b039c5b7c702d734adc.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f4b25dd201496d813c0a2fd664644384605c561e.002.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.92d3850bac295f75049735a3d8da512eff3dbf0b.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.92d3850bac295f75049735a3d8da512eff3dbf0b.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ea64b6f252c6fc944d939ae6de7c09ecb2e10daf.001.1"
  ],
  "wx": {
   "Paden": {

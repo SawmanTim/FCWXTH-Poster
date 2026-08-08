@@ -2343,8 +2343,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly clear",
-   "temp": 75,
+   "cond": "fog/mist",
+   "temp": 73,
    "sun_date": "2026-08-07",
    "station_id": "KCRX"
   },
@@ -2412,7 +2412,6 @@
  ],
  "usdm_week": "2026-W32",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1559.html/20260709",
   "https://www.spc.noaa.gov/products/md/20260630",
   "https://www.spc.noaa.gov/products/md/md1366.html/20260628",
   "https://www.spc.noaa.gov/products/md/md1357.html/20260627",
@@ -2811,7 +2810,8 @@
   "https://www.spc.noaa.gov/products/md/md1858.html/20260808",
   "https://www.spc.noaa.gov/products/md/20260808",
   "https://www.spc.noaa.gov/products/md/md1859.html/20260808",
-  "https://www.spc.noaa.gov/products/md/md1860.html/20260808"
+  "https://www.spc.noaa.gov/products/md/md1860.html/20260808",
+  "https://www.spc.noaa.gov/products/md/md1861.html/20260808"
  ],
  "apod_date": "2026-08-08",
  "station": {

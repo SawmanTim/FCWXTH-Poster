@@ -57,6 +57,9 @@ jobs:
           NASA_API_KEY:    ${{ secrets.NASA_API_KEY }}
           WU_API_KEY:      ${{ secrets.WU_API_KEY }}
           GH_TOKEN:        ${{ github.token }}
+          # Dead-man's-switch ping URL (healthchecks.io or similar). OPTIONAL —
+          # if the secret isn't set, the ping below is skipped and nothing changes.
+          HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
         run: |
           git config user.name  "fcwxth-poster-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -93,6 +96,17 @@ jobs:
                 python alert.py --log /tmp/cycle.log || true
               fi
               had_failures=1
+            fi
+            # HEARTBEAT (dead-man's-switch). Our own alert.py can only fire from
+            # INSIDE a running job — so when GitHub drops the runs entirely (the
+            # 2026-08-06 runner outage: silent ~8.5h gap) nothing warns us. These
+            # pings stop too, and the external monitor alarms on the silence.
+            # Deliberately pings even on a failed cycle: this signals "the poller
+            # is ALIVE", while post/alert failures are alert.py's job. Optional
+            # (skipped if the secret is unset) and never breaks the loop.
+            if [ -n "$HEALTHCHECK_URL" ]; then
+              curl -fsS -m 10 --retry 3 -o /dev/null "$HEALTHCHECK_URL" \
+                || echo "::warning::heartbeat ping failed (poller itself is fine)"
             fi
             if ! git diff --quiet -- state.json; then
               git add state.json

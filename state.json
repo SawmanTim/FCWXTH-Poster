@@ -2386,7 +2386,7 @@
   "us6000ti6x",
   "us6000ti8i"
  ],
- "apod_fetch_ts": 1786159285.1037595,
+ "apod_fetch_ts": 1786162310.7998438,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2811,7 +2811,7 @@
   "https://www.spc.noaa.gov/products/md/md1859.html/20260808",
   "https://www.spc.noaa.gov/products/md/md1860.html/20260808"
  ],
- "apod_date": "2026-08-07",
+ "apod_date": "2026-08-08",
  "station": {
   "hilo_date": "2026-08-07",
   "hi": 94,

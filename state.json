@@ -904,7 +904,9 @@
   "4e4c8b25b1aea2b97ec2a9e08c313f07",
   "9ec315ef7e1bd5981fd130b05c0f484d",
   "465e3921eaf4e6e88959bbc294adff3b",
-  "a20737f43908a16c6021b866235c3ed3"
+  "a20737f43908a16c6021b866235c3ed3",
+  "c902bc50bff9574b33a8bb90dc79c61d",
+  "dbe7dc085205818d8acdaa94a62bf957"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2838,7 +2840,7 @@
   "hi": 93,
   "lo": 68,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-08-09T12"
  },

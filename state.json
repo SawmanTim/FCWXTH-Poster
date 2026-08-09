@@ -2363,8 +2363,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "partly cloudy",
-   "temp": 91,
+   "cond": "cloudy",
+   "temp": 90,
    "sun_date": "2026-08-08",
    "station_id": "KCRX"
   },

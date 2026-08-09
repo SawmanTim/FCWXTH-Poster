@@ -1963,7 +1963,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8b58a0cad488bc8b1383f5d6ae8c36f4264b0ef5.003.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b5dd5db90bd9a306de9c39707fe8849a8e729b29.001.2",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ab273d36d74368d10680dbb1293a44dcbee4c12f.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7f0a8bf3a3d428ad34fcf69be3f23ab72aeb46ea.001.2",
@@ -2362,11 +2361,12 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.22a5ec2ca23e579a7a67dce51490132521bb5c6f.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.39b48169c3464238983d231431dbe7d0f6dea328.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e3b0739ad07c638bd50f1876742baa659d4a4a5d.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1f6c20fdc45415d700469bd5dbfe00272fe7546e.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1f6c20fdc45415d700469bd5dbfe00272fe7546e.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.08c732441ec3d79c0d1af7295ef33180ff7614b0.001.1"
  ],
  "wx": {
   "Paden": {
-   "cond": "",
+   "cond": "fog/mist",
    "temp": 73,
    "sun_date": "2026-08-08",
    "station_id": "KCRX"

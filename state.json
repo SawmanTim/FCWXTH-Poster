@@ -2853,7 +2853,7 @@
   "hi": 87,
   "lo": 69,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-08-10T09"
  },

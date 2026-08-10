@@ -2382,7 +2382,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
+   "cond": "clear",
    "temp": 90,
    "sun_date": "2026-08-09",
    "station_id": "KCRX"
@@ -2862,7 +2862,7 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-08-10T12"
+  "card_hour": "2026-08-10T15"
  },
  "community_alerts": [
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01791a67b6d6e77940a2dd7ec7d49936c4f4fea2.001.1"

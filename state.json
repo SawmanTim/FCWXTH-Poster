@@ -2898,7 +2898,7 @@
   "hilo_date": "2026-08-12",
   "hi": 94,
   "lo": 72,
-  "raining": false,
+  "raining": true,
   "heat": 2,
   "cold": 0,
   "card_hour": "2026-08-12T15"

@@ -2411,7 +2411,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly clear",
+   "cond": "mostly cloudy",
    "temp": 73,
    "sun_date": "2026-08-11",
    "station_id": "KCRX"
@@ -2457,7 +2457,7 @@
   "aka2026powmkf",
   "us6000tjl2"
  ],
- "apod_fetch_ts": 1786530427.8359401,
+ "apod_fetch_ts": 1786533448.6053195,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

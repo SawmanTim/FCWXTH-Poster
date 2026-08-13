@@ -1385,7 +1385,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/085814.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/092302.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/092302.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/092302.shtml?cone",
@@ -1784,7 +1783,8 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT3+shtml/131459.shtml",
   "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/150049.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/152301.shtml?cone",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608131741"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608131741",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608132319"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2513,7 +2513,6 @@
  ],
  "usdm_week": "2026-W33",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1629.html/20260715",
   "https://www.spc.noaa.gov/products/md/md1628.html/20260716",
   "https://www.spc.noaa.gov/products/md/md1629.html/20260716",
   "https://www.spc.noaa.gov/products/md/20260716",
@@ -2912,7 +2911,8 @@
   "https://www.spc.noaa.gov/products/md/md1968.html/20260813",
   "https://www.spc.noaa.gov/products/md/md1969.html/20260813",
   "https://www.spc.noaa.gov/products/md/md1970.html/20260813",
-  "https://www.spc.noaa.gov/products/md/md1971.html/20260813"
+  "https://www.spc.noaa.gov/products/md/md1971.html/20260813",
+  "https://www.spc.noaa.gov/products/md/md1972.html/20260813"
  ],
  "apod_date": "2026-08-13",
  "station": {

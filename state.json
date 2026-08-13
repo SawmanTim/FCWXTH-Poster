@@ -2909,7 +2909,7 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-08-12T21"
+  "card_hour": "2026-08-13T06"
  },
  "community_alerts": [
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01791a67b6d6e77940a2dd7ec7d49936c4f4fea2.001.1"

@@ -1376,8 +1376,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/085022.shtml?wsurge",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/085022.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/085022.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/085814.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/085814.shtml?inundation",
@@ -1775,7 +1773,9 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT3+shtml/131458.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT3+shtml/131459.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT3+shtml/131459.shtml",
-  "summary-al032026-202608131459"
+  "summary-al032026-202608131459",
+  "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/150016.shtml?cone",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT3+shtml/131459.shtml"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2432,7 +2432,7 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 86,
+   "temp": 88,
    "sun_date": "2026-08-12",
    "station_id": "KCRX"
   },
@@ -2907,10 +2907,10 @@
  "apod_date": "2026-08-13",
  "station": {
   "hilo_date": "2026-08-13",
-  "hi": 89,
+  "hi": 91,
   "lo": 73,
   "raining": false,
-  "heat": 1,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-08-13T09"
  },

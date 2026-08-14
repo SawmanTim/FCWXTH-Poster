@@ -2489,7 +2489,7 @@
   "us6000tjl2",
   "nc75417557"
  ],
- "apod_fetch_ts": 1786679168.6823046,
+ "apod_fetch_ts": 1786682228.125976,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2916,7 +2916,7 @@
   "https://www.spc.noaa.gov/products/md/20260814",
   "https://www.spc.noaa.gov/products/md/md1974.html/20260814"
  ],
- "apod_date": "2026-08-13",
+ "apod_date": "2026-08-14",
  "station": {
   "hilo_date": "2026-08-13",
   "hi": 98,

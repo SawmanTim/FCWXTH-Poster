@@ -2446,13 +2446,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly clear",
-   "temp": 75,
+   "cond": "fog/mist",
+   "temp": 73,
    "sun_date": "2026-08-13",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "partly cloudy",
+   "cond": "mostly cloudy",
    "temp": 73,
    "sun_date": "2026-08-13",
    "station_id": "K1M4"

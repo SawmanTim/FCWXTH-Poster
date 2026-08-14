@@ -158,7 +158,8 @@
   "32c061701a72247c8f0461daeb8a5616",
   "733942be8fa65f8b61c9dd14bf0334cc",
   "d7944e7e4159734f9a376d95ed255165",
-  "51e09eac7519c517b1c58b7ce7403567"
+  "51e09eac7519c517b1c58b7ce7403567",
+  "d5cba49013c59bfeafe52ea6ec0ce800"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
   "6d410f70592149889863512af083a959",
@@ -2456,7 +2457,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 91,
+   "temp": 93,
    "sun_date": "2026-08-13",
    "station_id": "K1M4"
   }

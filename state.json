@@ -2939,7 +2939,7 @@
   "hi": 98,
   "lo": 73,
   "raining": false,
-  "heat": 1,
+  "heat": 0,
   "cold": 0,
   "card_hour": "2026-08-14T18"
  },

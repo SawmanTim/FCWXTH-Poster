@@ -412,7 +412,8 @@
   "55410fe7b2aa583e0717e0014f723796",
   "38a9f24af57601e89c12af30858a2040",
   "d8d163ad9e0a236a112f25148e0e3a45",
-  "07af1c9eaffba72544eb1ba271ae63a5"
+  "07af1c9eaffba72544eb1ba271ae63a5",
+  "ce8fd5ba6710433eea144015365efdf6"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -2466,7 +2467,7 @@
   },
   "Franklin": {
    "cond": "fog/mist",
-   "temp": 73,
+   "temp": 72,
    "sun_date": "2026-08-14",
    "station_id": "K1M4"
   }

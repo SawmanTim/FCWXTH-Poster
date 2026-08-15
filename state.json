@@ -585,7 +585,6 @@
   "30ddae4cae475af07240d05bf456d9f8"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "5680291621d83ebee04600bd151c4ddd",
   "3167bf362a00a9d6cbda705946f7efc2",
   "70f56de9b99bad9b0a2c093e6c54ff8e",
   "7fa2dd6788497fce985a7e2cd142ca6a",
@@ -984,7 +983,8 @@
   "dbcb428601461b362cefa77e090868c4",
   "038c925f6249a7ff3b4b39cacd3f4a28",
   "040e0ceb97e676437a5fa8c52bd8e2c5",
-  "c1d00841e4437376093b4269c1f58c81"
+  "c1d00841e4437376093b4269c1f58c81",
+  "623118c0d502b76ffe3c2fd49727ba60"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2518,7 +2518,7 @@
   "us6000tkyk",
   "us6000tkv2"
  ],
- "apod_fetch_ts": 1786823138.521441,
+ "apod_fetch_ts": 1786826192.75517,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

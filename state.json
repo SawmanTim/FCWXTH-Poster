@@ -2469,12 +2469,12 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 88,
+   "temp": 82,
    "sun_date": "2026-08-15",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "haze",
+   "cond": "clear",
    "temp": 81,
    "sun_date": "2026-08-15",
    "station_id": "K1M4"

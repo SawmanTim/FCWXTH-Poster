@@ -163,7 +163,8 @@
   "258f3897f4c1f3c1a1ba3f7cfd6673f2",
   "0ecc71f31f6463136aaf448ab55e31a3",
   "6940121b8b096ddeeb5dfb628c3b50d5",
-  "8b9c0b758f5367e4820803449479cc8d"
+  "8b9c0b758f5367e4820803449479cc8d",
+  "dab6e2995a688dc52e60c8f4c1e75c32"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
   "6d410f70592149889863512af083a959",
@@ -2490,7 +2491,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "",
+   "cond": "clear",
    "temp": 97,
    "sun_date": "2026-08-16",
    "station_id": "K1M4"

@@ -601,7 +601,6 @@
   "21e7ece19f2351271b29c236cbf9bbd8"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "b2b0c6e0b414795e4943591a97f44846",
   "16c4004d426217f4625b8620e781dcf8",
   "b248283a734318f47acf03c5d5b77eb3",
   "0345735bb690e8ed8ca161396b78d027",
@@ -1000,7 +999,8 @@
   "968c7c90265527cf035f429216dc0892",
   "a9edab4009f064b82d4302dd4d81f13e",
   "671f72e5aa8ccc156288d70b11a479cd",
-  "68836a94445677d8056d7327c0bb2829"
+  "68836a94445677d8056d7327c0bb2829",
+  "22dd51b0e551c0b97793139c6a20a0c8"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2496,8 +2496,8 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "partly cloudy",
-   "temp": 91,
+   "cond": "mostly clear",
+   "temp": 93,
    "sun_date": "2026-08-16",
    "station_id": "K1M4"
   }

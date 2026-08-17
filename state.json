@@ -2087,7 +2087,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1e77b62b57a4b9750636e71ea086a4921d1ce5bc.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6434be071f3338504df09a4b175ba8b9eb696177.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4cdda239aa65333eb4ec5c3092a6440d2a4c885a.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d9508f9c450ce527ea35dffbe91aadd41e4fcd18.001.1",
@@ -2486,7 +2485,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.19b03bb39591e5c3020a6a02713501d7d185f7ee.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2c43cf0e1c477915f7c172f0b786df8408363864.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bfeace491167de02acddf744e7f8057897162418.002.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a11b1141e263379ce4ec1788a2491475d9fe023c.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a11b1141e263379ce4ec1788a2491475d9fe023c.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ba97d442c86f38618192a204b0badf6267f30536.001.1"
  ],
  "wx": {
   "Paden": {
@@ -2567,7 +2567,6 @@
  ],
  "usdm_week": "2026-W33",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1670.html/20260720",
   "https://www.spc.noaa.gov/products/md/md1671.html/20260720",
   "https://www.spc.noaa.gov/products/md/md1672.html/20260720",
   "https://www.spc.noaa.gov/products/md/md1673.html/20260720",
@@ -2966,7 +2965,8 @@
   "https://www.spc.noaa.gov/products/md/md2014.html/20260817",
   "https://www.spc.noaa.gov/products/md/md2015.html/20260817",
   "https://www.spc.noaa.gov/products/md/md2016.html/20260817",
-  "https://www.spc.noaa.gov/products/md/md2017.html/20260817"
+  "https://www.spc.noaa.gov/products/md/md2017.html/20260817",
+  "https://www.spc.noaa.gov/products/md/md2018.html/20260817"
  ],
  "apod_date": "2026-08-17",
  "station": {

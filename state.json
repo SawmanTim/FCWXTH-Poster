@@ -1263,7 +1263,8 @@
   "4ddb843e966b85b1c144a51e854fb9ca",
   "b87d75ca60057f08b6f55074b1b329e2",
   "f448167680b99d76c159e7d7fc462117",
-  "66e43a3e41826700e19837932fdd5d4c"
+  "66e43a3e41826700e19837932fdd5d4c",
+  "cfb246ced410464d4a3f5a54d2f46266"
  ],
  "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml": [
   "f068a2eaf3e067f0ab363d0b1c2b91e9",
@@ -2097,7 +2098,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8b80b760b153a2f31e6931a497161eed85d43c90.003.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0f9397287e7009b892e5457f1c055faf98e3cf7a.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a9804413e0601afadebf76553f1873c17b2c13c7.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.172d485e110b09b81635178535500a190e865bcc.001.1",
@@ -2496,7 +2496,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0ff3b83234073e70b5612b2a52aff499ed0418d.003.2",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0ff3b83234073e70b5612b2a52aff499ed0418d.004.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0ff3b83234073e70b5612b2a52aff499ed0418d.003.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c8fbe7458dbfb4e68a90456bb8140e4ac5d56018.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c8fbe7458dbfb4e68a90456bb8140e4ac5d56018.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2a74c76ea6ff3a3dc07e65c4e97649d3cb820cd5.001.1"
  ],
  "wx": {
   "Paden": {
@@ -2507,7 +2508,7 @@
   },
   "Franklin": {
    "cond": "mostly clear",
-   "temp": 90,
+   "temp": 91,
    "sun_date": "2026-08-17",
    "station_id": "K1M4"
   }

@@ -2498,7 +2498,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly clear",
+   "cond": "clear",
    "temp": 75,
    "sun_date": "2026-08-17",
    "station_id": "K1M4"
@@ -2542,7 +2542,7 @@
   "us6000tkyk",
   "us6000tkv2"
  ],
- "apod_fetch_ts": 1787020628.1402779,
+ "apod_fetch_ts": 1787023663.5377614,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

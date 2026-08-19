@@ -436,7 +436,8 @@
   "e34d2b1841246793c131ecf6aa0834f4",
   "1ea44031a46128827cfdb2ba836175b1",
   "cd53bcd6591692123376c54de422bd07",
-  "2682d665657e61213fd1439eff7e691a"
+  "2682d665657e61213fd1439eff7e691a",
+  "09463b18b8b5a7ebccf39bec88744b67"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -2991,7 +2992,7 @@
  "apod_date": "2026-08-19",
  "station": {
   "hilo_date": "2026-08-19",
-  "hi": 92,
+  "hi": 93,
   "lo": 68,
   "raining": false,
   "heat": 2,

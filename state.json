@@ -2556,7 +2556,7 @@
   "us6000tkv2",
   "us6000tlrj"
  ],
- "apod_fetch_ts": 1787123485.741318,
+ "apod_fetch_ts": 1787129104.5461905,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2583,7 +2583,6 @@
  ],
  "usdm_week": "2026-W33",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1690.html/20260721",
   "https://www.spc.noaa.gov/products/md/md1691.html/20260721",
   "https://www.spc.noaa.gov/products/md/md1692.html/20260721",
   "https://www.spc.noaa.gov/products/md/md1693.html/20260721",
@@ -2982,13 +2981,14 @@
   "https://www.spc.noaa.gov/products/md/md2033.html/20260819",
   "https://www.spc.noaa.gov/products/md/md2034.html/20260819",
   "https://www.spc.noaa.gov/products/md/md2035.html/20260819",
-  "https://www.spc.noaa.gov/products/md/md2036.html/20260819"
+  "https://www.spc.noaa.gov/products/md/md2036.html/20260819",
+  "https://www.spc.noaa.gov/products/md/md2037.html/20260819"
  ],
  "apod_date": "2026-08-19",
  "station": {
   "hilo_date": "2026-08-19",
   "hi": 72,
-  "lo": 70,
+  "lo": 69,
   "raining": false,
   "heat": 0,
   "cold": 0,

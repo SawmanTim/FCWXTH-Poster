@@ -47,7 +47,12 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+      # A hung apt mirror once ate a whole 5.9h window (2026-08-19: this step sat
+      # for an hour, the poll loop never started, so alert.py couldn't fire either).
+      # The font is normally already on the runner, so cap it and carry on regardless.
       - name: Ensure DejaVu font for the conditions card
+        timeout-minutes: 3
+        continue-on-error: true
         run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-dejavu-core
 
       - name: Poll every 60 seconds

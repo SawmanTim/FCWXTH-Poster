@@ -2991,10 +2991,10 @@
  "apod_date": "2026-08-19",
  "station": {
   "hilo_date": "2026-08-19",
-  "hi": 87,
+  "hi": 88,
   "lo": 68,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-08-19T09"
  },

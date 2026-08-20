@@ -2525,14 +2525,14 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly clear",
-   "temp": 88,
+   "cond": "rain",
+   "temp": 84,
    "sun_date": "2026-08-19",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "",
-   "temp": 91,
+   "cond": "clear",
+   "temp": 93,
    "sun_date": "2026-08-19",
    "station_id": "K1M4"
   }

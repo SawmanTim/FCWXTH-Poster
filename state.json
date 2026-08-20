@@ -2519,12 +2519,12 @@
   "Paden": {
    "cond": "clear",
    "temp": 88,
-   "sun_date": "2026-08-18",
+   "sun_date": "2026-08-19",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 81,
+   "temp": 82,
    "sun_date": "2026-08-19",
    "station_id": "K1M4"
   }

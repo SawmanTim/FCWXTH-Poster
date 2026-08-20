@@ -2569,7 +2569,7 @@
   "us6000tkv2",
   "us6000tlrj"
  ],
- "apod_fetch_ts": 1787195837.523159,
+ "apod_fetch_ts": 1787198873.120692,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2997,7 +2997,7 @@
   "https://www.spc.noaa.gov/products/md/md2047.html/20260820",
   "https://www.spc.noaa.gov/products/md/md2048.html/20260820"
  ],
- "apod_date": "2026-08-19",
+ "apod_date": "2026-08-20",
  "station": {
   "hilo_date": "2026-08-19",
   "hi": 97,

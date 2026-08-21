@@ -2547,7 +2547,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly clear",
+   "cond": "partly cloudy",
    "temp": 90,
    "sun_date": "2026-08-20",
    "station_id": "K1M4"
@@ -2620,7 +2620,6 @@
  ],
  "usdm_week": "2026-W34",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1725.html/20260725",
   "https://www.spc.noaa.gov/products/md/md1726.html/20260725",
   "https://www.spc.noaa.gov/products/md/md1727.html/20260725",
   "https://www.spc.noaa.gov/products/md/20260725",
@@ -3019,7 +3018,8 @@
   "https://www.spc.noaa.gov/products/md/md2070.html/20260821",
   "https://www.spc.noaa.gov/products/md/md2071.html/20260821",
   "https://www.spc.noaa.gov/products/md/md2072.html/20260821",
-  "https://www.spc.noaa.gov/products/md/md2073.html/20260821"
+  "https://www.spc.noaa.gov/products/md/md2073.html/20260821",
+  "https://www.spc.noaa.gov/products/md/md2074.html/20260821"
  ],
  "apod_date": "2026-08-21",
  "station": {

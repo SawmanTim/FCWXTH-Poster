@@ -634,7 +634,6 @@
   "494e3bc9a5c74f4ed84c838cae9642f1"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "b7100b7d1ab69a740dddb18dc840ce39",
   "a02d7ea4862042a2336da37fc3a47c9b",
   "ebbdece5afe461c7098afa0498918dc5",
   "bce3cec1d9a1f8697dfdc5b4dbec2019",
@@ -1033,7 +1032,8 @@
   "e2de6925fe462c4bdabd35ef157e06be",
   "67d63448b00f8b73ae7040434468ff5b",
   "8d821e4f7b45ed5262295ba20845b9e3",
-  "f07d6a6ba4fae0827562666ecfd266e9"
+  "f07d6a6ba4fae0827562666ecfd266e9",
+  "7632441ba549f32f87c471f7414bb95b"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2588,7 +2588,7 @@
   "us6000tlrj",
   "us6000tm81"
  ],
- "apod_fetch_ts": 1787329544.8836815,
+ "apod_fetch_ts": 1787332597.988533,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3019,7 +3019,7 @@
  "apod_date": "2026-08-21",
  "station": {
   "hilo_date": "2026-08-21",
-  "hi": 90,
+  "hi": 91,
   "lo": 71,
   "raining": false,
   "heat": 2,

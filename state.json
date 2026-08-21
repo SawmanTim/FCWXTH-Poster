@@ -2591,7 +2591,7 @@
   "us6000tlrj",
   "us6000tm81"
  ],
- "apod_fetch_ts": 1787341653.4423957,
+ "apod_fetch_ts": 1787344661.4657226,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2618,7 +2618,6 @@
  ],
  "usdm_week": "2026-W34",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1724.html/20260724",
   "https://www.spc.noaa.gov/products/md/md1725.html/20260724",
   "https://www.spc.noaa.gov/products/md/md1726.html/20260724",
   "https://www.spc.noaa.gov/products/md/md1725.html/20260725",
@@ -3017,7 +3016,8 @@
   "https://www.spc.noaa.gov/products/md/md2067.html/20260821",
   "https://www.spc.noaa.gov/products/md/md2068.html/20260821",
   "https://www.spc.noaa.gov/products/md/md2069.html/20260821",
-  "https://www.spc.noaa.gov/products/md/md2070.html/20260821"
+  "https://www.spc.noaa.gov/products/md/md2070.html/20260821",
+  "https://www.spc.noaa.gov/products/md/md2071.html/20260821"
  ],
  "apod_date": "2026-08-21",
  "station": {

@@ -632,7 +632,6 @@
   "76fe582b4b202895225222ba62112e59"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "73a70a0cc804de69441e3655db91cf0e",
   "b7100b7d1ab69a740dddb18dc840ce39",
   "a02d7ea4862042a2336da37fc3a47c9b",
   "ebbdece5afe461c7098afa0498918dc5",
@@ -1031,7 +1030,8 @@
   "b7364a9067a8f3f44b568adc367ad05c",
   "e2de6925fe462c4bdabd35ef157e06be",
   "67d63448b00f8b73ae7040434468ff5b",
-  "8d821e4f7b45ed5262295ba20845b9e3"
+  "8d821e4f7b45ed5262295ba20845b9e3",
+  "f07d6a6ba4fae0827562666ecfd266e9"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2533,13 +2533,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "partly cloudy",
+   "cond": "",
    "temp": 75,
    "sun_date": "2026-08-20",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "",
+   "cond": "clear",
    "temp": 73,
    "sun_date": "2026-08-20",
    "station_id": "K1M4"

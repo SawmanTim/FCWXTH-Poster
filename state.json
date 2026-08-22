@@ -2609,7 +2609,7 @@
   "attk5wls",
   "aka2026qoynpe"
  ],
- "apod_fetch_ts": 1787433526.5978422,
+ "apod_fetch_ts": 1787436534.4398282,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2636,7 +2636,6 @@
  ],
  "usdm_week": "2026-W34",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1742.html/20260726",
   "https://www.spc.noaa.gov/products/md/md1743.html/20260726",
   "https://www.spc.noaa.gov/products/md/md1744.html/20260726",
   "https://www.spc.noaa.gov/products/md/md1745.html/20260726",
@@ -3035,7 +3034,8 @@
   "https://www.spc.noaa.gov/products/md/md2088.html/20260822",
   "https://www.spc.noaa.gov/products/md/md2089.html/20260822",
   "https://www.spc.noaa.gov/products/md/md2090.html/20260822",
-  "https://www.spc.noaa.gov/products/md/md2091.html/20260822"
+  "https://www.spc.noaa.gov/products/md/md2091.html/20260822",
+  "https://www.spc.noaa.gov/products/md/md2092.html/20260822"
  ],
  "apod_date": "2026-08-22",
  "station": {

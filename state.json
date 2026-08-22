@@ -2555,13 +2555,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "partly cloudy",
-   "temp": 97,
+   "cond": "clear",
+   "temp": 93,
    "sun_date": "2026-08-21",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "clear",
+   "cond": "",
    "temp": 93,
    "sun_date": "2026-08-21",
    "station_id": "K1M4"
@@ -2636,7 +2636,6 @@
  ],
  "usdm_week": "2026-W34",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1741.html/20260726",
   "https://www.spc.noaa.gov/products/md/md1742.html/20260726",
   "https://www.spc.noaa.gov/products/md/md1743.html/20260726",
   "https://www.spc.noaa.gov/products/md/md1744.html/20260726",
@@ -3035,7 +3034,8 @@
   "https://www.spc.noaa.gov/products/md/md2087.html/20260822",
   "https://www.spc.noaa.gov/products/md/md2088.html/20260822",
   "https://www.spc.noaa.gov/products/md/md2089.html/20260822",
-  "https://www.spc.noaa.gov/products/md/md2090.html/20260822"
+  "https://www.spc.noaa.gov/products/md/md2090.html/20260822",
+  "https://www.spc.noaa.gov/products/md/md2091.html/20260822"
  ],
  "apod_date": "2026-08-22",
  "station": {

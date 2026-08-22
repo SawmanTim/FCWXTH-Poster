@@ -178,7 +178,8 @@
   "c7f0dbf481a58e12cc7f66a892217772",
   "c91c6ad42eb15daf2541d615d7ba384f",
   "f5e0773d6c68c59c49e8dc22726739f2",
-  "4dbc49ac6c17be32a70b88da231d2b75"
+  "4dbc49ac6c17be32a70b88da231d2b75",
+  "d5f6edd747f1c05fdbe1bfb5a5879135"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
   "6d410f70592149889863512af083a959",
@@ -2152,8 +2153,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e17f3cecec052159a5af7cdc4c8512190cfa4056.001.2",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e17f3cecec052159a5af7cdc4c8512190cfa4056.004.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3d3545290dd903a054b03bd96731d5ae53221da7.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3d3545290dd903a054b03bd96731d5ae53221da7.002.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.46be154d8e6d1b35403edaddde5adfad4f69b5b8.001.1",
@@ -2551,7 +2550,9 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5d1644b7af1cbd62492b4647e5d2955c8782b22f.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1759b05f127fd03b8ac7c8f2b400bd6697fdfab1.002.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a693f623d900f8c1cf1664c219f5fd4539861246.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3aa0f88ff40da294a5a804076334567e52d017b7.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3aa0f88ff40da294a5a804076334567e52d017b7.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e043cdfd577aee0eeb71509d4cc870ce787c174c.003.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e043cdfd577aee0eeb71509d4cc870ce787c174c.002.1"
  ],
  "wx": {
   "Paden": {
@@ -2636,7 +2637,6 @@
  ],
  "usdm_week": "2026-W34",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1743.html/20260726",
   "https://www.spc.noaa.gov/products/md/md1744.html/20260726",
   "https://www.spc.noaa.gov/products/md/md1745.html/20260726",
   "https://www.spc.noaa.gov/products/md/md1746.html/20260726",
@@ -3035,7 +3035,8 @@
   "https://www.spc.noaa.gov/products/md/md2089.html/20260822",
   "https://www.spc.noaa.gov/products/md/md2090.html/20260822",
   "https://www.spc.noaa.gov/products/md/md2091.html/20260822",
-  "https://www.spc.noaa.gov/products/md/md2092.html/20260822"
+  "https://www.spc.noaa.gov/products/md/md2092.html/20260822",
+  "https://www.spc.noaa.gov/products/md/md2093.html/20260822"
  ],
  "apod_date": "2026-08-22",
  "station": {

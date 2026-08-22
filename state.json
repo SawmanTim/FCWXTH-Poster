@@ -2550,14 +2550,14 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
+   "cond": "",
    "temp": 91,
    "sun_date": "2026-08-21",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 90,
+   "temp": 88,
    "sun_date": "2026-08-21",
    "station_id": "K1M4"
   }
@@ -2604,7 +2604,7 @@
   "attk5wls",
   "aka2026qoynpe"
  ],
- "apod_fetch_ts": 1787418063.291005,
+ "apod_fetch_ts": 1787421069.0696964,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

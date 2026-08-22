@@ -2595,7 +2595,7 @@
   "us6000tlrj",
   "us6000tm81"
  ],
- "apod_fetch_ts": 1787369315.926363,
+ "apod_fetch_ts": 1787372332.8463385,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3023,7 +3023,7 @@
   "https://www.spc.noaa.gov/products/md/md2078.html/20260822",
   "https://www.spc.noaa.gov/products/md/20260822"
  ],
- "apod_date": "2026-08-21",
+ "apod_date": "2026-08-22",
  "station": {
   "hilo_date": "2026-08-21",
   "hi": 94,

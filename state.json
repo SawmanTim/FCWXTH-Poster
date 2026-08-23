@@ -1445,7 +1445,8 @@
   "4b1724277cc31aef3128cf7d99600860",
   "f4b46c2764bbc565a534b6021ecdf9ac",
   "68777d707653b61f19dfee7fdcdb6601",
-  "15d781935e0bcb3234254b110de9e446"
+  "15d781935e0bcb3234254b110de9e446",
+  "3d6a3ea5ba709a3e7396a5db8241aac0"
  ],
  "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml": [
   "ef354fda682a7577253ab06ef0284f7a",
@@ -2563,7 +2564,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
+   "cond": "clear",
    "temp": 81,
    "sun_date": "2026-08-22",
    "station_id": "KCRX"
@@ -3048,7 +3049,7 @@
  "apod_date": "2026-08-23",
  "station": {
   "hilo_date": "2026-08-23",
-  "hi": 84,
+  "hi": 85,
   "lo": 67,
   "raining": false,
   "heat": 0,

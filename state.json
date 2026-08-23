@@ -462,7 +462,8 @@
   "64279686f93662762894bedc8afd2ab8",
   "f81f2eaa70379b0161f91bc45e66effc",
   "c982230a4b989719f5da1ff0fd274dd4",
-  "85036546d793960b3f872f5771fd4f4d"
+  "85036546d793960b3f872f5771fd4f4d",
+  "097fcfa6258a61bf8742cd5c8c3a0fe0"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -2558,7 +2559,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
+   "cond": "",
    "temp": 70,
    "sun_date": "2026-08-22",
    "station_id": "KCRX"

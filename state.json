@@ -2612,7 +2612,7 @@
   "attk5wls",
   "aka2026qoynpe"
  ],
- "apod_fetch_ts": 1787457753.1834621,
+ "apod_fetch_ts": 1787460756.458928,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3040,7 +3040,7 @@
   "https://www.spc.noaa.gov/products/md/md2095.html/20260823",
   "https://www.spc.noaa.gov/products/md/20260823"
  ],
- "apod_date": "2026-08-22",
+ "apod_date": "2026-08-23",
  "station": {
   "hilo_date": "2026-08-22",
   "hi": 95,

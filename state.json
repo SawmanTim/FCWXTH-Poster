@@ -2580,7 +2580,7 @@
   },
   "Franklin": {
    "cond": "mostly clear",
-   "temp": 88,
+   "temp": 90,
    "sun_date": "2026-08-23",
    "station_id": "K1M4"
   }
@@ -2654,7 +2654,6 @@
  ],
  "usdm_week": "2026-W34",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1772.html/20260727",
   "https://www.spc.noaa.gov/products/md/md1773.html/20260727",
   "https://www.spc.noaa.gov/products/md/md1774.html/20260727",
   "https://www.spc.noaa.gov/products/md/md1772.html/20260728",
@@ -3053,7 +3052,8 @@
   "https://www.spc.noaa.gov/products/md/md2112.html/20260824",
   "https://www.spc.noaa.gov/products/md/md2113.html/20260824",
   "https://www.spc.noaa.gov/products/md/md2114.html/20260824",
-  "https://www.spc.noaa.gov/products/md/md2115.html/20260824"
+  "https://www.spc.noaa.gov/products/md/md2115.html/20260824",
+  "https://www.spc.noaa.gov/products/md/md2116.html/20260824"
  ],
  "apod_date": "2026-08-24",
  "station": {

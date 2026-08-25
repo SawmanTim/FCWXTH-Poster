@@ -2636,7 +2636,8 @@
   "us6000tm81",
   "attk5wls",
   "aka2026qoynpe",
-  "us6000tmta"
+  "us6000tmta",
+  "us6000tna9"
  ],
  "apod_fetch_ts": 1787670723.919588,
  "swpc": [
@@ -3069,7 +3070,7 @@
  "apod_date": "2026-08-25",
  "station": {
   "hilo_date": "2026-08-25",
-  "hi": 86,
+  "hi": 87,
   "lo": 64,
   "raining": false,
   "heat": 0,

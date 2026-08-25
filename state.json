@@ -2580,7 +2580,7 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 86,
+   "temp": 84,
    "sun_date": "2026-08-23",
    "station_id": "KCRX"
   },
@@ -2631,7 +2631,8 @@
   "us6000tlrj",
   "us6000tm81",
   "attk5wls",
-  "aka2026qoynpe"
+  "aka2026qoynpe",
+  "us6000tmta"
  ],
  "apod_fetch_ts": 1787615284.2204216,
  "swpc": [

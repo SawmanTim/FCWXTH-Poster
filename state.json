@@ -2635,7 +2635,7 @@
   "aka2026qoynpe",
   "us6000tmta"
  ],
- "apod_fetch_ts": 1787627782.0075376,
+ "apod_fetch_ts": 1787630828.3156374,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3063,7 +3063,7 @@
   "https://www.spc.noaa.gov/products/md/md2122.html/20260825",
   "https://www.spc.noaa.gov/products/md/md2123.html/20260825"
  ],
- "apod_date": "2026-08-24",
+ "apod_date": "2026-08-25",
  "station": {
   "hilo_date": "2026-08-24",
   "hi": 93,

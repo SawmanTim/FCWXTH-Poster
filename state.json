@@ -2587,7 +2587,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 75,
+   "temp": 73,
    "sun_date": "2026-08-24",
    "station_id": "K1M4"
   }
@@ -2635,7 +2635,7 @@
   "aka2026qoynpe",
   "us6000tmta"
  ],
- "apod_fetch_ts": 1787621420.6594722,
+ "apod_fetch_ts": 1787621756.181812,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2662,7 +2662,6 @@
  ],
  "usdm_week": "2026-W34",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1777.html/20260728",
   "https://www.spc.noaa.gov/products/md/md1778.html/20260728",
   "https://www.spc.noaa.gov/products/md/20260728",
   "https://www.spc.noaa.gov/products/md/md1779.html/20260728",
@@ -3061,7 +3060,8 @@
   "https://www.spc.noaa.gov/products/md/md2120.html/20260824",
   "https://www.spc.noaa.gov/products/md/md2121.html/20260824",
   "https://www.spc.noaa.gov/products/md/20260825",
-  "https://www.spc.noaa.gov/products/md/md2122.html/20260825"
+  "https://www.spc.noaa.gov/products/md/md2122.html/20260825",
+  "https://www.spc.noaa.gov/products/md/md2123.html/20260825"
  ],
  "apod_date": "2026-08-24",
  "station": {

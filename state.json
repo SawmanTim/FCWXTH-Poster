@@ -2610,8 +2610,8 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "light rain",
-   "temp": 73,
+   "cond": "cloudy",
+   "temp": 72,
    "sun_date": "2026-08-25",
    "station_id": "K1M4"
   }

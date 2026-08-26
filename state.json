@@ -1546,7 +1546,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/205829.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/205845.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/205845.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/210106.shtml?inundation",
@@ -1945,7 +1944,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608251750",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608252332",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608260511",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608261132"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608261132",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608261729"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3091,7 +3091,7 @@
  "apod_date": "2026-08-26",
  "station": {
   "hilo_date": "2026-08-26",
-  "hi": 94,
+  "hi": 95,
   "lo": 69,
   "raining": false,
   "heat": 2,

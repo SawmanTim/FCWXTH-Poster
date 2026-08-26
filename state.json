@@ -674,7 +674,8 @@
   "fc32f036582cf92aed44edb2f893a59f",
   "ab29b186ad3cca107d5fa4b31a8159f8",
   "c3b46f9762d3e9ec8f5028103d0b856f",
-  "2f0aab7a1cdd41a4d4f0555a057321c1"
+  "2f0aab7a1cdd41a4d4f0555a057321c1",
+  "d900156a8609dff5e01a5012b8d71324"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "3320afb51a162048ad313142f005e267",
@@ -2653,7 +2654,7 @@
   "us6000tmta",
   "us6000tna9"
  ],
- "apod_fetch_ts": 1787740561.2596574,
+ "apod_fetch_ts": 1787743566.4973898,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

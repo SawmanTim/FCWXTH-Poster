@@ -2611,12 +2611,11 @@
   "Paden": {
    "cond": "clear",
    "temp": 77,
-   "sun_date": "2026-08-26",
-   "station_id": "KCRX"
+   "sun_date": "2026-08-26"
   },
   "Franklin": {
    "cond": "cloudy",
-   "temp": 72,
+   "temp": 70,
    "sun_date": "2026-08-26",
    "station_id": "K1M4"
   }

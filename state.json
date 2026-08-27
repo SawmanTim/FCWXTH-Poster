@@ -2612,7 +2612,8 @@
   "Paden": {
    "cond": "clear",
    "temp": 73,
-   "sun_date": "2026-08-26"
+   "sun_date": "2026-08-26",
+   "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "clear",

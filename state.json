@@ -490,7 +490,8 @@
   "d16f55251f4e3259e4e79c931fb36d54",
   "3acb8ca83177466bbf7654d93e361318",
   "98d04b6af6db605638d76807af6a0b10",
-  "f46e1b6d9a394121341a3547489fc2f7"
+  "f46e1b6d9a394121341a3547489fc2f7",
+  "759f64da466f5f0a92222941ed7ba6f5"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -689,7 +690,6 @@
   "53a36d15f52808a9fe8b2d0fe807b480"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "487dfe675959c840ebff8bca685bc17b",
   "f3e748a907809a39fc2168cc394cd985",
   "8c23ce9d40c91959990de916a76a6eec",
   "a6420c39703ea28d2626f96215033ff7",
@@ -1088,7 +1088,8 @@
   "3423be13ffe01cfc22b9647fc5c134ab",
   "e56b5a6cbe75206f47f5e186ba721c05",
   "a753c2029354979e25e016074b6d32c1",
-  "e7a058faf823bc9eb6909a3d11f2116c"
+  "e7a058faf823bc9eb6909a3d11f2116c",
+  "30e8fed0c60e06b0b9f75e0100bf827a"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -1361,7 +1362,9 @@
   "e911498b8f7c0c0fce5c03a9d7c6fd39",
   "a73d6a3086c2a6df5df67328dbb1386a",
   "5bcb69c0608fe99f31b2741319e47ea8",
-  "4bf7257b50080a63ead5016e449614dd"
+  "4bf7257b50080a63ead5016e449614dd",
+  "377a6ad040ebe2b227a476ebd4df44e8",
+  "419d666064c57e7ba219916ac0e2ba41"
  ],
  "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml": [
   "f068a2eaf3e067f0ab363d0b1c2b91e9",
@@ -1496,7 +1499,8 @@
   "dd4c627b1c547f90fc346b6c0d858cf6",
   "135a2ff0b1ca6b34402817cd398d8a44",
   "5670b9316e8d23b6085b46c9f706c903",
-  "107666f8fe30a642d1309e737ec23177"
+  "107666f8fe30a642d1309e737ec23177",
+  "22d9557c93367a9b9f50cdecf4fcfd99"
  ],
  "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml": [
   "ef354fda682a7577253ab06ef0284f7a",
@@ -1559,12 +1563,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/234950.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/235140.shtml?inundation",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/235140.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/235152.shtml?inundation",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/235152.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/014116.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/014116.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/014357.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/014357.shtml?cone",
@@ -1958,7 +1956,13 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/145059.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/145743.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/150006.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/152305.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/152305.shtml?cone",
+  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT4+shtml/272039.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT4+shtml/600021.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCMAT4+shtml/272038.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/272039.shtml",
+  "summary-al042026-202608272039",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608271739"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2614,14 +2618,14 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
-   "temp": 81,
+   "cond": "clear",
+   "temp": 90,
    "sun_date": "2026-08-26",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "cloudy",
-   "temp": 77,
+   "cond": "mostly cloudy",
+   "temp": 88,
    "sun_date": "2026-08-26",
    "station_id": "K1M4"
   }
@@ -2671,7 +2675,7 @@
   "us6000tna9",
   "us7000tbwb"
  ],
- "apod_fetch_ts": 1787847644.3659616,
+ "apod_fetch_ts": 1787863280.9037683,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2700,9 +2704,6 @@
  ],
  "usdm_week": "2026-W35",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1801.html/20260730",
-  "https://www.spc.noaa.gov/products/md/md1802.html/20260730",
-  "https://www.spc.noaa.gov/products/md/md1803.html/20260730",
   "https://www.spc.noaa.gov/products/md/md1804.html/20260730",
   "https://www.spc.noaa.gov/products/md/md1805.html/20260730",
   "https://www.spc.noaa.gov/products/md/md1806.html/20260730",
@@ -3099,12 +3100,15 @@
   "https://www.spc.noaa.gov/products/md/20260827",
   "https://www.spc.noaa.gov/products/md/md2143.html/20260827",
   "https://www.spc.noaa.gov/products/md/md2144.html/20260827",
-  "https://www.spc.noaa.gov/products/md/md2145.html/20260827"
+  "https://www.spc.noaa.gov/products/md/md2145.html/20260827",
+  "https://www.spc.noaa.gov/products/md/md2149.html/20260827",
+  "https://www.spc.noaa.gov/products/md/md2150.html/20260827",
+  "https://www.spc.noaa.gov/products/md/md2151.html/20260827"
  ],
  "apod_date": "2026-08-27",
  "station": {
   "hilo_date": "2026-08-27",
-  "hi": 80,
+  "hi": 90,
   "lo": 68,
   "raining": false,
   "heat": 0,

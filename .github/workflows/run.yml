@@ -2,18 +2,34 @@ name: FCWXTH Poster
 
 # GitHub's scheduler is best-effort and gets throttled to ~hourly, which is far
 # too slow for warnings. Work around it: each run is ONE long job that polls
-# every 60s for ~5.9 hours. The schedule keeps a restart QUEUED (it never kills
-# the running job — see concurrency below); pushing a code/config change to
-# main restarts the loop immediately so changes go live without waiting.
+# every 60s for ~5.9 hours. Each job QUEUES ITS OWN SUCCESSOR the moment it
+# starts (see "Queue the next window" below), so the next window begins the
+# instant this one ends instead of waiting on the cron. The schedule is now
+# only a backstop; pushing a code/config change to main restarts the loop
+# immediately so changes go live without waiting.
+#
+# Why the self-relaunch exists: relying on the cron alone left real holes —
+# the job ended and nothing restarted it for hours (2026-08-27 16:49-20:41,
+# 3h54m dark; 2026-08-28 02:34-05:06, 2h32m dark). Nothing polled, so a
+# warning issued in those windows would never have posted.
 on:
   schedule:
-    - cron: "*/30 * * * *"   # best-effort: keep a restart queued
+    - cron: "*/30 * * * *"   # backstop only: recovers the loop if a job dies
+                             # before it managed to queue its successor
   workflow_dispatch:
     inputs:
       test_alert:
         description: "Send a TEST phone alert (opens a test issue that @mentions you)"
         type: boolean
         default: false
+      relaunch:
+        # Set ONLY by a running job queueing its own successor. A relaunch must
+        # QUEUE (never cancel the job that dispatched it) — see concurrency.
+        # Deliberately a string, not a boolean: the `inputs` context in the
+        # concurrency expression compares reliably against 'true' as a string.
+        description: "Internal: queued by the previous window (leave as false)"
+        type: string
+        default: "false"
   push:
     branches: [main]
     paths:                    # state.json commits use [skip ci] and don't match
@@ -27,14 +43,17 @@ on:
 permissions:
   contents: write
   issues: write               # alert.py opens the @mention alarm issue
+  actions: write              # the job dispatches its own successor
 
 concurrency:
   group: fcwxth-poster
-  # Scheduled runs QUEUE behind the current job instead of cancelling it —
-  # a mid-flight kill between "posted to Facebook" and "pushed state.json"
-  # would repost those items on the next run. Pushes and manual dispatches DO
-  # cancel (an intentional restart to pick up new code right away).
-  cancel-in-progress: ${{ github.event_name != 'schedule' }}
+  # Scheduled runs and self-relaunches QUEUE behind the current job instead of
+  # cancelling it — a mid-flight kill between "posted to Facebook" and "pushed
+  # state.json" would repost those items on the next run. Pushes and HUMAN
+  # manual dispatches DO cancel (an intentional restart to pick up new code
+  # right away). GitHub keeps at most one pending run per group, so a queued
+  # successor and a queued cron restart collapse into one — no fan-out.
+  cancel-in-progress: ${{ github.event_name != 'schedule' && inputs.relaunch != 'true' }}
 
 jobs:
   poll:
@@ -54,6 +73,33 @@ jobs:
         timeout-minutes: 3
         continue-on-error: true
         run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-dejavu-core
+
+      # Queue the successor NOW, not when the loop finishes: if this job dies
+      # unexpectedly (runner loss, the 358-min timeout kill, a crashed step),
+      # the end-of-job step below never runs — but a successor queued up front
+      # is already waiting and starts within seconds. It sits pending for the
+      # whole window because a relaunch never cancels an in-progress run.
+      - name: Queue the next window
+        id: relaunch
+        if: github.ref == 'refs/heads/main'
+        continue-on-error: true       # never block polling on a dispatch failure
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in 1 2 3; do
+            if curl -fsS -m 20 -X POST \
+                 -H "Authorization: Bearer $GH_TOKEN" \
+                 -H "Accept: application/vnd.github+json" \
+                 -H "X-GitHub-Api-Version: 2022-11-28" \
+                 "https://api.github.com/repos/${{ github.repository }}/actions/workflows/run.yml/dispatches" \
+                 -d '{"ref":"main","inputs":{"relaunch":"true"}}'; then
+              echo "queued the next window"
+              exit 0
+            fi
+            echo "::warning::relaunch dispatch attempt $attempt failed"
+            sleep $((attempt * 5))
+          done
+          exit 1
 
       - name: Poll every 60 seconds
         env:
@@ -134,3 +180,21 @@ jobs:
             echo "::error::One or more cycles had posting failures — check the warnings above and the FB tokens."
             exit 1
           fi
+
+      # Last-ditch retry: only if the up-front dispatch never succeeded. Runs
+      # even when the poll loop failed, because a failed window still has to
+      # hand off to the next one. If this fails too, the cron backstop above is
+      # what recovers the loop.
+      - name: Queue the next window (retry)
+        if: always() && github.ref == 'refs/heads/main' && steps.relaunch.outcome != 'success'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -fsS -m 20 -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/run.yml/dispatches" \
+            -d '{"ref":"main","inputs":{"relaunch":"true"}}' \
+            || echo "::warning::could not queue the next window — the cron backstop will restart it"

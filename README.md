@@ -79,8 +79,10 @@ python post.py --dry-run   # shows what it WOULD post
 
 1. Create a new GitHub repo and push this folder.
 2. Add the secrets (step 2) — plus `NASA_API_KEY` and `WU_API_KEY`.
-3. The workflow polls every ~60 seconds (one long job, restarted by the cron); it
+3. The workflow polls every ~60 seconds (one long job, ~5.9 hours per window); it
    commits `state.json` back whenever it changes so it remembers across runs.
+   Each window queues its own successor as soon as it starts, so the next one
+   begins the moment the current one ends — the cron is only a backstop.
    Pushing a code/config change to `main` restarts the loop immediately.
    Trigger a manual run anytime from the **Actions** tab.
 
@@ -92,8 +94,11 @@ python post.py --dry-run   # shows what it WOULD post
 - Turn off image attachment → set `defaults.attach_image: false` in `feeds.yaml`.
 
 ## Notes / honest caveats
-- GitHub's cron is best-effort (can lag to ~hourly); the long polling job rides
-  through the gaps, so effective polling stays ~60s.
+- GitHub's cron is best-effort and gets throttled — trusting it to restart the
+  loop left real holes (two windows on 2026-08-27/28 went 3h54m and 2h32m with
+  nothing polling at all). Each job now dispatches its own successor up front,
+  so the handoff no longer depends on the scheduler; the cron only has to
+  recover the loop if a job dies before it queued that successor.
 - `state.json` is committed back whenever it changes; that's normal and keeps it free.
 - County consolidation reposts an alert if NWS issues an **updated** version (new alert id).
 - If any cycle fails to post (e.g. an expired Facebook token), two alarms fire:

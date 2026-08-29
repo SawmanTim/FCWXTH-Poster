@@ -3128,7 +3128,7 @@
   "hi": 94,
   "lo": 65,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-08-29T12"
  },

@@ -2689,7 +2689,7 @@
   "us6000tna9",
   "us7000tbwb"
  ],
- "apod_fetch_ts": 1787976026.7002795,
+ "apod_fetch_ts": 1787979075.1855288,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3119,7 +3119,7 @@
   "https://www.spc.noaa.gov/products/md/md2163.html/20260828",
   "https://www.spc.noaa.gov/products/md/md2164.html/20260829"
  ],
- "apod_date": "2026-08-28",
+ "apod_date": "2026-08-29",
  "station": {
   "hilo_date": "2026-08-28",
   "hi": 94,

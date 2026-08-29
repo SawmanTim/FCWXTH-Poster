@@ -2633,7 +2633,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "fog/mist",
+   "cond": "clear",
    "temp": 63,
    "sun_date": "2026-08-28",
    "station_id": "KCRX"

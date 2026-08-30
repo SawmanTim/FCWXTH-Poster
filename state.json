@@ -706,7 +706,8 @@
   "e6e7b530e099745ebabf8913a99de344",
   "17b1d6b83a141f12917b646a731e0a4e",
   "13e23c7b7844cb237584473681314ee3",
-  "10fe50673a3f7cbc99c9af70bad37ec8"
+  "10fe50673a3f7cbc99c9af70bad37ec8",
+  "e29ad249c9ff281a090ddd3cf4a265c8"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "16aaec8de69758bae566f52cf800490b",
@@ -3131,7 +3132,7 @@
  "apod_date": "2026-08-30",
  "station": {
   "hilo_date": "2026-08-30",
-  "hi": 79,
+  "hi": 81,
   "lo": 70,
   "raining": false,
   "heat": 0,

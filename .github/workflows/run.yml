@@ -123,6 +123,7 @@ jobs:
             python alert.py --test || true
           fi
           had_failures=0
+          last_ping=-240        # seed negative so the FIRST cycle of a window pings
           end=$((SECONDS + 21240))      # ~5.9 hours, then let the schedule restart
           while [ $SECONDS -lt $end ]; do
             # Self-heal: a corrupted state.json (e.g. conflict markers left by an
@@ -155,9 +156,19 @@ jobs:
             # Deliberately pings even on a failed cycle: this signals "the poller
             # is ALIVE", while post/alert failures are alert.py's job. Optional
             # (skipped if the secret is unset) and never breaks the loop.
-            if [ -n "$HEALTHCHECK_URL" ]; then
-              curl -fsS -m 10 --retry 3 -o /dev/null "$HEALTHCHECK_URL" \
-                || echo "::warning::heartbeat ping failed (poller itself is fine)"
+            # THROTTLED to one ping per ~4 min (2026-08-31): healthchecks.io's
+            # free plan stores only ~100 events, so a once-per-cycle ping burned
+            # the whole event log in under 2h, leaving nothing to post-mortem a
+            # morning alert with. 4 min stays inside the check's 5-minute period
+            # (so it never shows "late") and stretches retention to ~7h. Detection
+            # speed is unchanged - that is the 25-minute grace, not this. On a
+            # failed ping last_ping is NOT advanced, so the next cycle retries.
+            if [ -n "$HEALTHCHECK_URL" ] && [ $((SECONDS - last_ping)) -ge 240 ]; then
+              if curl -fsS -m 10 --retry 3 -o /dev/null "$HEALTHCHECK_URL"; then
+                last_ping=$SECONDS
+              else
+                echo "::warning::heartbeat ping failed (poller itself is fine)"
+              fi
             fi
             if ! git diff --quiet -- state.json; then
               git add state.json

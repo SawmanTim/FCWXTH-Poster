@@ -1616,7 +1616,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608091138",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608091159",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608091731",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608092336",
@@ -2015,7 +2014,8 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCUAT5+shtml/011925.shtml",
   "summary-al052026-202609011925",
   "https://www.nhc.noaa.gov/text/refresh/MIATCUAT5+shtml/011958.shtml",
-  "summary-al052026-202609011958"
+  "summary-al052026-202609011958",
+  "summary-al052026-202609012001"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2677,7 +2677,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly clear",
+   "cond": "clear",
    "temp": 95,
    "sun_date": "2026-08-31",
    "station_id": "K1M4"

@@ -1604,7 +1604,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT2+shtml/232033.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/232033.shtml",
   "summary-al022026-202607232033",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT2+shtml/232035.shtml",
@@ -2003,7 +2002,8 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/084655.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/084655.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/084655.shtml?cone",
-  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT5+shtml/333194.shtml"
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT5+shtml/333194.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT5+shtml/010848.shtml"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",

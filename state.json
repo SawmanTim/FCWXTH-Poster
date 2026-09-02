@@ -1630,7 +1630,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT3+shtml/131459.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT3+shtml/131459.shtml",
   "summary-al032026-202608131459",
   "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/150016.shtml?cone",
@@ -2029,7 +2028,8 @@
   "Tropical Depression Edouard Public Advisory Number 10",
   "summary-al052026-202609022032",
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT5+shtml/022032.shtml",
-  "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/203542.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/203542.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/205145.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2685,7 +2685,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
+   "cond": "partly cloudy",
    "temp": 99,
    "sun_date": "2026-09-01",
    "station_id": "KCRX"

@@ -520,7 +520,8 @@
   "75e8109638a18e272400f4c1b58d3832",
   "9a007f96fd5406d98b72391f0e083bb6",
   "807cff06728c4d180f5675bbd7b57c4a",
-  "393d270a0da39347a5cc787278ef9fe0"
+  "393d270a0da39347a5cc787278ef9fe0",
+  "ff23b64f13d5c26ad5b8674e6706bd47"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -3166,7 +3167,7 @@
  "station": {
   "hilo_date": "2026-09-02",
   "hi": 72,
-  "lo": 71,
+  "lo": 70,
   "raining": false,
   "heat": 0,
   "cold": 0,

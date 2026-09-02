@@ -36,7 +36,7 @@ import os
 import re
 import sys
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -695,9 +695,32 @@ def _deg_to_compass(deg) -> str:
         return ""
 
 
-def fetch_wu_station(station_id: str) -> dict | None:
+def _obs_age_seconds(obs: dict) -> float | None:
+    """Age of a WU observation in seconds, or None if it cannot be determined.
+    Unknown age fails OPEN (the caller proceeds): an upstream field rename must
+    never silence the station — only a reading we can PROVE is stale should."""
+    epoch = obs.get("epoch")
+    if epoch is not None:
+        try:
+            return time.time() - float(epoch)
+        except (TypeError, ValueError):
+            pass
+    ts = obs.get("obsTimeUtc")
+    if ts:
+        try:
+            t = datetime.fromisoformat(str(ts).replace("Z", "+00:00"))
+            if t.tzinfo is None:
+                t = t.replace(tzinfo=timezone.utc)
+            return (datetime.now(timezone.utc) - t).total_seconds()
+        except (TypeError, ValueError):
+            pass
+    return None
+
+
+def fetch_wu_station(station_id: str, max_age_min: int = 30) -> dict | None:
     """Current observation from a Weather Underground PWS. Needs env WU_API_KEY.
-    Returns a flat dict (imperial units) or None on any failure."""
+    Returns a flat dict (imperial units) or None on any failure — including an
+    observation older than max_age_min, which is treated as no data at all."""
     key = os.environ.get("WU_API_KEY")
     if not key:
         log("  [wu] WU_API_KEY not set — skipping station pull")
@@ -714,6 +737,19 @@ def fetch_wu_station(station_id: str) -> dict | None:
         obs = (r.json().get("observations") or [None])[0]
         if not obs:
             log(f"  [wu] {station_id} returned no observations")
+            return None
+        # A dead sensor battery does NOT fail this call. The station just stops
+        # uploading and WU keeps serving the LAST observation with a 200, so a
+        # frozen reading looks perfectly healthy here. Everything downstream
+        # stamps posts with the wall clock (`now`), not the observation time —
+        # without this guard the hourly card would publish hours-old numbers as
+        # current, and the heat/cold tiers would be judged on them. Treat a
+        # stale reading as no reading: skip the cycle and say so in the log.
+        age_s = _obs_age_seconds(obs)
+        if age_s is not None and age_s > max_age_min * 60:
+            log(f"  [wu] {station_id} observation is {age_s / 60:.0f} min old "
+                f"(limit {max_age_min}) — station is not reporting "
+                "(dead sensor battery?); skipping this cycle")
             return None
         imp = obs.get("imperial", {})
         return {
@@ -942,7 +978,7 @@ def process_station(cfg, fb, state, *, seed):
     sc = cfg.get("station")
     if not sc:
         return
-    data = fetch_wu_station(sc["station_id"])
+    data = fetch_wu_station(sc["station_id"], sc.get("max_obs_age_min", 30))
     if not data:
         return
     tz = ZoneInfo(sc.get("tz", "America/Chicago"))

@@ -100,6 +100,12 @@ python post.py --dry-run   # shows what it WOULD post
   so the handoff no longer depends on the scheduler; the cron only has to
   recover the loop if a job dies before it queued that successor.
 - `state.json` is committed back whenever it changes; that's normal and keeps it free.
+- A dead sensor battery on the WU station does **not** make the API fail — the
+  station stops uploading and WU keeps serving the last observation with a 200.
+  Any observation older than `station.max_obs_age_min` (30 min) is therefore
+  treated as no data: that cycle is skipped and the reason is logged, so the
+  conditions card never publishes frozen numbers stamped with the current time.
+  To check the station by hand, run `wu_test.py` and read the `obs age` line.
 - County consolidation reposts an alert if NWS issues an **updated** version (new alert id).
 - If any cycle fails to post (e.g. an expired Facebook token), two alarms fire:
   **instantly**, `alert.py` opens a `poster-alert` issue that @mentions you (GitHub

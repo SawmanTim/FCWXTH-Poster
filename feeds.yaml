@@ -240,6 +240,12 @@ station:
   card_end: 21
   card_every_hours: 3
   rain: true            # post when rain first begins (precipRate > 0)
+  # Treat an observation older than this (minutes) as NO data, and skip the cycle.
+  # A dead sensor battery does not make the WU API fail — the station stops
+  # uploading and WU keeps serving the last reading — so without this the card
+  # would post frozen numbers stamped with the current time. 30 min tolerates a
+  # brief RF dropout on a station that normally reports every few minutes.
+  max_obs_age_min: 30
   # Public WU dashboard for this station — linked in the conditions-card caption.
   station_url: "https://www.wunderground.com/dashboard/pws/KALPHILC8"
   # Conditions-card caption. Placeholders: {time} {tz} {location} {url}. The footer

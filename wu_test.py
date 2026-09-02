@@ -6,7 +6,7 @@ Run:
     PowerShell:  $env:WU_API_KEY='<your key>'; python wu_test.py
     Git Bash:    WU_API_KEY='<your key>' python wu_test.py
 """
-import os, json, sys, urllib.parse, urllib.request
+import os, json, sys, time, urllib.parse, urllib.request
 
 KEY = os.environ.get("WU_API_KEY")
 if not KEY:
@@ -39,6 +39,13 @@ imp = obs.get("imperial", {})
 print("\n===== PARSED SUMMARY =====")
 print("station   :", obs.get("stationID"))
 print("obs time  :", obs.get("obsTimeLocal"))
+# The tell for a dead sensor battery: WU keeps serving the LAST observation with
+# a 200, so the only sign is this age growing. post.py skips a cycle past 30 min.
+epoch = obs.get("epoch")
+if epoch is not None:
+    age_min = (time.time() - float(epoch)) / 60
+    flag = "  <-- STALE" if age_min > 30 else ""
+    print(f"obs age   : {age_min:.1f} min{flag}")
 print("temp      :", imp.get("temp"))
 print("heatIndex :", imp.get("heatIndex"))
 print("windChill :", imp.get("windChill"))

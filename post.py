@@ -47,6 +47,8 @@ import yaml
 from astral import LocationInfo
 from astral.sun import sun
 
+import acurite
+
 # Windows consoles default to cp1252 and crash on emoji/special chars in posts.
 for _stream in (sys.stdout, sys.stderr):
     try:
@@ -72,12 +74,27 @@ def log(msg: str) -> None:
     print(time.strftime("%Y-%m-%d %H:%M:%S"), msg, flush=True)
 
 
+# Env vars whose VALUES must never reach the log. Redacting the literal value is
+# the last line of defence: it catches a leak through a path no pattern anticipated.
+_SECRET_ENV = ("WU_API_KEY", "NASA_API_KEY", "ACURITE_PASSWORD",
+               "FB_TOKEN_FCWXTH", "FB_TOKEN_PVFD", "GH_TOKEN")
+
+
 def scrub_secrets(s) -> str:
-    """Mask API keys in text that gets logged. urllib3/requests exception
+    """Mask credentials in text that gets logged. urllib3/requests exception
     messages can include the FULL request URL — query string and all — so a
-    WU/NASA outage would otherwise print the key into the Actions log."""
-    return re.sub(r"(apiKey|api_key|access_token)=[^&\s\"']+", r"\1=****",
-                  str(s), flags=re.I)
+    WU/NASA outage would otherwise print the key into the Actions log. The
+    AcuRite client POSTs a password in a JSON body, which can likewise surface
+    in an exception, so JSON credential fields are masked too."""
+    out = re.sub(r"(apiKey|api_key|access_token)=[^&\s\"']+", r"\1=****",
+                 str(s), flags=re.I)
+    out = re.sub(r'("(?:password|token|token_id|access_token)"\s*:\s*")[^"]*(")',
+                 r"\1****\2", out, flags=re.I)
+    for name in _SECRET_ENV:
+        val = os.environ.get(name)
+        if val and len(val) >= 6:
+            out = out.replace(val, "****")
+    return out
 
 
 def load_config() -> dict:
@@ -1033,6 +1050,115 @@ def _station_offline_watch(stt: dict, status: dict, sc: dict, *, seed: bool) -> 
         log(f"[station] OFFLINE alarm raised ({age_min:.0f} min without data)")
 
 
+def _aggregate(values) -> bool | None:
+    """Fold per-sensor verdicts into one, keeping THREE states.
+
+    Sensors we cannot interpret are ignored as long as at least one sensor gave
+    a usable reading; if none did, the answer is None (unknown), NOT False.
+    Collapsing unknown to False would log a bogus "recovered", clear the alarm
+    flag while the battery is still flat, and then re-alarm on the next real
+    reading."""
+    known = [v for v in values if v is not None]
+    if not known:
+        return None
+    return any(known)
+
+
+def _health_alarm(stt: dict, key: str, fired: bool | None, title: str, body: str,
+                  label: str) -> None:
+    """Raise a health alarm once per episode, and re-arm it on recovery so the
+    next episode notifies too. `fired` is None when the value could not be
+    interpreted — that is NOT an all-clear, so leave the flag alone."""
+    if fired is None:
+        return
+    flag = f"{key}_alerted"
+    if fired and not stt.get(flag):
+        if _raise_alert(title, body, label):
+            stt[flag] = True
+            log(f"[acurite] {key} alarm raised")
+    elif not fired and stt.pop(flag, None):
+        log(f"[acurite] {key} recovered")
+
+
+def process_station_health(cfg, state, *, seed) -> None:
+    """Battery + RF signal for the 5-in-1, from My AcuRite.
+
+    WU cannot answer this — its PWS API has no battery or signal fields — so a
+    dead sensor battery is invisible there until the station goes silent
+    entirely. This catches it while the batteries are merely LOW, which is the
+    warning that actually prevents an outage.
+
+    Best-effort throughout: any failure just skips. Station health must never
+    be able to break weather posting."""
+    try:
+        _station_health(cfg, state, seed=seed)
+    except Exception as exc:  # noqa: BLE001
+        # Swallowed deliberately. step() would otherwise count this as a POSTING
+        # failure, failing the job and firing the Facebook alarm — a wrong and
+        # alarming diagnosis for an unofficial nice-to-have endpoint misbehaving.
+        log(f"  [acurite] health check error ({type(exc).__name__}): "
+            f"{scrub_secrets(exc)}")
+
+
+def _station_health(cfg, state, *, seed) -> None:
+    sc = cfg.get("station") or {}
+    hc = sc.get("health") or {}
+    if not hc.get("enabled") or seed:
+        return
+    stt = state.setdefault("station", {})
+    # The My AcuRite dashboard only refreshes every ~5 minutes, so polling it on
+    # every 60-second cycle would be pure waste against an unofficial endpoint.
+    every = max(int(hc.get("poll_every_min", 15)), 5)
+    now_s = time.time()
+    if now_s - stt.get("health_checked_at", 0) < every * 60:
+        return
+    stt["health_checked_at"] = now_s
+
+    health = acurite.fetch_health(os.environ.get("ACURITE_EMAIL", ""),
+                                  os.environ.get("ACURITE_PASSWORD", ""),
+                                  log=lambda m: log(scrub_secrets(m)))
+    if not health or not health["sensors"]:
+        # Back off hard on failure: bad credentials retried every cycle are how
+        # an account gets locked out, and the endpoint is not ours to hammer.
+        stt["health_checked_at"] = now_s + max(every * 60, 1800)
+        return
+
+    lows, weaks = [], []
+    for sensor in health["sensors"]:
+        lows.append(acurite.is_low_battery(sensor["battery"]))
+        weaks.append(acurite.is_weak_signal(sensor["signal"]))
+        log(f"  [acurite] {sensor['name']}: battery={sensor['battery']} "
+            f"signal={sensor['signal']} last_check_in={sensor['last_check_in']}")
+    low_any, weak_any = _aggregate(lows), _aggregate(weaks)
+
+    url = sc.get("station_url", "")
+    _health_alarm(
+        stt, "battery", low_any,
+        "\U0001F50B Weather station battery is LOW",
+        "the AcuRite 5-in-1 is reporting a **LOW battery** (under 25% remaining).\n\n"
+        "Replace the 4 AA batteries in the sensor before it stops transmitting — "
+        "once it goes silent the conditions card and the heat/cold alerts stop "
+        "posting. Lithium AAs hold up far better than alkaline through a cold "
+        "snap.\n\n"
+        "Per-sensor detail is in the poll log; the My AcuRite dashboard shows the "
+        "same reading.\n\n"
+        "Close this issue once the batteries are changed — a new one opens if it "
+        "goes low again.",
+        "station-battery")
+    _health_alarm(
+        stt, "signal", weak_any,
+        "\U0001F4F6 Weather station RF signal is WEAK",
+        "the AcuRite 5-in-1's radio link to the Access/smartHUB is **weak or "
+        "lost**.\n\n"
+        "The sensor may still be fine — this is the link between it and the hub, "
+        "not your internet. Common causes: the hub was moved, something metal is "
+        "now in the path, or the sensor batteries are too low to transmit at full "
+        "power (check the battery reading too).\n\n"
+        f"Dashboard: {url}\n\n"
+        "Close this issue once the signal recovers.",
+        "station-signal")
+
+
 def process_station(cfg, fb, state, *, seed):
     sc = cfg.get("station")
     if not sc:
@@ -1509,6 +1635,9 @@ def main() -> int:
 
     # Personal weather station (KALPHILC8) — conditions card + rain + heat/cold alerts
     step("station", process_station, cfg, fb, state, seed=args.seed)
+    # Station HEALTH (battery/signal via My AcuRite) — separate step so a
+    # failure here can never take the weather posting down with it.
+    step("station_health", process_station_health, cfg, state, seed=args.seed)
 
     # Extras — NASA APOD, space weather, drought monitor, SPC mesoscale discussions
     step("nasa_apod", process_nasa_apod, cfg, fb, state, seed=args.seed)

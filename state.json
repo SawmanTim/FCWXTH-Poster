@@ -1620,9 +1620,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/203614.shtml?cone",
-  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT3+shtml/122035.shtml",
-  "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/203640.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/212242.shtml?cone",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608122339",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT3+shtml/130232.shtml",
@@ -2019,7 +2016,10 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609020530",
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/054800.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/061356.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/081934.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/081934.shtml?cone",
+  "Tropical Depression Edouard Public Advisory Number 8",
+  "summary-al052026-202609020839",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&amp;202609020530"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",

@@ -12,6 +12,10 @@ Called from run.yml. Needs env GH_TOKEN (the workflow's github.token) and the
 workflow permission `issues: write`. Pass --test for a harmless test alert;
 pass --log <path> to quote the failing cycle's error lines in the issue body
 so the alarm itself says WHAT failed (no log-digging needed).
+
+For a DIFFERENT kind of alarm (e.g. the weather station going offline), pass
+--title/--body plus a --label of its own, so it dedupes independently instead
+of being swallowed by an already-open posting alert.
 """
 import json
 import os
@@ -43,9 +47,18 @@ API = f"https://api.github.com/repos/{REPO}/issues"
 HDRS = {"Authorization": "Bearer " + os.environ["GH_TOKEN"],
         "Accept": "application/vnd.github+json",
         "User-Agent": "fcwxth-poster-alert"}
-LABEL = "poster-alert"
+def _arg(flag: str, default: str = "") -> str:
+    return sys.argv[sys.argv.index(flag) + 1] if flag in sys.argv else default
+
+
 TEST = "--test" in sys.argv
-LOG_PATH = sys.argv[sys.argv.index("--log") + 1] if "--log" in sys.argv else ""
+LOG_PATH = _arg("--log")
+# --label lets a DIFFERENT kind of alarm dedupe on its own issue. The station
+# going offline and Facebook posting failing are unrelated problems: sharing one
+# label would mean an open posting alert silences the station alarm entirely.
+LABEL = _arg("--label", "poster-alert")
+CUSTOM_TITLE = _arg("--title")
+CUSTOM_BODY = _arg("--body")
 
 # One alarm at a time: if an alert issue is already open, don't pile on.
 req = urllib.request.Request(f"{API}?state=open&labels={LABEL}", headers=HDRS)
@@ -57,7 +70,10 @@ owner = REPO.split("/")[0]
 run_url = (f"{os.environ.get('GITHUB_SERVER_URL', 'https://github.com')}/"
            f"{REPO}/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}")
 
-if TEST:
+if CUSTOM_TITLE:
+    title = CUSTOM_TITLE
+    body = f"@{owner} — {CUSTOM_BODY}\n\nRun: {run_url}"
+elif TEST:
     title = "TEST — FCWXTH Poster phone alert"
     body = (f"@{owner} — this is a TEST of the phone alarm. If your phone "
             "buzzed, it works! You can close this issue.\n\n"

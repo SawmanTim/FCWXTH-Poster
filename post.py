@@ -34,6 +34,7 @@ import html
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -717,10 +718,16 @@ def _obs_age_seconds(obs: dict) -> float | None:
     return None
 
 
-def fetch_wu_station(station_id: str, max_age_min: int = 30) -> dict | None:
+def fetch_wu_station(station_id: str, max_age_min: int = 30,
+                     status: dict | None = None) -> dict | None:
     """Current observation from a Weather Underground PWS. Needs env WU_API_KEY.
     Returns a flat dict (imperial units) or None on any failure — including an
-    observation older than max_age_min, which is treated as no data at all."""
+    observation older than max_age_min, which is treated as no data at all.
+
+    `status`, if given, is filled in with why None came back ({"reason": ...,
+    "age_min": ...}). A SILENT station (stale) is a different problem from a
+    network blip or a bad key, and only the first should raise the alarm."""
+    status = {} if status is None else status
     key = os.environ.get("WU_API_KEY")
     if not key:
         log("  [wu] WU_API_KEY not set — skipping station pull")
@@ -750,6 +757,7 @@ def fetch_wu_station(station_id: str, max_age_min: int = 30) -> dict | None:
             log(f"  [wu] {station_id} observation is {age_s / 60:.0f} min old "
                 f"(limit {max_age_min}) — station is not reporting "
                 "(dead sensor battery?); skipping this cycle")
+            status.update(reason="stale", age_min=age_s / 60)
             return None
         imp = obs.get("imperial", {})
         return {
@@ -974,13 +982,70 @@ def _card_due(hour, sc):
     return every > 0 and (hour - start) % every == 0
 
 
+def _raise_alert(title: str, body: str, label: str) -> bool:
+    """Open the @mention alarm issue via alert.py (GitHub Mobile pushes it to
+    the phone). No-ops outside Actions, where the token isn't available."""
+    if not (os.environ.get("GH_TOKEN") and os.environ.get("GITHUB_REPOSITORY")):
+        log("  [station] no GH_TOKEN/GITHUB_REPOSITORY — phone alarm skipped")
+        return False
+    try:
+        subprocess.run([sys.executable, str(Path(__file__).with_name("alert.py")),
+                        "--title", title, "--body", body, "--label", label],
+                       check=True, timeout=60)
+        return True
+    except (subprocess.SubprocessError, OSError) as exc:
+        log(f"  [station] phone alarm failed: {scrub_secrets(exc)}")
+        return False
+
+
+def _station_offline_watch(stt: dict, status: dict, sc: dict, *, seed: bool) -> None:
+    """Raise ONE phone alarm once the station has been silent long enough that a
+    dead sensor battery or a dropped WiFi link is the likely cause.
+
+    Only fires on a STALE reading — a missing API key, an HTTP error or a network
+    blip is a poster problem, and alert.py's existing cycle-failure alarm already
+    covers those. Alarming on them here would just double-notify."""
+    if seed or status.get("reason") != "stale":
+        return
+    age_min = status.get("age_min")
+    after = sc.get("offline_alert_after_min", 60)
+    if age_min is None or age_min < after:
+        return          # inside the grace window: a short dropout is not an outage
+    if stt.get("offline_alerted"):
+        return          # one alarm per outage, not one per 60-second cycle
+    sid = sc.get("station_id", "")
+    hours = age_min / 60
+    if _raise_alert(
+            f"\U0001F4E1 Weather station {sid} is not reporting",
+            f"the weather station **{sid}** has sent no observation for "
+            f"**{hours:.1f} hours** (last reading is {age_min:.0f} minutes old).\n\n"
+            "Weather Underground still answers, so this is the station itself, not "
+            "the poster: the usual causes are a **dead outdoor sensor battery**, a "
+            "**dropped WiFi link**, or the console losing power.\n\n"
+            "Station posts (the conditions card and the heat/cold/rain alerts) are "
+            "PAUSED until it reports again — they are not being published with stale "
+            "numbers. Everything else keeps posting normally.\n\n"
+            f"Dashboard: {sc.get('station_url', '')}\n\n"
+            "Close this issue once the station is back; a new one opens "
+            "automatically if it goes quiet again.",
+            "station-offline"):
+        stt["offline_alerted"] = True
+        log(f"[station] OFFLINE alarm raised ({age_min:.0f} min without data)")
+
+
 def process_station(cfg, fb, state, *, seed):
     sc = cfg.get("station")
     if not sc:
         return
-    data = fetch_wu_station(sc["station_id"], sc.get("max_obs_age_min", 30))
+    stt = state.setdefault("station", {})
+    status: dict = {}
+    data = fetch_wu_station(sc["station_id"], sc.get("max_obs_age_min", 30), status)
     if not data:
+        _station_offline_watch(stt, status, sc, seed=seed)
         return
+    # Fresh data again — re-arm the alarm so the NEXT outage also notifies.
+    if stt.pop("offline_alerted", None):
+        log("[station] back online — observations are fresh again")
     tz = ZoneInfo(sc.get("tz", "America/Chicago"))
     now = datetime.now(tz)
     page = sc.get("page", "FCWXTH")
@@ -988,7 +1053,6 @@ def process_station(cfg, fb, state, *, seed):
     attribution = sc.get("attribution", "")
     disc = sc.get("disclaimer", "")
     msgs = sc.get("messages", {})
-    stt = state.setdefault("station", {})
 
     temp = data["tempF"]
     feels_hot, feels_cold = data["heatIndexF"], data["windChillF"]

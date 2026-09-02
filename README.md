@@ -106,6 +106,13 @@ python post.py --dry-run   # shows what it WOULD post
   treated as no data: that cycle is skipped and the reason is logged, so the
   conditions card never publishes frozen numbers stamped with the current time.
   To check the station by hand, run `wu_test.py` and read the `obs age` line.
+- If the station stays silent for `station.offline_alert_after_min` (60 min),
+  `alert.py` opens an @mention issue so your phone buzzes — same alarm as a
+  posting failure, but on its own `station-offline` label so the two never
+  silence each other. ONE alarm per outage; it re-arms once the station reports
+  again. Note this alarm can only tell you the station went **quiet** — WiFi
+  signal and battery level are not in the WU API and would need the station
+  vendor's own API (Ambient Weather / Ecowitt / Tempest / WeatherLink).
 - County consolidation reposts an alert if NWS issues an **updated** version (new alert id).
 - If any cycle fails to post (e.g. an expired Facebook token), two alarms fire:
   **instantly**, `alert.py` opens a `poster-alert` issue that @mentions you (GitHub

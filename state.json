@@ -1623,7 +1623,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT3+shtml/130846.shtml",
   "summary-al032026-202608130847",
   "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/084834.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT3+shtml/130847.shtml",
@@ -2022,7 +2021,8 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/134046.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT5+shtml/021448.shtml",
   "Tropical Depression Edouard Public Advisory Number 9",
-  "summary-al052026-202609021449"
+  "summary-al052026-202609021449",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT5+shtml/021450.shtml"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",

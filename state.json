@@ -2745,7 +2745,7 @@
   "us6000tna9",
   "us7000tbwb"
  ],
- "apod_fetch_ts": 1788411486.7275732,
+ "apod_fetch_ts": 1788414495.9963627,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2774,7 +2774,6 @@
  ],
  "usdm_week": "2026-W35",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1869.html/20260808",
   "https://www.spc.noaa.gov/products/md/md1870.html/20260808",
   "https://www.spc.noaa.gov/products/md/md1871.html/20260808",
   "https://www.spc.noaa.gov/products/md/md1869.html/20260809",
@@ -3173,7 +3172,8 @@
   "https://www.spc.noaa.gov/products/md/md2208.html/20260903",
   "https://www.spc.noaa.gov/products/md/md2209.html/20260903",
   "https://www.spc.noaa.gov/products/md/20260903",
-  "https://www.spc.noaa.gov/products/md/md2210.html/20260903"
+  "https://www.spc.noaa.gov/products/md/md2210.html/20260903",
+  "https://www.spc.noaa.gov/products/md/md2211.html/20260903"
  ],
  "apod_date": "2026-09-03",
  "station": {

@@ -3184,10 +3184,10 @@
  "apod_date": "2026-09-03",
  "station": {
   "hilo_date": "2026-09-03",
-  "hi": 92,
+  "hi": 96,
   "lo": 72,
   "raining": false,
-  "heat": 0,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-02T18"
  },

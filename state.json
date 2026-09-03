@@ -743,7 +743,6 @@
   "a5fbf75d1f7a92cca361cb1f8e57a638"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "b6c6642cb133945af424f60b270a88e7",
   "0e596b5056e8559cacb13fa332b5ebf5",
   "0034ee5547f10e82fd29b340576c432a",
   "378109befb14eec3588e65ea7ea31f21",
@@ -1142,7 +1141,8 @@
   "25dc00af845080b2dc9c1af185f8b0a8",
   "470c19d8a4356542eebeb602626ea605",
   "230949ee205e77172bdc6e8f9e03ee69",
-  "e8707414738eb1843b8b89c1e9dca46c"
+  "e8707414738eb1843b8b89c1e9dca46c",
+  "12a8849d567ecc0936940d8e481780db"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2694,8 +2694,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
-   "temp": 99,
+   "cond": "mostly clear",
+   "temp": 97,
    "sun_date": "2026-09-02",
    "station_id": "KCRX"
   },

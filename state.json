@@ -2757,7 +2757,7 @@
   "us7000tdw6",
   "nc75429272"
  ],
- "apod_fetch_ts": 1788503267.2148612,
+ "apod_fetch_ts": 1788506289.7492802,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -2786,7 +2786,6 @@
  ],
  "usdm_week": "2026-W36",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1885.html/20260810",
   "https://www.spc.noaa.gov/products/md/md1886.html/20260810",
   "https://www.spc.noaa.gov/products/md/md1887.html/20260810",
   "https://www.spc.noaa.gov/products/md/md1888.html/20260810",
@@ -3185,7 +3184,8 @@
   "https://www.spc.noaa.gov/products/md/md2226.html/20260904",
   "https://www.spc.noaa.gov/products/md/md2227.html/20260904",
   "https://www.spc.noaa.gov/products/md/md2228.html/20260904",
-  "https://www.spc.noaa.gov/products/md/md2229.html/20260904"
+  "https://www.spc.noaa.gov/products/md/md2229.html/20260904",
+  "https://www.spc.noaa.gov/products/md/md2230.html/20260904"
  ],
  "apod_date": "2026-09-04",
  "station": {

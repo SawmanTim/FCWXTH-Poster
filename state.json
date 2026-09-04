@@ -3203,7 +3203,7 @@
   "hi": 99,
   "lo": 83,
   "raining": false,
-  "heat": 1,
+  "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-04T15"
  },

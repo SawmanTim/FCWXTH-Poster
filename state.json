@@ -2757,7 +2757,7 @@
   "us7000tdw6",
   "nc75429272"
  ],
- "apod_fetch_ts": 1788493396.440188,
+ "apod_fetch_ts": 1788496397.073375,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3187,7 +3187,7 @@
   "https://www.spc.noaa.gov/products/md/md2227.html/20260904",
   "https://www.spc.noaa.gov/products/md/md2228.html/20260904"
  ],
- "apod_date": "2026-09-03",
+ "apod_date": "2026-09-04",
  "station": {
   "hilo_date": "2026-09-03",
   "hi": 101,

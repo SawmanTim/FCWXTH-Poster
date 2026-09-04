@@ -3194,9 +3194,9 @@
  "station": {
   "hilo_date": "2026-09-04",
   "hi": 95,
-  "lo": 95,
+  "lo": 83,
   "raining": false,
-  "heat": 2,
+  "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-03T18"
  },

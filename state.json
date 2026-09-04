@@ -2703,7 +2703,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "clear",
+   "cond": "fog/mist",
    "temp": 73,
    "sun_date": "2026-09-03",
    "station_id": "K1M4"

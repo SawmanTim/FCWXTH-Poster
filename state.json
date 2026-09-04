@@ -2786,7 +2786,6 @@
  ],
  "usdm_week": "2026-W36",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1884.html/20260809",
   "https://www.spc.noaa.gov/products/md/20260810",
   "https://www.spc.noaa.gov/products/md/md1885.html/20260810",
   "https://www.spc.noaa.gov/products/md/md1886.html/20260810",
@@ -3185,7 +3184,8 @@
   "https://www.spc.noaa.gov/products/md/md2225.html/20260904",
   "https://www.spc.noaa.gov/products/md/20260904",
   "https://www.spc.noaa.gov/products/md/md2226.html/20260904",
-  "https://www.spc.noaa.gov/products/md/md2227.html/20260904"
+  "https://www.spc.noaa.gov/products/md/md2227.html/20260904",
+  "https://www.spc.noaa.gov/products/md/md2228.html/20260904"
  ],
  "apod_date": "2026-09-03",
  "station": {

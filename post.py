@@ -755,12 +755,28 @@ def fetch_wu_station(station_id: str, max_age_min: int = 30,
     try:
         r = requests.get(url, params=params, timeout=30,
                          headers={"User-Agent": USER_AGENT})
+        # *** 204 IS THE STATION BEING OFFLINE, NOT AN HTTP ERROR ***
+        # Learned the hard way 2026-09-05: KALPHILC8 went dark for 2h and this
+        # function returned None with NO reason, so the offline alarm never
+        # fired -- Tim found out from Alexa. WU does NOT keep serving a stale
+        # 200 when a station stops uploading (the case this code was written
+        # for); it answers 204 No Content. Both shapes mean the same thing to
+        # us: the station is not reporting. Any OTHER non-200 (401 bad key,
+        # 5xx WU outage) really is a poster/upstream problem and is left to
+        # alert.py, which is why it stays reason-less.
+        if r.status_code in (204, 404) or not (r.text or "").strip():
+            log(f"  [wu] {station_id} HTTP {r.status_code} / empty body — "
+                "station is NOT REPORTING to Weather Underground")
+            status.update(reason="offline")
+            return None
         if r.status_code != 200:
             log(f"  [wu] {station_id} HTTP {r.status_code}: {r.text[:120]}")
             return None
         obs = (r.json().get("observations") or [None])[0]
         if not obs:
-            log(f"  [wu] {station_id} returned no observations")
+            log(f"  [wu] {station_id} returned no observations — "
+                "station is NOT REPORTING")
+            status.update(reason="offline")
             return None
         # A dead sensor battery does NOT fail this call. The station just stops
         # uploading and WU keeps serving the LAST observation with a 200, so a
@@ -1022,11 +1038,27 @@ def _station_offline_watch(stt: dict, status: dict, sc: dict, *, seed: bool) -> 
     Only fires on a STALE reading — a missing API key, an HTTP error or a network
     blip is a poster problem, and alert.py's existing cycle-failure alarm already
     covers those. Alarming on them here would just double-notify."""
-    if seed or status.get("reason") != "stale":
+    # Two shapes of the same problem: "stale" = WU served a frozen reading,
+    # "offline" = WU served 204/no observations at all. The second one is what
+    # actually happens (2026-09-05), and only checking the first is what let a
+    # real 2-hour outage pass unannounced.
+    if seed or status.get("reason") not in ("stale", "offline"):
         return
-    age_min = status.get("age_min")
     after = sc.get("offline_alert_after_min", 60)
-    if age_min is None or age_min < after:
+    age_min = status.get("age_min")
+    if age_min is None:
+        # A 204 carries no timestamp, so the outage is timed from the last
+        # reading we actually saw. First time through (no state yet) we can
+        # only start the clock -- alarming immediately would fire on every
+        # cold start, including a deploy during a healthy night.
+        last = stt.get("last_obs_at")
+        if not last:
+            stt["last_obs_at"] = time.time()
+            log("[station] no observation and no last-seen time yet — "
+                "starting the outage clock now")
+            return
+        age_min = (time.time() - last) / 60
+    if age_min < after:
         return          # inside the grace window: a short dropout is not an outage
     if stt.get("offline_alerted"):
         return          # one alarm per outage, not one per 60-second cycle
@@ -1169,6 +1201,10 @@ def process_station(cfg, fb, state, *, seed):
     if not data:
         _station_offline_watch(stt, status, sc, seed=seed)
         return
+    # Zero point for the outage clock in _station_offline_watch: the last time
+    # we saw a reading we trusted. Set on every fresh cycle, so a 204 an hour
+    # from now can say HOW LONG the station has been quiet.
+    stt["last_obs_at"] = time.time()
     # Fresh data again — re-arm the alarm so the NEXT outage also notifies.
     if stt.pop("offline_alerted", None):
         log("[station] back online — observations are fresh again")

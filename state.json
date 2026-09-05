@@ -3202,9 +3202,9 @@
  ],
  "apod_date": "2026-09-05",
  "station": {
-  "hilo_date": "2026-09-04",
-  "hi": 99,
-  "lo": 83,
+  "hilo_date": "2026-09-05",
+  "hi": 85,
+  "lo": 85,
   "raining": false,
   "heat": 0,
   "cold": 0,

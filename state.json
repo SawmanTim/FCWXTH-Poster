@@ -3211,7 +3211,7 @@
   "hilo_date": "2026-09-05",
   "hi": 99,
   "lo": 85,
-  "raining": false,
+  "raining": true,
   "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-05T12",

@@ -22,6 +22,15 @@ on:
         description: "Send a TEST phone alert (opens a test issue that @mentions you)"
         type: boolean
         default: false
+      test_station_alert:
+        # Fires the STATION-OFFLINE alarm on its real `station-offline` label,
+        # not the generic poster-alert one — that label is the whole point of
+        # the separation, so a test that used poster-alert would prove nothing
+        # about it. CLOSE the resulting issue afterwards: while it is open the
+        # dedupe suppresses a REAL station-offline alarm.
+        description: "Send a TEST station-OFFLINE alert (close the issue afterwards!)"
+        type: boolean
+        default: false
       relaunch:
         # Set ONLY by a running job queueing its own successor. A relaunch must
         # QUEUE (never cancel the job that dispatched it) — see concurrency.
@@ -127,6 +136,9 @@ jobs:
           git pull --rebase -q origin main || true
           if [ "${{ inputs.test_alert }}" = "true" ]; then
             python alert.py --test || true
+          fi
+          if [ "${{ inputs.test_station_alert }}" = "true" ]; then
+            python alert.py --label station-offline               --title "TEST - station-offline alarm"               --body "this is a TEST of the STATION-OFFLINE alarm (the one that fires when KALPHILC8 stops uploading to Weather Underground). The real alarm looks like this. If your phone buzzed, it works. CLOSE THIS ISSUE NOW - while it is open, a real station outage will NOT alarm." || true
           fi
           had_failures=0
           last_ping=-240        # seed negative so the FIRST cycle of a window pings

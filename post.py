@@ -1031,6 +1031,60 @@ def _raise_alert(title: str, body: str, label: str) -> bool:
         return False
 
 
+def _station_flap_watch(stt: dict, sc: dict) -> None:
+    """Warn when the station keeps dropping out and coming back.
+
+    WHY THIS EXISTS: nothing can tell Tim his batteries are going any more. WU's
+    API carries no battery field, AcuRite NOW dropped its low-battery alert (it
+    reports only active/offline), and our own AcuRite reader died with the
+    2026-09-05 platform migration. So the battery has to be inferred from
+    BEHAVIOUR instead of read.
+
+    A healthy station does not flap. A dying one does, and 2026-09-05 was the
+    textbook case: frozen repeated values overnight, a good stretch late morning,
+    two hours dark, alive for 35 minutes after a battery change, then dark again.
+    Any ONE of those dropouts looks like a blip; the PATTERN is the signal.
+
+    So: count separate outages in a rolling window and alarm on the count. Only
+    the START of an outage counts -- `was_offline` latches, so a six-hour silence
+    is one event rather than 360 cycles of one.
+    """
+    now = time.time()
+    if stt.get("was_offline"):
+        return                      # already counted; still the same outage
+    stt["was_offline"] = True
+    window_h = sc.get("flap_window_hours", 24)
+    starts = [t for t in stt.get("outage_starts", []) if now - t < window_h * 3600]
+    starts.append(now)
+    stt["outage_starts"] = starts[-50:]   # cap: state.json is committed every cycle
+    after = sc.get("flap_alert_after", 3)
+    log(f"[station] dropout #{len(starts)} in the last {window_h}h")
+    if len(starts) < after or stt.get("flap_alerted"):
+        return
+    hours = (now - starts[0]) / 3600
+    if _raise_alert(
+            "\U0001f50c Weather station keeps dropping out",
+            f"the weather station has gone quiet and come back **{len(starts)} "
+            f"separate times** in the last {hours:.1f} hours.\n\n"
+            "Each dropout on its own looks like a blip, but the PATTERN is the "
+            "classic signature of a **failing sensor battery** -- it holds voltage "
+            "at rest, then browns out under the load of transmitting.\n\n"
+            "This is worth acting on because nothing warns you about batteries any "
+            "more: Weather Underground's API carries no battery reading, and "
+            "AcuRite NOW dropped its low-battery alert. This pattern is the only "
+            "warning left, and it comes BEFORE the station quits for good.\n\n"
+            "**Change the 4 AA batteries in the Iris sensor -- use lithium.** They "
+            "hold voltage through heat and cold far better than alkaline, which is "
+            "what fails on a 98F afternoon or in a January cold snap. If fresh "
+            "batteries do not settle it, check the Access hub's power and network "
+            "next -- a flapping hub looks identical from here.\n\n"
+            "Close this issue once you have dealt with it; it re-arms after "
+            f"{window_h}h with no dropouts.",
+            "station-flapping"):
+        stt["flap_alerted"] = True
+        log(f"[station] FLAPPING alarm raised ({len(starts)} dropouts)")
+
+
 def _station_offline_watch(stt: dict, status: dict, sc: dict, *, seed: bool) -> None:
     """Raise ONE phone alarm once the station has been silent long enough that a
     dead sensor battery or a dropped WiFi link is the likely cause.
@@ -1058,6 +1112,10 @@ def _station_offline_watch(stt: dict, status: dict, sc: dict, *, seed: bool) -> 
                 "starting the outage clock now")
             return
         age_min = (time.time() - last) / 60
+    # Count this as ONE outage the moment it starts, BEFORE the grace window --
+    # a flapping station's dropouts are mostly short, so waiting for the 60-minute
+    # alarm would miss exactly the pattern we are trying to see.
+    _station_flap_watch(stt, sc)
     if age_min < after:
         return          # inside the grace window: a short dropout is not an outage
     if stt.get("offline_alerted"):
@@ -1205,6 +1263,15 @@ def process_station(cfg, fb, state, *, seed):
     # we saw a reading we trusted. Set on every fresh cycle, so a 204 an hour
     # from now can say HOW LONG the station has been quiet.
     stt["last_obs_at"] = time.time()
+    stt["was_offline"] = False      # the next dropout counts as a NEW one
+    # Re-arm the flap alarm only after a full QUIET window. Re-arming the moment
+    # data returns would re-alarm on every bounce of the same failing battery.
+    if stt.get("flap_alerted"):
+        window_h = sc.get("flap_window_hours", 24)
+        if not [ts for ts in stt.get("outage_starts", [])
+                if time.time() - ts < window_h * 3600]:
+            stt["flap_alerted"] = False
+            log("[station] steady again — flap alarm re-armed")
     # Fresh data again — re-arm the alarm so the NEXT outage also notifies.
     if stt.pop("offline_alerted", None):
         log("[station] back online — observations are fresh again")

@@ -260,8 +260,20 @@ station:
   # false to switch the whole thing off; nothing else changes.
   # AcuRite's own System Alerts (low battery / loss of signal / communication
   # loss) are the SUPPORTED path and worth enabling in My AcuRite regardless.
+  # How many SEPARATE dropouts inside flap_window_hours before we call it a
+  # failing battery. 3 in 24h is well past coincidence: a healthy station goes
+  # weeks without one. Only the START of an outage counts, so a long silence is
+  # one dropout, not hundreds.
+  flap_alert_after: 3
+  flap_window_hours: 24
   health:
-    enabled: true
+    # DISABLED 2026-09-05. Login still works, but every dashboard endpoint 404s
+    # since the AcuRite NOW migration retired the old API -- it read nothing and
+    # just retried every 30 min. AcuRite NOW has also dropped its own low-battery
+    # alert (active/offline only), so NOTHING can report battery level any more;
+    # `flap_alert_after` above infers it from behaviour instead. Re-enable only if
+    # someone finds the new AcuRite NOW endpoints.
+    enabled: false
     # The My AcuRite dashboard only refreshes every ~5 min, so polling it every
     # 60-second cycle would be waste. Floor is 5 min.
     poll_every_min: 15

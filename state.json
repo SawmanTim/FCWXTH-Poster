@@ -760,7 +760,6 @@
   "eff56611d5725b0a3949ad9d4148fd07"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "d01b10548dc0c5be388e54eee399d66b",
   "1a7fde5981d8a73ce8780b88f32c196d",
   "dbf13bb7d74d2dce27a76aba0c82747a",
   "aa3ac65b82e1bbbb1f92d924be9b50c7",
@@ -1159,7 +1158,8 @@
   "6a34313ff052d5e6e18d04fb57d958e0",
   "45a8929000d6b0b8647e7869000844bc",
   "dc838769a6d11b088564cab0bd3181ef",
-  "bd3fd94b42c717b67c392c483111323a"
+  "bd3fd94b42c717b67c392c483111323a",
+  "a123424714ab76346b4f44a86a6d5b60"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2777,7 +2777,7 @@
   "us7000tdw6",
   "nc75429272"
  ],
- "apod_fetch_ts": 1788637843.660485,
+ "apod_fetch_ts": 1788640899.3914192,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",

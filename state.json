@@ -3215,8 +3215,8 @@
   "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-05T12",
-  "health_checked_at": 1788637436.2699952,
-  "last_obs_at": 1788638288.7092574
+  "health_checked_at": 1788640152.7724614,
+  "last_obs_at": 1788638352.7708492
  },
  "community_alerts": [
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01791a67b6d6e77940a2dd7ec7d49936c4f4fea2.001.1"

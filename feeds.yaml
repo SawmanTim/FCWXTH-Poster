@@ -240,6 +240,31 @@ station:
   card_end: 21
   card_every_hours: 3
   rain: true            # post when rain first begins (precipRate > 0)
+  # Treat an observation older than this (minutes) as NO data, and skip the cycle.
+  # A dead sensor battery does not make the WU API fail — the station stops
+  # uploading and WU keeps serving the last reading — so without this the card
+  # would post frozen numbers stamped with the current time. 30 min tolerates a
+  # brief RF dropout on a station that normally reports every few minutes.
+  max_obs_age_min: 30
+  # After this many minutes with NO observation, open an @mention issue so the
+  # phone buzzes (same alarm alert.py uses for posting failures, but on its own
+  # `station-offline` label so the two never silence each other). ONE alarm per
+  # outage; it re-arms when the station starts reporting again. 60 min means a
+  # brief WiFi dropout stays quiet but a dead battery reaches you within the hour.
+  offline_alert_after_min: 60
+  # STATION HEALTH (battery + RF signal) via My AcuRite. WU's API carries no
+  # battery or signal fields, so this is the only way to be warned while the
+  # batteries are merely LOW instead of after the station has already gone
+  # silent. UNOFFICIAL endpoint — needs secrets ACURITE_EMAIL and
+  # ACURITE_PASSWORD (account credentials, not a scoped token). Set enabled:
+  # false to switch the whole thing off; nothing else changes.
+  # AcuRite's own System Alerts (low battery / loss of signal / communication
+  # loss) are the SUPPORTED path and worth enabling in My AcuRite regardless.
+  health:
+    enabled: true
+    # The My AcuRite dashboard only refreshes every ~5 min, so polling it every
+    # 60-second cycle would be waste. Floor is 5 min.
+    poll_every_min: 15
   # Public WU dashboard for this station — linked in the conditions-card caption.
   station_url: "https://www.wunderground.com/dashboard/pws/KALPHILC8"
   # Conditions-card caption. Placeholders: {time} {tz} {location} {url}. The footer

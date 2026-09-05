@@ -32,6 +32,8 @@ Two things IFTTT couldn't do, now fixed:
 |---|---|
 | `feeds.yaml` | All feeds, templates, target pages (edit this to change behavior) |
 | `post.py` | The poster |
+| `acurite.py` | My AcuRite client — station battery + RF signal (unofficial API) |
+| `acurite_test.py` | One-off check of the AcuRite login and health pull |
 | `state.json` | Auto-created; remembers what was already posted |
 | `.github/workflows/run.yml` | GitHub Actions: ~60-second polling loop, restarted by cron (free) |
 
@@ -100,6 +102,47 @@ python post.py --dry-run   # shows what it WOULD post
   so the handoff no longer depends on the scheduler; the cron only has to
   recover the loop if a job dies before it queued that successor.
 - `state.json` is committed back whenever it changes; that's normal and keeps it free.
+- A dead sensor battery on the WU station does **not** make the API fail — the
+  station stops uploading and WU keeps serving the last observation with a 200.
+  Any observation older than `station.max_obs_age_min` (30 min) is therefore
+  treated as no data: that cycle is skipped and the reason is logged, so the
+  conditions card never publishes frozen numbers stamped with the current time.
+  To check the station by hand, run `wu_test.py` and read the `obs age` line.
+- If the station stays silent for `station.offline_alert_after_min` (60 min),
+  `alert.py` opens an @mention issue so your phone buzzes — same alarm as a
+  posting failure, but on its own `station-offline` label so the two never
+  silence each other. ONE alarm per outage; it re-arms once the station reports
+  again. Note this alarm can only tell you the station went **quiet** — WiFi
+  signal and battery level are not in the WU API and would need the station
+  vendor's own API — for this station, My AcuRite (see below).
+
+## Station health (battery + signal)
+
+The 5-in-1 has two independent failure points: the **sensor** (4x AA batteries,
+RF link to the hub) and the **AcuRite Access/smartHUB** (mains + WiFi, uploads
+to both My AcuRite and WU). WU's API shows neither, so `acurite.py` reads them
+from My AcuRite and the poller logs them every ~15 min, raising the phone alarm
+on a low battery (`station-battery`) or a weak/lost RF signal (`station-signal`).
+
+Needs secrets `ACURITE_EMAIL` / `ACURITE_PASSWORD`; leave them unset (or set
+`station.health.enabled: false`) to switch the whole thing off. **AcuRite
+publishes no public API**, so this uses the endpoints the myacurite.com
+dashboard itself calls — it can change without notice, which is why every
+failure is non-fatal and the JSON is parsed by searching for battery/signal
+fields rather than by a fixed path. Check it by hand with:
+
+```bash
+ACURITE_EMAIL='you@example.com' ACURITE_PASSWORD='...' python acurite_test.py
+# add --raw to dump the payload if the summary comes back empty
+```
+
+**Also turn on AcuRite's own System Alerts** in My AcuRite (Alert Rules) — they
+are the officially supported path and cover low battery (<25%, after 10
+consecutive check-ins), loss of sensor signal (>2h), and hub communication loss
+(>2h). Deliver them by **email or app push, not text**: the carriers have shut
+down the email-to-SMS gateways these alerts ride on (Sprint 2022, T-Mobile late
+2024, AT&T June 2025, Verizon phasing out through March 2027), so texts are
+silently dropped.
 - County consolidation reposts an alert if NWS issues an **updated** version (new alert id).
 - If any cycle fails to post (e.g. an expired Facebook token), two alarms fire:
   **instantly**, `alert.py` opens a `poster-alert` issue that @mentions you (GitHub

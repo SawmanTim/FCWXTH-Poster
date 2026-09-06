@@ -3223,11 +3223,11 @@
   "hi": 101,
   "lo": 72,
   "raining": false,
-  "heat": 1,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-06T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788727701.0358636,
+  "last_obs_at": 1788727766.413219,
   "was_offline": false
  },
  "community_alerts": [

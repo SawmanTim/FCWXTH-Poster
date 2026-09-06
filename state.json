@@ -3217,14 +3217,14 @@
  "apod_date": "2026-09-06",
  "station": {
   "hilo_date": "2026-09-06",
-  "hi": 89,
+  "hi": 90,
   "lo": 72,
   "raining": false,
   "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-06T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788706394.0154316,
+  "last_obs_at": 1788706459.5982676,
   "was_offline": false
  },
  "community_alerts": [

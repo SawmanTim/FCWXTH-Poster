@@ -2780,7 +2780,7 @@
   "nc75429272",
   "uw714095342"
  ],
- "apod_fetch_ts": 1788662104.2358913,
+ "apod_fetch_ts": 1788665135.4634109,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3214,13 +3214,13 @@
  "station": {
   "hilo_date": "2026-09-05",
   "hi": 99,
-  "lo": 78,
+  "lo": 77,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-05T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788665069.1859791,
+  "last_obs_at": 1788665135.024565,
   "was_offline": false
  },
  "community_alerts": [

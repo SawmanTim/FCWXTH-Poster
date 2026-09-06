@@ -3213,13 +3213,13 @@
  "station": {
   "hilo_date": "2026-09-05",
   "hi": 99,
-  "lo": 79,
+  "lo": 78,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-05T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788660784.0807722,
+  "last_obs_at": 1788660850.015342,
   "was_offline": false
  },
  "community_alerts": [

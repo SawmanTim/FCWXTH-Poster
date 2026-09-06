@@ -3218,14 +3218,14 @@
  "apod_date": "2026-09-06",
  "station": {
   "hilo_date": "2026-09-06",
-  "hi": 95,
+  "hi": 96,
   "lo": 72,
   "raining": false,
   "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-06T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788711942.3132412,
+  "last_obs_at": 1788712007.8314166,
   "was_offline": false
  },
  "community_alerts": [

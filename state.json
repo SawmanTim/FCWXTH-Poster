@@ -3212,13 +3212,13 @@
  "station": {
   "hilo_date": "2026-09-05",
   "hi": 99,
-  "lo": 80,
+  "lo": 79,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-05T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788659686.4805906,
+  "last_obs_at": 1788659752.0112467,
   "was_offline": false
  },
  "community_alerts": [

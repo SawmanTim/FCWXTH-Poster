@@ -3226,14 +3226,14 @@
  "apod_date": "2026-09-07",
  "station": {
   "hilo_date": "2026-09-07",
-  "hi": 88,
+  "hi": 89,
   "lo": 70,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-07T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788793369.107092,
+  "last_obs_at": 1788793434.1558235,
   "was_offline": false
  },
  "community_alerts": [

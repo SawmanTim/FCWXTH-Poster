@@ -3231,11 +3231,11 @@
   "hi": 93,
   "lo": 70,
   "raining": false,
-  "heat": 1,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-07T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788799250.109797,
+  "last_obs_at": 1788799315.9442053,
   "was_offline": false
  },
  "community_alerts": [

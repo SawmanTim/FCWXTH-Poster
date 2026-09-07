@@ -2819,7 +2819,6 @@
  ],
  "usdm_week": "2026-W36",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/20260811",
   "https://www.spc.noaa.gov/products/md/md1918.html/20260811",
   "https://www.spc.noaa.gov/products/md/md1919.html/20260811",
   "https://www.spc.noaa.gov/products/md/md1920.html/20260811",
@@ -3218,7 +3217,8 @@
   "https://www.spc.noaa.gov/products/md/md2259.html/20260907",
   "https://www.spc.noaa.gov/products/md/md2260.html/20260907",
   "https://www.spc.noaa.gov/products/md/20260907",
-  "https://www.spc.noaa.gov/products/md/md2261.html/20260907"
+  "https://www.spc.noaa.gov/products/md/md2261.html/20260907",
+  "https://www.spc.noaa.gov/products/md/md2262.html/20260907"
  ],
  "apod_date": "2026-09-07",
  "station": {
@@ -3230,7 +3230,7 @@
   "cold": 0,
   "card_hour": "2026-09-06T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788760259.0766497,
+  "last_obs_at": 1788760323.9450188,
   "was_offline": false
  },
  "community_alerts": [

@@ -2789,7 +2789,7 @@
   "nc75429272",
   "uw714095342"
  ],
- "apod_fetch_ts": 1788752847.3385732,
+ "apod_fetch_ts": 1788755849.6050842,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3220,7 +3220,7 @@
   "https://www.spc.noaa.gov/products/md/20260907",
   "https://www.spc.noaa.gov/products/md/md2261.html/20260907"
  ],
- "apod_date": "2026-09-06",
+ "apod_date": "2026-09-07",
  "station": {
   "hilo_date": "2026-09-06",
   "hi": 101,
@@ -3230,7 +3230,7 @@
   "cold": 0,
   "card_hour": "2026-09-06T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788755783.8548286,
+  "last_obs_at": 1788755849.165262,
   "was_offline": false
  },
  "community_alerts": [

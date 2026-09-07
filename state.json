@@ -771,7 +771,8 @@
   "4e910c37ea86f3954154748675ff2d61",
   "3844360c27c87570c0cdc13e57736efe",
   "f51f12f49d35c17810e8518f46993d53",
-  "7560132f19f50b61e2210936499e4acc"
+  "7560132f19f50b61e2210936499e4acc",
+  "92fdfa5ea84e88f482edcdf8a09f0766"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "9ee5eb9af220ba4a43025952affd5bca",
@@ -1679,7 +1680,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608211731",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608212335",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608220540",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608221138",
@@ -2078,7 +2078,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609062320",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609070512",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609071110",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609071713"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609071713",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609072311"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2734,7 +2735,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
+   "cond": "clear",
    "temp": 95,
    "sun_date": "2026-09-06",
    "station_id": "KCRX"
@@ -3237,7 +3238,7 @@
   "cold": 0,
   "card_hour": "2026-09-07T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788822705.4639304,
+  "last_obs_at": 1788822781.7092555,
   "was_offline": false
  },
  "community_alerts": [

@@ -3236,14 +3236,14 @@
  "apod_date": "2026-09-08",
  "station": {
   "hilo_date": "2026-09-08",
-  "hi": 87,
+  "hi": 88,
   "lo": 73,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-08T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788880602.937793,
+  "last_obs_at": 1788880668.9150448,
   "was_offline": false
  },
  "community_alerts": [

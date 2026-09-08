@@ -3242,11 +3242,11 @@
   "hi": 93,
   "lo": 73,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-08T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788887821.4969072,
+  "last_obs_at": 1788887887.103169,
   "was_offline": false
  },
  "community_alerts": [

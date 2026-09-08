@@ -3245,11 +3245,11 @@
   "hi": 94,
   "lo": 73,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-08T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788901740.8530993,
+  "last_obs_at": 1788901806.4092743,
   "was_offline": false
  },
  "community_alerts": [

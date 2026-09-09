@@ -3245,14 +3245,14 @@
  "apod_date": "2026-09-09",
  "station": {
   "hilo_date": "2026-09-09",
-  "hi": 73,
+  "hi": 74,
   "lo": 73,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-08T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788938595.2427497,
+  "last_obs_at": 1788938660.5635536,
   "was_offline": false
  },
  "community_alerts": [

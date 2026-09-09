@@ -3252,11 +3252,11 @@
   "hi": 93,
   "lo": 71,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-09T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1788975847.1377091,
+  "last_obs_at": 1788975963.4177513,
   "was_offline": false
  },
  "community_alerts": [

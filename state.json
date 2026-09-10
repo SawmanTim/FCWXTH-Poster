@@ -2822,7 +2822,7 @@
   "nc75429272",
   "uw714095342"
  ],
- "apod_fetch_ts": 1789042503.7208416,
+ "apod_fetch_ts": 1789045533.4516964,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3259,14 +3259,14 @@
  "apod_date": "2026-09-10",
  "station": {
   "hilo_date": "2026-09-10",
-  "hi": 77,
+  "hi": 78,
   "lo": 69,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-10T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789045467.0797653,
+  "last_obs_at": 1789045532.9475262,
   "was_offline": false
  },
  "community_alerts": [

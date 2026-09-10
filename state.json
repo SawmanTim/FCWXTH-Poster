@@ -2766,7 +2766,7 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 95,
+   "temp": 97,
    "sun_date": "2026-09-09",
    "station_id": "KCRX"
   },
@@ -2859,7 +2859,6 @@
  ],
  "usdm_week": "2026-W37",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1938.html/20260811",
   "https://www.spc.noaa.gov/products/md/md1936.html/20260812",
   "https://www.spc.noaa.gov/products/md/md1937.html/20260812",
   "https://www.spc.noaa.gov/products/md/md1938.html/20260812",
@@ -3258,7 +3257,8 @@
   "https://www.spc.noaa.gov/products/md/md2276.html/20260909",
   "https://www.spc.noaa.gov/products/md/20260910",
   "https://www.spc.noaa.gov/products/md/md2277.html/20260910",
-  "https://www.spc.noaa.gov/products/md/md2278.html/20260910"
+  "https://www.spc.noaa.gov/products/md/md2278.html/20260910",
+  "https://www.spc.noaa.gov/products/md/md2279.html/20260910"
  ],
  "apod_date": "2026-09-10",
  "station": {
@@ -3270,7 +3270,7 @@
   "cold": 0,
   "card_hour": "2026-09-10T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789067947.8714974,
+  "last_obs_at": 1789068013.9871922,
   "was_offline": false
  },
  "community_alerts": [

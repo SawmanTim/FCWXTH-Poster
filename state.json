@@ -1491,7 +1491,8 @@
   "0e7a60c9bf2d146348b7c18c1db15a4f",
   "9250130fd1dd20696e5a19b7d9353eaf",
   "0cecc067ec3adb8ae65b286423ae0beb",
-  "7f0801e83e89cc7f4cab2d722e4c1ec1"
+  "7f0801e83e89cc7f4cab2d722e4c1ec1",
+  "791934ad94fa943a12dac8072398021d"
  ],
  "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml": [
   "f068a2eaf3e067f0ab363d0b1c2b91e9",
@@ -3260,14 +3261,14 @@
  "apod_date": "2026-09-10",
  "station": {
   "hilo_date": "2026-09-10",
-  "hi": 91,
+  "hi": 92,
   "lo": 69,
   "raining": false,
   "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-10T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789058500.8202257,
+  "last_obs_at": 1789058571.8174744,
   "was_offline": false
  },
  "community_alerts": [

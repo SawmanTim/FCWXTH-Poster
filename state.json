@@ -3266,11 +3266,11 @@
   "hi": 97,
   "lo": 69,
   "raining": false,
-  "heat": 0,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-10T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789068348.715043,
+  "last_obs_at": 1789068419.9967394,
   "was_offline": false
  },
  "community_alerts": [

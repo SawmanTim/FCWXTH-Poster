@@ -1715,7 +1715,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608241755",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608242308",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608250507",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202608251152",
@@ -2114,7 +2113,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609092312",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609100508",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609101111",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609101705"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609101705",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609102314"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3275,7 +3275,7 @@
   "cold": 0,
   "card_hour": "2026-09-10T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789082099.989846,
+  "last_obs_at": 1789082167.0311968,
   "was_offline": false
  },
  "community_alerts": [

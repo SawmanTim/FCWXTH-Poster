@@ -3259,14 +3259,14 @@
  "apod_date": "2026-09-10",
  "station": {
   "hilo_date": "2026-09-10",
-  "hi": 85,
+  "hi": 86,
   "lo": 69,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-10T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789050315.1602318,
+  "last_obs_at": 1789050380.8291109,
   "was_offline": false
  },
  "community_alerts": [

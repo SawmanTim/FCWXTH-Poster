@@ -3265,11 +3265,11 @@
   "hi": 93,
   "lo": 69,
   "raining": false,
-  "heat": 1,
+  "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-10T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789059110.0755057,
+  "last_obs_at": 1789059175.713746,
   "was_offline": false
  },
  "community_alerts": [

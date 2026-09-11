@@ -2838,7 +2838,8 @@
   "us7000tdvt",
   "us7000tdw6",
   "nc75429272",
-  "uw714095342"
+  "uw714095342",
+  "us7000tgrk"
  ],
  "apod_fetch_ts": 1789160929.654447,
  "swpc": [
@@ -3284,7 +3285,7 @@
   "cold": 0,
   "card_hour": "2026-09-11T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789162868.7250822,
+  "last_obs_at": 1789162937.8464594,
   "was_offline": false
  },
  "community_alerts": [

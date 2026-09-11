@@ -563,7 +563,8 @@
   "c279da0803f1086a987ee64acad3fa26",
   "792cd1723f0d805a15508acbf781237f",
   "de3a8c9c67e1f4622b6ecb69474afb48",
-  "e3d738684adea98effa85bb030ea0aa8"
+  "e3d738684adea98effa85bb030ea0aa8",
+  "c56b1dbf70e139e71515ff9f3c6b11ca"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -2772,7 +2773,7 @@
   "Paden": {
    "cond": "clear",
    "temp": 91,
-   "sun_date": "2026-09-09",
+   "sun_date": "2026-09-10",
    "station_id": "KCRX"
   },
   "Franklin": {
@@ -3275,7 +3276,7 @@
   "cold": 0,
   "card_hour": "2026-09-10T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789085139.4133213,
+  "last_obs_at": 1789085216.3986044,
   "was_offline": false
  },
  "community_alerts": [

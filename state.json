@@ -211,7 +211,8 @@
   "79608cf00ee3bf614b0d8288bc2400b1",
   "e5f3f598330fbfabad3e749b034d5b70",
   "5d16662d197ccbf70f50f00989c16aa4",
-  "ea0e2a97051dcbe50120adf6ad09afca"
+  "ea0e2a97051dcbe50120adf6ad09afca",
+  "f7966bd43e3774ea0f60ef0297345822"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
   "6d410f70592149889863512af083a959",
@@ -2775,13 +2776,13 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 75,
+   "temp": 77,
    "sun_date": "2026-09-10",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 77,
+   "temp": 79,
    "sun_date": "2026-09-10",
    "station_id": "K1M4"
   }
@@ -3279,7 +3280,7 @@
   "cold": 0,
   "card_hour": "2026-09-11T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789135372.0299184,
+  "last_obs_at": 1789135442.7805147,
   "was_offline": false
  },
  "community_alerts": [

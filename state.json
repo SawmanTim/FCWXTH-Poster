@@ -2798,8 +2798,7 @@
   "Franklin": {
    "cond": "mostly cloudy",
    "temp": 82,
-   "sun_date": "2026-09-11",
-   "station_id": "K1M4"
+   "sun_date": "2026-09-11"
   }
  },
  "usgs_quakes": [
@@ -3289,14 +3288,14 @@
  "apod_date": "2026-09-12",
  "station": {
   "hilo_date": "2026-09-12",
-  "hi": 84,
+  "hi": 85,
   "lo": 72,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-12T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789231531.5454826,
+  "last_obs_at": 1789231626.87513,
   "was_offline": false
  },
  "community_alerts": [

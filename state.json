@@ -3283,14 +3283,14 @@
  "apod_date": "2026-09-12",
  "station": {
   "hilo_date": "2026-09-12",
-  "hi": 73,
+  "hi": 74,
   "lo": 72,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-12T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789214581.7752466,
+  "last_obs_at": 1789214646.5028617,
   "was_offline": false
  },
  "community_alerts": [

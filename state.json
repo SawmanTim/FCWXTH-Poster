@@ -2854,7 +2854,7 @@
   "uw714095342",
   "us7000tgrk"
  ],
- "apod_fetch_ts": 1789270381.9714437,
+ "apod_fetch_ts": 1789273383.052902,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3288,7 +3288,7 @@
   "https://www.spc.noaa.gov/products/md/md2291.html/20260913",
   "https://www.spc.noaa.gov/products/md/20260913"
  ],
- "apod_date": "2026-09-12",
+ "apod_date": "2026-09-13",
  "station": {
   "hilo_date": "2026-09-12",
   "hi": 93,
@@ -3298,7 +3298,7 @@
   "cold": 0,
   "card_hour": "2026-09-12T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789273318.789573,
+  "last_obs_at": 1789273382.5126336,
   "was_offline": false
  },
  "community_alerts": [

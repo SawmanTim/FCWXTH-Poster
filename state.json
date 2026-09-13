@@ -2802,7 +2802,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "partly cloudy",
+   "cond": "mostly clear",
    "temp": 90,
    "sun_date": "2026-09-12",
    "station_id": "K1M4"
@@ -2858,7 +2858,7 @@
   "uw714095342",
   "us7000tgrk"
  ],
- "apod_fetch_ts": 1789318900.2296388,
+ "apod_fetch_ts": 1789321940.2154007,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3298,11 +3298,11 @@
   "hi": 95,
   "lo": 66,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-13T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789321873.52832,
+  "last_obs_at": 1789321939.7553444,
   "was_offline": false
  },
  "community_alerts": [

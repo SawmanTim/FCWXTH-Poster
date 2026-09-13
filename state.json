@@ -3292,13 +3292,13 @@
  "station": {
   "hilo_date": "2026-09-12",
   "hi": 93,
-  "lo": 71,
+  "lo": 70,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-12T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789275422.9902246,
+  "last_obs_at": 1789275486.5359318,
   "was_offline": false
  },
  "community_alerts": [

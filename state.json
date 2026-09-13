@@ -3295,14 +3295,14 @@
  "apod_date": "2026-09-13",
  "station": {
   "hilo_date": "2026-09-13",
-  "hi": 97,
+  "hi": 98,
   "lo": 66,
   "raining": false,
   "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-13T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789325898.6000857,
+  "last_obs_at": 1789325964.3982892,
   "was_offline": false
  },
  "community_alerts": [

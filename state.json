@@ -816,7 +816,6 @@
   "f37bcad460d921666501dff2d31d02d2"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "50947dc5f23c0e77f3b481778ebb56eb",
   "4f0b9e6241b3aec7fcb5e4cc44d61f64",
   "0146843fa17f586dfa13560c30179570",
   "0921262d5273937bce8e1bf757940be1",
@@ -1215,7 +1214,8 @@
   "5c8786474eb4ae58e21e74219ff92e6a",
   "c07ddd4dd459f2ac91fc467c73e882bb",
   "63bb8f88c739d36c8a4facc156824df1",
-  "52e8e5e0c403cbad86ccc03789b8ea8d"
+  "52e8e5e0c403cbad86ccc03789b8ea8d",
+  "e7e69dfebac2ef23263fc7f89d17eac1"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -3300,7 +3300,7 @@
   "cold": 0,
   "card_hour": "2026-09-13T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789313007.023026,
+  "last_obs_at": 1789313078.98766,
   "was_offline": false
  },
  "community_alerts": [

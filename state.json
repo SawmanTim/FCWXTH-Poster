@@ -1677,7 +1677,8 @@
   "50084f842198150d810ab04db17dce9b",
   "1e5e2293921a97ee35c8eafd9db48945",
   "4791a70aaa86f9d8fb429823d31a68de",
-  "b59e1634d22e4896a4b170cf036e0512"
+  "b59e1634d22e4896a4b170cf036e0512",
+  "8cbc1599b7ecced077f7689e388cc06f"
  ],
  "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml": [
   "ef354fda682a7577253ab06ef0284f7a",
@@ -3297,11 +3298,11 @@
   "hi": 91,
   "lo": 66,
   "raining": false,
-  "heat": 1,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-13T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789314338.2118237,
+  "last_obs_at": 1789314407.7107143,
   "was_offline": false
  },
  "community_alerts": [

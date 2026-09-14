@@ -3309,11 +3309,11 @@
   "hi": 99,
   "lo": 67,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-14T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789413883.1757877,
+  "last_obs_at": 1789413948.6292129,
   "was_offline": false
  },
  "community_alerts": [

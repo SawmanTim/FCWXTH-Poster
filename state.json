@@ -3306,14 +3306,14 @@
  "apod_date": "2026-09-14",
  "station": {
   "hilo_date": "2026-09-14",
-  "hi": 97,
+  "hi": 98,
   "lo": 67,
   "raining": false,
   "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-14T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789402883.4005156,
+  "last_obs_at": 1789402949.7728786,
   "was_offline": false
  },
  "community_alerts": [

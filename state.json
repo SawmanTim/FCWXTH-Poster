@@ -2819,7 +2819,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
+   "cond": "",
    "temp": 99,
    "sun_date": "2026-09-14",
    "station_id": "KCRX"
@@ -2881,7 +2881,7 @@
   "uw714095342",
   "us7000tgrk"
  ],
- "apod_fetch_ts": 1789498080.1531315,
+ "apod_fetch_ts": 1789501144.5436924,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3327,7 +3327,7 @@
   "cold": 0,
   "card_hour": "2026-09-15T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789501077.7347035,
+  "last_obs_at": 1789501144.119617,
   "was_offline": false
  },
  "community_alerts": [

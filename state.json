@@ -3327,13 +3327,13 @@
  "station": {
   "hilo_date": "2026-09-16",
   "hi": 76,
-  "lo": 76,
+  "lo": 75,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-15T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789542738.454107,
+  "last_obs_at": 1789542802.0635161,
   "was_offline": false
  },
  "community_alerts": [

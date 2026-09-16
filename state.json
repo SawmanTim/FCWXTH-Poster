@@ -3336,11 +3336,11 @@
   "hi": 99,
   "lo": 74,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-16T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789591498.9063504,
+  "last_obs_at": 1789591564.4909565,
   "was_offline": false
  },
  "community_alerts": [

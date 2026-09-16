@@ -3328,14 +3328,14 @@
  "apod_date": "2026-09-16",
  "station": {
   "hilo_date": "2026-09-16",
-  "hi": 90,
+  "hi": 91,
   "lo": 74,
   "raining": false,
   "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-16T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789572206.7730794,
+  "last_obs_at": 1789572272.7228982,
   "was_offline": false
  },
  "community_alerts": [

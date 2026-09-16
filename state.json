@@ -2890,7 +2890,7 @@
   "uw714095342",
   "us7000tgrk"
  ],
- "apod_fetch_ts": 1789570613.7049205,
+ "apod_fetch_ts": 1789573665.4850607,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3332,11 +3332,11 @@
   "hi": 92,
   "lo": 74,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-16T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789573599.9690335,
+  "last_obs_at": 1789573665.2817562,
   "was_offline": false
  },
  "community_alerts": [

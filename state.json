@@ -1715,7 +1715,8 @@
   "b7c120f29b875ee6856310f5ae5c0f1a",
   "bb968846cfa3ade061057b434f2ec8c2",
   "ffa463343dc9b24bb31e9debdafe50a3",
-  "94593c332dc2aa0f15826d4387dacee3"
+  "94593c332dc2aa0f15826d4387dacee3",
+  "9c7c0057f77809816915e26c4c5d34e4"
  ],
  "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml": [
   "ef354fda682a7577253ab06ef0284f7a",
@@ -3341,7 +3342,7 @@
   "cold": 0,
   "card_hour": "2026-09-16T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789594604.4190404,
+  "last_obs_at": 1789594671.628168,
   "was_offline": false
  },
  "community_alerts": [

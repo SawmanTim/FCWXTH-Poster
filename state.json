@@ -3327,14 +3327,14 @@
  "apod_date": "2026-09-16",
  "station": {
   "hilo_date": "2026-09-16",
-  "hi": 81,
+  "hi": 82,
   "lo": 74,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-16T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789566445.5716472,
+  "last_obs_at": 1789566511.828199,
   "was_offline": false
  },
  "community_alerts": [

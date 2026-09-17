@@ -3339,13 +3339,13 @@
  "station": {
   "hilo_date": "2026-09-16",
   "hi": 99,
-  "lo": 73,
+  "lo": 72,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-16T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789616780.3480926,
+  "last_obs_at": 1789616845.4844599,
   "was_offline": false
  },
  "community_alerts": [

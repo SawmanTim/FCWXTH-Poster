@@ -2902,7 +2902,8 @@
   "nc75429272",
   "uw714095342",
   "us7000tgrk",
-  "attliih5"
+  "attliih5",
+  "aka2026slmipb"
  ],
  "apod_fetch_ts": 1789655557.0293553,
  "swpc": [
@@ -3350,7 +3351,7 @@
   "cold": 0,
   "card_hour": "2026-09-17T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789655556.5542474,
+  "last_obs_at": 1789655628.2676835,
   "was_offline": false
  },
  "community_alerts": [

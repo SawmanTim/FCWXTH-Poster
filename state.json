@@ -2936,7 +2936,7 @@
   "2026-09-14 15:47:26.890|A20F",
   "2026-09-15 17:37:51.220|A20F"
  ],
- "usdm_week": "2026-W37",
+ "usdm_week": "2026-W38",
  "spc_md": [
   "https://www.spc.noaa.gov/products/md/md1964.html/20260813",
   "https://www.spc.noaa.gov/products/md/md1965.html/20260813",
@@ -3342,14 +3342,14 @@
  "apod_date": "2026-09-17",
  "station": {
   "hilo_date": "2026-09-17",
-  "hi": 83,
+  "hi": 84,
   "lo": 67,
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-09-17T06",
+  "card_hour": "2026-09-17T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789653570.0792594,
+  "last_obs_at": 1789653636.794299,
   "was_offline": false
  },
  "community_alerts": [

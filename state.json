@@ -2903,7 +2903,8 @@
   "uw714095342",
   "us7000tgrk",
   "attliih5",
-  "aka2026slmipb"
+  "aka2026slmipb",
+  "us7000ti1p"
  ],
  "apod_fetch_ts": 1789655557.0293553,
  "swpc": [
@@ -3351,7 +3352,7 @@
   "cold": 0,
   "card_hour": "2026-09-17T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789656018.9347966,
+  "last_obs_at": 1789656087.1383677,
   "was_offline": false
  },
  "community_alerts": [

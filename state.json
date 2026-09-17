@@ -3347,14 +3347,14 @@
  "apod_date": "2026-09-17",
  "station": {
   "hilo_date": "2026-09-17",
-  "hi": 98,
+  "hi": 99,
   "lo": 67,
   "raining": false,
   "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-17T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789672948.1975873,
+  "last_obs_at": 1789673013.3674119,
   "was_offline": false
  },
  "community_alerts": [

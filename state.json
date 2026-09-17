@@ -2911,7 +2911,7 @@
   "aka2026slmipb",
   "us7000ti1p"
  ],
- "apod_fetch_ts": 1789680077.8342347,
+ "apod_fetch_ts": 1789683103.142363,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3353,11 +3353,11 @@
   "hi": 99,
   "lo": 67,
   "raining": false,
-  "heat": 1,
+  "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-17T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789683037.0973427,
+  "last_obs_at": 1789683102.8790784,
   "was_offline": false
  },
  "community_alerts": [

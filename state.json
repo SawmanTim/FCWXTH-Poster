@@ -2843,7 +2843,7 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 93,
+   "temp": 95,
    "sun_date": "2026-09-16",
    "station_id": "KCRX"
   },
@@ -3353,7 +3353,7 @@
   "cold": 0,
   "card_hour": "2026-09-17T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789667777.0550935,
+  "last_obs_at": 1789667841.794979,
   "was_offline": false
  },
  "community_alerts": [

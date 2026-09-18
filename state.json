@@ -3355,13 +3355,13 @@
  "station": {
   "hilo_date": "2026-09-18",
   "hi": 71,
-  "lo": 68,
+  "lo": 67,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-18T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789730664.8202496,
+  "last_obs_at": 1789730731.0056455,
   "was_offline": false
  },
  "community_alerts": [

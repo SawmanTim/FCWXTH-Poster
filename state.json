@@ -3360,11 +3360,11 @@
   "hi": 101,
   "lo": 67,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-18T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789764200.5091813,
+  "last_obs_at": 1789764265.7448595,
   "was_offline": false
  },
  "community_alerts": [

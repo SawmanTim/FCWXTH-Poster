@@ -3352,15 +3352,15 @@
  ],
  "apod_date": "2026-09-18",
  "station": {
-  "hilo_date": "2026-09-17",
-  "hi": 99,
-  "lo": 67,
+  "hilo_date": "2026-09-18",
+  "hi": 71,
+  "lo": 71,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-17T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789707595.9024115,
+  "last_obs_at": 1789707660.4450521,
   "was_offline": false
  },
  "community_alerts": [

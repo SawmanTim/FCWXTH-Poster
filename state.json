@@ -3356,14 +3356,14 @@
  "apod_date": "2026-09-18",
  "station": {
   "hilo_date": "2026-09-18",
-  "hi": 84,
+  "hi": 85,
   "lo": 67,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-18T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789740014.608872,
+  "last_obs_at": 1789740085.0307822,
   "was_offline": false
  },
  "community_alerts": [

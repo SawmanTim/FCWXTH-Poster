@@ -3363,14 +3363,14 @@
  "apod_date": "2026-09-19",
  "station": {
   "hilo_date": "2026-09-19",
-  "hi": 96,
+  "hi": 97,
   "lo": 68,
   "raining": false,
   "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-19T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789832736.1795466,
+  "last_obs_at": 1789832801.0948968,
   "was_offline": false
  },
  "community_alerts": [

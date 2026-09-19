@@ -3366,11 +3366,11 @@
   "hi": 96,
   "lo": 68,
   "raining": false,
-  "heat": 1,
+  "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-19T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789832082.3408895,
+  "last_obs_at": 1789832146.9300876,
   "was_offline": false
  },
  "community_alerts": [

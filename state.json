@@ -1818,7 +1818,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "summary-al052026-202608311523",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT5+shtml/311751.shtml",
   "summary-al052026-202608311751",
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/175354.shtml?cone",
@@ -2217,7 +2216,8 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT1+shtml/202035.shtml",
   "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/203626.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/212304.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/212307.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/212307.shtml?cone",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609202315"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2974,7 +2974,6 @@
  ],
  "usdm_week": "2026-W38",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md1978.html/20260814",
   "https://www.spc.noaa.gov/products/md/md1979.html/20260814",
   "https://www.spc.noaa.gov/products/md/md1980.html/20260814",
   "https://www.spc.noaa.gov/products/md/md1981.html/20260814",
@@ -3373,7 +3372,8 @@
   "https://www.spc.noaa.gov/products/md/20260920",
   "https://www.spc.noaa.gov/products/md/md2314.html/20260920",
   "https://www.spc.noaa.gov/products/md/md2315.html/20260920",
-  "https://www.spc.noaa.gov/products/md/md2316.html/20260920"
+  "https://www.spc.noaa.gov/products/md/md2316.html/20260920",
+  "https://www.spc.noaa.gov/products/md/md2317.html/20260920"
  ],
  "apod_date": "2026-09-20",
  "station": {
@@ -3385,7 +3385,7 @@
   "cold": 0,
   "card_hour": "2026-09-20T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789946181.33825,
+  "last_obs_at": 1789946251.3763366,
   "was_offline": false
  },
  "community_alerts": [

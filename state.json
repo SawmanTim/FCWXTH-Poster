@@ -3379,11 +3379,11 @@
   "hi": 97,
   "lo": 69,
   "raining": false,
-  "heat": 2,
+  "heat": 1,
   "cold": 0,
   "card_hour": "2026-09-20T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789924101.849182,
+  "last_obs_at": 1789924166.4801407,
   "was_offline": false
  },
  "community_alerts": [

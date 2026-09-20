@@ -3376,14 +3376,14 @@
  "apod_date": "2026-09-20",
  "station": {
   "hilo_date": "2026-09-20",
-  "hi": 97,
+  "hi": 98,
   "lo": 69,
   "raining": false,
   "heat": 2,
   "cold": 0,
   "card_hour": "2026-09-20T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789926187.6360748,
+  "last_obs_at": 1789926252.3823211,
   "was_offline": false
  },
  "community_alerts": [

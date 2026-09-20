@@ -3370,13 +3370,13 @@
  "station": {
   "hilo_date": "2026-09-20",
   "hi": 73,
-  "lo": 71,
+  "lo": 70,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-19T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789895672.8418927,
+  "last_obs_at": 1789895738.8092194,
   "was_offline": false
  },
  "community_alerts": [

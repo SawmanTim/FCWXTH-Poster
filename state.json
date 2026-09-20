@@ -2939,7 +2939,7 @@
   "us7000ti1p",
   "us7000tiqc"
  ],
- "apod_fetch_ts": 1789942438.541912,
+ "apod_fetch_ts": 1789945464.8347576,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3385,7 +3385,7 @@
   "cold": 0,
   "card_hour": "2026-09-20T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789945378.6734092,
+  "last_obs_at": 1789945444.5096781,
   "was_offline": false
  },
  "community_alerts": [

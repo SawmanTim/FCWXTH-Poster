@@ -3382,12 +3382,12 @@
   "hilo_date": "2026-09-21",
   "hi": 70,
   "lo": 69,
-  "raining": true,
+  "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-20T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1789970354.596357,
+  "last_obs_at": 1789970420.1838086,
   "was_offline": false
  },
  "community_alerts": [

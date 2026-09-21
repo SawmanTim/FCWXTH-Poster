@@ -2885,14 +2885,14 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "rain",
+   "cond": "clear",
    "temp": 97,
    "sun_date": "2026-09-20",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "clear",
-   "temp": 93,
+   "cond": "mostly cloudy",
+   "temp": 90,
    "sun_date": "2026-09-20",
    "station_id": "K1M4"
   }
@@ -3398,7 +3398,7 @@
   "cold": 0,
   "card_hour": "2026-09-21T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790021777.1170251,
+  "last_obs_at": 1790021843.6603734,
   "was_offline": false
  },
  "community_alerts": [

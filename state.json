@@ -3402,14 +3402,14 @@
  "apod_date": "2026-09-22",
  "station": {
   "hilo_date": "2026-09-22",
-  "hi": 76,
+  "hi": 77,
   "lo": 67,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-22T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790085461.7126122,
+  "last_obs_at": 1790085526.8128738,
   "was_offline": false
  },
  "community_alerts": [

@@ -1836,7 +1836,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/012300.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT5+shtml/415341.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT5+shtml/010252.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT5+shtml/010252.shtml",
@@ -2235,7 +2234,8 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT1+shtml/220233.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT1+shtml/220233.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT1+shtml/220233.shtml",
-  "summary-al062026-202609220233"
+  "summary-al062026-202609220233",
+  "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/023457.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2891,7 +2891,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
+   "cond": "mostly cloudy",
    "temp": 77,
    "sun_date": "2026-09-21",
    "station_id": "KCRX"
@@ -3404,7 +3404,7 @@
   "cold": 0,
   "card_hour": "2026-09-21T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790044504.0975618,
+  "last_obs_at": 1790044572.8238137,
   "was_offline": false
  },
  "community_alerts": [

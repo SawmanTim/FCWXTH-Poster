@@ -3411,15 +3411,15 @@
  ],
  "apod_date": "2026-09-23",
  "station": {
-  "hilo_date": "2026-09-22",
-  "hi": 93,
-  "lo": 67,
+  "hilo_date": "2026-09-23",
+  "hi": 69,
+  "lo": 69,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-22T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790139589.7722495,
+  "last_obs_at": 1790139654.997837,
   "was_offline": false
  },
  "community_alerts": [

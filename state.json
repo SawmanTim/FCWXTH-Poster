@@ -2920,7 +2920,7 @@
   },
   "Franklin": {
    "cond": "mostly cloudy",
-   "temp": 73,
+   "temp": 72,
    "sun_date": "2026-09-22",
    "station_id": "K1M4"
   }
@@ -3426,7 +3426,7 @@
   "cold": 0,
   "card_hour": "2026-09-23T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790204838.4874551,
+  "last_obs_at": 1790204904.263468,
   "was_offline": false
  },
  "community_alerts": [

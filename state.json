@@ -1622,7 +1622,8 @@
   "3eb01a48795664c49649cef3871d61a8",
   "03e2f28fb0ef9c279da0eb52f2a3169b",
   "5be0c442b0af1ae06d2093018737061d",
-  "4312dc22ec0f7896a13f15f03f20ef24"
+  "4312dc22ec0f7896a13f15f03f20ef24",
+  "7ad621e567bf22785c9ad0c936b1a351"
  ],
  "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml": [
   "f068a2eaf3e067f0ab363d0b1c2b91e9",
@@ -2920,14 +2921,14 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
+   "cond": "partly cloudy",
    "temp": 81,
    "sun_date": "2026-09-23",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "partly cloudy",
-   "temp": 82,
+   "cond": "mostly cloudy",
+   "temp": 81,
    "sun_date": "2026-09-23",
    "station_id": "K1M4"
   }
@@ -3426,14 +3427,14 @@
  "apod_date": "2026-09-24",
  "station": {
   "hilo_date": "2026-09-24",
-  "hi": 82,
+  "hi": 83,
   "lo": 59,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-24T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790282183.024984,
+  "last_obs_at": 1790282252.197723,
   "was_offline": false
  },
  "community_alerts": [

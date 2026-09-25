@@ -1873,8 +1873,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/023259.shtml?cone",
-  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT5+shtml/020232.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT5+shtml/020232.shtml",
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/023346.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/023523.shtml?cone",
@@ -2272,7 +2270,9 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT2+shtml/252036.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/252037.shtml",
   "summary-al072026-202609252037",
-  "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/203627.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/203627.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/203745.shtml?cone",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT2+shtml/252037.shtml"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3441,7 +3441,7 @@
   "cold": 0,
   "card_hour": "2026-09-25T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790368677.2990873,
+  "last_obs_at": 1790368748.662554,
   "was_offline": false
  },
  "community_alerts": [

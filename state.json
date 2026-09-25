@@ -1806,7 +1806,8 @@
   "cd13a287b9d55fb639e51ef59db66cc9",
   "89e6091c92f0a300457b3aa63424d8c0",
   "f00b77c7683aed1f61d71251ce456e56",
-  "c52faed7a12ec3f0862c4e54b188c5c6"
+  "c52faed7a12ec3f0862c4e54b188c5c6",
+  "72a7eed24ea33de38ea61b13b0cab2f4"
  ],
  "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml": [
   "ef354fda682a7577253ab06ef0284f7a",
@@ -2990,7 +2991,7 @@
   "us7000ti1p",
   "us7000tiqc"
  ],
- "apod_fetch_ts": 1790346784.709434,
+ "apod_fetch_ts": 1790349786.081873,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3430,14 +3431,14 @@
  "apod_date": "2026-09-25",
  "station": {
   "hilo_date": "2026-09-25",
-  "hi": 78,
+  "hi": 79,
   "lo": 58,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-25T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790349714.4489973,
+  "last_obs_at": 1790349785.808566,
   "was_offline": false
  },
  "community_alerts": [

@@ -2988,7 +2988,7 @@
   "us7000ti1p",
   "us7000tiqc"
  ],
- "apod_fetch_ts": 1790307490.578652,
+ "apod_fetch_ts": 1790310534.7098746,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3425,7 +3425,7 @@
   "https://www.spc.noaa.gov/products/md/20260924",
   "https://www.spc.noaa.gov/products/md/md2327.html/20260924"
  ],
- "apod_date": "2026-09-24",
+ "apod_date": "2026-09-25",
  "station": {
   "hilo_date": "2026-09-24",
   "hi": 83,
@@ -3435,7 +3435,7 @@
   "cold": 0,
   "card_hour": "2026-09-24T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790310470.0497518,
+  "last_obs_at": 1790310534.2019148,
   "was_offline": false
  },
  "community_alerts": [

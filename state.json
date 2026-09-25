@@ -1867,7 +1867,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/144618.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/144618.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT5+shtml/011445.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT5+shtml/011446.shtml",
@@ -2266,7 +2265,8 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT1+shtml/250248.shtml",
   "summary-al062026-202609250248",
   "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/025133.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/032248.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/032248.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/032834.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2928,8 +2928,8 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly cloudy",
-   "temp": 70,
+   "cond": "cloudy",
+   "temp": 68,
    "sun_date": "2026-09-24",
    "station_id": "K1M4"
   }
@@ -3435,7 +3435,7 @@
   "cold": 0,
   "card_hour": "2026-09-24T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790306890.5071588,
+  "last_obs_at": 1790306960.0557055,
   "was_offline": false
  },
  "community_alerts": [

@@ -1875,7 +1875,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/054800.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/061356.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at5+shtml/081934.shtml?cone",
   "Tropical Depression Edouard Public Advisory Number 8",
@@ -2274,7 +2273,8 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/233644.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/252336.shtml",
   "summary-al072026-202609252336",
-  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/233719.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/233719.shtml?cone",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609252341"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3445,7 +3445,7 @@
   "cold": 0,
   "card_hour": "2026-09-25T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790379716.249104,
+  "last_obs_at": 1790379784.0892606,
   "was_offline": false
  },
  "community_alerts": [

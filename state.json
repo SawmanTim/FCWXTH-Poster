@@ -2944,15 +2944,14 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 82,
+   "temp": 84,
    "sun_date": "2026-09-26",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "clear",
    "temp": 82,
-   "sun_date": "2026-09-26",
-   "station_id": "K1M4"
+   "sun_date": "2026-09-26"
   }
  },
  "usgs_quakes": [
@@ -3458,7 +3457,7 @@
   "cold": 0,
   "card_hour": "2026-09-27T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790543034.3979173,
+  "last_obs_at": 1790543100.1523602,
   "was_offline": false
  },
  "community_alerts": [

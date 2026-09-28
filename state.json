@@ -3456,13 +3456,13 @@
  "station": {
   "hilo_date": "2026-09-28",
   "hi": 59,
-  "lo": 56,
+  "lo": 55,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-28T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790594413.072767,
+  "last_obs_at": 1790594478.3624392,
   "was_offline": false
  },
  "community_alerts": [

@@ -3455,14 +3455,14 @@
  "apod_date": "2026-09-28",
  "station": {
   "hilo_date": "2026-09-28",
-  "hi": 58,
+  "hi": 59,
   "lo": 57,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-27T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790574107.6447196,
+  "last_obs_at": 1790574172.9243696,
   "was_offline": false
  },
  "community_alerts": [

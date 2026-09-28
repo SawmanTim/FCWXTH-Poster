@@ -1897,10 +1897,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609200525",
-  "https://www.nhc.noaa.gov/text/refresh/MIATCMAT1+shtml/200840.shtml",
-  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT1+shtml/691745.shtml",
-  "summary-al062026-202609200840",
   "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT1+shtml/200841.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT1+shtml/200841.shtml",
   "summary-al062026-202609200841",
@@ -2296,7 +2292,11 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/150105.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/152318.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/152926.shtml?cone",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609281736"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609281736",
+  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT1+shtml/282032.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCMAT1+shtml/282031.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT1+shtml/282032.shtml",
+  "summary-al062026-202609282032"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2952,8 +2952,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
-   "temp": 84,
+   "cond": "thunderstorms",
+   "temp": 86,
    "sun_date": "2026-09-27",
    "station_id": "KCRX"
   },
@@ -3467,7 +3467,7 @@
   "cold": 0,
   "card_hour": "2026-09-28T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790627510.713578,
+  "last_obs_at": 1790627617.605195,
   "was_offline": false
  },
  "community_alerts": [

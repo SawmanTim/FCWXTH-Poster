@@ -3024,7 +3024,7 @@
   "pt26268000",
   "us6000txpi"
  ],
- "apod_fetch_ts": 1790653936.1081886,
+ "apod_fetch_ts": 1790657008.5891018,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3461,7 +3461,7 @@
   "https://www.spc.noaa.gov/products/md/md2332.html/20260928",
   "https://www.spc.noaa.gov/products/md/20260929"
  ],
- "apod_date": "2026-09-28",
+ "apod_date": "2026-09-29",
  "station": {
   "hilo_date": "2026-09-28",
   "hi": 87,
@@ -3471,7 +3471,7 @@
   "cold": 0,
   "card_hour": "2026-09-28T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790656916.2277296,
+  "last_obs_at": 1790656980.7906675,
   "was_offline": false
  },
  "community_alerts": [

@@ -253,7 +253,6 @@
   "a5590d1e6a2d6c0df8024acfa05c099b"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
-  "f8745a95dd054771c02ef94d614919f0",
   "9110164c2d2ee4d3016475ad00040721",
   "eeaf77c91c5dea841f552fa2452b02d6",
   "2b12c5fe8aff8a3f7de2588eab7231d5",
@@ -652,7 +651,8 @@
   "088352ad18ce52fc1d5817b1090c3524",
   "593e2f6c15e6cadcf8540cf58154b947",
   "cdcdbe60588567b08513b3a6dc9dbb09",
-  "1b2709b8afabb419841cc5c3aec5f737"
+  "1b2709b8afabb419841cc5c3aec5f737",
+  "153fe24e89995241b7f215b7cbec7928"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -2956,7 +2956,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
+   "cond": "",
    "temp": 59,
    "sun_date": "2026-09-28",
    "station_id": "KCRX"
@@ -3471,7 +3471,7 @@
   "cold": 0,
   "card_hour": "2026-09-28T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790652948.4096034,
+  "last_obs_at": 1790653024.000804,
   "was_offline": false
  },
  "community_alerts": [

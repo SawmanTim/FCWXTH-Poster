@@ -1904,12 +1904,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/text/refresh/MIATCMAT1+shtml/212034.shtml",
-  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT1+shtml/817041.shtml",
-  "summary-al062026-202609212034",
-  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT1+shtml/212035.shtml",
-  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT1+shtml/697892.shtml",
-  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT1+shtml/212034.shtml",
   "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/203713.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT1+shtml/212036.shtml",
   "https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/212308.shtml?cone",
@@ -2303,7 +2297,13 @@
   "summary-al082026-202609291448",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT1+shtml/291448.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT1+shtml/291448.shtml",
-  "summary-al062026-202609291448"
+  "summary-al062026-202609291448",
+  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT3+shtml/291449.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT3+shtml/291449.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT3+shtml/291449.shtml",
+  "summary-al082026-202609291449",
+  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT1+shtml/291449.shtml",
+  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT1+shtml/291449.shtml"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3468,14 +3468,14 @@
  "apod_date": "2026-09-29",
  "station": {
   "hilo_date": "2026-09-29",
-  "hi": 78,
+  "hi": 79,
   "lo": 50,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-29T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790693375.2574155,
+  "last_obs_at": 1790693464.1943054,
   "was_offline": false
  },
  "community_alerts": [

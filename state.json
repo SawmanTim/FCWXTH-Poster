@@ -3468,14 +3468,14 @@
  "apod_date": "2026-09-29",
  "station": {
   "hilo_date": "2026-09-29",
-  "hi": 61,
+  "hi": 62,
   "lo": 50,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-29T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790689552.1116781,
+  "last_obs_at": 1790689618.9588623,
   "was_offline": false
  },
  "community_alerts": [

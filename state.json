@@ -933,7 +933,6 @@
   "7f44335114c2575844174a64eafb60c4"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "33ee171b9572d1078fd867f2a99d7293",
   "ea18aa44128bb990f6f1d70926ff34cc",
   "a35bdbf113d9100261d654444700ee0f",
   "9028fc79bcad5f31eababbdcca344ead",
@@ -1332,7 +1331,8 @@
   "de3465b7397e97b1d375d41d2eb798f0",
   "1b3248296b61d528909502516ad6e4d7",
   "45f69f06b52acf806c91652dce128c63",
-  "f1d30be0e84882ec2910deb612d49e8c"
+  "f1d30be0e84882ec2910deb612d49e8c",
+  "2ec8a87abe8b942c226f757cb0339151"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -2974,7 +2974,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 86,
+   "temp": 88,
    "sun_date": "2026-09-29",
    "station_id": "K1M4"
   }
@@ -3484,7 +3484,7 @@
   "cold": 0,
   "card_hour": "2026-09-30T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790790954.1177483,
+  "last_obs_at": 1790791024.157942,
   "was_offline": false
  },
  "community_alerts": [

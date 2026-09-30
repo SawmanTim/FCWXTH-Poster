@@ -254,7 +254,8 @@
   "83ea8a6d6bdf0d205ee999a7e8f8a672",
   "3a7240bd1d1f4cdd19a562a329ffec26",
   "058ff65f2f25a307b5001404d2fb6321",
-  "41025482b5c0756f919280f04bfe679d"
+  "41025482b5c0756f919280f04bfe679d",
+  "e2d8e7c0ad29e5a85a2e46878a606a74"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
   "ffb6d74bd389e4fa2839219f887c85cc",
@@ -2969,7 +2970,7 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 91,
+   "temp": 90,
    "sun_date": "2026-09-29",
    "station_id": "KCRX"
   },
@@ -3485,7 +3486,7 @@
   "cold": 0,
   "card_hour": "2026-09-30T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790792599.5074894,
+  "last_obs_at": 1790792669.138255,
   "was_offline": false
  },
  "community_alerts": [

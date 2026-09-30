@@ -3034,7 +3034,7 @@
   "us6000txpi",
   "uw714111952"
  ],
- "apod_fetch_ts": 1790730622.1931722,
+ "apod_fetch_ts": 1790730987.7461338,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3480,9 +3480,9 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-09-29T18",
+  "card_hour": "2026-09-29T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790733585.7638927,
+  "last_obs_at": 1790733652.5588434,
   "was_offline": false
  },
  "community_alerts": [

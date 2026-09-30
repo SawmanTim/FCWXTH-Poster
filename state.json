@@ -3477,14 +3477,14 @@
  "apod_date": "2026-09-30",
  "station": {
   "hilo_date": "2026-09-30",
-  "hi": 92,
+  "hi": 93,
   "lo": 56,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-09-30T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790789597.5463448,
+  "last_obs_at": 1790789662.3470664,
   "was_offline": false
  },
  "community_alerts": [

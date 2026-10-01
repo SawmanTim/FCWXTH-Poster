@@ -1857,7 +1857,8 @@
   "74975d3863ee80723a6d2aaff490be48",
   "a98cc6470374fee8fb68bfdc4587f1e3",
   "596a0030b5f6f93a2941d3bfca7647c4",
-  "b1f45df0e6f3eff09dcbac988238bae3"
+  "b1f45df0e6f3eff09dcbac988238bae3",
+  "8eae78a607c8009040694c5d50284009"
  ],
  "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml": [
   "ef354fda682a7577253ab06ef0284f7a",
@@ -3044,7 +3045,7 @@
   "us6000txpi",
   "uw714111952"
  ],
- "apod_fetch_ts": 1790883837.8776546,
+ "apod_fetch_ts": 1790886870.048759,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3493,7 +3494,7 @@
   "cold": 0,
   "card_hour": "2026-10-01T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790886795.7279575,
+  "last_obs_at": 1790886864.2257216,
   "was_offline": false
  },
  "community_alerts": [

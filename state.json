@@ -3496,11 +3496,11 @@
   "hi": 96,
   "lo": 68,
   "raining": false,
-  "heat": 1,
+  "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-02T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790969334.888769,
+  "last_obs_at": 1790969404.477802,
   "was_offline": false
  },
  "community_alerts": [

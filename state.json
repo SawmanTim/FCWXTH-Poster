@@ -3493,14 +3493,14 @@
  "apod_date": "2026-10-02",
  "station": {
   "hilo_date": "2026-10-02",
-  "hi": 94,
+  "hi": 96,
   "lo": 68,
   "raining": false,
   "heat": 1,
   "cold": 0,
   "card_hour": "2026-10-02T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790969197.5595582,
+  "last_obs_at": 1790969268.6139293,
   "was_offline": false
  },
  "community_alerts": [

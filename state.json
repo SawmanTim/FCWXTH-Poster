@@ -3498,12 +3498,12 @@
   "hilo_date": "2026-10-03",
   "hi": 72,
   "lo": 70,
-  "raining": false,
+  "raining": true,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-03T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791030495.8189387,
+  "last_obs_at": 1791030561.0567205,
   "was_offline": false
  },
  "community_alerts": [

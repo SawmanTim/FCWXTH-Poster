@@ -3505,9 +3505,9 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-10-03T15",
+  "card_hour": "2026-10-03T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791068374.8740828,
+  "last_obs_at": 1791068440.0854073,
   "was_offline": false
  },
  "community_alerts": [

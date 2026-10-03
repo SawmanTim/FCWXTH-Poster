@@ -3054,7 +3054,7 @@
   "uw714111952",
   "us6000tz1y"
  ],
- "apod_fetch_ts": 1790993698.9963305,
+ "apod_fetch_ts": 1790996734.9270852,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3493,7 +3493,7 @@
   "https://www.spc.noaa.gov/products/md/md2344.html/20261001",
   "https://www.spc.noaa.gov/products/md/md2345.html/20261001"
  ],
- "apod_date": "2026-10-02",
+ "apod_date": "2026-10-03",
  "station": {
   "hilo_date": "2026-10-02",
   "hi": 96,
@@ -3503,7 +3503,7 @@
   "cold": 0,
   "card_hour": "2026-10-02T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1790996640.3725927,
+  "last_obs_at": 1790996705.3265777,
   "was_offline": false
  },
  "community_alerts": [

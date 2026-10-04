@@ -3502,14 +3502,14 @@
  "apod_date": "2026-10-04",
  "station": {
   "hilo_date": "2026-10-04",
-  "hi": 70,
+  "hi": 71,
   "lo": 68,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-04T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791124637.4852066,
+  "last_obs_at": 1791124703.5541892,
   "was_offline": false
  },
  "community_alerts": [

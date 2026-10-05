@@ -3511,13 +3511,13 @@
  "station": {
   "hilo_date": "2026-10-05",
   "hi": 69,
-  "lo": 67,
+  "lo": 66,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-04T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791194018.6994703,
+  "last_obs_at": 1791194082.6429098,
   "was_offline": false
  },
  "community_alerts": [

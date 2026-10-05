@@ -1950,7 +1950,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609241944",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609241945",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT1+shtml/941261.shtml",
   "summary-al062026-202609242031",
@@ -2349,7 +2348,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610042327",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610050508",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610051138",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610051729"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610051729",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610052330"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3007,7 +3007,7 @@
   "Paden": {
    "cond": "light rain",
    "temp": 81,
-   "sun_date": "2026-10-04",
+   "sun_date": "2026-10-05",
    "station_id": "KCRX"
   },
   "Franklin": {
@@ -3524,7 +3524,7 @@
   "cold": 0,
   "card_hour": "2026-10-05T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791243055.4130614,
+  "last_obs_at": 1791243124.5819733,
   "was_offline": false
  },
  "community_alerts": [

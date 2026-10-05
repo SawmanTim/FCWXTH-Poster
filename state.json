@@ -262,7 +262,6 @@
   "ebe2fe4d22546b9595053b11da8cb2b1"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
-  "eba74d7de3963fbac0c3f2e492a160b2",
   "96043808bbd5449e2ca646b6af5a2a74",
   "01c743d84802027f5a10b0421d37aa6d",
   "7f46c05eb5f5c2e1af713ad8c2a1dd42",
@@ -661,7 +660,8 @@
   "719c19a297496de6887004ac83c8de85",
   "4f7e2bd742f59f26ae95ec2e721a5248",
   "96808ef695086c4deed02c78d15bbb09",
-  "0f33e4cfc5e6cb18a9e1425421bfdd93"
+  "0f33e4cfc5e6cb18a9e1425421bfdd93",
+  "0dad38ed5833dc09482f71870527fcaf"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -3003,7 +3003,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "",
+   "cond": "mostly cloudy",
    "temp": 78,
    "sun_date": "2026-10-04",
    "station_id": "K1M4"
@@ -3516,7 +3516,7 @@
   "cold": 0,
   "card_hour": "2026-10-04T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791161641.2823076,
+  "last_obs_at": 1791161716.0614953,
   "was_offline": false
  },
  "community_alerts": [

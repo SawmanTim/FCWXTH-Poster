@@ -3518,14 +3518,14 @@
  "apod_date": "2026-10-05",
  "station": {
   "hilo_date": "2026-10-06",
-  "hi": 72,
+  "hi": 73,
   "lo": 53,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-06T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791297012.5490859,
+  "last_obs_at": 1791297078.9690783,
   "was_offline": false
  },
  "community_alerts": [

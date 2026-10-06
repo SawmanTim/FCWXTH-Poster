@@ -1956,7 +1956,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/text/refresh/MIATCMAT2+shtml/250245.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT2+shtml/250245.shtml",
   "summary-al072026-202609250246",
   "https://www.nhc.noaa.gov/refresh/graphics_at2+shtml/024732.shtml?cone",
@@ -2355,7 +2354,8 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/204725.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/205457.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/211705.shtml?cone",
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/212229.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/212229.shtml?cone",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610062319"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3018,7 +3018,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 81,
+   "temp": 79,
    "sun_date": "2026-10-05",
    "station_id": "K1M4"
   }
@@ -3532,7 +3532,7 @@
   "cold": 0,
   "card_hour": "2026-10-06T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791328744.518753,
+  "last_obs_at": 1791328813.4597695,
   "was_offline": false
  },
  "community_alerts": [

@@ -953,7 +953,6 @@
   "6d818ca8379721f55bb8cf5e53977ad1"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "6bed9dbca0f97c8ea5ab46ba42355cdb",
   "02a6645a8a88afa19b3a5c72b207973b",
   "c5099463d0721c5a982f0acd51f4efee",
   "f77f4af93abc99058baf21a34aff8491",
@@ -1352,7 +1351,8 @@
   "e00ffb572d0a0781265a1df9740ce8b4",
   "8a9e168b07730cf50645aecec79f2a0c",
   "668c81a8e0b7f64f7e8ecac5689bb93a",
-  "1a3cb7469e68a9d2c6e44f390666ccc3"
+  "1a3cb7469e68a9d2c6e44f390666ccc3",
+  "2a43236173fdbb4304dfa13232d10636"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -1952,7 +1952,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "summary-al062026-202609242031",
   "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT1+shtml/242032.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT1+shtml/311260.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT1+shtml/242032.shtml",
@@ -2351,7 +2350,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610051729",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610052330",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610060507",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610061131"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610061131",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610061733"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3007,7 +3007,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
+   "cond": "",
    "temp": 79,
    "sun_date": "2026-10-05",
    "station_id": "KCRX"
@@ -3527,7 +3527,7 @@
   "cold": 0,
   "card_hour": "2026-10-06T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791308004.6444879,
+  "last_obs_at": 1791308075.2387164,
   "was_offline": false
  },
  "community_alerts": [

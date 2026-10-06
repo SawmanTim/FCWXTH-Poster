@@ -264,7 +264,6 @@
   "33cc9f3df29706c71cd401936705d1a8"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
-  "623a3a7ed7152e7d87821b2e7314627c",
   "edcf50e18ee55ce7febac43e74585f7e",
   "d96bea1cd1e3d978e580a483162eab1d",
   "42a2b771a3bccb501f4cfa0c5311ee22",
@@ -663,7 +662,8 @@
   "6cd88a8d159bf51bd85019017f4ced57",
   "b36400cf7583567b80bc899c1b2ed74a",
   "ce0f5dc382d6159c53106e8da62bbe8a",
-  "2fc672249773804d7f66912d4a91a5ec"
+  "2fc672249773804d7f66912d4a91a5ec",
+  "d1fb6dec778efc23fb4530f536684706"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -3012,13 +3012,13 @@
  "wx": {
   "Paden": {
    "cond": "clear",
-   "temp": 88,
+   "temp": 86,
    "sun_date": "2026-10-05",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 82,
+   "temp": 81,
    "sun_date": "2026-10-05",
    "station_id": "K1M4"
   }
@@ -3532,7 +3532,7 @@
   "cold": 0,
   "card_hour": "2026-10-06T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791326033.718802,
+  "last_obs_at": 1791326109.0361402,
   "was_offline": false
  },
  "community_alerts": [

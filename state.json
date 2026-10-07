@@ -3084,7 +3084,7 @@
   "us6000tz1y",
   "aka2026tuxgky"
  ],
- "apod_fetch_ts": 1791365215.2591114,
+ "apod_fetch_ts": 1791368258.843779,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3534,7 +3534,7 @@
   "cold": 0,
   "card_hour": "2026-10-06T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791368192.8918455,
+  "last_obs_at": 1791368257.5689528,
   "was_offline": false
  },
  "community_alerts": [

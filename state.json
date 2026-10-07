@@ -3529,14 +3529,14 @@
  "apod_date": "2026-10-07",
  "station": {
   "hilo_date": "2026-10-07",
-  "hi": 65,
+  "hi": 66,
   "lo": 55,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-07T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791381437.0423207,
+  "last_obs_at": 1791381502.7857282,
   "was_offline": false
  },
  "community_alerts": [

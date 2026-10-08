@@ -3543,13 +3543,13 @@
  "station": {
   "hilo_date": "2026-10-08",
   "hi": 58,
-  "lo": 57,
+  "lo": 56,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-07T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791442160.0012107,
+  "last_obs_at": 1791442225.3952186,
   "was_offline": false
  },
  "community_alerts": [

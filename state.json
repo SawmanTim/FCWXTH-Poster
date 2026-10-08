@@ -3097,7 +3097,8 @@
   "us6000txpi",
   "uw714111952",
   "us6000tz1y",
-  "aka2026tuxgky"
+  "aka2026tuxgky",
+  "pt26281001"
  ],
  "apod_fetch_ts": 1791450222.2346165,
  "swpc": [
@@ -3549,7 +3550,7 @@
   "cold": 0,
   "card_hour": "2026-10-07T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791450498.9713776,
+  "last_obs_at": 1791450567.8657,
   "was_offline": false
  },
  "community_alerts": [

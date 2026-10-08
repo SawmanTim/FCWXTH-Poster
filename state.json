@@ -3098,7 +3098,7 @@
   "us6000tz1y",
   "aka2026tuxgky"
  ],
- "apod_fetch_ts": 1791416832.470602,
+ "apod_fetch_ts": 1791419843.4698765,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3538,7 +3538,7 @@
   "https://www.spc.noaa.gov/products/md/20261006",
   "https://www.spc.noaa.gov/products/md/20261007"
  ],
- "apod_date": "2026-10-07",
+ "apod_date": "2026-10-08",
  "station": {
   "hilo_date": "2026-10-07",
   "hi": 91,
@@ -3548,7 +3548,7 @@
   "cold": 0,
   "card_hour": "2026-10-07T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791419770.9540157,
+  "last_obs_at": 1791419836.8242595,
   "was_offline": false
  },
  "community_alerts": [

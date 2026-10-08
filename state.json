@@ -267,7 +267,6 @@
   "8038933b8dfb5d960918c68c7a0de748"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
-  "9d3231b6ef62977856ce87c6a95aad68",
   "d0ed0589e8d8b4120784fc1a35ed5f26",
   "4595202dc6d1dab6a9f366243e80b42c",
   "79490dffed6a4563b64f3cebe451d1d8",
@@ -666,7 +665,8 @@
   "d05f6476ac5a03942156b4a281397f3b",
   "0ab8c52940db9044e9958627c4a42d35",
   "78569d8327c4636172728aed13bb792b",
-  "ec542e09744a35859f9fbfef61661754"
+  "ec542e09744a35859f9fbfef61661754",
+  "0980b563feec47621e260b2bda83f2d5"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "8a7292cb80275c1c23daad1f552933f4",
@@ -3548,14 +3548,14 @@
  "apod_date": "2026-10-08",
  "station": {
   "hilo_date": "2026-10-08",
-  "hi": 82,
+  "hi": 83,
   "lo": 54,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-08T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791472153.7308843,
+  "last_obs_at": 1791472228.5629458,
   "was_offline": false
  },
  "community_alerts": [

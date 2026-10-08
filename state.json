@@ -1977,9 +1977,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/text/refresh/MIATCMAT3+shtml/282039.shtml",
-  "https://www.nhc.noaa.gov/text/refresh/MIAPWSAT3+shtml/282040.shtml",
-  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT3+shtml/282040.shtml",
   "summary-al082026-202609282040",
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT3+shtml/282043.shtml",
   "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/204438.shtml?cone",
@@ -2376,7 +2373,10 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/150158.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/150158.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/150158.shtml?cone",
-  "https://www.nhc.noaa.gov/text/WTUS84-KBMX.shtml"
+  "https://www.nhc.noaa.gov/text/WTUS84-KBMX.shtml",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/151143.shtml?wsurge",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/151143.shtml?inundation",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/151143.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3555,7 +3555,7 @@
   "cold": 0,
   "card_hour": "2026-10-08T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791472295.5152345,
+  "last_obs_at": 1791472370.5593858,
   "was_offline": false
  },
  "community_alerts": [

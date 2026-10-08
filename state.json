@@ -3548,14 +3548,14 @@
  "apod_date": "2026-10-08",
  "station": {
   "hilo_date": "2026-10-08",
-  "hi": 65,
+  "hi": 66,
   "lo": 54,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-08T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791468784.6630425,
+  "last_obs_at": 1791468850.4414237,
   "was_offline": false
  },
  "community_alerts": [

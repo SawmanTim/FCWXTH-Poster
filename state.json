@@ -965,7 +965,8 @@
   "d0829ee4d997a9716d301c47383420b1",
   "6f2e5f041994279905d40e68ffe6e353",
   "9f3a326ac0115852aa5f51ccf8ea9a91",
-  "25ea03ce0bd4343a8a822b9a6af51745"
+  "25ea03ce0bd4343a8a822b9a6af51745",
+  "f8fcefb6b762344ec0fac1ce0f81a434"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "cf5bc5e9201fd3a3ffbfcb2f486138e6",
@@ -3038,7 +3039,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 54,
+   "temp": 55,
    "sun_date": "2026-10-07",
    "station_id": "K1M4"
   }
@@ -3554,7 +3555,7 @@
   "cold": 0,
   "card_hour": "2026-10-08T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791463536.6356902,
+  "last_obs_at": 1791463608.554792,
   "was_offline": false
  },
  "community_alerts": [

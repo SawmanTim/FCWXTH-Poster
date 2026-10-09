@@ -1990,9 +1990,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/062038.shtml",
-  "summary-al092026-202610062038",
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/203918.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT4+shtml/062039.shtml",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/204019.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/204725.shtml?cone",
@@ -2389,7 +2386,10 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/090600.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/090708.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/090708.shtml?inundation",
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/090708.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/090708.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/091524.shtml?wsurge",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/091524.shtml?inundation",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/091524.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2642,7 +2642,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ce3c4691b29735032401ad43b73b3de4408bb635.004.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.301332695bb5c8bab268473eab87d639a7b96dd4.002.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d2e7a7505605a082d6233917a845498fdbcd470f.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3599a4aaf2b6491713b5b131cc90774828a5061a.001.1",
@@ -3041,12 +3040,13 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a17cd5810dabe2c7f7f5bdde866c316dcba22bb3.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.98529f175faaf5f49aa77be5b176db34863362f0.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.94dac313f087ec8b6615eb95de0500b201924c19.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c84fad8a6da97c17493d866b75d9d514f44a4228.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c84fad8a6da97c17493d866b75d9d514f44a4228.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9b8ba15cbff21d6744128bf2da7b2038475d97f8.001.1"
  ],
  "wx": {
   "Paden": {
-   "cond": "fog/mist",
-   "temp": 59,
+   "cond": "clear",
+   "temp": 57,
    "sun_date": "2026-10-08",
    "station_id": "KCRX"
   },
@@ -3569,7 +3569,7 @@
   "cold": 0,
   "card_hour": "2026-10-08T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791537315.2857864,
+  "last_obs_at": 1791537390.714607,
   "was_offline": false
  },
  "community_alerts": [

@@ -3063,7 +3063,7 @@
   "Paden": {
    "cond": "clear",
    "temp": 81,
-   "sun_date": "2026-10-08",
+   "sun_date": "2026-10-09",
    "station_id": "KCRX"
   },
   "Franklin": {
@@ -3591,7 +3591,7 @@
   "cold": 0,
   "card_hour": "2026-10-09T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791588341.7870421,
+  "last_obs_at": 1791588409.33441,
   "was_offline": false
  },
  "community_alerts": [

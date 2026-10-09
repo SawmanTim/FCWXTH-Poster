@@ -1990,9 +1990,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/text/refresh/MIATCPAT3+shtml/300842.shtml",
-  "summary-al082026-202609300842",
-  "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/084451.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at3+shtml/092307.shtml?cone",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202609301140",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT3+shtml/301449.shtml",
@@ -2389,7 +2386,10 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/025732.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/025830.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/025830.shtml?inundation",
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/025830.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/025830.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/030220.shtml?wsurge",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/030220.shtml?inundation",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/030220.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3157,7 +3157,6 @@
  ],
  "usdm_week": "2026-W41",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md2018.html/20260818",
   "https://www.spc.noaa.gov/products/md/md2019.html/20260818",
   "https://www.spc.noaa.gov/products/md/md2020.html/20260818",
   "https://www.spc.noaa.gov/products/md/20260818",
@@ -3556,7 +3555,8 @@
   "https://www.spc.noaa.gov/products/md/md2346.html/20261006",
   "https://www.spc.noaa.gov/products/md/20261006",
   "https://www.spc.noaa.gov/products/md/20261007",
-  "https://www.spc.noaa.gov/products/md/md2347.html/20261009"
+  "https://www.spc.noaa.gov/products/md/md2347.html/20261009",
+  "https://www.spc.noaa.gov/products/md/20261009"
  ],
  "apod_date": "2026-10-09",
  "station": {
@@ -3568,7 +3568,7 @@
   "cold": 0,
   "card_hour": "2026-10-08T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791514926.969257,
+  "last_obs_at": 1791515002.0909953,
   "was_offline": false
  },
  "community_alerts": [

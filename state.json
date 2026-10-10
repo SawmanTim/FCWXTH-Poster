@@ -3145,7 +3145,7 @@
   "us6000u19w",
   "us6000u1cf"
  ],
- "apod_fetch_ts": 1791614474.816003,
+ "apod_fetch_ts": 1791617519.4068923,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3587,7 +3587,7 @@
   "https://www.spc.noaa.gov/products/md/md2351.html/20261010",
   "https://www.spc.noaa.gov/products/md/20261010"
  ],
- "apod_date": "2026-10-09",
+ "apod_date": "2026-10-10",
  "station": {
   "hilo_date": "2026-10-10",
   "hi": 68,
@@ -3597,7 +3597,7 @@
   "cold": 0,
   "card_hour": "2026-10-09T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791617454.6195157,
+  "last_obs_at": 1791617518.9528642,
   "was_offline": false
  },
  "community_alerts": [

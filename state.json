@@ -2011,9 +2011,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/105100.shtml?cone",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610081138",
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/114654.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/114654.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/114654.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/081154.shtml",
@@ -2410,7 +2407,10 @@
   "https://www.nhc.noaa.gov/text/refresh/MIATCDAT4+shtml/100845.shtml",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/085132.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/085132.shtml?inundation",
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/085132.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/085132.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/085324.shtml?wsurge",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/085324.shtml?inundation",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/085324.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -2663,8 +2663,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f643a3c9b33739a208515ebafd2791a053a63b20.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.30e4f3c374e19700cee64b26659d5be6e8c39128.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cd347d883cc806aad4bade7c7fc4757efc426144.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0f0204b9a1d554f61fad0ad632536b383b0f73b6.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c75f9c592d2f42126b3d4edb9bc6e68324b45de8.001.1",
@@ -3062,7 +3060,9 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f3430a854acec388d048b32e549aedbb6a34d2c1.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e9738751548355cb1b8db77eeedbebf984c85503.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c4ba92cc0514c78771aa589da7ab070982373670.002.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c4ba92cc0514c78771aa589da7ab070982373670.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c4ba92cc0514c78771aa589da7ab070982373670.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ab83b3e281c794bb399715d5e5d58aa3c612b15e.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ab83b3e281c794bb399715d5e5d58aa3c612b15e.002.1"
  ],
  "wx": {
   "Paden": {
@@ -3597,7 +3597,7 @@
   "cold": 0,
   "card_hour": "2026-10-09T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791622419.9907136,
+  "last_obs_at": 1791622494.4822752,
   "was_offline": false
  },
  "community_alerts": [

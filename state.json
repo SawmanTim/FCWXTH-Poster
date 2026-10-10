@@ -3595,12 +3595,12 @@
   "hilo_date": "2026-10-10",
   "hi": 68,
   "lo": 60,
-  "raining": true,
+  "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-10T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791644216.3471167,
+  "last_obs_at": 1791644281.8435187,
   "was_offline": false
  },
  "community_alerts": [

@@ -1745,7 +1745,8 @@
   "5169c7795179815b2ed3708e16d2a18a",
   "0c099fec0c8a7d847420600d0b895187",
   "78189041de08d1b2a1f5599005227834",
-  "5a3071c57738d5da1c132e5854fb2b7d"
+  "5a3071c57738d5da1c132e5854fb2b7d",
+  "fec6c65055ab395dede8108147b43932"
  ],
  "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml": [
   "f068a2eaf3e067f0ab363d0b1c2b91e9",
@@ -3081,7 +3082,7 @@
   },
   "Franklin": {
    "cond": "light rain and fog/mist",
-   "temp": 61,
+   "temp": 60,
    "sun_date": "2026-10-09",
    "station_id": "K1M4"
   }
@@ -3608,7 +3609,7 @@
   "cold": 0,
   "card_hour": "2026-10-10T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791670714.0580235,
+  "last_obs_at": 1791670782.4746535,
   "was_offline": false
  },
  "community_alerts": [

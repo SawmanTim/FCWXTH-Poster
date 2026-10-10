@@ -992,7 +992,6 @@
   "8b6367ec3d5f1df585c0d8ee6a1c77df"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "ee09c799d58231e673a816c9921854c7",
   "1fb0d23f94e1604a2d69a22b62798573",
   "ef397c3390cd6b55049238bc91868d2b",
   "c3bce5a44b96bbf5bc2f0bf284e9ea20",
@@ -1391,7 +1390,8 @@
   "3634dfdbb3b2cdfcfe45da9912096b82",
   "786a16848dc8f7fd64cd6854fd4a72ba",
   "484b93e3d698b7e18d786d022e2264b6",
-  "995c1d66d7b72e676bb2f4a3b1649dd5"
+  "995c1d66d7b72e676bb2f4a3b1649dd5",
+  "197c21bb118dd6967fa08a518f53126b"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -3189,7 +3189,6 @@
  ],
  "usdm_week": "2026-W41",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md2023.html/20260818",
   "https://www.spc.noaa.gov/products/md/md2024.html/20260818",
   "https://www.spc.noaa.gov/products/md/md2025.html/20260818",
   "https://www.spc.noaa.gov/products/md/md2026.html/20260818",
@@ -3588,7 +3587,8 @@
   "https://www.spc.noaa.gov/products/md/md2349.html/20261009",
   "https://www.spc.noaa.gov/products/md/md2350.html/20261009",
   "https://www.spc.noaa.gov/products/md/md2351.html/20261010",
-  "https://www.spc.noaa.gov/products/md/20261010"
+  "https://www.spc.noaa.gov/products/md/20261010",
+  "https://www.spc.noaa.gov/products/md/md2352.html/20261010"
  ],
  "apod_date": "2026-10-10",
  "station": {
@@ -3600,7 +3600,7 @@
   "cold": 0,
   "card_hour": "2026-10-10T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791643031.9003391,
+  "last_obs_at": 1791643101.5574315,
   "was_offline": false
  },
  "community_alerts": [

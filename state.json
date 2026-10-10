@@ -3603,13 +3603,13 @@
  "station": {
   "hilo_date": "2026-10-10",
   "hi": 68,
-  "lo": 60,
+  "lo": 59,
   "raining": true,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-10T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791672526.7962701,
+  "last_obs_at": 1791672591.1608057,
   "was_offline": false
  },
  "community_alerts": [

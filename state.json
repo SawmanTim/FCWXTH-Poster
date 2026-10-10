@@ -2011,9 +2011,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/090316.shtml?wsurge",
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/090316.shtml?inundation",
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/090316.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/092227.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/092227.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/092227.shtml?cone",
@@ -2410,7 +2407,10 @@
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/060623.shtml?cone",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/060725.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/060725.shtml?inundation",
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/060725.shtml?cone"
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/060725.shtml?cone",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/080015.shtml?wsurge",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/080015.shtml?inundation",
+  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/080015.shtml?cone"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3072,7 +3072,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "rain",
+   "cond": "heavy rain",
    "temp": 61,
    "sun_date": "2026-10-09",
    "station_id": "K1M4"
@@ -3597,7 +3597,7 @@
   "cold": 0,
   "card_hour": "2026-10-09T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791619221.2369902,
+  "last_obs_at": 1791619314.7713823,
   "was_offline": false
  },
  "community_alerts": [

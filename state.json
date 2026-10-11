@@ -3082,7 +3082,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "fog/mist",
+   "cond": "cloudy",
    "temp": 61,
    "sun_date": "2026-10-10",
    "station_id": "K1M4"
@@ -3199,7 +3199,6 @@
  ],
  "usdm_week": "2026-W41",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/20260819",
   "https://www.spc.noaa.gov/products/md/md2031.html/20260819",
   "https://www.spc.noaa.gov/products/md/md2032.html/20260819",
   "https://www.spc.noaa.gov/products/md/md2033.html/20260819",
@@ -3598,7 +3597,8 @@
   "https://www.spc.noaa.gov/products/md/md2357.html/20261010",
   "https://www.spc.noaa.gov/products/md/md2358.html/20261010",
   "https://www.spc.noaa.gov/products/md/md2359.html/20261010",
-  "https://www.spc.noaa.gov/products/md/md2359.html/20261011"
+  "https://www.spc.noaa.gov/products/md/md2359.html/20261011",
+  "https://www.spc.noaa.gov/products/md/20261011"
  ],
  "apod_date": "2026-10-10",
  "station": {
@@ -3610,7 +3610,7 @@
   "cold": 0,
   "card_hour": "2026-10-10T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791679599.9296136,
+  "last_obs_at": 1791679664.3581328,
   "was_offline": false
  },
  "community_alerts": [

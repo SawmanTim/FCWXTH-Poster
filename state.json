@@ -3603,15 +3603,15 @@
  ],
  "apod_date": "2026-10-10",
  "station": {
-  "hilo_date": "2026-10-10",
-  "hi": 68,
-  "lo": 59,
+  "hilo_date": "2026-10-11",
+  "hi": 60,
+  "lo": 60,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-10T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791694763.2249165,
+  "last_obs_at": 1791694828.9743412,
   "was_offline": false
  },
  "community_alerts": [

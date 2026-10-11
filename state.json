@@ -3605,14 +3605,14 @@
  "apod_date": "2026-10-10",
  "station": {
   "hilo_date": "2026-10-11",
-  "hi": 62,
+  "hi": 63,
   "lo": 60,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-11T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791727794.7493005,
+  "last_obs_at": 1791727861.4935586,
   "was_offline": false
  },
  "community_alerts": [

@@ -1972,7 +1972,8 @@
   "abcec2ca2d133732d9bda7145712deec",
   "a3e7e62bcbf7b3ef337fa6853d536e87",
   "29c7198c5effe3b64906aca228dbabfe",
-  "3e0c3badf0cbc0f66014566ecb6279cb"
+  "3e0c3badf0cbc0f66014566ecb6279cb",
+  "f5c5ee972f573c7993363dc532c6ddc4"
  ],
  "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml": [
   "ef354fda682a7577253ab06ef0284f7a",
@@ -3619,14 +3620,14 @@
  "apod_date": "2026-10-12",
  "station": {
   "hilo_date": "2026-10-12",
-  "hi": 79,
+  "hi": 80,
   "lo": 56,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-12T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791818142.6185627,
+  "last_obs_at": 1791818215.2627978,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

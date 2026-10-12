@@ -271,7 +271,8 @@
   "11c0d61847d530a7ce1992120daa9836",
   "ed083100dea554be1e0d6733d157866f",
   "3a6f327ec189f3ef38864faba176cced",
-  "e1297d470698d7c5549a5aeec891f220"
+  "e1297d470698d7c5549a5aeec891f220",
+  "dcecbcd1b6966a40606c9a67041eff9d"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
   "8dd3c706d852f526ce13709a37db79af",
@@ -3087,7 +3088,7 @@
  "wx": {
   "Paden": {
    "cond": "fog/mist",
-   "temp": 63,
+   "temp": 61,
    "sun_date": "2026-10-11",
    "station_id": "KCRX"
   },
@@ -3616,13 +3617,13 @@
  "station": {
   "hilo_date": "2026-10-11",
   "hi": 83,
-  "lo": 59,
+  "lo": 58,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-11T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791780182.7863462,
+  "last_obs_at": 1791780252.200651,
   "was_offline": false
  },
  "community_alerts": [

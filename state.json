@@ -3617,13 +3617,13 @@
  "station": {
   "hilo_date": "2026-10-12",
   "hi": 58,
-  "lo": 58,
+  "lo": 57,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-11T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791783608.784836,
+  "last_obs_at": 1791783672.6840215,
   "was_offline": false
  },
  "community_alerts": [

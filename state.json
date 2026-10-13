@@ -3628,14 +3628,14 @@
  "apod_date": "2026-10-13",
  "station": {
   "hilo_date": "2026-10-13",
-  "hi": 71,
+  "hi": 72,
   "lo": 59,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-13T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791901611.6730902,
+  "last_obs_at": 1791901676.973611,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

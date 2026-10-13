@@ -1006,7 +1006,6 @@
   "9545727e883423bf826d55a0614cd8de"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "3b03ff2bf04b76fc2d0fef8a4b92f1ac",
   "fd86351946c31b3f91260116216ab48a",
   "024b03d1ab94e3fc99e67d28f56b7417",
   "41abe2593508294d44ab96dd9dbd0160",
@@ -1405,7 +1404,8 @@
   "e2d1005b22270102f5a71d8728431d0d",
   "1c5f1f9e150f9978853a73f8f3d0f812",
   "fbcef76989271e3d87aec405c7bc6cbb",
-  "42ea1d8fd2c1674f71f44787b7f9010d"
+  "42ea1d8fd2c1674f71f44787b7f9010d",
+  "e06b37432e5e30b386e01b22657bb3b9"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -3100,7 +3100,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 64,
+   "temp": 63,
    "sun_date": "2026-10-12",
    "station_id": "K1M4"
   }
@@ -3631,7 +3631,7 @@
   "cold": 0,
   "card_hour": "2026-10-12T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791883945.7464757,
+  "last_obs_at": 1791884014.6814728,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

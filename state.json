@@ -2038,7 +2038,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/175100.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/175100.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/624709.shtml",
   "summary-al092026-202610081753",
@@ -2437,7 +2436,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610120532",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610121132",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610121703",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610122303"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610122303",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202610130519"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3093,7 +3093,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
+   "cond": "",
    "temp": 61,
    "sun_date": "2026-10-12",
    "station_id": "KCRX"
@@ -3630,7 +3630,7 @@
   "cold": 0,
   "card_hour": "2026-10-12T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791868773.1701596,
+  "last_obs_at": 1791868842.0013006,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

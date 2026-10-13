@@ -3174,7 +3174,8 @@
   "us6000u1cf",
   "us6000u1wn",
   "us6000u1z5",
-  "pt26286001"
+  "pt26286001",
+  "us6000u214"
  ],
  "apod_fetch_ts": 1791894132.5505059,
  "swpc": [
@@ -3633,7 +3634,7 @@
   "cold": 0,
   "card_hour": "2026-10-13T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791895189.7750044,
+  "last_obs_at": 1791895260.0184247,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

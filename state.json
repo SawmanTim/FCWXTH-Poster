@@ -3174,7 +3174,7 @@
   "us6000u1wn",
   "us6000u1z5"
  ],
- "apod_fetch_ts": 1791888038.132365,
+ "apod_fetch_ts": 1791891087.0205112,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3621,7 +3621,7 @@
   "https://www.spc.noaa.gov/products/md/md2364.html/20261011",
   "https://www.spc.noaa.gov/products/md/md2365.html/20261011"
  ],
- "apod_date": "2026-10-12",
+ "apod_date": "2026-10-13",
  "station": {
   "hilo_date": "2026-10-13",
   "hi": 63,
@@ -3631,7 +3631,7 @@
   "cold": 0,
   "card_hour": "2026-10-13T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791891019.8072093,
+  "last_obs_at": 1791891085.612873,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

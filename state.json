@@ -3101,7 +3101,8 @@
   "Franklin": {
    "cond": "clear",
    "temp": 73,
-   "sun_date": "2026-10-12"
+   "sun_date": "2026-10-12",
+   "station_id": "K1M4"
   }
  },
  "usgs_quakes": [
@@ -3628,7 +3629,7 @@
   "cold": 0,
   "card_hour": "2026-10-12T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1791849989.5801086,
+  "last_obs_at": 1791850055.7787437,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

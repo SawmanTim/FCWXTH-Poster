@@ -1535,7 +1535,8 @@
   "2b87524ad08ab233dccf168bcf988994",
   "916e73873e6133b330289b79051c31b3",
   "b817ff0af73a90010f26958e8a94e554",
-  "63b06299045470ca70044ebe41e9bb05"
+  "63b06299045470ca70044ebe41e9bb05",
+  "259fba7b8564bc2c5e1ae45579fb9890"
  ],
  "https://rss.app/feeds/pOYz2pLU9sUdSfvb.xml": [
   "f6f7b146605abc5140631bc12fa4a171",
@@ -3108,13 +3109,13 @@
  "wx": {
   "Paden": {
    "cond": "mostly clear",
-   "temp": 88,
+   "temp": 90,
    "sun_date": "2026-10-13",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "cloudy",
-   "temp": 84,
+   "cond": "mostly cloudy",
+   "temp": 86,
    "sun_date": "2026-10-13",
    "station_id": "K1M4"
   }
@@ -3647,7 +3648,7 @@
   "cold": 0,
   "card_hour": "2026-10-14T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792003966.3040092,
+  "last_obs_at": 1792004036.6573331,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

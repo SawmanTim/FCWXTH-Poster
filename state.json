@@ -3667,14 +3667,14 @@
  "apod_date": "2026-10-16",
  "station": {
   "hilo_date": "2026-10-17",
-  "hi": 49,
+  "hi": 50,
   "lo": 46,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-17T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792244711.755007,
+  "last_obs_at": 1792244776.927621,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

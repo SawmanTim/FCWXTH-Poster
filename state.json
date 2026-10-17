@@ -3666,13 +3666,13 @@
  "station": {
   "hilo_date": "2026-10-16",
   "hi": 77,
-  "lo": 54,
+  "lo": 53,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-16T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792201345.2969334,
+  "last_obs_at": 1792201410.5123127,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

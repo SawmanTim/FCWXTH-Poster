@@ -1797,7 +1797,8 @@
   "12503f1a2a94dabda7f52f0ebe7a75f6",
   "7c6e67b1919e9f0b0ee1433d3bf7211d",
   "a4608272189080a9543ba6345e185706",
-  "c2e60d1359649c3a04c418bf21fea043"
+  "c2e60d1359649c3a04c418bf21fea043",
+  "0f8593a0b1d4c7b45e7a92ac94073b48"
  ],
  "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml": [
   "f068a2eaf3e067f0ab363d0b1c2b91e9",
@@ -3146,7 +3147,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 70,
+   "temp": 68,
    "sun_date": "2026-10-17",
    "station_id": "K1M4"
   }
@@ -3683,7 +3684,7 @@
   "cold": 0,
   "card_hour": "2026-10-18T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792358983.8382947,
+  "last_obs_at": 1792359055.4371347,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

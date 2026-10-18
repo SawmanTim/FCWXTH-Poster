@@ -3142,7 +3142,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 46,
+   "temp": 45,
    "sun_date": "2026-10-17",
    "station_id": "K1M4"
   }
@@ -3220,7 +3220,7 @@
   "us6000u2mq",
   "us6000u2y1"
  ],
- "apod_fetch_ts": 1792288308.2336383,
+ "apod_fetch_ts": 1792291361.1444762,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3678,7 +3678,7 @@
   "cold": 0,
   "card_hour": "2026-10-17T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792291287.0760102,
+  "last_obs_at": 1792291352.6320276,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

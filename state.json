@@ -3672,13 +3672,13 @@
  "station": {
   "hilo_date": "2026-10-17",
   "hi": 66,
-  "lo": 46,
+  "lo": 45,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-17T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792288840.0373123,
+  "last_obs_at": 1792288910.2389808,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

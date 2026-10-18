@@ -3670,15 +3670,15 @@
  ],
  "apod_date": "2026-10-17",
  "station": {
-  "hilo_date": "2026-10-17",
-  "hi": 66,
-  "lo": 42,
+  "hilo_date": "2026-10-18",
+  "hi": 43,
+  "lo": 43,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-17T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792299556.4433825,
+  "last_obs_at": 1792299622.6672168,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

@@ -285,7 +285,9 @@
   "7a9e2797f1d3340ce11dbf562b5dd9c6",
   "55dc1d487f9f0ddb266ce10cd0aa124f",
   "9d00e16a24a65ca50bff2c169066e62a",
-  "43f6b630424a2eb1d0c9a662a2e4daec"
+  "43f6b630424a2eb1d0c9a662a2e4daec",
+  "330508aff19cac65481c36c82aeffbb5",
+  "bd1a5ff2402989b1f74dcbfdf19ac2b2"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
   "ef38ff57e79d38066a83b4305477d395",
@@ -3145,8 +3147,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "clear",
-   "temp": 37,
+   "cond": "fog/mist",
+   "temp": 36,
    "sun_date": "2026-10-18",
    "station_id": "KCRX"
   },
@@ -3689,7 +3691,7 @@
   "cold": 0,
   "card_hour": "2026-10-19T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792414756.686646,
+  "last_obs_at": 1792414830.1500363,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

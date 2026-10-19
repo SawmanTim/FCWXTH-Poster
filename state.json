@@ -3232,7 +3232,7 @@
   "us6000u2mq",
   "us6000u2y1"
  ],
- "apod_fetch_ts": 1792419212.8320363,
+ "apod_fetch_ts": 1792422221.9242427,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3684,14 +3684,14 @@
  "apod_date": "2026-10-19",
  "station": {
   "hilo_date": "2026-10-19",
-  "hi": 60,
+  "hi": 61,
   "lo": 40,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-19T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792422153.2595005,
+  "last_obs_at": 1792422218.2858512,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

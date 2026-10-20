@@ -3693,14 +3693,14 @@
  "apod_date": "2026-10-20",
  "station": {
   "hilo_date": "2026-10-20",
-  "hi": 75,
+  "hi": 76,
   "lo": 41,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-20T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792515508.4949532,
+  "last_obs_at": 1792515575.3381677,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

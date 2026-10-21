@@ -3249,7 +3249,7 @@
   "pt26293000",
   "us6000u3jl"
  ],
- "apod_fetch_ts": 1792568427.5533671,
+ "apod_fetch_ts": 1792571450.2097425,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3699,7 +3699,7 @@
   "https://www.spc.noaa.gov/products/md/20261019",
   "https://www.spc.noaa.gov/products/md/md2384.html/20261021"
  ],
- "apod_date": "2026-10-20",
+ "apod_date": "2026-10-21",
  "station": {
   "hilo_date": "2026-10-21",
   "hi": 47,
@@ -3709,7 +3709,7 @@
   "cold": 0,
   "card_hour": "2026-10-20T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792571384.4798505,
+  "last_obs_at": 1792571449.7213929,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

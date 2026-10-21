@@ -3167,14 +3167,14 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "haze",
-   "temp": 68,
+   "cond": "clear",
+   "temp": 70,
    "sun_date": "2026-10-20",
    "station_id": "KCRX"
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 70,
+   "temp": 72,
    "sun_date": "2026-10-20",
    "station_id": "K1M4"
   }
@@ -3714,7 +3714,7 @@
   "cold": 0,
   "card_hour": "2026-10-21T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792600165.1793563,
+  "last_obs_at": 1792600231.0702918,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

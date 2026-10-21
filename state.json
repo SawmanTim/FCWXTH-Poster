@@ -3706,14 +3706,14 @@
  "apod_date": "2026-10-21",
  "station": {
   "hilo_date": "2026-10-21",
-  "hi": 61,
+  "hi": 62,
   "lo": 44,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-21T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792593166.2862253,
+  "last_obs_at": 1792593231.8526194,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

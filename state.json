@@ -3701,14 +3701,14 @@
  "apod_date": "2026-10-20",
  "station": {
   "hilo_date": "2026-10-21",
-  "hi": 46,
+  "hi": 47,
   "lo": 46,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-20T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792559052.535739,
+  "last_obs_at": 1792559117.7197099,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

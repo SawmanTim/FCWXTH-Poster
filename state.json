@@ -3714,13 +3714,13 @@
  "station": {
   "hilo_date": "2026-10-22",
   "hi": 47,
-  "lo": 45,
+  "lo": 44,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-21T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792653386.7422414,
+  "last_obs_at": 1792653450.7503457,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

@@ -1042,7 +1042,8 @@
   "68ca613adcf4b2115acbf852c38c7f39",
   "8a37fed6d79675fa1655fa6234270eee",
   "1f5ad29bb7f44356e80ccf7141e02e74",
-  "79771c41aa911ab4d7b9eef8bb79e3d2"
+  "79771c41aa911ab4d7b9eef8bb79e3d2",
+  "51b7bafde658700488338c607484cb7d"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "fbe6ef25a802f2b01eab66dd25b4df6f",
@@ -3719,7 +3720,7 @@
   "cold": 0,
   "card_hour": "2026-10-21T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792631639.5662146,
+  "last_obs_at": 1792631708.614431,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

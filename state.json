@@ -3721,13 +3721,13 @@
  "station": {
   "hilo_date": "2026-10-23",
   "hi": 48,
-  "lo": 47,
+  "lo": 46,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-22T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792750013.1982975,
+  "last_obs_at": 1792750078.9006913,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

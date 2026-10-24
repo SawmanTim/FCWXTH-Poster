@@ -3733,14 +3733,14 @@
  "apod_date": "2026-10-24",
  "station": {
   "hilo_date": "2026-10-24",
-  "hi": 49,
+  "hi": 50,
   "lo": 46,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-24T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792846879.2240057,
+  "last_obs_at": 1792846945.6724503,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

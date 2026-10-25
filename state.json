@@ -3286,7 +3286,7 @@
   "pt26298050",
   "pt26297050"
  ],
- "apod_fetch_ts": 1792920568.4720259,
+ "apod_fetch_ts": 1792923612.096684,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3736,7 +3736,7 @@
   "https://www.spc.noaa.gov/products/md/md2408.html/20261024",
   "https://www.spc.noaa.gov/products/md/20261025"
  ],
- "apod_date": "2026-10-24",
+ "apod_date": "2026-10-25",
  "station": {
   "hilo_date": "2026-10-25",
   "hi": 47,
@@ -3746,7 +3746,7 @@
   "cold": 0,
   "card_hour": "2026-10-24T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1792923545.1317992,
+  "last_obs_at": 1792923609.666187,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

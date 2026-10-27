@@ -3752,14 +3752,14 @@
  "apod_date": "2026-10-27",
  "station": {
   "hilo_date": "2026-10-27",
-  "hi": 52,
+  "hi": 53,
   "lo": 42,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-27T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793110380.184286,
+  "last_obs_at": 1793110447.7711194,
   "was_offline": false,
   "outage_starts": [
    1791797845.7507157

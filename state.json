@@ -3308,7 +3308,8 @@
   "us6000u4r9",
   "pt26298050",
   "pt26297050",
-  "us6000u4ty"
+  "us6000u4ty",
+  "us7000ttxz"
  ],
  "apod_fetch_ts": 1793259634.2706702,
  "swpc": [
@@ -3771,7 +3772,7 @@
   "cold": 0,
   "card_hour": "2026-10-28T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793261227.941626,
+  "last_obs_at": 1793261298.1966784,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

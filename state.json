@@ -3777,14 +3777,14 @@
  "apod_date": "2026-10-29",
  "station": {
   "hilo_date": "2026-10-30",
-  "hi": 72,
+  "hi": 73,
   "lo": 47,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-10-30T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793372560.6282027,
+  "last_obs_at": 1793372629.8811543,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

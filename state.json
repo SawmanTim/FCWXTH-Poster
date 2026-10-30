@@ -3230,8 +3230,8 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "haze",
-   "temp": 57,
+   "cond": "clear",
+   "temp": 56,
    "sun_date": "2026-10-29",
    "station_id": "K1M4"
   }
@@ -3782,7 +3782,7 @@
   "cold": 0,
   "card_hour": "2026-10-29T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793326909.9476304,
+  "last_obs_at": 1793326975.8515115,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

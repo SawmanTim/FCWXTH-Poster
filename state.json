@@ -3802,12 +3802,12 @@
   "hilo_date": "2026-11-01",
   "hi": 63,
   "lo": 55,
-  "raining": false,
+  "raining": true,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-01T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793582610.8299096,
+  "last_obs_at": 1793582676.717175,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

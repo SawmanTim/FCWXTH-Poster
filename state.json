@@ -3811,13 +3811,13 @@
  "station": {
   "hilo_date": "2026-11-03",
   "hi": 63,
-  "lo": 63,
+  "lo": 62,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-02T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793685949.483276,
+  "last_obs_at": 1793686014.709142,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

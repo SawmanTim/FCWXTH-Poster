@@ -3813,14 +3813,14 @@
  "apod_date": "2026-11-03",
  "station": {
   "hilo_date": "2026-11-03",
-  "hi": 71,
+  "hi": 72,
   "lo": 60,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-03T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793726842.5551662,
+  "last_obs_at": 1793726912.3053067,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

@@ -3265,7 +3265,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "mostly cloudy",
+   "cond": "partly cloudy",
    "temp": 66,
    "sun_date": "2026-11-02",
    "station_id": "K1M4"
@@ -3406,7 +3406,6 @@
  ],
  "usdm_week": "2026-W44",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md2117.html/20260824",
   "https://www.spc.noaa.gov/products/md/md2118.html/20260824",
   "https://www.spc.noaa.gov/products/md/md2119.html/20260824",
   "https://www.spc.noaa.gov/products/md/md2120.html/20260824",
@@ -3805,7 +3804,8 @@
   "https://www.spc.noaa.gov/products/md/md2436.html/20261102",
   "https://www.spc.noaa.gov/products/md/md2435.html/20261103",
   "https://www.spc.noaa.gov/products/md/md2436.html/20261103",
-  "https://www.spc.noaa.gov/products/md/md2437.html/20261103"
+  "https://www.spc.noaa.gov/products/md/md2437.html/20261103",
+  "https://www.spc.noaa.gov/products/md/20261103"
  ],
  "apod_date": "2026-11-02",
  "station": {
@@ -3817,7 +3817,7 @@
   "cold": 0,
   "card_hour": "2026-11-02T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793671325.4711778,
+  "last_obs_at": 1793671390.3111117,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

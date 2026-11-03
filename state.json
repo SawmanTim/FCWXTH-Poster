@@ -3355,7 +3355,7 @@
   "us6000u4ty",
   "us7000ttxz"
  ],
- "apod_fetch_ts": 1793679128.1170282,
+ "apod_fetch_ts": 1793682178.0689952,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3807,7 +3807,7 @@
   "https://www.spc.noaa.gov/products/md/md2438.html/20261103",
   "https://www.spc.noaa.gov/products/md/md2439.html/20261103"
  ],
- "apod_date": "2026-11-02",
+ "apod_date": "2026-11-03",
  "station": {
   "hilo_date": "2026-11-02",
   "hi": 77,
@@ -3817,7 +3817,7 @@
   "cold": 0,
   "card_hour": "2026-11-02T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793682111.0992413,
+  "last_obs_at": 1793682175.5158985,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

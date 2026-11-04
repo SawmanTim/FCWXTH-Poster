@@ -3821,14 +3821,14 @@
  "apod_date": "2026-11-03",
  "station": {
   "hilo_date": "2026-11-04",
-  "hi": 67,
+  "hi": 68,
   "lo": 67,
   "raining": true,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-03T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793790049.4378414,
+  "last_obs_at": 1793790120.7739441,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

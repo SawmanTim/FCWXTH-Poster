@@ -3825,14 +3825,14 @@
  "apod_date": "2026-11-03",
  "station": {
   "hilo_date": "2026-11-04",
-  "hi": 70,
+  "hi": 71,
   "lo": 67,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-04T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793815553.998379,
+  "last_obs_at": 1793815621.6351614,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

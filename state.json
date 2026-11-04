@@ -3825,12 +3825,12 @@
   "hilo_date": "2026-11-04",
   "hi": 69,
   "lo": 67,
-  "raining": false,
+  "raining": true,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-04T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793806499.236283,
+  "last_obs_at": 1793806566.5824823,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

@@ -3819,15 +3819,15 @@
  ],
  "apod_date": "2026-11-03",
  "station": {
-  "hilo_date": "2026-11-03",
-  "hi": 72,
-  "lo": 60,
+  "hilo_date": "2026-11-04",
+  "hi": 67,
+  "lo": 67,
   "raining": true,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-03T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793771985.0583158,
+  "last_obs_at": 1793772050.5374815,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

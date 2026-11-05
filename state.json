@@ -3832,13 +3832,13 @@
  "station": {
   "hilo_date": "2026-11-05",
   "hi": 52,
-  "lo": 49,
+  "lo": 48,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-04T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793873022.364949,
+  "last_obs_at": 1793873087.5002663,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

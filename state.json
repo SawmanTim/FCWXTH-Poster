@@ -314,7 +314,8 @@
   "beac8f366517a0990a9f25d0ad38f39b",
   "1e110d7f7970480c484c9ccefdcf8a0b",
   "fc1b6a7b69b094927b55c484bf0b0c21",
-  "aaaf5aa3248e61e5a595dfda8bc08ecf"
+  "aaaf5aa3248e61e5a595dfda8bc08ecf",
+  "007d4f1471d1b6cb9fe682f38b1aa45c"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
   "450b492ac9c85a54f355721491957cd4",
@@ -3835,7 +3836,7 @@
   "cold": 0,
   "card_hour": "2026-11-04T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793840198.5154116,
+  "last_obs_at": 1793840265.862469,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

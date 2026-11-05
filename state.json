@@ -3829,13 +3829,13 @@
  "station": {
   "hilo_date": "2026-11-04",
   "hi": 76,
-  "lo": 60,
+  "lo": 59,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-04T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793838184.0726023,
+  "last_obs_at": 1793838248.9978359,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

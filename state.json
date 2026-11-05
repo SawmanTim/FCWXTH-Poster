@@ -3833,14 +3833,14 @@
  "apod_date": "2026-11-03",
  "station": {
   "hilo_date": "2026-11-05",
-  "hi": 65,
+  "hi": 66,
   "lo": 46,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-05T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1793892111.9839025,
+  "last_obs_at": 1793892178.5166745,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

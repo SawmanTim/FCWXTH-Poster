@@ -1106,7 +1106,8 @@
   "e2e3d0d6f0f4cacd7a8c96046033b068",
   "f0a0d5aaec1f256ae9df879b5e712d52",
   "a8634bec957ea28e5e12b49e5397f2e2",
-  "c954374cb1b84aa6c7345560d092a778"
+  "c954374cb1b84aa6c7345560d092a778",
+  "55e81f3da48320a8b9529851573011bc"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "f07d6a6ba4fae0827562666ecfd266e9",
@@ -3391,7 +3392,7 @@
   "us6000u4ty",
   "us7000ttxz"
  ],
- "apod_fetch_ts": 1794011187.1576586,
+ "apod_fetch_ts": 1794014255.8710878,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3855,7 +3856,7 @@
   "cold": 0,
   "card_hour": "2026-11-06T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794014184.41983,
+  "last_obs_at": 1794014255.1549919,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

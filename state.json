@@ -3401,7 +3401,7 @@
   "us6000u4ty",
   "us7000ttxz"
  ],
- "apod_fetch_ts": 1794143586.6529567,
+ "apod_fetch_ts": 1794146598.2016313,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3859,14 +3859,14 @@
  "apod_date": "2026-11-08",
  "station": {
   "hilo_date": "2026-11-08",
-  "hi": 40,
+  "hi": 41,
   "lo": 34,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-08T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794146532.2967148,
+  "last_obs_at": 1794146597.787842,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

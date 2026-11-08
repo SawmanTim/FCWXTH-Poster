@@ -1118,8 +1118,6 @@
   "68a0e97907228bb8619754a8daa4cb17"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "1cac51738858298baf1911a2d8c581bb",
-  "d9a07d145b7d0a51155dad4af2e83936",
   "efa4c7663a734b1bf5e9ff51d08e6ebd",
   "32570eb11d5d2782781e46d631fb6f6b",
   "843806b94f256681d820a2fddce0f111",
@@ -1517,7 +1515,9 @@
   "492b493c5460ef3230ac020430fcc7fe",
   "049d5d17b372fad00c341f571ef5ae7a",
   "faa30c338ce0e83dd8c10b0e4a500fd0",
-  "6a9f1e0a9d97b43f2b2b15fa8b335e54"
+  "6a9f1e0a9d97b43f2b2b15fa8b335e54",
+  "deb1e8bf21881e530b84c1940c0481b4",
+  "ef079a6479237c85939f89d4089615e5"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -3866,7 +3866,7 @@
   "cold": 0,
   "card_hour": "2026-11-08T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794147442.9618742,
+  "last_obs_at": 1794147517.7718613,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

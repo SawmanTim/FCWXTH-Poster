@@ -3881,15 +3881,15 @@
  ],
  "apod_date": "2026-11-11",
  "station": {
-  "hilo_date": "2026-11-10",
-  "hi": 75,
-  "lo": 37,
+  "hilo_date": "2026-11-11",
+  "hi": 43,
+  "lo": 43,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-10T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794376750.0001955,
+  "last_obs_at": 1794376817.518886,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

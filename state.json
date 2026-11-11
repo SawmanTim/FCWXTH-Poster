@@ -3327,8 +3327,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "light drizzle",
-   "temp": 61,
+   "cond": "clear",
+   "temp": 59,
    "sun_date": "2026-11-10",
    "station_id": "KCRX"
   },
@@ -3889,7 +3889,7 @@
   "cold": 0,
   "card_hour": "2026-11-10T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794355650.2236903,
+  "last_obs_at": 1794355714.3938193,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

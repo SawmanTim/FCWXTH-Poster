@@ -731,7 +731,6 @@
   "5aec6bf70a95259ccd7950b327e87755"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
-  "8a7292cb80275c1c23daad1f552933f4",
   "d4022be03622681f30a57bb35c1048ac",
   "f5ba411840c3f28f4635553fc6f9701d",
   "fe49f9a60247e3517ccd44f0383bec10",
@@ -1130,7 +1129,8 @@
   "291e3b548dca0eeb50dcbc3013379ff7",
   "82f96e47e42c1750a9262238f83cfb8c",
   "e60e302da914061de06ba5456a1ad657",
-  "451a769768a22a1e5b295270e89cc7c3"
+  "451a769768a22a1e5b295270e89cc7c3",
+  "e88aacaa69c6ae0ec19606719a56fc45"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
   "582af3caa93f213bc296b5d35463d69f",
@@ -3883,14 +3883,14 @@
  "apod_date": "2026-11-11",
  "station": {
   "hilo_date": "2026-11-11",
-  "hi": 51,
+  "hi": 52,
   "lo": 42,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-11T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794405684.3583584,
+  "last_obs_at": 1794405752.9498227,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

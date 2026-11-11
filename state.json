@@ -3883,14 +3883,14 @@
  "apod_date": "2026-11-11",
  "station": {
   "hilo_date": "2026-11-11",
-  "hi": 49,
+  "hi": 50,
   "lo": 42,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-11T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794404111.1559176,
+  "last_obs_at": 1794404176.0813708,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

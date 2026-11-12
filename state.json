@@ -3480,7 +3480,7 @@
   "2026-11-05 17:45:33.607|A20F",
   "2026-11-07 06:26:14.357|A20F"
  ],
- "usdm_week": "2026-W45",
+ "usdm_week": "2026-W46",
  "spc_md": [
   "https://www.spc.noaa.gov/products/md/20260826",
   "https://www.spc.noaa.gov/products/md/md2135.html/20260826",
@@ -3891,9 +3891,9 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-11-12T06",
+  "card_hour": "2026-11-12T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794495563.8703508,
+  "last_obs_at": 1794495630.406737,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

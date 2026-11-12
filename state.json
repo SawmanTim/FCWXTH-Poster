@@ -3887,13 +3887,13 @@
  "station": {
   "hilo_date": "2026-11-12",
   "hi": 57,
-  "lo": 45,
+  "lo": 44,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-12T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794487555.5170434,
+  "last_obs_at": 1794487620.6480336,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

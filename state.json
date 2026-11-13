@@ -2284,7 +2284,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/145200.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/145200.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT4+shtml/165690.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/914444.shtml",
@@ -2683,7 +2682,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611121727",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611122323",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611130523",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611131133"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611131133",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611131718"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3339,13 +3339,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
-   "temp": 46,
+   "cond": "clear",
+   "temp": 48,
    "sun_date": "2026-11-12",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "clear",
+   "cond": "mostly clear",
    "temp": 46,
    "sun_date": "2026-11-12",
    "station_id": "K1M4"
@@ -3901,7 +3901,7 @@
   "cold": 0,
   "card_hour": "2026-11-13T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794590316.5656605,
+  "last_obs_at": 1794590386.2766469,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

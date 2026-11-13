@@ -2934,8 +2934,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.34061f1f4a00d6d045406ba0082793a080c0d5f5.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6b629133730ca8606b0ef8d679c7f62c24e63bfa.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c83e309b81fe80802938e94c928ce5fc554ccc18.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.15e7d06776b47bedf6a8a006db9adcfe6c65cdb8.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8f05029d757b6f078a5062b0d01122aa02c913c5.001.1",
@@ -3333,7 +3331,9 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.acafb616108db3048d2cb896fd1160cb1ca755fd.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8d79c75555daafbf352582ce3481b976d5ed8001.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c11060965b7fe93fc24aaf9ccb3884b2396c86a1.001.2",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c11060965b7fe93fc24aaf9ccb3884b2396c86a1.001.3"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c11060965b7fe93fc24aaf9ccb3884b2396c86a1.001.3",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f478126a4d0887d8cd2ffbfe0a4a1efad8e4677a.001.2",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f478126a4d0887d8cd2ffbfe0a4a1efad8e4677a.001.3"
  ],
  "wx": {
   "Paden": {
@@ -3434,7 +3434,7 @@
   "us7000ttxz",
   "us7000tx16"
  ],
- "apod_fetch_ts": 1794554371.9616423,
+ "apod_fetch_ts": 1794557420.22147,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3899,7 +3899,7 @@
   "cold": 0,
   "card_hour": "2026-11-12T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794557353.8223598,
+  "last_obs_at": 1794557419.6928732,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

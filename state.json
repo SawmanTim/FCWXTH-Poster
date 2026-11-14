@@ -3900,13 +3900,13 @@
  "station": {
   "hilo_date": "2026-11-13",
   "hi": 54,
-  "lo": 33,
+  "lo": 32,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-13T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794630621.5546856,
+  "last_obs_at": 1794630684.8983305,
   "was_offline": false,
   "outage_starts": [
    1793255703.1115143

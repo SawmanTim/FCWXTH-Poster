@@ -3903,14 +3903,14 @@
  "apod_date": "2026-11-15",
  "station": {
   "hilo_date": "2026-11-15",
-  "hi": 46,
+  "hi": 47,
   "lo": 27,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-15T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794755591.9021752,
+  "last_obs_at": 1794755655.1917973,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993

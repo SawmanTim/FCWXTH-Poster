@@ -3902,13 +3902,13 @@
  "station": {
   "hilo_date": "2026-11-15",
   "hi": 29,
-  "lo": 28,
+  "lo": 27,
   "raining": false,
   "heat": 0,
   "cold": 1,
   "card_hour": "2026-11-14T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794738709.6305532,
+  "last_obs_at": 1794738772.8283565,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993

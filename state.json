@@ -3450,7 +3450,8 @@
   "pt26297050",
   "us6000u4ty",
   "us7000ttxz",
-  "us7000tx16"
+  "us7000tx16",
+  "us7000tymu"
  ],
  "apod_fetch_ts": 1794863448.533465,
  "swpc": [
@@ -3918,7 +3919,7 @@
   "cold": 0,
   "card_hour": "2026-11-16T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794864365.4398813,
+  "last_obs_at": 1794864435.0278842,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993

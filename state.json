@@ -3917,9 +3917,9 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-11-16T21",
+  "card_hour": "2026-11-17T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794916795.4205878,
+  "last_obs_at": 1794916865.0200944,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993

@@ -3913,13 +3913,13 @@
  "station": {
   "hilo_date": "2026-11-17",
   "hi": 36,
-  "lo": 35,
+  "lo": 34,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-16T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1794900754.2869806,
+  "last_obs_at": 1794900818.380055,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993

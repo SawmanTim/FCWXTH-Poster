@@ -3917,14 +3917,14 @@
  "apod_date": "2026-11-18",
  "station": {
   "hilo_date": "2026-11-18",
-  "hi": 46,
+  "hi": 47,
   "lo": 39,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-18T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795010367.1141112,
+  "last_obs_at": 1795010439.2658024,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993

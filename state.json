@@ -1143,8 +1143,6 @@
   "55d0f8f7a5d893328942fb49fe264f5c"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "b566356b62add1eef88b37176d5816e2",
-  "6a34313ff052d5e6e18d04fb57d958e0",
   "45a8929000d6b0b8647e7869000844bc",
   "dc838769a6d11b088564cab0bd3181ef",
   "bd3fd94b42c717b67c392c483111323a",
@@ -1542,7 +1540,9 @@
   "6d25c2167f2c3339bba4e4d695e96676",
   "d5c6e76a4841ff7691371ce8ed74336c",
   "29a9d9061564fea70e9779890bbe4574",
-  "081af1395e7ecf26ebebbfba717173cc"
+  "081af1395e7ecf26ebebbfba717173cc",
+  "96372a02f51adfd8a0355e618d23ea42",
+  "57fe0399f56e6e428165cfd30e6598d7"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -1963,7 +1963,8 @@
   "a29eaf727e2a731ce6d814579a02afe1",
   "b51af13c2fe098ad6ce0b7d34b755ece",
   "67b6859491604e1d7b57c2f297875436",
-  "51408aa1766b30b1eded4e963ad633f1"
+  "51408aa1766b30b1eded4e963ad633f1",
+  "a6f560eb1b90816bceb1609d3a6012d9"
  ],
  "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml": [
   "f068a2eaf3e067f0ab363d0b1c2b91e9",
@@ -3366,7 +3367,7 @@
   },
   "Franklin": {
    "cond": "clear",
-   "temp": 64,
+   "temp": 66,
    "sun_date": "2026-11-17",
    "station_id": "K1M4"
   }
@@ -3458,7 +3459,7 @@
   "us7000tymu",
   "us7000tyw8"
  ],
- "apod_fetch_ts": 1795024312.5341682,
+ "apod_fetch_ts": 1795027341.2559419,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3924,7 +3925,7 @@
   "cold": 0,
   "card_hour": "2026-11-18T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795027266.245177,
+  "last_obs_at": 1795027340.381055,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993

@@ -1317,6 +1317,32 @@ def process_station(cfg, fb, state, *, seed):
             stt["hi"] = max(stt.get("hi", t), t)
             stt["lo"] = min(stt.get("lo", t), t)
 
+    # Live feed for the DESKTOP-4 wall display (2026-11-18). That old PC could not
+    # keep the Weather Underground dashboard up (heavy page, constant freezes), so it
+    # now draws this same conditions card itself from the reading saved here. It
+    # must NOT call WU on its own: this 60 s loop already uses nearly the key's whole
+    # daily quota. state.json is committed every cycle anyway (last_obs_at changes
+    # each time), so this adds no commits. Only FRESH readings reach this point
+    # (fetch_wu_station drops stale ones), and the display shows the observation
+    # time and flags it when `saved` gets old — so it can never pass off old data.
+    # Display-only: any failure here is logged and posting carries on.
+    try:
+        stt["live"] = {
+            "tempF": temp, "feelsF": feelsF, "feels_label": feels_label,
+            "dewF": data.get("dewF"), "humidity": data.get("humidity"),
+            "pressure_in": data.get("pressure_in"),
+            "wind_dir": data.get("wind_dir"), "wind_mph": data.get("wind_mph"),
+            "gust_mph": data.get("gust_mph"),
+            "precip_rate": data.get("precip_rate"),
+            "precip_accum": data.get("precip_accum"),
+            "high_today": stt.get("hi"), "low_today": stt.get("lo"),
+            "obs_local": data.get("obs_local") or "",
+            "tz": now.strftime("%Z"),
+            "saved": int(time.time()),
+        }
+    except Exception as exc:  # noqa: BLE001 — the display feed must never break posting
+        log(f"  [station] live display feed not saved: {exc}")
+
     if seed:
         stt.update({"heat": heat, "cold": cold, "raining": raining,
                     "card_hour": now.strftime("%Y-%m-%dT%H")})

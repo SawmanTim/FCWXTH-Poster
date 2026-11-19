@@ -340,7 +340,6 @@
   "a33223ab673968896b06d0f3660362ae"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
-  "2cba3acf8c8a73c4f4ed315f9558f85f",
   "8d0fc7bb840fc5daf4da74dd73621e3e",
   "78929f39ba02fcd7145741267c8f8a6d",
   "1ae16393188a44023ca23bfd90e7b7a9",
@@ -739,7 +738,8 @@
   "3138c7a7d1ea749c51dc885b66322809",
   "8b12fff8db0d1baeeb65f8f420876b3f",
   "24d7827c04a6f9faf6f7968d3d5bc481",
-  "5838f719f8cd172cc4f0bb258bc46f56"
+  "5838f719f8cd172cc4f0bb258bc46f56",
+  "db8f56ad2f8a976079a30ce45bfd6b42"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "be2a214753de19d8316b9c932fe8cb3b",
@@ -3932,7 +3932,7 @@
   "cold": 0,
   "card_hour": "2026-11-19T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795122686.876749,
+  "last_obs_at": 1795122760.2390609,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3944,16 +3944,16 @@
    "dewF": 52.2,
    "humidity": 49.0,
    "pressure_in": 30.4,
-   "wind_dir": "NW",
-   "wind_mph": 2.0,
-   "gust_mph": 3.0,
+   "wind_dir": "NNE",
+   "wind_mph": 0.0,
+   "gust_mph": 0.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 79,
    "low_today": 46,
-   "obs_local": "2026-11-19 15:11:15",
+   "obs_local": "2026-11-19 15:12:27",
    "tz": "CST",
-   "saved": 1795122686
+   "saved": 1795122760
   }
  },
  "community_alerts": [

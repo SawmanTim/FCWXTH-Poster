@@ -3369,7 +3369,7 @@
   },
   "Franklin": {
    "cond": "",
-   "temp": 48,
+   "temp": 52,
    "sun_date": "2026-11-18",
    "station_id": "K1M4"
   }
@@ -3927,11 +3927,29 @@
   "cold": 0,
   "card_hour": "2026-11-18T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795053719.535399,
+  "last_obs_at": 1795053803.88698,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
-  ]
+  ],
+  "live": {
+   "tempF": 49.1,
+   "feelsF": 49.1,
+   "feels_label": "Feels Like",
+   "dewF": 40.1,
+   "humidity": 71.0,
+   "pressure_in": 30.46,
+   "wind_dir": "E",
+   "wind_mph": 0.0,
+   "gust_mph": 1.0,
+   "precip_rate": 0.0,
+   "precip_accum": 0.0,
+   "high_today": 71,
+   "low_today": 39,
+   "obs_local": "2026-11-18 20:03:07",
+   "tz": "CST",
+   "saved": 1795053803
+  }
  },
  "community_alerts": [
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01791a67b6d6e77940a2dd7ec7d49936c4f4fea2.001.1",

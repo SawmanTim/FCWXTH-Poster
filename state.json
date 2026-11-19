@@ -3461,7 +3461,7 @@
   "us7000tymu",
   "us7000tyw8"
  ],
- "apod_fetch_ts": 1795097561.3260045,
+ "apod_fetch_ts": 1795100619.8298945,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3920,35 +3920,35 @@
  "apod_date": "2026-11-19",
  "station": {
   "hilo_date": "2026-11-19",
-  "hi": 61,
+  "hi": 62,
   "lo": 46,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-19T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795100554.5055833,
+  "last_obs_at": 1795100619.15073,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 61.3,
-   "feelsF": 61.3,
+   "tempF": 61.5,
+   "feelsF": 61.5,
    "feels_label": "Feels Like",
-   "dewF": 47.3,
+   "dewF": 47.5,
    "humidity": 60.0,
    "pressure_in": 30.51,
-   "wind_dir": "N",
+   "wind_dir": "SSE",
    "wind_mph": 2.0,
    "gust_mph": 4.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
-   "high_today": 61,
+   "high_today": 62,
    "low_today": 46,
-   "obs_local": "2026-11-19 09:01:20",
+   "obs_local": "2026-11-19 09:02:16",
    "tz": "CST",
-   "saved": 1795100554
+   "saved": 1795100619
   }
  },
  "community_alerts": [

@@ -3463,7 +3463,7 @@
   "us7000tymu",
   "us7000tyw8"
  ],
- "apod_fetch_ts": 1795112868.6551726,
+ "apod_fetch_ts": 1795115930.8255053,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3929,28 +3929,28 @@
   "cold": 0,
   "card_hour": "2026-11-19T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795115865.6195195,
+  "last_obs_at": 1795115930.1962445,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 77.0,
-   "feelsF": 77.0,
+   "tempF": 76.5,
+   "feelsF": 76.5,
    "feels_label": "Feels Like",
-   "dewF": 54.0,
-   "humidity": 45.0,
-   "pressure_in": 30.44,
+   "dewF": 55.9,
+   "humidity": 49.0,
+   "pressure_in": 30.43,
    "wind_dir": "NNW",
-   "wind_mph": 4.0,
-   "gust_mph": 4.0,
+   "wind_mph": 7.0,
+   "gust_mph": 7.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 79,
    "low_today": 46,
-   "obs_local": "2026-11-19 12:54:09",
+   "obs_local": "2026-11-19 13:17:35",
    "tz": "CST",
-   "saved": 1795115865
+   "saved": 1795115930
   }
  },
  "community_alerts": [

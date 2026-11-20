@@ -3470,7 +3470,7 @@
   "nc75468702",
   "ci41364111"
  ],
- "apod_fetch_ts": 1795181460.6064365,
+ "apod_fetch_ts": 1795184494.257967,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3936,7 +3936,7 @@
   "cold": 0,
   "card_hour": "2026-11-20T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795184429.0378387,
+  "last_obs_at": 1795184494.0399876,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3948,16 +3948,16 @@
    "dewF": 50.4,
    "humidity": 80.0,
    "pressure_in": 30.39,
-   "wind_dir": "W",
-   "wind_mph": 1.0,
-   "gust_mph": 2.0,
+   "wind_dir": "ESE",
+   "wind_mph": 0.0,
+   "gust_mph": 3.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 56,
    "low_today": 46,
-   "obs_local": "2026-11-20 08:19:22",
+   "obs_local": "2026-11-20 08:21:28",
    "tz": "CST",
-   "saved": 1795184429
+   "saved": 1795184494
   }
  },
  "community_alerts": [

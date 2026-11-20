@@ -3929,35 +3929,35 @@
  "apod_date": "2026-11-20",
  "station": {
   "hilo_date": "2026-11-20",
-  "hi": 75,
+  "hi": 76,
   "lo": 46,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-20T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795192305.3205328,
+  "last_obs_at": 1795192370.4193385,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 75.4,
-   "feelsF": 75.4,
+   "tempF": 75.6,
+   "feelsF": 75.6,
    "feels_label": "Feels Like",
-   "dewF": 58.6,
+   "dewF": 58.8,
    "humidity": 56.0,
    "pressure_in": 30.37,
    "wind_dir": "E",
-   "wind_mph": 2.0,
+   "wind_mph": 4.0,
    "gust_mph": 4.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
-   "high_today": 75,
+   "high_today": 76,
    "low_today": 46,
-   "obs_local": "2026-11-20 10:31:41",
+   "obs_local": "2026-11-20 10:32:35",
    "tz": "CST",
-   "saved": 1795192305
+   "saved": 1795192370
   }
  },
  "community_alerts": [

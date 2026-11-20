@@ -3467,7 +3467,7 @@
   "us7000tymu",
   "us7000tyw8"
  ],
- "apod_fetch_ts": 1795132245.4441159,
+ "apod_fetch_ts": 1795132604.101078,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3933,7 +3933,7 @@
   "cold": 0,
   "card_hour": "2026-11-19T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795135208.3953495,
+  "last_obs_at": 1795135273.921465,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3952,9 +3952,9 @@
    "precip_accum": 0.0,
    "high_today": 79,
    "low_today": 46,
-   "obs_local": "2026-11-19 18:40:03",
+   "obs_local": "2026-11-19 18:40:57",
    "tz": "CST",
-   "saved": 1795135208
+   "saved": 1795135273
   }
  },
  "community_alerts": [

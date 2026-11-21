@@ -3382,7 +3382,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "clear",
+   "cond": "partly cloudy",
    "temp": 72,
    "sun_date": "2026-11-20",
    "station_id": "K1M4"
@@ -3481,7 +3481,7 @@
   "us6000ucij",
   "us6000ucly"
  ],
- "apod_fetch_ts": 1795282115.752217,
+ "apod_fetch_ts": 1795285175.3002439,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3947,28 +3947,28 @@
   "cold": 0,
   "card_hour": "2026-11-21T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795285108.4817054,
+  "last_obs_at": 1795285172.651175,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 80.8,
-   "feelsF": 80.8,
+   "tempF": 81.3,
+   "feelsF": 81.3,
    "feels_label": "Feels Like",
-   "dewF": 58.1,
-   "humidity": 46.0,
+   "dewF": 57.9,
+   "humidity": 45.0,
    "pressure_in": 30.16,
-   "wind_dir": "NE",
-   "wind_mph": 3.0,
-   "gust_mph": 3.0,
+   "wind_dir": "SW",
+   "wind_mph": 4.0,
+   "gust_mph": 5.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 84,
    "low_today": 49,
-   "obs_local": "2026-11-21 12:17:21",
+   "obs_local": "2026-11-21 12:18:15",
    "tz": "CST",
-   "saved": 1795285108
+   "saved": 1795285172
   }
  },
  "community_alerts": [

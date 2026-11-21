@@ -3937,34 +3937,34 @@
  "station": {
   "hilo_date": "2026-11-21",
   "hi": 57,
-  "lo": 56,
+  "lo": 55,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-20T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795243285.6452677,
+  "last_obs_at": 1795243350.7171135,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 55.6,
-   "feelsF": 55.6,
+   "tempF": 55.4,
+   "feelsF": 55.4,
    "feels_label": "Feels Like",
-   "dewF": 46.7,
-   "humidity": 72.0,
+   "dewF": 46.9,
+   "humidity": 73.0,
    "pressure_in": 30.23,
-   "wind_dir": "E",
+   "wind_dir": "ESE",
    "wind_mph": 0.0,
    "gust_mph": 0.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 57,
-   "low_today": 56,
-   "obs_local": "2026-11-21 00:40:06",
+   "low_today": 55,
+   "obs_local": "2026-11-21 00:42:12",
    "tz": "CST",
-   "saved": 1795243285
+   "saved": 1795243350
   }
  },
  "community_alerts": [

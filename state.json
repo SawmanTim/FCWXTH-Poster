@@ -2325,7 +2325,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/174354.shtml?wsurge",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/174354.shtml?inundation",
   "https://www.nhc.noaa.gov/refresh/graphics_at4+shtml/174354.shtml?cone",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/091756.shtml",
@@ -2724,7 +2723,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611212306",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611220501",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611221126",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611221712"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611221712",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611222308"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3380,8 +3380,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "mostly cloudy",
-   "temp": 73,
+   "cond": "cloudy",
+   "temp": 68,
    "sun_date": "2026-11-22",
    "station_id": "KCRX"
   },
@@ -3951,17 +3951,17 @@
   "cold": 0,
   "card_hour": "2026-11-22T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795388886.0394409,
+  "last_obs_at": 1795388956.534311,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 59.5,
-   "feelsF": 59.5,
+   "tempF": 59.4,
+   "feelsF": 59.4,
    "feels_label": "Feels Like",
-   "dewF": 58.1,
-   "humidity": 95.0,
+   "dewF": 58.5,
+   "humidity": 97.0,
    "pressure_in": 30.06,
    "wind_dir": "ESE",
    "wind_mph": 0.0,
@@ -3970,9 +3970,9 @@
    "precip_accum": 0.0,
    "high_today": 71,
    "low_today": 48,
-   "obs_local": "2026-11-22 17:07:47",
+   "obs_local": "2026-11-22 17:08:59",
    "tz": "CST",
-   "saved": 1795388886
+   "saved": 1795388956
   }
  },
  "community_alerts": [

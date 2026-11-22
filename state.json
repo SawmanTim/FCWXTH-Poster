@@ -3384,7 +3384,7 @@
   },
   "Franklin": {
    "cond": "cloudy",
-   "temp": 51,
+   "temp": 52,
    "sun_date": "2026-11-21",
    "station_id": "K1M4"
   }
@@ -3948,7 +3948,7 @@
   "cold": 0,
   "card_hour": "2026-11-21T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795344187.617163,
+  "last_obs_at": 1795344252.242541,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3960,16 +3960,16 @@
    "dewF": 49.2,
    "humidity": 99.0,
    "pressure_in": 30.09,
-   "wind_dir": "S",
+   "wind_dir": "SSE",
    "wind_mph": 0.0,
    "gust_mph": 0.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 50,
    "low_today": 48,
-   "obs_local": "2026-11-22 04:41:58",
+   "obs_local": "2026-11-22 04:42:52",
    "tz": "CST",
-   "saved": 1795344187
+   "saved": 1795344252
   }
  },
  "community_alerts": [

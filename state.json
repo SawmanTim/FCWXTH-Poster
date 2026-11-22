@@ -3482,7 +3482,7 @@
   "us6000ucij",
   "us6000ucly"
  ],
- "apod_fetch_ts": 1795316316.1347911,
+ "apod_fetch_ts": 1795319344.3783677,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3948,7 +3948,7 @@
   "cold": 0,
   "card_hour": "2026-11-21T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795319278.359832,
+  "last_obs_at": 1795319343.8457997,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3959,17 +3959,17 @@
    "feels_label": "Feels Like",
    "dewF": 50.4,
    "humidity": 99.0,
-   "pressure_in": 30.11,
-   "wind_dir": "SSE",
+   "pressure_in": 30.12,
+   "wind_dir": "SE",
    "wind_mph": 0.0,
    "gust_mph": 0.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 84,
    "low_today": 49,
-   "obs_local": "2026-11-21 21:46:45",
+   "obs_local": "2026-11-21 21:48:52",
    "tz": "CST",
-   "saved": 1795319278
+   "saved": 1795319343
   }
  },
  "community_alerts": [

@@ -3951,7 +3951,7 @@
   "cold": 0,
   "card_hour": "2026-11-22T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795382518.2625015,
+  "last_obs_at": 1795382585.1120005,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3970,9 +3970,9 @@
    "precip_accum": 0.0,
    "high_today": 71,
    "low_today": 48,
-   "obs_local": "2026-11-22 15:21:54",
+   "obs_local": "2026-11-22 15:22:47",
    "tz": "CST",
-   "saved": 1795382518
+   "saved": 1795382585
   }
  },
  "community_alerts": [

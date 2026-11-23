@@ -3485,7 +3485,7 @@
   "us6000ucij",
   "us6000ucly"
  ],
- "apod_fetch_ts": 1795389920.4551792,
+ "apod_fetch_ts": 1795390280.3457735,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3951,7 +3951,7 @@
   "cold": 0,
   "card_hour": "2026-11-22T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795392883.774719,
+  "last_obs_at": 1795392950.100387,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3970,9 +3970,9 @@
    "precip_accum": 0.0,
    "high_today": 71,
    "low_today": 48,
-   "obs_local": "2026-11-22 18:14:41",
+   "obs_local": "2026-11-22 18:15:35",
    "tz": "CST",
-   "saved": 1795392883
+   "saved": 1795392950
   }
  },
  "community_alerts": [

@@ -3380,8 +3380,8 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "light drizzle",
-   "temp": 61,
+   "cond": "",
+   "temp": 59,
    "sun_date": "2026-11-22",
    "station_id": "KCRX"
   },
@@ -3487,7 +3487,7 @@
   "pt26327000",
   "us6000ucvm"
  ],
- "apod_fetch_ts": 1795405737.1665175,
+ "apod_fetch_ts": 1795408763.6179683,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3953,28 +3953,28 @@
   "cold": 0,
   "card_hour": "2026-11-22T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795408697.2973611,
+  "last_obs_at": 1795408763.1714017,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 55.0,
-   "feelsF": 55.0,
+   "tempF": 54.9,
+   "feelsF": 54.9,
    "feels_label": "Feels Like",
-   "dewF": 54.7,
+   "dewF": 54.6,
    "humidity": 99.0,
    "pressure_in": 30.12,
-   "wind_dir": "SSE",
+   "wind_dir": "SE",
    "wind_mph": 0.0,
    "gust_mph": 0.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 71,
    "low_today": 48,
-   "obs_local": "2026-11-22 22:36:53",
+   "obs_local": "2026-11-22 22:39:17",
    "tz": "CST",
-   "saved": 1795408697
+   "saved": 1795408763
   }
  },
  "community_alerts": [

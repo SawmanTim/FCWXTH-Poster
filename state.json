@@ -3954,28 +3954,28 @@
   "cold": 0,
   "card_hour": "2026-11-22T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795428499.4231436,
+  "last_obs_at": 1795428564.4919405,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 53.1,
-   "feelsF": 53.1,
+   "tempF": 52.9,
+   "feelsF": 52.9,
    "feels_label": "Feels Like",
-   "dewF": 52.8,
+   "dewF": 52.6,
    "humidity": 99.0,
    "pressure_in": 30.16,
-   "wind_dir": "NE",
+   "wind_dir": "W",
    "wind_mph": 0.0,
-   "gust_mph": 0.0,
+   "gust_mph": 4.0,
    "precip_rate": 0.0,
    "precip_accum": 0.03,
    "high_today": 57,
    "low_today": 53,
-   "obs_local": "2026-11-23 04:08:06",
+   "obs_local": "2026-11-23 04:09:18",
    "tz": "CST",
-   "saved": 1795428499
+   "saved": 1795428564
   }
  },
  "community_alerts": [

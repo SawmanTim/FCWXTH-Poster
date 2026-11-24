@@ -1150,7 +1150,6 @@
   "c192b8520a18fd33ae437620f5123082"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "975b5caac1e3a5f17aac3aab381f2c36",
   "950e2ece4279b8f07d6456cd5a6fe40c",
   "a1c8aab787b85c72c52990d1f0e08e61",
   "3abdc8ac0b929ba7581c7fdb1dc41ed9",
@@ -1549,7 +1548,8 @@
   "8dc807870792466c122763f0060fcabc",
   "d9b3f339c5a4ea4303c1f078acc0cad5",
   "92dc1ee5ea06a02c17648fb94ec5a0fe",
-  "cbb56e10a1e1948e2d1e8009413a227b"
+  "cbb56e10a1e1948e2d1e8009413a227b",
+  "52f260083a50d25a2fb4da51f29cd987"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -3386,7 +3386,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
+   "cond": "clear",
    "temp": 48,
    "sun_date": "2026-11-23",
    "station_id": "KCRX"
@@ -3961,28 +3961,28 @@
   "cold": 0,
   "card_hour": "2026-11-24T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795544040.0079844,
+  "last_obs_at": 1795544108.8611693,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 55.0,
-   "feelsF": 55.0,
+   "tempF": 54.9,
+   "feelsF": 54.9,
    "feels_label": "Feels Like",
-   "dewF": 41.8,
+   "dewF": 41.7,
    "humidity": 61.0,
    "pressure_in": 30.3,
-   "wind_dir": "NW",
-   "wind_mph": 7.0,
+   "wind_dir": "WNW",
+   "wind_mph": 2.0,
    "gust_mph": 7.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 58,
    "low_today": 32,
-   "obs_local": "2026-11-24 12:13:55",
+   "obs_local": "2026-11-24 12:14:49",
    "tz": "CST",
-   "saved": 1795544040
+   "saved": 1795544108
   }
  },
  "community_alerts": [

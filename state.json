@@ -346,7 +346,6 @@
   "a699408916f8f21f82cc0286fa6fd0a6"
  ],
  "https://rss.app/feeds/ooRDmgGkddunF68p.xml": [
-  "4b33853f7484afe9a979e88413de1a7c",
   "39b8e3035d360c7fb71eefcd96f431af",
   "f06968eb24d4256cdec3f254038d5094",
   "4b7b81f1483be0afc728989c91a41b39",
@@ -745,7 +744,8 @@
   "4a98f5d6abd796f3e0017d85887ab564",
   "12ec0f0aaa2fc4c0caf898ddcd044e3b",
   "4fedee197d245b2f12f1af839032f366",
-  "102f3a88007983e948846de751567b48"
+  "102f3a88007983e948846de751567b48",
+  "2328d6e9123c6936da5a0d84f3569259"
  ],
  "https://rss.app/feeds/JBk8eEJRnq97YNin.xml": [
   "e148a77241bf22f3911feace77c27bc1",
@@ -3957,28 +3957,28 @@
   "cold": 0,
   "card_hour": "2026-11-23T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795495568.585665,
+  "last_obs_at": 1795495638.5584157,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
    "tempF": 40.8,
-   "feelsF": 40.8,
-   "feels_label": "Feels Like",
+   "feelsF": 39.3,
+   "feels_label": "Wind Chill",
    "dewF": 36.9,
    "humidity": 86.0,
    "pressure_in": 30.32,
-   "wind_dir": "NW",
-   "wind_mph": 1.0,
+   "wind_dir": "SSE",
+   "wind_mph": 3.0,
    "gust_mph": 6.0,
    "precip_rate": 0.0,
    "precip_accum": 0.04,
    "high_today": 57,
    "low_today": 41,
-   "obs_local": "2026-11-23 22:45:58",
+   "obs_local": "2026-11-23 22:47:10",
    "tz": "CST",
-   "saved": 1795495568
+   "saved": 1795495638
   }
  },
  "community_alerts": [

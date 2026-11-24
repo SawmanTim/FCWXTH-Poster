@@ -3491,7 +3491,7 @@
   "pt26327000",
   "us6000ucvm"
  ],
- "apod_fetch_ts": 1795493652.1092584,
+ "apod_fetch_ts": 1795493984.4297488,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3957,28 +3957,28 @@
   "cold": 0,
   "card_hour": "2026-11-23T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795496607.165153,
+  "last_obs_at": 1795496670.7854514,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
    "tempF": 40.5,
-   "feelsF": 40.5,
-   "feels_label": "Feels Like",
+   "feelsF": 37.1,
+   "feels_label": "Wind Chill",
    "dewF": 37.2,
    "humidity": 88.0,
    "pressure_in": 30.32,
    "wind_dir": "W",
-   "wind_mph": 2.0,
-   "gust_mph": 2.0,
+   "wind_mph": 5.0,
+   "gust_mph": 5.0,
    "precip_rate": 0.0,
    "precip_accum": 0.04,
    "high_today": 57,
    "low_today": 40,
-   "obs_local": "2026-11-23 23:02:28",
+   "obs_local": "2026-11-23 23:04:16",
    "tz": "CST",
-   "saved": 1795496607
+   "saved": 1795496670
   }
  },
  "community_alerts": [

@@ -3498,7 +3498,7 @@
   "us6000ud6h",
   "aka2026xhgksb"
  ],
- "apod_fetch_ts": 1795607144.8917904,
+ "apod_fetch_ts": 1795610205.2912643,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3956,7 +3956,7 @@
   "https://www.spc.noaa.gov/products/md/md2463.html/20261122",
   "https://www.spc.noaa.gov/products/md/md2464.html/20261122"
  ],
- "apod_date": "2026-11-24",
+ "apod_date": "2026-11-25",
  "station": {
   "hilo_date": "2026-11-25",
   "hi": 46,
@@ -3966,7 +3966,7 @@
   "cold": 0,
   "card_hour": "2026-11-25T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795610137.8804195,
+  "last_obs_at": 1795610203.1605995,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3978,16 +3978,16 @@
    "dewF": 45.0,
    "humidity": 99.0,
    "pressure_in": 30.2,
-   "wind_dir": "E",
-   "wind_mph": 3.0,
-   "gust_mph": 3.0,
+   "wind_dir": "N",
+   "wind_mph": 0.0,
+   "gust_mph": 4.0,
    "precip_rate": 0.73,
    "precip_accum": 0.84,
    "high_today": 46,
    "low_today": 43,
-   "obs_local": "2026-11-25 06:34:21",
+   "obs_local": "2026-11-25 06:36:27",
    "tz": "CST",
-   "saved": 1795610137
+   "saved": 1795610203
   }
  },
  "community_alerts": [

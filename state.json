@@ -3395,7 +3395,7 @@
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "rain",
+   "cond": "light rain",
    "temp": 48,
    "sun_date": "2026-11-24",
    "station_id": "K1M4"
@@ -3966,7 +3966,7 @@
   "cold": 0,
   "card_hour": "2026-11-25T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795626488.323531,
+  "last_obs_at": 1795626555.5762534,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3978,16 +3978,16 @@
    "dewF": 47.9,
    "humidity": 99.0,
    "pressure_in": 30.2,
-   "wind_dir": "NW",
+   "wind_dir": "NNW",
    "wind_mph": 0.0,
    "gust_mph": 0.0,
    "precip_rate": 0.04,
    "precip_accum": 0.92,
    "high_today": 48,
    "low_today": 43,
-   "obs_local": "2026-11-25 11:07:59",
+   "obs_local": "2026-11-25 11:09:11",
    "tz": "CST",
-   "saved": 1795626488
+   "saved": 1795626555
   }
  },
  "community_alerts": [

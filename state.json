@@ -3497,7 +3497,7 @@
   "us6000ud6h",
   "aka2026xhgksb"
  ],
- "apod_fetch_ts": 1795585926.3279004,
+ "apod_fetch_ts": 1795588939.960309,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3964,7 +3964,7 @@
   "cold": 0,
   "card_hour": "2026-11-24T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795588874.42862,
+  "last_obs_at": 1795588939.3477118,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3985,7 +3985,7 @@
    "low_today": 44,
    "obs_local": "2026-11-25 00:40:57",
    "tz": "CST",
-   "saved": 1795588874
+   "saved": 1795588939
   }
  },
  "community_alerts": [

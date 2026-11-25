@@ -3392,13 +3392,13 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "light rain",
+   "cond": "rain",
    "temp": 45,
    "sun_date": "2026-11-24",
    "station_id": "KCRX"
   },
   "Franklin": {
-   "cond": "rain and fog/mist",
+   "cond": "light rain",
    "temp": 46,
    "sun_date": "2026-11-24",
    "station_id": "K1M4"
@@ -3969,7 +3969,7 @@
   "cold": 0,
   "card_hour": "2026-11-25T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795642885.5978649,
+  "last_obs_at": 1795642951.348592,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3981,16 +3981,16 @@
    "dewF": 46.6,
    "humidity": 99.0,
    "pressure_in": 30.15,
-   "wind_dir": "NNW",
+   "wind_dir": "E",
    "wind_mph": 0.0,
    "gust_mph": 0.0,
    "precip_rate": 0.12,
    "precip_accum": 1.4,
    "high_today": 48,
    "low_today": 43,
-   "obs_local": "2026-11-25 15:41:17",
+   "obs_local": "2026-11-25 15:42:11",
    "tz": "CST",
-   "saved": 1795642885
+   "saved": 1795642951
   }
  },
  "community_alerts": [

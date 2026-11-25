@@ -3558,7 +3558,6 @@
  ],
  "usdm_week": "2026-W47",
  "spc_md": [
-  "https://www.spc.noaa.gov/products/md/md2157.html/20260827",
   "https://www.spc.noaa.gov/products/md/md2156.html/20260828",
   "https://www.spc.noaa.gov/products/md/md2157.html/20260828",
   "https://www.spc.noaa.gov/products/md/md2158.html/20260828",
@@ -3957,7 +3956,8 @@
   "https://www.spc.noaa.gov/products/md/md2462.html/20261122",
   "https://www.spc.noaa.gov/products/md/20261122",
   "https://www.spc.noaa.gov/products/md/md2463.html/20261122",
-  "https://www.spc.noaa.gov/products/md/md2464.html/20261122"
+  "https://www.spc.noaa.gov/products/md/md2464.html/20261122",
+  "https://www.spc.noaa.gov/products/md/md2465.html/20261125"
  ],
  "apod_date": "2026-11-25",
  "station": {
@@ -3969,7 +3969,7 @@
   "cold": 0,
   "card_hour": "2026-11-25T15",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795642554.905569,
+  "last_obs_at": 1795642620.290147,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3981,16 +3981,16 @@
    "dewF": 46.6,
    "humidity": 99.0,
    "pressure_in": 30.14,
-   "wind_dir": "E",
+   "wind_dir": "ESE",
    "wind_mph": 0.0,
    "gust_mph": 0.0,
    "precip_rate": 0.14,
    "precip_accum": 1.4,
    "high_today": 48,
    "low_today": 43,
-   "obs_local": "2026-11-25 15:35:53",
+   "obs_local": "2026-11-25 15:36:47",
    "tz": "CST",
-   "saved": 1795642554
+   "saved": 1795642620
   }
  },
  "community_alerts": [

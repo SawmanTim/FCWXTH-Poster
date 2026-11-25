@@ -1152,7 +1152,6 @@
   "3d621abc45e4eff4b16348931565bc02"
  ],
  "https://rss.app/feeds/8SPWQbJnOzYdaxTi.xml": [
-  "3abdc8ac0b929ba7581c7fdb1dc41ed9",
   "a506ab8b07ab0625285e97ad97c77658",
   "a4b2041a10c0bfbcad3fc6e6ff913509",
   "d30335e2ffdb8a56ea636a032ad3b486",
@@ -1551,7 +1550,8 @@
   "cbb56e10a1e1948e2d1e8009413a227b",
   "52f260083a50d25a2fb4da51f29cd987",
   "fb0c22c9004031d41bfaeb508809d5d1",
-  "ffb0d1f08bf5574b7448de9c49d2ee3a"
+  "ffb0d1f08bf5574b7448de9c49d2ee3a",
+  "d8b349bdfae12e723cc1114ac398707f"
  ],
  "https://rss.app/feeds/hfPdH4pNvoCWmLsu.xml": [
   "76e6e3b05f1c1b151050f79a224be8e2",
@@ -3966,7 +3966,7 @@
   "cold": 0,
   "card_hour": "2026-11-25T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795614963.4507446,
+  "last_obs_at": 1795615033.4706442,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3985,9 +3985,9 @@
    "precip_accum": 0.88,
    "high_today": 46,
    "low_today": 43,
-   "obs_local": "2026-11-25 07:55:57",
+   "obs_local": "2026-11-25 07:57:09",
    "tz": "CST",
-   "saved": 1795614963
+   "saved": 1795615033
   }
  },
  "community_alerts": [

@@ -2991,7 +2991,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.af7006ca07938ec54719d64052e6e19f401a515f.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3b28b4c8d653d51fda79b40e139b96146ca73eea.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.84a7224426bd3aeeb7b88f6a95c7a99173fcd697.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7ed47bed276209b02c10604ba6ccf65e72424222.001.1",
@@ -3390,7 +3389,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e7851c0522346944d8f76f11caf861ed512cacac.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e8bcda5d4206cdc92649a1dac14c30be5a7cc933.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c67307bbc4254892f30402442152ef446eeefc85.002.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c67307bbc4254892f30402442152ef446eeefc85.003.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c67307bbc4254892f30402442152ef446eeefc85.003.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e5c3d242198c8b3030fc5a2ac08ae5052f109450.003.1"
  ],
  "wx": {
   "Paden": {
@@ -3971,28 +3971,28 @@
   "cold": 0,
   "card_hour": "2026-11-26T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795709943.3190494,
+  "last_obs_at": 1795710009.724397,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 35.1,
-   "feelsF": 35.1,
-   "feels_label": "Feels Like",
-   "dewF": 34.8,
+   "tempF": 34.9,
+   "feelsF": 32.6,
+   "feels_label": "Wind Chill",
+   "dewF": 34.6,
    "humidity": 99.0,
    "pressure_in": 29.95,
-   "wind_dir": "SW",
-   "wind_mph": 2.0,
+   "wind_dir": "W",
+   "wind_mph": 3.0,
    "gust_mph": 3.0,
    "precip_rate": 0.0,
    "precip_accum": 0.14,
    "high_today": 42,
    "low_today": 34,
-   "obs_local": "2026-11-26 10:18:48",
+   "obs_local": "2026-11-26 10:20:00",
    "tz": "CST",
-   "saved": 1795709943
+   "saved": 1795710009
   }
  },
  "community_alerts": [

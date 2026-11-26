@@ -1983,7 +1983,8 @@
   "211a7c47a9f459d7d5f19e84bb334c21",
   "3f818f33a0229dd3b1503773947dbb09",
   "c4109ea015d26bbf0f0cb4315b74c4bd",
-  "c3a610d0ba9ad272e259698a9f54f8a2"
+  "c3a610d0ba9ad272e259698a9f54f8a2",
+  "88eb4d024866dca8934f379a1a537fc6"
  ],
  "https://rss.app/feeds/WHUa4Hr2dHd9DKIR.xml": [
   "f068a2eaf3e067f0ab363d0b1c2b91e9",
@@ -3557,7 +3558,7 @@
   "2026-11-24 14:19:26.753|A20F",
   "2026-11-25 08:33:12.430|A20F"
  ],
- "usdm_week": "2026-W47",
+ "usdm_week": "2026-W48",
  "spc_md": [
   "https://www.spc.noaa.gov/products/md/20260828",
   "https://www.spc.noaa.gov/products/md/md2161.html/20260828",
@@ -3968,9 +3969,9 @@
   "raining": false,
   "heat": 0,
   "cold": 0,
-  "card_hour": "2026-11-26T06",
+  "card_hour": "2026-11-26T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795705184.7031748,
+  "last_obs_at": 1795705259.1823354,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
@@ -3982,16 +3983,16 @@
    "dewF": 34.4,
    "humidity": 99.0,
    "pressure_in": 29.96,
-   "wind_dir": "WNW",
+   "wind_dir": "SW",
    "wind_mph": 0.0,
    "gust_mph": 4.0,
    "precip_rate": 0.0,
    "precip_accum": 0.14,
    "high_today": 42,
    "low_today": 34,
-   "obs_local": "2026-11-26 08:59:36",
+   "obs_local": "2026-11-26 09:00:47",
    "tz": "CST",
-   "saved": 1795705184
+   "saved": 1795705259
   }
  },
  "community_alerts": [

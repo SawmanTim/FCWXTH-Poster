@@ -3982,9 +3982,9 @@
   "card_hour": "2026-11-27T12",
   "health_checked_at": 1788651127.9197035,
   "last_obs_at": 1795804496.7415497,
-  "was_offline": false,
+  "was_offline": true,
   "outage_starts": [
-   1794635181.4690993
+   1795804562.9187255
   ],
   "live": {
    "tempF": 58.1,

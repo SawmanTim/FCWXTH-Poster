@@ -3508,7 +3508,7 @@
   "us6000ud6h",
   "aka2026xhgksb"
  ],
- "apod_fetch_ts": 1795744135.1975546,
+ "apod_fetch_ts": 1795747157.4687076,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3976,28 +3976,28 @@
   "cold": 0,
   "card_hour": "2026-11-26T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795747089.0302649,
+  "last_obs_at": 1795747154.6598594,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
    "tempF": 35.6,
-   "feelsF": 35.6,
-   "feels_label": "Feels Like",
+   "feelsF": 33.4,
+   "feels_label": "Wind Chill",
    "dewF": 35.3,
    "humidity": 99.0,
    "pressure_in": 29.94,
-   "wind_dir": "SW",
-   "wind_mph": 0.0,
-   "gust_mph": 1.0,
+   "wind_dir": "W",
+   "wind_mph": 3.0,
+   "gust_mph": 3.0,
    "precip_rate": 0.0,
    "precip_accum": 0.2,
    "high_today": 42,
    "low_today": 34,
-   "obs_local": "2026-11-26 20:38:03",
+   "obs_local": "2026-11-26 20:38:57",
    "tz": "CST",
-   "saved": 1795747089
+   "saved": 1795747154
   }
  },
  "community_alerts": [

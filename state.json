@@ -2996,7 +2996,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a6d7f80c3fe908fdbeaa803a85528828e9cf19c8.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c6d723e2ed73f3f45d629dc6ab28ed355fadf32e.002.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c19ce5be007f58b85910ca5226c3da5b4aa34b6e.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.09ceac320ae2319954780ed88b8e9d8ec6c24d09.001.1",
@@ -3395,7 +3394,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.35fda85860b58f25811af8467dfe9b3e8b2c4f68.003.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5eba8b6b3988b431a3e38343e464c02fc1d3257d.003.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.43aa16b92376deb120f71041c63f9d680d579041.004.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.43aa16b92376deb120f71041c63f9d680d579041.003.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.43aa16b92376deb120f71041c63f9d680d579041.003.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eb021254de5f9b1bef5c81f67634c74d89191f77.004.1"
  ],
  "wx": {
   "Paden": {
@@ -3971,33 +3971,33 @@
   "hilo_date": "2026-11-26",
   "hi": 42,
   "lo": 34,
-  "raining": true,
+  "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-26T18",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795745186.8065498,
+  "last_obs_at": 1795745252.0627196,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
    "tempF": 35.4,
-   "feelsF": 31.1,
-   "feels_label": "Wind Chill",
+   "feelsF": 35.4,
+   "feels_label": "Feels Like",
    "dewF": 35.1,
    "humidity": 99.0,
    "pressure_in": 29.94,
-   "wind_dir": "W",
-   "wind_mph": 5.0,
-   "gust_mph": 5.0,
-   "precip_rate": 0.01,
+   "wind_dir": "WNW",
+   "wind_mph": 0.0,
+   "gust_mph": 0.0,
+   "precip_rate": 0.0,
    "precip_accum": 0.2,
    "high_today": 42,
    "low_today": 34,
-   "obs_local": "2026-11-26 20:06:15",
+   "obs_local": "2026-11-26 20:07:27",
    "tz": "CST",
-   "saved": 1795745186
+   "saved": 1795745252
   }
  },
  "community_alerts": [

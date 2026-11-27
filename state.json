@@ -2283,7 +2283,9 @@
   "38dbc9eefcf63506cb354e4bd44ed902",
   "d145903875a42a91fff77ade8b8dbc62",
   "745150a61db23ef006c3d6bd96a65fbb",
-  "53284bcf38ad423582ac7436cb7ca7c3"
+  "53284bcf38ad423582ac7436cb7ca7c3",
+  "ac02ef57a2c3759f01d41609d4cd663f",
+  "7d674f6c0962ae53230b6f8b64cc0b69"
  ],
  "https://rss.app/feeds/eUaNPnoNqUFJFUYv.xml": [
   "ef354fda682a7577253ab06ef0284f7a",
@@ -3401,7 +3403,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "partly cloudy",
+   "cond": "mostly clear",
    "temp": 45,
    "sun_date": "2026-11-26",
    "station_id": "KCRX"
@@ -3971,35 +3973,35 @@
  "apod_date": "2026-11-26",
  "station": {
   "hilo_date": "2026-11-27",
-  "hi": 55,
+  "hi": 56,
   "lo": 36,
   "raining": false,
   "heat": 0,
   "cold": 0,
   "card_hour": "2026-11-27T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795799460.2833786,
+  "last_obs_at": 1795799534.0867045,
   "was_offline": false,
   "outage_starts": [
    1794635181.4690993
   ],
   "live": {
-   "tempF": 55.4,
-   "feelsF": 55.4,
+   "tempF": 55.9,
+   "feelsF": 55.9,
    "feels_label": "Feels Like",
-   "dewF": 43.4,
-   "humidity": 64.0,
+   "dewF": 43.1,
+   "humidity": 62.0,
    "pressure_in": 30.08,
-   "wind_dir": "E",
-   "wind_mph": 1.0,
+   "wind_dir": "SW",
+   "wind_mph": 2.0,
    "gust_mph": 2.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
-   "high_today": 55,
+   "high_today": 56,
    "low_today": 36,
-   "obs_local": "2026-11-27 11:10:49",
+   "obs_local": "2026-11-27 11:12:01",
    "tz": "CST",
-   "saved": 1795799460
+   "saved": 1795799534
   }
  },
  "community_alerts": [

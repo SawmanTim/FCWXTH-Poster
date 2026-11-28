@@ -3518,7 +3518,7 @@
   "aka2026xhgksb",
   "aka2026xnvqjt"
  ],
- "apod_fetch_ts": 1795864733.5808449,
+ "apod_fetch_ts": 1795867747.1349397,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3986,7 +3986,7 @@
   "cold": 1,
   "card_hour": "2026-11-28T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795867683.4083574,
+  "last_obs_at": 1795867746.503478,
   "was_offline": false,
   "outage_starts": [
    1795804562.9187255
@@ -3998,16 +3998,16 @@
    "dewF": 31.6,
    "humidity": 99.0,
    "pressure_in": 30.1,
-   "wind_dir": "SSW",
+   "wind_dir": "SSE",
    "wind_mph": 0.0,
    "gust_mph": 0.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 32,
    "low_today": 29,
-   "obs_local": "2026-11-28 06:06:56",
+   "obs_local": "2026-11-28 06:07:50",
    "tz": "CST",
-   "saved": 1795867683
+   "saved": 1795867746
   }
  },
  "community_alerts": [

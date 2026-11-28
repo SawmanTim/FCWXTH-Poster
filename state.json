@@ -3520,7 +3520,7 @@
   "aka2026xnvqjt",
   "us6000ue3p"
  ],
- "apod_fetch_ts": 1795879881.980941,
+ "apod_fetch_ts": 1795882919.5702813,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3988,7 +3988,7 @@
   "cold": 0,
   "card_hour": "2026-11-28T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795882829.1235352,
+  "last_obs_at": 1795882892.707951,
   "was_offline": false,
   "outage_starts": [
    1795804562.9187255
@@ -3997,19 +3997,19 @@
    "tempF": 63.5,
    "feelsF": 63.5,
    "feels_label": "Feels Like",
-   "dewF": 46.6,
-   "humidity": 54.0,
+   "dewF": 46.1,
+   "humidity": 53.0,
    "pressure_in": 30.12,
-   "wind_dir": "S",
+   "wind_dir": "SW",
    "wind_mph": 2.0,
-   "gust_mph": 2.0,
+   "gust_mph": 3.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 64,
    "low_today": 29,
-   "obs_local": "2026-11-28 10:19:14",
+   "obs_local": "2026-11-28 10:20:26",
    "tz": "CST",
-   "saved": 1795882829
+   "saved": 1795882892
   }
  },
  "community_alerts": [

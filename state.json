@@ -3517,7 +3517,7 @@
   "aka2026xhgksb",
   "aka2026xnvqjt"
  ],
- "apod_fetch_ts": 1795861701.754229,
+ "apod_fetch_ts": 1795864733.5808449,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3985,7 +3985,7 @@
   "cold": 1,
   "card_hour": "2026-11-27T21",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795864669.761827,
+  "last_obs_at": 1795864732.9996421,
   "was_offline": false,
   "outage_starts": [
    1795804562.9187255
@@ -4004,9 +4004,9 @@
    "precip_accum": 0.0,
    "high_today": 32,
    "low_today": 29,
-   "obs_local": "2026-11-28 05:16:32",
+   "obs_local": "2026-11-28 05:17:44",
    "tz": "CST",
-   "saved": 1795864669
+   "saved": 1795864732
   }
  },
  "community_alerts": [

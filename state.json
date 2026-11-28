@@ -1696,7 +1696,8 @@
   "e81887f2ce1138106c59496cb9d4c814",
   "03e9adf9fa8d3d6347bf4142dd3f4412",
   "1855a29567005894010f9cfe76746bd8",
-  "9274610a97c18bb3a5f566ae75e6dc54"
+  "9274610a97c18bb3a5f566ae75e6dc54",
+  "c8f689876529a27bfe0ca1f4836e19f4"
  ],
  "https://rss.app/feeds/pOYz2pLU9sUdSfvb.xml": [
   "f6f7b146605abc5140631bc12fa4a171",
@@ -3417,7 +3418,7 @@
   },
   "Franklin": {
    "cond": "",
-   "temp": 57,
+   "temp": 59,
    "sun_date": "2026-11-27",
    "station_id": "K1M4"
   }
@@ -3990,28 +3991,28 @@
   "cold": 0,
   "card_hour": "2026-11-28T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795890424.4803293,
+  "last_obs_at": 1795890493.7220259,
   "was_offline": false,
   "outage_starts": [
    1795804562.9187255
   ],
   "live": {
-   "tempF": 69.6,
-   "feelsF": 69.6,
+   "tempF": 66.4,
+   "feelsF": 66.4,
    "feels_label": "Feels Like",
-   "dewF": 47.3,
-   "humidity": 45.0,
+   "dewF": 46.7,
+   "humidity": 49.0,
    "pressure_in": 30.06,
-   "wind_dir": "S",
-   "wind_mph": 0.0,
-   "gust_mph": 4.0,
+   "wind_dir": "ESE",
+   "wind_mph": 2.0,
+   "gust_mph": 2.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 71,
    "low_today": 29,
-   "obs_local": "2026-11-28 12:25:52",
+   "obs_local": "2026-11-28 12:27:58",
    "tz": "CST",
-   "saved": 1795890424
+   "saved": 1795890493
   }
  },
  "community_alerts": [

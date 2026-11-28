@@ -3411,7 +3411,7 @@
  ],
  "wx": {
   "Paden": {
-   "cond": "",
+   "cond": "clear",
    "temp": 64,
    "sun_date": "2026-11-27",
    "station_id": "KCRX"
@@ -3991,28 +3991,28 @@
   "cold": 0,
   "card_hour": "2026-11-28T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795894071.1725914,
+  "last_obs_at": 1795894135.7817986,
   "was_offline": false,
   "outage_starts": [
    1795804562.9187255
   ],
   "live": {
-   "tempF": 66.6,
-   "feelsF": 66.6,
+   "tempF": 66.9,
+   "feelsF": 66.9,
    "feels_label": "Feels Like",
-   "dewF": 46.8,
-   "humidity": 49.0,
-   "pressure_in": 30.05,
-   "wind_dir": "SSW",
-   "wind_mph": 1.0,
-   "gust_mph": 7.0,
+   "dewF": 46.6,
+   "humidity": 48.0,
+   "pressure_in": 30.04,
+   "wind_dir": "W",
+   "wind_mph": 0.0,
+   "gust_mph": 0.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 71,
    "low_today": 29,
-   "obs_local": "2026-11-28 13:26:28",
+   "obs_local": "2026-11-28 13:27:40",
    "tz": "CST",
-   "saved": 1795894071
+   "saved": 1795894135
   }
  },
  "community_alerts": [

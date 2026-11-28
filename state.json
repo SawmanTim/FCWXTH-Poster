@@ -3522,7 +3522,7 @@
   "us6000ue3p",
   "ci41581136"
  ],
- "apod_fetch_ts": 1795885935.7243533,
+ "apod_fetch_ts": 1795888996.1136746,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3980,7 +3980,7 @@
   "https://www.spc.noaa.gov/products/md/md2471.html/20261127",
   "https://www.spc.noaa.gov/products/md/20261127"
  ],
- "apod_date": "2026-11-26",
+ "apod_date": "2026-11-28",
  "station": {
   "hilo_date": "2026-11-28",
   "hi": 70,
@@ -3990,7 +3990,7 @@
   "cold": 0,
   "card_hour": "2026-11-28T12",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795888931.3964095,
+  "last_obs_at": 1795888995.9700603,
   "was_offline": false,
   "outage_starts": [
    1795804562.9187255
@@ -4011,7 +4011,7 @@
    "low_today": 29,
    "obs_local": "2026-11-28 12:01:51",
    "tz": "CST",
-   "saved": 1795888931
+   "saved": 1795888995
   }
  },
  "community_alerts": [

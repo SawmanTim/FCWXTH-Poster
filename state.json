@@ -2355,7 +2355,6 @@
   "6c24207c27a20017e2296faf26ca44b9"
  ],
  "https://www.nhc.noaa.gov/index-at.xml": [
-  "https://www.nhc.noaa.gov/text/refresh/MIATCDAT4+shtml/092052.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCMAT4+shtml/092051.shtml",
   "https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/092052.shtml",
   "summary-al092026-202610092052",
@@ -2754,7 +2753,8 @@
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611271708",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611272322",
   "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611280514",
-  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611281134"
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611281134",
+  "https://www.nhc.noaa.gov/gtwo.php?basin=atlc&202611281703"
  ],
  "https://weather.im/iembot-rss/room/hunchat.xml": [
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212126-KHUN-CDUS44-CLIMSL",
@@ -3007,7 +3007,6 @@
   "https://mesonet.agron.iastate.edu/p.php?pid=202606212115-KOHX-CDUS44-CLIBNA"
  ],
  "county_alerts": [
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.09ceac320ae2319954780ed88b8e9d8ec6c24d09.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d2f3bbb3ac4d0aaae6554255a33029225a2300df.001.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7af4a37f5f0ca0f343ab9deb54611f3366752818.002.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f2c437a98fb63a0c555fea3579877457fce29350.001.1",
@@ -3406,7 +3405,8 @@
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.43aa16b92376deb120f71041c63f9d680d579041.003.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eb021254de5f9b1bef5c81f67634c74d89191f77.004.1",
   "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c1cb04b1fcec9013f689835ef9026f72e5895ebc.001.1",
-  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.adc9f5fc55d6a343d2d0fc5de2fd43a43cfe5afa.001.1"
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.adc9f5fc55d6a343d2d0fc5de2fd43a43cfe5afa.001.1",
+  "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bd81465cc58c7e48fee98fea8c33310fd92a801d.001.1"
  ],
  "wx": {
   "Paden": {
@@ -3989,28 +3989,28 @@
   "cold": 0,
   "card_hour": "2026-11-28T09",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795885412.446215,
+  "last_obs_at": 1795885481.4168894,
   "was_offline": false,
   "outage_starts": [
    1795804562.9187255
   ],
   "live": {
-   "tempF": 64.6,
-   "feelsF": 64.6,
+   "tempF": 66.2,
+   "feelsF": 66.2,
    "feels_label": "Feels Like",
-   "dewF": 46.6,
-   "humidity": 52.0,
+   "dewF": 46.5,
+   "humidity": 49.0,
    "pressure_in": 30.11,
-   "wind_dir": "S",
-   "wind_mph": 1.0,
-   "gust_mph": 4.0,
+   "wind_dir": "ENE",
+   "wind_mph": 2.0,
+   "gust_mph": 5.0,
    "precip_rate": 0.0,
    "precip_accum": 0.0,
    "high_today": 67,
    "low_today": 29,
-   "obs_local": "2026-11-28 11:02:09",
+   "obs_local": "2026-11-28 11:04:33",
    "tz": "CST",
-   "saved": 1795885412
+   "saved": 1795885481
   }
  },
  "community_alerts": [

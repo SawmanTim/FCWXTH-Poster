@@ -3520,7 +3520,7 @@
   "aka2026xnvqjt",
   "us6000ue3p"
  ],
- "apod_fetch_ts": 1795870819.1530461,
+ "apod_fetch_ts": 1795873854.8276358,
  "swpc": [
   "2026-06-03 14:52:28.343|A50F",
   "2026-06-14 08:30:13.163|A30F",
@@ -3988,7 +3988,7 @@
   "cold": 0,
   "card_hour": "2026-11-28T06",
   "health_checked_at": 1788651127.9197035,
-  "last_obs_at": 1795873789.7792234,
+  "last_obs_at": 1795873854.249716,
   "was_offline": false,
   "outage_starts": [
    1795804562.9187255
@@ -4007,9 +4007,9 @@
    "precip_accum": 0.0,
    "high_today": 35,
    "low_today": 29,
-   "obs_local": "2026-11-28 07:48:39",
+   "obs_local": "2026-11-28 07:49:33",
    "tz": "CST",
-   "saved": 1795873789
+   "saved": 1795873854
   }
  },
  "community_alerts": [
